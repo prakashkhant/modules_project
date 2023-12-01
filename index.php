@@ -59,7 +59,10 @@
   </div>
 
 </main>
-<!-- footer statred                 -->
+<!-- footer statred                
+
+
+-Kishan-->
 
 <footer class="bg-dark text-light text-center p-2">
 <h6>Copy right by <i>Prakash Khant</i></h6>
