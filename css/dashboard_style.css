@@ -1,5 +1,5 @@
 :root {
-    --main-bg-color: #4d97d4;
+    --main-bg-color: #564dd4;
     --main-text-color: #005e9d;
     --second-text-color: #7f6ad5;
     --second-bg-color: #ffee99;
@@ -27,13 +27,13 @@
   
   #wrapper {
     overflow-x: hidden;
-    background-image: linear-gradient(
+    background: linear-gradient(
       to right,
-      #baf3d7,
-      #c2f5de,
-      #cbf7e4,
-      #d4f8ea,
-      #ddfaef
+      #82ece7,
+      #c2f5f3,
+      #cbf6f7,
+      #d4f8f8,
+      #ddfaf8
     );
   }
   
@@ -81,6 +81,28 @@
     border: none;
   }
  
+  .page-header{
+    background: var(--second-bg-color);
+    padding: 15px 30px;
+    margin-bottom: 20px;
+    color: #005e9d;
+    border: 1px solid #ffffff;
+    font-size: 36px;
+    font-weight: 500;
+  }
+.main-content{
+    background:rgb(255, 254, 254);
+    font-size: 1.2rem;
+    margin: 20px 20px;
+    border: 2px solid black;
+  }
+  .create-admin{
+    background: #fff;
+    justify-content: center;
+    width: 40%;
+    padding: 2rem;
+    margin: 20px 20px;
+  }
   
   @media (min-width: 768px) {
     #sidebar-wrapper {
