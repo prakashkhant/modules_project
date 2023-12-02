@@ -8,7 +8,7 @@
   <title>sign up</title>
  
 
-
+  <link rel="icon" type="image/x-icon" href="./images/github.svg">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   
 </head>
