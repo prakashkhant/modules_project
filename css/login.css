@@ -1,12 +1,24 @@
 body{
-    background:url(../images/bg-1.jpg);
+    /* background:url(../images/test_bg.png) transparent; */
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     flex-direction: column;
+    height: fit-content;
 }
 
+.bg{
+    background:url(../images/test_bg.png);
+    position: absolute; 
+    height: 100%; 
+    width: 100%; 
+  
+    background-size: cover; 
+    background-position: center; 
+    filter: blur(3px); 
+    z-index: -1; 
+} 
 *{
     font-family: sans-serif;
     box-sizing: border-box;
@@ -28,6 +40,7 @@ height: 450px;
     border-radius: 20px;
     padding: 40px;
     transition: 0.2s;
+    margin-top: 200px;
 }
 h2{
     text-align: center;
