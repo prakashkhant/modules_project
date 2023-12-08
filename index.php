@@ -50,7 +50,7 @@
 
           <a href="log_in.php" class="btn btn-success m-1" role="button">log in</a>
           <a href="sign_up.php" class="btn btn-warning m-1" role="button">Sign up</a>
-
+rfpoewtprowefi[wit[perwit[perwit[ewi]]]]
         </form>
       </div>
     </div>
