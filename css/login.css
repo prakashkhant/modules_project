@@ -1,5 +1,5 @@
 body{
-    /* background:url(../images/test_bg.png) transparent; */
+     background:url(../images/bg-1.jpg) transparent; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -8,7 +8,7 @@ body{
     height: fit-content;
 }
 
-.bg{
+/* .bg{
     background:url(../images/test_bg.png);
     position: absolute; 
     height: 100%; 
@@ -18,7 +18,7 @@ body{
     background-position: center; 
     filter: blur(3px); 
     z-index: -1; 
-} 
+}  */
 *{
     font-family: sans-serif;
     box-sizing: border-box;
