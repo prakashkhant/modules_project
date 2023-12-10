@@ -78,7 +78,7 @@
                         </li>
                        
                         <li class="nav-item ml-5">
-                            <a class="nav-link" href="log_in.php">Log in</a>
+                            <a class="nav-link log-in" href="log_in.php" >Log in</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#"><span><i class="fa-solid fa-right-to-bracket"></i></span></a>
@@ -171,25 +171,28 @@
                         <div class="first-row row">
                             <div class="col-lg-4 col-md-6 col-sm-6">
                                 <div class="single-brand">
-                                    <img src="./images/brands/logo1.png" alt="Brand-1 ">
+                                    <h3>java</h3>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-6">
                                 <div class="single-brand">
-                                    <img src="./images/brands/logo2.png" alt="Brand-2 ">
+                                    <!-- <img src="./images/brands/logo2.png" alt="Brand-2 "> -->
+                                    <h3>PHP</h3>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-6">
                                 <div class="single-brand">
-                                    <img src="./images/brands/logo3.png" alt="Brand-3 ">
+                                    <!-- <img src="./images/brands/logo3.png" alt="Brand-3 "> -->
+                                    <h3>Android</h3>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-6">
                                 <div class="single-brand">
-                                    <img src="./images/brands/logo4.png" alt="Brand-4">
+                                    <!-- <img src="./images/brands/logo4.png" alt="Brand-4"> -->
+                                    <h3>Python</h3>
                                 </div>
                             </div>
-                            <div class="col-lg-4 col-md-6 col-sm-6">
+                            <!-- <div class="col-lg-4 col-md-6 col-sm-6">
                                 <div class="single-brand">
                                     <img src="./images/brands/logo5.png" alt="Brand-5 ">
                                 </div>
@@ -213,26 +216,27 @@
                                 <div class="single-brand">
                                     <img src="./images/brands/logo9.png" alt="Brand-9">
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                     <div class="col-xl-6 col-lg-12 col-md-12">
                         <div class="experience-area">
                             <div class="d-flex flex-row years-area">
-                                <h2 class="p-3 years">Top 10</h2>
+                                <h2 class="p-1 years">Easy </h2>
                                 <h2>
+                                <span>ways to learn</span>
                                     <span>Programming</span>
                                     <span>Languages</span>
-                                    <span></span>
+                                    
                                 </h2>
                             </div>
-                            <div class="d-flex flex-row flex-wrap call-area">
+                            <!-- <div class="d-flex flex-row flex-wrap call-area">
                                 <span><i class="fas fa-phone-alt fa-3x px-3"></i></span>
                                 <div class="call-now">
                                     <a href="#" class="text-uppercase h4 font-roboto">Call Now</a>
                                     <span class="font-roboto py-2">(+91)-800-555-4986</span>
                                 </div>
-                            </div>
+                            </div> -->
                             <div class="bg-panel"></div>
                         </div>
                     </div>
@@ -260,10 +264,10 @@
                         <div class="col-lg-3 col-md-6 col-sm-12">
                             <div class="services">
                                 <div class="sevices-img text-center py-4">
-                                    <img src="./images/services/s1.png" alt="Services-1">
+                                    <img src="./images/services/news.png" alt="news-box">
                                 </div>
                                 <div class="card-body text-center">
-                                    <h5 class="card-title text-uppercase font-roboto">Wp developer</h5>
+                                    <h5 class="card-title text-uppercase font-roboto">News </h5>
                                     <p class="card-text text-secondary">
                                         Some quick example text to build on the card
                                         title and make up
@@ -275,10 +279,10 @@
                         <div class="col-lg-3 col-md-6 col-sm-12">
                             <div class="services">
                                 <div class="sevices-img text-center py-4">
-                                    <img src="./images/services/s2.png" alt="Services-2">
+                                    <img src="./images/services/prog-lang.png" alt="Services-2">
                                 </div>
                                 <div class="card-body text-center">
-                                    <h5 class="card-title text-uppercase font-roboto">ux/ui desing</h5>
+                                    <h5 class="card-title text-uppercase font-roboto">programming Languages</h5>
                                     <p class="card-text text-secondary">
                                         Some quick example text to build on the card
                                         title and make up
@@ -290,10 +294,10 @@
                         <div class="col-lg-3 col-md-6 col-sm-12">
                             <div class="services">
                                 <div class="sevices-img text-center py-4">
-                                    <img src="./images/services/s3.png" alt="Services-3">
+                                    <img src="./images/services/fun-fact.png" alt="Services-3">
                                 </div>
                                 <div class="card-body text-center">
-                                    <h5 class="card-title text-uppercase font-roboto">web design</h5>
+                                    <h5 class="card-title text-uppercase font-roboto">Fact finding</h5>
                                     <p class="card-text text-secondary">
                                         Some quick example text to build on the card
                                         title and make up
@@ -305,10 +309,10 @@
                         <div class="col-lg-3 col-md-6 col-sm-12">
                             <div class="services">
                                 <div class="sevices-img text-center py-4">
-                                    <img src="./images/services/s4.png" alt="Services-4">
+                                    <img src="./images/services/entertainments.png" alt="Movies-shows">
                                 </div>
                                 <div class="card-body text-center">
-                                    <h5 class="card-title text-uppercase font-roboto">seo optimize</h5>
+                                    <h5 class="card-title text-uppercase font-roboto">Entertainments</h5>
                                     <p class="card-text text-secondary">
                                         Some quick example text to build on the card
                                         title and make up
@@ -329,8 +333,8 @@
         <section class="project-area">
             <div class="container">
                 <div class="project-title pb-5">
-                    <h1 class="text-uppercase title-h1">Recently Done Project</h1>
-                    <h1 class="text-uppercase title-h1">Quality Work</h1>
+                    <h1 class="text-uppercase title-h1">Recently Done crafts</h1>
+                    <h1 class="text-uppercase title-h1">Photosk</h1>
                 </div>
 
                 <div class="button-group">
@@ -587,7 +591,7 @@
         <div class="container">
             <div class="">
                 <div class="site-logo text-center py-4">
-                    <a href="#"><img src="./images/logo.png" alt="logo"></a>
+                    <a href="#"><img src="./images/website_icon.png" alt="logo"></a>
                 </div>
                 <div class="social text-center">
                     <h5 class="text-uppercase">Follow me</h5>
@@ -598,8 +602,8 @@
                 </div>
                 <div class="copyrights text-center">
                     <p class="para">
-                        Copyright ©2019 All rights reserved | This template is made with by
-                        <a href="#"><span style="color: var(--primary-color);">Daily Tuition</span></a>
+                        Copyright ©2023 All rights reserved | This website is made with by
+                        <a href="#"><span style="color: var(--primary-color);">xt9developers</span></a>
                     </p>
                 </div>
             </div>
