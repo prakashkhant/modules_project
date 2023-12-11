@@ -34,7 +34,7 @@
 
     <button type="submit">Log in</button>
     <div class="sign-up">
-        <p>Are you new user ?<span> <a href="sign_up.php"> Join me !</a></span></p>
+        <p>Are you new user ?<span> <a href="registration.php"> Join me !</a></span></p>
     </div>
 </form>
 </body>

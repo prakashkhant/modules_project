@@ -1,11 +1,12 @@
 body{
-     background:url(../images/bg-1.jpg) transparent; 
+     /* background:url(../images/bg-1.jpg) transparent;  */
+      background: linear-gradient(135deg, #71b7e6, #9b59b6);
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     flex-direction: column;
-    height: fit-content;
+    /* height: fit-content; */
 }
 
 /* .bg{
@@ -40,7 +41,7 @@ height: 450px;
     border-radius: 20px;
     padding: 40px;
     transition: 0.2s;
-    margin-top: 200px;
+    margin-top: 2%;
 }
 h2{
     text-align: center;
