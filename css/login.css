@@ -36,6 +36,15 @@ body{
     padding: 0 60px 0 40px;
     
 }
+
+.error{
+    background: #ecd1d1;
+    color: #A94442;
+    padding: 10px;
+    width: 95%;
+    border-radius: 5px;
+    margin: 20px auto;
+}
 .wrapper .form-box.login .animation{
 transform: translateX(0);
 opacity: 1;
