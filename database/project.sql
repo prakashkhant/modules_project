@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 01, 2023 at 06:24 PM
+-- Generation Time: Dec 11, 2023 at 05:17 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.1
 
@@ -28,30 +28,24 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `userdetails` (
-  `id` int(11) NOT NULL,
   `username` varchar(20) NOT NULL,
+  `fullname` varchar(20) NOT NULL,
   `password` varchar(20) NOT NULL,
   `email` varchar(20) NOT NULL,
-  `city` varchar(20) NOT NULL
+  `phone` int(11) NOT NULL,
+  `gender` varchar(6) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `userdetails`
 --
 
-INSERT INTO `userdetails` (`id`, `username`, `password`, `email`, `city`) VALUES
-(1, 'prakash', '123', '', ''),
-(2, 'kishan', '123', '', '');
-
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `userdetails`
---
-ALTER TABLE `userdetails`
-  ADD PRIMARY KEY (`id`);
+INSERT INTO `userdetails` (`username`, `fullname`, `password`, `email`, `phone`, `gender`) VALUES
+('prakash', '', '123', '', 0, ''),
+('kishan', '', '123', '', 0, ''),
+('khant', 'kishan', '123', 'khan', 123, 'none'),
+('khant', 'kishan', '123', 'khan', 123, 'none'),
+('shizu', 'shehnaz', '123', 's@123', 1234, 'female');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
