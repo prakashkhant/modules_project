@@ -78,7 +78,7 @@
                         </li>
                        
                         <li class="nav-item ml-5">
-                            <a class="nav-link log-in" href="log_in.php" >Log in</a>
+                            <a class="nav-link log-in" href="login.php" >Log in</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#"><span><i class="fa-solid fa-right-to-bracket"></i></span></a>
@@ -113,7 +113,7 @@
                             <div class="d-flex flex-row flex-wrap mt-4">
                                 <a href="registration.php" class="btn button primary-button mr-4 text-uppercase ">
                                     Sign up</a>
-                                <a href="log_in.php" type="button" class="btn button secondary-button text-uppercase">Log in</a>
+                                <a href="login.php" type="button" class="btn button secondary-button text-uppercase">Log in</a>
                             </div>
                         </div>
                     </div>

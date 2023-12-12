@@ -11,20 +11,22 @@
 </head>
 
 <body>
+    
     <div class="wrapper">
         <span class="bg-animate"></span>
         <span class="bg-animate2"></span>
 
         <div class="form-box login">
             <h2 class="animation" style="--i:0; --j:21;">Login</h2>
-            <form action="#">
+
+            <form action="login_check.php" method="post">
                 <div class="input-box animation" style="--i:1; --j:22;">
-                    <input type="text" name="text" required>
+                    <input type="text" name="uname" required>
                     <label>Username</label>
                     <i class='bx bxs-user'></i>
                 </div>
                 <div class="input-box animation" style="--i:2; --j:23;">
-                    <input type="password" name="password" required>
+                    <input type="password" name="pass" required>
                     <label>Password</label>
                     <i class='bx bxs-lock'></i>
                 </div>
@@ -39,7 +41,7 @@
         <div class="info-text login">
             <h2 class="animation" style="--i:0; --j:20;">Welcome Back To Nexus Hub</h2>
         </div>
-
+        
 
         <div class="form-box register">
             <h2 class="animation" style="--i:17; --j:0;">Sign Up</h2>
@@ -70,7 +72,7 @@
             </form>
         </div>
         <div class="info-text register">
-            <h2 class="animation" style="--i:17; --j:0;"> Welcome Back To Nexus Hub</h2>
+            <h2 class="animation" style="--i:17; --j:0;"> Welcome  To Nexus Hub</h2>
         </div>
     </div>
     <script src="script.js"></script>
