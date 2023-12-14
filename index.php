@@ -2,633 +2,1506 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Nexus Hub</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- 
+    - primary meta tags
+  -->
+  <title>Nexus Hub</title>
+  <meta name="title" content="Wren - Perosonal Blog Website">
+  <meta name="description" content="This is a blog html template made by codewithsadee">
 
-    <!--  Bootstrap css file  -->
-    <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="images/logo.png" type="image/svg+xml">
 
-    <!--  font awesome icons  -->
-    <link rel="stylesheet" href="./css/all.min.css">
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
 
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="css/index_style.css">
 
-    <!--  Magnific Popup css file  -->
-    <link rel="stylesheet" href="./vendor/Magnific-Popup/dist/magnific-popup.css">
+  <!-- 
+    - preload images
+  -->
+  <link rel="preload" as="image" href="images/web-pre.png">
+  <link rel="preload" as="image" href="images/pattern-2.svg">
+  <link rel="preload" as="image" href="images/pattern-3.svg">
 
-
-    <!--  Owl-carousel css file  -->
-    <link rel="stylesheet" href="./vendor/owl-carousel/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="./vendor/owl-carousel/css/owl.theme.default.min.css">
-
-
-    <!--  custom css file  -->
-    <link rel="stylesheet" href="./css/style.css">
-
-    <!--  Responsive css file  -->
-    <link rel="stylesheet" href="./css/responsive.css">
-    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 </head>
 
-<body>
+<body id="top">
 
+  <!-- 
+    - #HEADER
+  -->
 
-    <!--  ======================= Start Header Area ============================== -->
+  <header class="header" data-header>
+    <div class="container">
 
-    <header class="header_area">
-        <div class="main-menu">
-            <nav class="navbar navbar-expand-lg navbar-light">
-                <a class="navbar-brand" href="#"><img src="./images/website_icon.png" alt="logo"></a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <div class="mr-auto"></div>
-                    <ul class="navbar-nav">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">about</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">services</a>
-                        </li>
-                        
-                        <li class="nav-item">
-                            <div class="dropdown">
-                                <button class="btn  dropdown-toggle nav-link" type="button" data-toggle="dropdown">Modulles
-                                    <span class="caret"></span></button>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">Entertainments</a></li>
-                                    <li><a href="#">Blogs</a></li>
-                                    <li><a href="#">Programming Languages</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">blog</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">contact</a>
-                        </li>
-                       
-                        <li class="nav-item ml-5">
-                            <a class="nav-link log-in" href="log_in.php" >Log in</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"><span><i class="fa-solid fa-right-to-bracket"></i></span></a>
-                        </li>
+      <a href="#" class="logo">
+        <img src="images/logo_name.png" width="119" height="40" alt="Nexus Hub">
+      </a>
 
-                    </ul>
-                </div>
+      <nav class="navbar" data-navbar>
 
+        <div class="navbar-top">
+          <a href="#" class="logo">
+            <img src="images/logo.png" width="119" height="40" alt="Nexus hub ">
+          </a>
 
-
-
-                </ul>
+          <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+            <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+          </button>
         </div>
-        </nav>
+
+        <ul class="navbar-list">
+
+          <li>
+            <a href="#home" class="navbar-link hover-1" data-nav-toggler>Home</a>
+          </li>
+
+          <li>
+            <a href="#topics" class="navbar-link hover-1" data-nav-toggler>Entrtainments</a>
+          </li>
+
+          <li>
+            <a href="#featured" class="navbar-link hover-1" data-nav-toggler>Blogs</a>
+          </li>
+
+          <li>
+            <a href="#recent" class="navbar-link hover-1" data-nav-toggler>News</a>
+          </li>
+
+          <li>
+            <a href="#" class="navbar-link hover-1" data-nav-toggler>Programming Laguages</a>
+          </li>
+
+        </ul>
+
+        <div class="navbar-bottom">
+
+          <div class="profile-card">
+            <img src="images/author-1.png" width="48" height="48" alt="Steven" class="profile-banner">
+
+            <div>
+              <p class="card-title">Hello Steven !</p>
+
+              <p class="card-subtitle">
+                You have 3 new messages
+              </p>
+            </div>
+          </div>
+
+          <ul class="link-list">
+
+            <li>
+              <a href="#" class="navbar-bottom-link hover-1">Profile</a>
+            </li>
+
+            <li>
+              <a href="#" class="navbar-bottom-link hover-1">Articles Saved</a>
+            </li>
+
+            <li>
+              <a href="#" class="navbar-bottom-link hover-1">Add New Post</a>
+            </li>
+
+            <li>
+              <a href="#" class="navbar-bottom-link hover-1">My Likes</a>
+            </li>
+
+            <li>
+              <a href="#" class="navbar-bottom-link hover-1">Account Setting</a>
+            </li>
+
+            <li>
+              <a href="#" class="navbar-bottom-link hover-1">Sign Out</a>
+            </li>
+
+          </ul>
+
         </div>
-    </header>
 
-    <!--  ======================= End Header Area ============================== -->
+        <p class="copyright-text">
+          Copyright 2023 © Nexus hub website.
+          Developed by SPJdevlopers
+        </p>
 
-    <!--  ======================= Start Main Area ================================ -->
-    <main class="site-main">
+      </nav>
 
+      <a href="login_regs.php" class="btn btn-primary">Join Me !</a>
 
-        <!--  ======================= Start Banner Area =======================  -->
-        <section class="site-banner">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6 col-md-12 site-title">
-                        <h3 class="title-text">Hey are you want to use your Free time ?</h3>
-                        <!-- <h4 class="title-text text-uppercase">Senior Wordpress Developer</h4> -->
-                        <div class="site-buttons">
-                            <div class="d-flex flex-row flex-wrap mt-4">
-                                <a href="registration.php" class="btn button primary-button mr-4 text-uppercase ">
-                                    Sign up</a>
-                                <a href="log_in.php" type="button" class="btn button secondary-button text-uppercase">Log in</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-12 banner-image">
-                    <img src="./images/about-us.png" alt="About us" class="img-fluid">
-                        <!-- <img src="./images/banner/banner-image.png" alt="banner-img" class="img-fluid"> -->
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--  ======================= End Banner Area =======================  -->
+      <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+        <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+      </button>
 
-        <!--  ========================= About Area ==========================  -->
-
-        <!-- <section class="about-area">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-6 col-md-12">
-                        <div class="about-image">
-                            <img src="./images/about-us.png" alt="About us" class="img-fluid">
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-12 about-title">
-                        <h2 class="text-uppercase pt-5">
-                            <span>Let me</span>
-                            <span>introduce</span>
-                            <span>myself</span>
-                        </h2>
-                        <div class="paragraph py-4 w-75">
-                            <p class="para">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Error rerum iure obcaecati vel
-                                possimus officia maiores perferendis ut! Quos, perspiciatis.
-                            </p>
-                            <p class="para">
-                                It is a long established fact that a reader will be distracted by the readable content
-                                of a page when looking at its layout. The point of using Lorem Ipsum is that it has a
-                                more-or-less normal distribution of letters, as opposed to using 'Content here, content
-                                here
-                            </p>
-                        </div>
-                        <button type="button" class="btn button primary-button text-uppercase">Download cv</button>
-                    </div>
-                </div>
-            </div>
-        </section> -->
-
-        <!--  ========================= End About Area ==========================  -->
-
-        <!--  ======================== Brand Area ==============================  -->
-
-        <section class="brand-area">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-xl-6 col-lg-12 col-md-12">
-                        <div class="first-row row">
-                            <div class="col-lg-4 col-md-6 col-sm-6">
-                                <div class="single-brand">
-                                    <h3>java</h3>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm-6">
-                                <div class="single-brand">
-                                    <!-- <img src="./images/brands/logo2.png" alt="Brand-2 "> -->
-                                    <h3>PHP</h3>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm-6">
-                                <div class="single-brand">
-                                    <!-- <img src="./images/brands/logo3.png" alt="Brand-3 "> -->
-                                    <h3>Android</h3>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm-6">
-                                <div class="single-brand">
-                                    <!-- <img src="./images/brands/logo4.png" alt="Brand-4"> -->
-                                    <h3>Python</h3>
-                                </div>
-                            </div>
-                            <!-- <div class="col-lg-4 col-md-6 col-sm-6">
-                                <div class="single-brand">
-                                    <img src="./images/brands/logo5.png" alt="Brand-5 ">
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm-6">
-                                <div class="single-brand">
-                                    <img src="./images/brands/logo6.png" alt="Brand-6">
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm-6">
-                                <div class="single-brand">
-                                    <img src="./images/brands/logo7.png" alt="Brand-7 ">
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm-6">
-                                <div class="single-brand">
-                                    <img src="./images/brands/logo8.png" alt="Brand-8 ">
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm-6">
-                                <div class="single-brand">
-                                    <img src="./images/brands/logo9.png" alt="Brand-9">
-                                </div>
-                            </div> -->
-                        </div>
-                    </div>
-                    <div class="col-xl-6 col-lg-12 col-md-12">
-                        <div class="experience-area">
-                            <div class="d-flex flex-row years-area">
-                                <h2 class="p-1 years">Easy </h2>
-                                <h2>
-                                <span>ways to learn</span>
-                                    <span>Programming</span>
-                                    <span>Languages</span>
-                                    
-                                </h2>
-                            </div>
-                            <!-- <div class="d-flex flex-row flex-wrap call-area">
-                                <span><i class="fas fa-phone-alt fa-3x px-3"></i></span>
-                                <div class="call-now">
-                                    <a href="#" class="text-uppercase h4 font-roboto">Call Now</a>
-                                    <span class="font-roboto py-2">(+91)-800-555-4986</span>
-                                </div>
-                            </div> -->
-                            <div class="bg-panel"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!--  ======================== End Brand Area ==============================  -->
-
-        <!--  ====================== Start Services Area =============================  -->
-
-        <section class="services-area">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12 text-center services-title">
-                        <h1 class="text-uppercase title-text">Services Offers</h1>
-                        <p class="para">
-                            There are many variations of passages of Lorem Ipsum available, but the majority have
-                            suffered alteration in some form, by injected humour
-                        </p>
-                    </div>
-                </div>
-                <div class="container services-list">
-                    <div class="row">
-                        <div class="col-lg-3 col-md-6 col-sm-12">
-                            <div class="services">
-                                <div class="sevices-img text-center py-4">
-                                    <img src="./images/services/news.png" alt="news-box">
-                                </div>
-                                <div class="card-body text-center">
-                                    <h5 class="card-title text-uppercase font-roboto">News </h5>
-                                    <p class="card-text text-secondary">
-                                        Some quick example text to build on the card
-                                        title and make up
-                                        the bulk of the card's content.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-sm-12">
-                            <div class="services">
-                                <div class="sevices-img text-center py-4">
-                                    <img src="./images/services/prog-lang.png" alt="Services-2">
-                                </div>
-                                <div class="card-body text-center">
-                                    <h5 class="card-title text-uppercase font-roboto">programming Languages</h5>
-                                    <p class="card-text text-secondary">
-                                        Some quick example text to build on the card
-                                        title and make up
-                                        the bulk of the card's content.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-sm-12">
-                            <div class="services">
-                                <div class="sevices-img text-center py-4">
-                                    <img src="./images/services/fun-fact.png" alt="Services-3">
-                                </div>
-                                <div class="card-body text-center">
-                                    <h5 class="card-title text-uppercase font-roboto">Fact finding</h5>
-                                    <p class="card-text text-secondary">
-                                        Some quick example text to build on the card
-                                        title and make up
-                                        the bulk of the card's content.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-sm-12">
-                            <div class="services">
-                                <div class="sevices-img text-center py-4">
-                                    <img src="./images/services/entertainments.png" alt="Movies-shows">
-                                </div>
-                                <div class="card-body text-center">
-                                    <h5 class="card-title text-uppercase font-roboto">Entertainments</h5>
-                                    <p class="card-text text-secondary">
-                                        Some quick example text to build on the card
-                                        title and make up
-                                        the bulk of the card's content.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!--  ====================== End Services Area =============================  -->
-
-        <!--  ======================= Project Area =============================  -->
-
-        <section class="project-area">
-            <div class="container">
-                <div class="project-title pb-5">
-                    <h1 class="text-uppercase title-h1">Recently Done crafts</h1>
-                    <h1 class="text-uppercase title-h1">Photosk</h1>
-                </div>
-
-                <div class="button-group">
-                    <button type="button" class="active" id="btn1" data-filter="*">All</button>
-                    <button type="button" data-filter=".popular">Popular</button>
-                    <button type="button" data-filter=".latest">Latest</button>
-                    <button type="button" data-filter=".following">Following</button>
-                    <button type="button" data-filter=".upcoming">Upcoming</button>
-                </div>
-
-                <div class="row grid">
-                    <div class="col-lg-4 col-md-6 col-sm-12 element-item latest">
-                        <div class="our-project">
-                            <div class="img">
-                                <a class="test-popup-link" href="./images/portfolio/p1.jpg">
-                                    <img src="./images/portfolio/p1.jpg" alt="portfolio-1" class="img-fluid">
-                                </a>
-                            </div>
-                            <div class="title py-4">
-                                <h4 class="text-uppercase">Minimul Desing</h4>
-                                <span class="text-secondary">Latest, Portfolio</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 element-item popular">
-                        <div class="our-project">
-                            <div class="img">
-                                <a class="test-popup-link" href="./images/portfolio/p2.jpg">
-                                    <img src="./images/portfolio/p2.jpg" alt="portfolio-2" class="img-fluid">
-                                </a>
-                            </div>
-                            <div class="title py-4">
-                                <h4 class="text-uppercase">Paint Wall</h4>
-                                <span class="text-secondary">Popular, Portfolio</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 element-item popular">
-                        <div class="our-project">
-                            <div class="img">
-                                <a class="test-popup-link" href="./images/portfolio/p3.jpg">
-                                    <img src="./images/portfolio/p3.jpg" alt="portfolio-3" class="img-fluid">
-                                </a>
-                            </div>
-                            <div class="title py-4">
-                                <h4 class="text-uppercase">Female light</h4>
-                                <span class="text-secondary">Popular, Portfolio</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 element-item upcoming">
-                        <div class="our-project">
-                            <div class="img">
-                                <a class="test-popup-link" href="./images/portfolio/p4.jpg">
-                                    <img src="./images/portfolio/p4.jpg" alt="portfolio-4" class="img-fluid">
-                                </a>
-                            </div>
-                            <div class="title py-4">
-                                <h4 class="text-uppercase">Fourth Air</h4>
-                                <span class="text-secondary">Upcoming, Portfolio</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 element-item upcoming">
-                        <div class="our-project">
-                            <div class="img">
-                                <a class="test-popup-link" href="./images/portfolio/p5.jpg">
-                                    <img src="./images/portfolio/p5.jpg" alt="portfolio-5" class="img-fluid">
-                                </a>
-                            </div>
-                            <div class="title py-4">
-                                <h4 class="text-uppercase">Muliple fown</h4>
-                                <span class="text-secondary">Upcoming, Portfolio</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 element-item following">
-                        <div class="our-project">
-                            <div class="img">
-                                <a class="test-popup-link" href="./images/portfolio/p6.jpg">
-                                    <img src="./images/portfolio/p6.jpg" alt="portfolio-6" class="img-fluid">
-                                </a>
-                            </div>
-                            <div class="title py-4">
-                                <h4 class="text-uppercase">Together sign</h4>
-                                <span class="text-secondary">Following, Portfolio</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 element-item following">
-                        <div class="our-project">
-                            <div class="img">
-                                <a class="test-popup-link" href="./images/portfolio/p7.jpg">
-                                    <img src="./images/portfolio/p7.jpg" alt="portfolio-7" class="img-fluid">
-                                </a>
-                            </div>
-                            <div class="title py-4">
-                                <h4 class="text-uppercase">Green Heaven</h4>
-                                <span class="text-secondary">Following, Portfolio</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 element-item following">
-                        <div class="our-project">
-                            <div class="img">
-                                <a class="test-popup-link" href="./images/portfolio/p8.jpg">
-                                    <img src="./images/portfolio/p8.jpg" alt="portfolio-8" class="img-fluid">
-                                </a>
-                            </div>
-                            <div class="title py-4">
-                                <h4 class="text-uppercase">Fly Male</h4>
-                                <span class="text-secondary">Following, Portfolio</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 element-item upcoming">
-                        <div class="our-project">
-                            <div class="img">
-                                <a class="test-popup-link" href="./images/portfolio/p9.jpg">
-                                    <img src="./images/portfolio/p9.jpg" alt="portfolio-9" class="img-fluid">
-                                </a>
-                            </div>
-                            <div class="title py-4">
-                                <h4 class="text-uppercase">Camera Lens</h4>
-                                <span class="text-secondary">Upcoming, Portfolio</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!--  ======================= End Project Area =============================  -->
-
-        <!--  ======================== About Me Area ==============================  -->
-
-        <section class="about-area">
-            <div class="container">
-                <div class="row text-center">
-                    <div class="col-12">
-                        <div class="about-title">
-                            <h1 class="text-uppercase title-h1">Client Say about me</h1>
-                            <p class="para">
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus, deleniti
-                                recusandae. Esse incidunt rem repellendus ab voluptates maxime? Nemo, numquam!
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="container carousel py-lg-5">
-                <div class="owl-carousel owl-theme">
-                    <div class="client row">
-                        <div class="col-lg-4 col-md-12 client-img">
-                            <img src="./images/testimonials/t1.jpg" alt="img1" class="img-fluid">
-                        </div>
-                        <div class="col-lg-8 col-md-12 about-client">
-                            <h4 class="text-uppercase">John Martin</h4>
-                            <p class="para">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem architecto
-                                consequuntur ratione, obcaecati corrupti deserunt.</p>
-                        </div>
-                    </div>
-                    <div class="client row">
-                        <div class="col-lg-4 col-md-12 client-img">
-                            <img src="./images/testimonials/t2.jpg" alt="img2" class="img-fluid">
-                        </div>
-                        <div class="col-lg-8 col-md-12 about-client">
-                            <h4 class="text-uppercase">Mac Hill</h4>
-                            <p class="para">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem architecto
-                                consequuntur ratione, obcaecati corrupti deserunt.</p>
-                        </div>
-                    </div>
-                    <div class="client row">
-                        <div class="col-lg-4 col-md-12 client-img">
-                            <img src="./images/testimonials/t1.jpg" alt="img1" class="img-fluid">
-                        </div>
-                        <div class="col-lg-8 col-md-12 about-client">
-                            <h4 class="text-uppercase">John Martin</h4>
-                            <p class="para">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem architecto
-                                consequuntur ratione, obcaecati corrupti deserunt.</p>
-                        </div>
-                    </div>
-                    <div class="client row">
-                        <div class="col-lg-4 col-md-12 client-img">
-                            <img src="./images/testimonials/t2.jpg" alt="img2" class="img-fluid">
-                        </div>
-                        <div class="col-lg-8 col-md-12 about-client">
-                            <h4 class="text-uppercase">Mac Hill</h4>
-                            <p class="para">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem architecto
-                                consequuntur ratione, obcaecati corrupti deserunt.</p>
-                        </div>
-                    </div>
-                    <div class="client row">
-                        <div class="col-lg-4 col-md-12 client-img">
-                            <img src="./images/testimonials/t1.jpg" alt="img1" class="img-fluid">
-                        </div>
-                        <div class="col-lg-8 col-md-12 about-client">
-                            <h4 class="text-uppercase">John Martin</h4>
-                            <p class="para">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem architecto
-                                consequuntur ratione, obcaecati corrupti deserunt.</p>
-                        </div>
-                    </div>
-                    <div class="client row">
-                        <div class="col-lg-4 col-md-12 client-img">
-                            <img src="./images/testimonials/t2.jpg" alt="img2" class="img-fluid">
-                        </div>
-                        <div class="col-lg-8 col-md-12 about-client">
-                            <h4 class="text-uppercase">Mac Hill</h4>
-                            <p class="para">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem architecto
-                                consequuntur ratione, obcaecati corrupti deserunt.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </section>
-
-        <!--  ======================== End About Me Area ==============================  -->
-
-        <!--  ========================== Subscribe me Area ============================  -->
-        <section class="subscribe-us-area">
-            <div class="container subscribe">
-                <div class="row">
-                    <div class="col-lg-12 text-center subscribe-title">
-                        <h4 class="text-uppercase">Get Update From anywhere</h4>
-                        <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam,
-                            consequuntur.</p>
-                    </div>
-                </div>
-                <div class="d-sm-flex justify-content-center">
-                    <form class="w-50">
-                        <div class="row d-flex flex-row flex-wrap">
-                            <div class="col input-textbox">
-                                <input type="text" id="txtemail" class="form-control" placeholder="Email">
-                            </div>
-                            <div class="col">
-                                <div class="btn-submit">
-                                    <button type="submit" class="btn btn-success float-right">Subscribe</button>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </section>
-        <!--  ========================== End Subscribe me Area ============================  -->
+    </div>
+  </header>
 
 
-    </main>
-    <!--  ======================= End Main Area ================================ -->
 
-    <footer class="footer-area">
+
+
+  <main>
+    <article>
+
+      <!-- 
+        - #HERO
+      -->
+
+      <section class="hero" id="home" aria-label="home">
         <div class="container">
-            <div class="">
-                <div class="site-logo text-center py-4">
-                    <a href="#"><img src="./images/website_icon.png" width="100px" height="100px" alt="logo"></a>
-                </div>
-                <div class="social text-center">
-                    <h5 class="text-uppercase">Follow me</h5>
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-youtube"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                </div>
-                <div class="copyrights text-center">
-                    <p class="para">
-                        Copyright ©2023 All rights reserved | This website is made with by
-                        <a href="#"><span style="color: var(--primary-color);">xt9developers</span></a>
-                    </p>
-                </div>
+
+          <div class="hero-content">
+
+            <p class="hero-subtitle">Hello Everyone!</p>
+
+            <h1 class="headline headline-1 section-title">
+              Welcome to <span class="span">Nexus Hub</span>
+            </h1>
+
+            <p class="hero-text">
+              I use animation as a third dimension by which to simplify experiences and kuiding thro each and every
+              interaction. I’m not adding motion just to spruce things up, but doing it in ways that.
+            </p>
+
+            <div class="input-wrapper">
+
+              <input type="email" name="email_address" placeholder="Type your free Time " required class="input-field"
+                autocomplete="off">
+
+              <button class="btn btn-primary">
+                <span class="span">Go </span>
+
+                <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+              </button>
+
             </div>
+
+          </div>
+
+          <div class="hero-banner">
+
+            <img src="images/web-pre.png" width="327" height="490" alt="Wren Clark" class="w-100">
+
+            <img src="images/pattern-2.svg" width="27" height="26" alt="shape" class="shape shape-1">
+
+            <img src="images/pattern-3.svg" width="27" height="26" alt="shape" class="shape shape-2">
+
+          </div>
+
+          <img src="images/shadow-1.svg" width="500" height="800" alt="" class="hero-bg hero-bg-1">
+
+          <img src="images/shadow-2.svg" width="500" height="500" alt="" class="hero-bg hero-bg-2">
+
         </div>
-    </footer>
+      </section>
 
 
-    <!--  Jquery js file  -->
-    <script src="./js/jquery.3.4.1.js"></script>
 
-    <!--  Bootstrap js file  -->
-    <script src="./js/bootstrap.min.js"></script>
 
-    <!--  isotope js library  -->
-    <script src="./vendor/isotope/isotope.min.js"></script>
 
-    <!--  Magnific popup script file  -->
-    <script src="./vendor/Magnific-Popup/dist/jquery.magnific-popup.min.js"></script>
+      <!-- 
+        - #TOPICS
+      -->
 
-    <!--  Owl-carousel js file  -->
-    <script src="./vendor/owl-carousel/js/owl.carousel.min.js"></script>
+      <section class="topics" id="topics" aria-labelledby="topic-label">
+        <div class="container">
 
-    <!--  custom js file  -->
-    <script src="./js/main.js"></script>
+          <div class="card topic-card">
 
+            <div class="card-content">
+
+              <h2 class="headline headline-2 section-title card-title" id="topic-label">
+                Interseting Pats
+              </h2>
+
+              <p class="card-text">
+                Don't miss out on the latest news about Travel tips, Hotels review, Food guide...
+              </p>
+
+              <div class="btn-group">
+                <button class="btn-icon" aria-label="previous" data-slider-prev>
+                  <ion-icon name="arrow-back" aria-hidden="true"></ion-icon>
+                </button>
+
+                <button class="btn-icon" aria-label="next" data-slider-next>
+                  <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+                </button>
+              </div>
+
+            </div>
+
+            <div class="slider" data-slider>
+              <ul class="slider-list" data-slider-container>
+
+                <li class="slider-item">
+                  <a href="#" class="slider-card">
+
+                    <figure class="slider-banner img-holder" style="--width: 507; --height: 618;">
+                      <img src="images/topic-1.png" width="507" height="618" loading="lazy" alt="Sport"
+                        class="img-cover">
+                    </figure>
+
+                    <div class="slider-content">
+                      <span class="slider-title">Entrtainments</span>
+
+                      <p class="slider-subtitle">38 Articles</p>
+                    </div>
+
+                  </a>
+                </li>
+
+                <li class="slider-item">
+                  <a href="#" class="slider-card">
+
+                    <figure class="slider-banner img-holder" style="--width: 507; --height: 618;">
+                      <img src="images/topic-2.png" width="507" height="618" loading="lazy" alt="Travel"
+                        class="img-cover">
+                    </figure>
+
+                    <div class="slider-content">
+                      <span class="slider-title">News</span>
+
+                      <p class="slider-subtitle">63 Articles</p>
+                    </div>
+
+                  </a>
+                </li>
+
+                <li class="slider-item">
+                  <a href="#" class="slider-card">
+
+                    <figure class="slider-banner img-holder" style="--width: 507; --height: 618;">
+                      <img src="images/topic-3.png" width="507" height="618" loading="lazy" alt="Design"
+                        class="img-cover">
+                    </figure>
+
+                    <div class="slider-content">
+                      <span class="slider-title">Programming Languages</span>
+
+                      <p class="slider-subtitle">78 Articles</p>
+                    </div>
+
+                  </a>
+                </li>
+
+                <li class="slider-item">
+                  <a href="#" class="slider-card">
+
+                    <figure class="slider-banner img-holder" style="--width: 507; --height: 618;">
+                      <img src="images/topic-4.png" width="507" height="618" loading="lazy" alt="Movie"
+                        class="img-cover">
+                    </figure>
+
+                    <div class="slider-content">
+                      <span class="slider-title">Movie</span>
+
+                      <p class="slider-subtitle">125 Articles</p>
+                    </div>
+
+                  </a>
+                </li>
+
+                <li class="slider-item">
+                  <a href="#" class="slider-card">
+
+                    <figure class="slider-banner img-holder" style="--width: 507; --height: 618;">
+                      <img src="images/topic-5.png" width="507" height="618" loading="lazy" alt="Lifestyle"
+                        class="img-cover">
+                    </figure>
+
+                    <div class="slider-content">
+                      <span class="slider-title">Facts</span>
+
+                      <p class="slider-subtitle">78 Articles</p>
+                    </div>
+
+                  </a>
+                </li>
+
+              </ul>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #FEATURED POST
+      -->
+
+      <section class="section feature" aria-label="feature" id="featured">
+        <div class="container">
+
+          <h2 class="headline headline-2 section-title">
+            <span class="span">Editor's picked</span>
+          </h2>
+
+          <p class="section-text">
+            Featured and highly rated articles
+          </p>
+
+          <ul class="feature-list">
+
+            <li>
+              <div class="card feature-card">
+
+                <figure class="card-banner img-holder" style="--width: 1602; --height: 903;">
+                  <img src="images/featured-1.png" width="1602" height="903" loading="lazy"
+                    alt="Self-observation is the first step of inner unfolding" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <div class="card-wrapper">
+                    <div class="card-tag">
+                      <a href="#" class="span hover-2">#Travel</a>
+
+                      <a href="#" class="span hover-2">#Lifestyle</a>
+                    </div>
+
+                    <div class="wrapper">
+                      <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+
+                      <span class="span">3 mins read</span>
+                    </div>
+                  </div>
+
+                  <h3 class="headline headline-3">
+                    <a href="#" class="card-title hover-2">
+                      Self-observation is the first step of inner unfolding
+                    </a>
+                  </h3>
+
+                  <div class="card-wrapper">
+
+                    <div class="profile-card">
+                      <img src="images/author-1.png" width="48" height="48" loading="lazy" alt="Joseph"
+                        class="profile-banner">
+
+                      <div>
+                        <p class="card-title">Joseph</p>
+
+                        <p class="card-subtitle">25 Nov 2022</p>
+                      </div>
+                    </div>
+
+                    <a href="#" class="card-btn">Read more</a>
+
+                  </div>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="card feature-card">
+
+                <figure class="card-banner img-holder" style="--width: 1602; --height: 903;">
+                  <img src="images/featured-2.png" width="1602" height="903" loading="lazy"
+                    alt="Self-observation is the first step of inner unfolding" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <div class="card-wrapper">
+                    <div class="card-tag">
+                      <a href="#" class="span hover-2">#Design</a>
+
+                      <a href="#" class="span hover-2">#Movie</a>
+                    </div>
+
+                    <div class="wrapper">
+                      <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+
+                      <span class="span">6 mins read</span>
+                    </div>
+                  </div>
+
+                  <h3 class="headline headline-3">
+                    <a href="#" class="card-title hover-2">
+                      Self-observation is the first step of inner unfolding
+                    </a>
+                  </h3>
+
+                  <div class="card-wrapper">
+
+                    <div class="profile-card">
+                      <img src="images/author-1.png" width="48" height="48" loading="lazy" alt="Joseph"
+                        class="profile-banner">
+
+                      <div>
+                        <p class="card-title">Joseph</p>
+
+                        <p class="card-subtitle">25 Nov 2022</p>
+                      </div>
+                    </div>
+
+                    <a href="#" class="card-btn">Read more</a>
+
+                  </div>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="card feature-card">
+
+                <figure class="card-banner img-holder" style="--width: 1602; --height: 903;">
+                  <img src="images/featured-3.png" width="1602" height="903" loading="lazy"
+                    alt="Self-observation is the first step of inner unfolding" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <div class="card-wrapper">
+                    <div class="card-tag">
+                      <a href="#" class="span hover-2">#Design</a>
+
+                      <a href="#" class="span hover-2">#Movie</a>
+                    </div>
+
+                    <div class="wrapper">
+                      <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+
+                      <span class="span">6 mins read</span>
+                    </div>
+                  </div>
+
+                  <h3 class="headline headline-3">
+                    <a href="#" class="card-title hover-2">
+                      Self-observation is the first step of inner unfolding
+                    </a>
+                  </h3>
+
+                  <div class="card-wrapper">
+
+                    <div class="profile-card">
+                      <img src="images/author-1.png" width="48" height="48" loading="lazy" alt="Joseph"
+                        class="profile-banner">
+
+                      <div>
+                        <p class="card-title">Joseph</p>
+
+                        <p class="card-subtitle">25 Nov 2022</p>
+                      </div>
+                    </div>
+
+                    <a href="#" class="card-btn">Read more</a>
+
+                  </div>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="card feature-card">
+
+                <figure class="card-banner img-holder" style="--width: 1602; --height: 903;">
+                  <img src="images/featured-4.png" width="1602" height="903" loading="lazy"
+                    alt="Self-observation is the first step of inner unfolding" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <div class="card-wrapper">
+                    <div class="card-tag">
+                      <a href="#" class="span hover-2">#Design</a>
+
+                      <a href="#" class="span hover-2">#Movie</a>
+                    </div>
+
+                    <div class="wrapper">
+                      <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+
+                      <span class="span">6 mins read</span>
+                    </div>
+                  </div>
+
+                  <h3 class="headline headline-3">
+                    <a href="#" class="card-title hover-2">
+                      Self-observation is the first step of inner unfolding
+                    </a>
+                  </h3>
+
+                  <div class="card-wrapper">
+
+                    <div class="profile-card">
+                      <img src="images/author-1.png" width="48" height="48" loading="lazy" alt="Joseph"
+                        class="profile-banner">
+
+                      <div>
+                        <p class="card-title">Joseph</p>
+
+                        <p class="card-subtitle">25 Nov 2022</p>
+                      </div>
+                    </div>
+
+                    <a href="#" class="card-btn">Read more</a>
+
+                  </div>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="card feature-card">
+
+                <figure class="card-banner img-holder" style="--width: 1602; --height: 903;">
+                  <img src="images/featured-5.png" width="1602" height="903" loading="lazy"
+                    alt="Self-observation is the first step of inner unfolding" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <div class="card-wrapper">
+                    <div class="card-tag">
+                      <a href="#" class="span hover-2">#Design</a>
+
+                      <a href="#" class="span hover-2">#Movie</a>
+                    </div>
+
+                    <div class="wrapper">
+                      <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+
+                      <span class="span">6 mins read</span>
+                    </div>
+                  </div>
+
+                  <h3 class="headline headline-3">
+                    <a href="#" class="card-title hover-2">
+                      Self-observation is the first step of inner unfolding
+                    </a>
+                  </h3>
+
+                  <div class="card-wrapper">
+
+                    <div class="profile-card">
+                      <img src="images/author-1.png" width="48" height="48" loading="lazy" alt="Joseph"
+                        class="profile-banner">
+
+                      <div>
+                        <p class="card-title">Joseph</p>
+
+                        <p class="card-subtitle">25 Nov 2022</p>
+                      </div>
+                    </div>
+
+                    <a href="#" class="card-btn">Read more</a>
+
+                  </div>
+
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+          <a href="#" class="btn btn-secondary">
+            <span class="span">Show More Posts</span>
+
+            <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+          </a>
+
+        </div>
+
+        <img src="images/shadow-3.svg" width="500" height="1500" loading="lazy" alt="" class="feature-bg">
+
+      </section>
+
+
+
+
+
+      <!-- 
+        - #POPULAR TAGS
+      -->
+
+      <section class="tags" aria-labelledby="tag-label">
+        <div class="container">
+
+          <h2 class="headline headline-2 section-title" id="tag-label">
+            <span class="span">Popular Languages</span>
+          </h2>
+
+          <p class="section-text">
+            Programming Languages & Native Languages
+          </p>
+
+          <ul class="grid-list ">
+
+            <li>
+              <button class="card tag-btn">
+                <img src="images/tag1.png" width="32" height="32" loading="lazy" alt="Travel">
+
+                <p class="btn-text">Java</p>
+              </button>
+            </li>
+
+            <li>
+              <button class="card tag-btn">
+                <img src="images/tag2.png" width="32" height="32" loading="lazy" alt="Culture">
+
+                <p class="btn-text">Python</p>
+              </button>
+            </li>
+
+            <li>
+              <button class="card tag-btn">
+                <img src="images/tag3.png" width="32" height="32" loading="lazy" alt="Lifestyle">
+
+                <p class="btn-text">PHP</p>
+              </button>
+            </li>
+
+            <li>
+              <button class="card tag-btn">
+                <img src="images/tag4.png" width="32" height="32" loading="lazy" alt="Fashion">
+
+                <p class="btn-text">Java-Script</p>
+              </button>
+            </li>
+
+            <li>
+              <button class="card tag-btn">
+                <img src="images/tag5.png" width="32" height="32" loading="lazy" alt="Food">
+
+                <p class="btn-text">Korean</p>
+              </button>
+            </li>
+
+            <li>
+              <button class="card tag-btn">
+                <img src="images/tag6.png" width="32" height="32" loading="lazy" alt="Space">
+
+                <p class="btn-text">English</p>
+              </button>
+            </li>
+
+            <li>
+              <button class="card tag-btn">
+                <img src="images/tag7.png" width="32" height="32" loading="lazy" alt="Animal">
+
+                <p class="btn-text">Germany</p>
+              </button>
+            </li>
+
+            <!-- <li>
+              <button class="card tag-btn">
+                <img src="images/tag8.png" width="32" height="32" loading="lazy" alt="Minimal">
+
+                <p class="btn-text">Minimal</p>
+              </button>
+            </li>
+
+            <li>
+              <button class="card tag-btn">
+                <img src="images/tag9.png" width="32" height="32" loading="lazy" alt="Interior">
+
+                <p class="btn-text">Interior</p>
+              </button>
+            </li>
+
+            <li>
+              <button class="card tag-btn">
+                <img src="images/tag10.png" width="32" height="32" loading="lazy" alt="Plant">
+
+                <p class="btn-text">Plant</p>
+              </button>
+            </li>
+
+            <li>
+              <button class="card tag-btn">
+                <img src="images/tag11.png" width="32" height="32" loading="lazy" alt="Nature">
+
+                <p class="btn-text">Nature</p>
+              </button>
+            </li>
+
+            <li>
+              <button class="card tag-btn">
+                <img src="images/tag12.png" width="32" height="32" loading="lazy" alt="Business">
+
+                <p class="btn-text">Business</p>
+              </button>
+            </li> -->
+
+          </ul>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #RECENT POST
+      -->
+
+      <section class="section recent-post" id="recent" aria-labelledby="recent-label">
+        <div class="container">
+
+          <div class="post-main">
+
+            <h2 class="headline headline-2 section-title">
+              <span class="span">Recent posts</span>
+            </h2>
+
+            <p class="section-text">
+              Don't miss the latest trends
+            </p>
+
+            <ul class="grid-list">
+
+              <li>
+                <div class="recent-post-card">
+
+                  <figure class="card-banner img-holder" style="--width: 271; --height: 258;">
+                    <img src="images/recent-post-1.jpg" width="271" height="258" loading="lazy"
+                      alt="Helpful Tips for Working from Home as a Freelancer" class="img-cover">
+                  </figure>
+
+                  <div class="card-content">
+
+                    <a href="#" class="card-badge">Working Tips</a>
+
+                    <h3 class="headline headline-3 card-title">
+                      <a href="#" class="link hover-2">Helpful Tips for Working from Home as a Freelancer</a>
+                    </h3>
+
+                    <p class="card-text">
+                      Gosh jaguar ostrich quail one excited dear hello and bound and the and bland moral misheard
+                      roadrunner flapped lynx far that and jeepers giggled far and far
+                    </p>
+
+                    <div class="card-wrapper">
+                      <div class="card-tag">
+                        <a href="#" class="span hover-2"># Travel</a>
+
+                        <a href="#" class="span hover-2"># Lifestyle</a>
+                      </div>
+
+                      <div class="wrapper">
+                        <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+
+                        <span class="span">3 mins read</span>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+              </li>
+
+              <li>
+                <div class="recent-post-card">
+
+                  <figure class="card-banner img-holder" style="--width: 271; --height: 258;">
+                    <img src="images/recent-post-2.jpg" width="271" height="258" loading="lazy"
+                      alt="Helpful Tips for Working from Home as a Freelancer" class="img-cover">
+                  </figure>
+
+                  <div class="card-content">
+
+                    <a href="#" class="card-badge">Working Tips</a>
+
+                    <h3 class="headline headline-3 card-title">
+                      <a href="#" class="link hover-2">Helpful Tips for Working from Home as a Freelancer</a>
+                    </h3>
+
+                    <p class="card-text">
+                      Gosh jaguar ostrich quail one excited dear hello and bound and the and bland moral misheard
+                      roadrunner flapped lynx far that and jeepers giggled far and far
+                    </p>
+
+                    <div class="card-wrapper">
+                      <div class="card-tag">
+                        <a href="#" class="span hover-2"># Travel</a>
+
+                        <a href="#" class="span hover-2"># Lifestyle</a>
+                      </div>
+
+                      <div class="wrapper">
+                        <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+
+                        <span class="span">3 mins read</span>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+              </li>
+
+              <li>
+                <div class="recent-post-card">
+
+                  <figure class="card-banner img-holder" style="--width: 271; --height: 258;">
+                    <img src="images/recent-post-3.jpg" width="271" height="258" loading="lazy"
+                      alt="Helpful Tips for Working from Home as a Freelancer" class="img-cover">
+                  </figure>
+
+                  <div class="card-content">
+
+                    <a href="#" class="card-badge">Working Tips</a>
+
+                    <h3 class="headline headline-3 card-title">
+                      <a href="#" class="link hover-2">Helpful Tips for Working from Home as a Freelancer</a>
+                    </h3>
+
+                    <p class="card-text">
+                      Gosh jaguar ostrich quail one excited dear hello and bound and the and bland moral misheard
+                      roadrunner flapped lynx far that and jeepers giggled far and far
+                    </p>
+
+                    <div class="card-wrapper">
+                      <div class="card-tag">
+                        <a href="#" class="span hover-2"># Travel</a>
+
+                        <a href="#" class="span hover-2"># Lifestyle</a>
+                      </div>
+
+                      <div class="wrapper">
+                        <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+
+                        <span class="span">3 mins read</span>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+              </li>
+
+              <li>
+                <div class="recent-post-card">
+
+                  <figure class="card-banner img-holder" style="--width: 271; --height: 258;">
+                    <img src="images/recent-post-4.jpg" width="271" height="258" loading="lazy"
+                      alt="Helpful Tips for Working from Home as a Freelancer" class="img-cover">
+                  </figure>
+
+                  <div class="card-content">
+
+                    <a href="#" class="card-badge">Working Tips</a>
+
+                    <h3 class="headline headline-3 card-title">
+                      <a href="#" class="link hover-2">Helpful Tips for Working from Home as a Freelancer</a>
+                    </h3>
+
+                    <p class="card-text">
+                      Gosh jaguar ostrich quail one excited dear hello and bound and the and bland moral misheard
+                      roadrunner flapped lynx far that and jeepers giggled far and far
+                    </p>
+
+                    <div class="card-wrapper">
+                      <div class="card-tag">
+                        <a href="#" class="span hover-2"># Travel</a>
+
+                        <a href="#" class="span hover-2"># Lifestyle</a>
+                      </div>
+
+                      <div class="wrapper">
+                        <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+
+                        <span class="span">3 mins read</span>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+              </li>
+
+              <li>
+                <div class="recent-post-card">
+
+                  <figure class="card-banner img-holder" style="--width: 271; --height: 258;">
+                    <img src="images/recent-post-5.jpg" width="271" height="258" loading="lazy"
+                      alt="Helpful Tips for Working from Home as a Freelancer" class="img-cover">
+                  </figure>
+
+                  <div class="card-content">
+
+                    <a href="#" class="card-badge">Working Tips</a>
+
+                    <h3 class="headline headline-3 card-title">
+                      <a href="#" class="link hover-2">Helpful Tips for Working from Home as a Freelancer</a>
+                    </h3>
+
+                    <p class="card-text">
+                      Gosh jaguar ostrich quail one excited dear hello and bound and the and bland moral misheard
+                      roadrunner flapped lynx far that and jeepers giggled far and far
+                    </p>
+
+                    <div class="card-wrapper">
+                      <div class="card-tag">
+                        <a href="#" class="span hover-2"># Travel</a>
+
+                        <a href="#" class="span hover-2"># Lifestyle</a>
+                      </div>
+
+                      <div class="wrapper">
+                        <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+
+                        <span class="span">3 mins read</span>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+              </li>
+
+            </ul>
+
+            <nav aria-label="pagination" class="pagination">
+
+              <a href="#" class="pagination-btn" aria-label="previous page">
+                <ion-icon name="arrow-back" aria-hidden="true"></ion-icon>
+              </a>
+
+              <a href="#" class="pagination-btn">1</a>
+              <a href="#" class="pagination-btn">2</a>
+              <a href="#" class="pagination-btn">3</a>
+              <a href="#" class="pagination-btn" aria-label="more page">...</a>
+
+              <a href="#" class="pagination-btn" aria-label="next page">
+                <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+              </a>
+
+            </nav>
+
+          </div>
+
+          <div class="post-aside grid-list">
+
+            <div class="card aside-card">
+
+              <h3 class="headline headline-2 aside-title">
+                <span class="span">Popular Posts</span>
+              </h3>
+
+              <ul class="popular-list">
+
+                <li>
+                  <div class="popular-card">
+
+                    <figure class="card-banner img-holder" style="--width: 64; --height: 64;">
+                      <img src="images/popular-post-1.jpg" width="64" height="64" loading="lazy"
+                        alt="Creating is a privilege but it’s also a gift" class="img-cover">
+                    </figure>
+
+                    <div class="card-content">
+
+                      <h4 class="headline headline-4 card-title">
+                        <a href="#" class="link hover-2">Creating is a privilege but it’s also a gift</a>
+                      </h4>
+
+                      <div class="warpper">
+                        <p class="card-subtitle">15 mins read</p>
+
+                        <time class="publish-date" datetime="2022-04-15">15 April 2022</time>
+                      </div>
+
+                    </div>
+
+                  </div>
+                </li>
+
+                <li>
+                  <div class="popular-card">
+
+                    <figure class="card-banner img-holder" style="--width: 64; --height: 64;">
+                      <img src="images/popular-post-2.jpg" width="64" height="64" loading="lazy"
+                        alt="Being unique is better than being perfect" class="img-cover">
+                    </figure>
+
+                    <div class="card-content">
+
+                      <h4 class="headline headline-4 card-title">
+                        <a href="#" class="link hover-2">Being unique is better than being perfect</a>
+                      </h4>
+
+                      <div class="warpper">
+                        <p class="card-subtitle">15 mins read</p>
+
+                        <time class="publish-date" datetime="2022-04-15">15 April 2022</time>
+                      </div>
+
+                    </div>
+
+                  </div>
+                </li>
+
+                <li>
+                  <div class="popular-card">
+
+                    <figure class="card-banner img-holder" style="--width: 64; --height: 64;">
+                      <img src="images/popular-post-3.jpg" width="64" height="64" loading="lazy"
+                        alt="Every day, in every city and town across the country" class="img-cover">
+                    </figure>
+
+                    <div class="card-content">
+
+                      <h4 class="headline headline-4 card-title">
+                        <a href="#" class="link hover-2">Every day, in every city and town across the country</a>
+                      </h4>
+
+                      <div class="warpper">
+                        <p class="card-subtitle">15 mins read</p>
+
+                        <time class="publish-date" datetime="2022-04-15">15 April 2022</time>
+                      </div>
+
+                    </div>
+
+                  </div>
+                </li>
+
+                <li>
+                  <div class="popular-card">
+
+                    <figure class="card-banner img-holder" style="--width: 64; --height: 64;">
+                      <img src="images/popular-post-4.jpg" width="64" height="64" loading="lazy"
+                        alt="Your voice, your mind, your story, your vision" class="img-cover">
+                    </figure>
+
+                    <div class="card-content">
+
+                      <h4 class="headline headline-4 card-title">
+                        <a href="#" class="link hover-2">Your voice, your mind, your story, your vision</a>
+                      </h4>
+
+                      <div class="warpper">
+                        <p class="card-subtitle">15 mins read</p>
+
+                        <time class="publish-date" datetime="2022-04-15">15 April 2022</time>
+                      </div>
+
+                    </div>
+
+                  </div>
+                </li>
+
+                <li>
+                  <div class="popular-card">
+
+                    <figure class="card-banner img-holder" style="--width: 64; --height: 64;">
+                      <img src="images/popular-post-2.jpg" width="64" height="64" loading="lazy"
+                        alt="Being unique is better than being perfect" class="img-cover">
+                    </figure>
+
+                    <div class="card-content">
+
+                      <h4 class="headline headline-4 card-title">
+                        <a href="#" class="link hover-2">Being unique is better than being perfect</a>
+                      </h4>
+
+                      <div class="warpper">
+                        <p class="card-subtitle">15 mins read</p>
+
+                        <time class="publish-date" datetime="2022-04-15">15 April 2022</time>
+                      </div>
+
+                    </div>
+
+                  </div>
+                </li>
+
+              </ul>
+
+            </div>
+
+            <div class="card aside-card">
+
+              <h3 class="headline headline-2 aside-title">
+                <span class="span">Last Comment</span>
+              </h3>
+
+              <ul class="comment-list">
+
+                <li>
+                  <div class="comment-card">
+
+                    <blockquote class="card-text">
+                      “ Gosh jaguar ostrich quail one excited dear hello and bound and the and bland moral misheard
+                      roadrunner “
+                    </blockquote>
+
+                    <div class="profile-card">
+                      <figure class="profile-banner img-holder">
+                        <img src="images/author-6.png" width="32" height="32" loading="lazy" alt="Jane Cooper">
+                      </figure>
+
+                      <div>
+                        <p class="card-title">Jane Cooper</p>
+
+                        <time class="card-date" datetime="2022-04-15">15 April 2022</time>
+                      </div>
+                    </div>
+
+                  </div>
+                </li>
+
+                <li>
+                  <div class="comment-card">
+
+                    <blockquote class="card-text">
+                      “ Gosh jaguar ostrich quail one excited dear hello and bound and the and bland moral misheard
+                      roadrunner “
+                    </blockquote>
+
+                    <div class="profile-card">
+                      <figure class="profile-banner img-holder">
+                        <img src="images/author-7.png" width="32" height="32" loading="lazy" alt="Katen Doe">
+                      </figure>
+
+                      <div>
+                        <p class="card-title">Katen Doe</p>
+
+                        <time class="card-date" datetime="2022-04-15">15 April 2022</time>
+                      </div>
+                    </div>
+
+                  </div>
+                </li>
+
+                <li>
+                  <div class="comment-card">
+
+                    <blockquote class="card-text">
+                      “ Gosh jaguar ostrich quail one excited dear hello and bound and the and bland moral misheard
+                      roadrunner “
+                    </blockquote>
+
+                    <div class="profile-card">
+                      <figure class="profile-banner img-holder">
+                        <img src="images/author-8.png" width="32" height="32" loading="lazy" alt="Barbara Cartland">
+                      </figure>
+
+                      <div>
+                        <p class="card-title">Barbara Cartland</p>
+
+                        <time class="card-date" datetime="2022-04-15">15 April 2022</time>
+                      </div>
+                    </div>
+
+                  </div>
+                </li>
+
+              </ul>
+
+            </div>
+
+            <div class="card aside-card insta-card">
+
+              <!-- <a href="#" class="logo">
+                <img src="images/logo.svg" width="119" height="37" loading="lazy" alt="Wren logo">
+                <p >Photos</p>
+              </a> -->
+              <h2 class="headline headline-2 section-title">
+                <span class="span">Recent Photos</span>
+              </h2>
+
+              <p class="card-text">
+                Follow us on instagram
+              </p>
+
+              <ul class="insta-list">
+
+                <li>
+                  <a href="#" class="insta-post img-holder" style="--width: 276; --height: 277;">
+                    <img src="images/insta-post-1.png" width="276" height="277" loading="lazy" alt="insta post"
+                      class="img-cover">
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" class="insta-post img-holder" style="--width: 276; --height: 277;">
+                    <img src="images/insta-post-2.png" width="276" height="277" loading="lazy" alt="insta post"
+                      class="img-cover">
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" class="insta-post img-holder" style="--width: 276; --height: 277;">
+                    <img src="images/insta-post-3.png" width="276" height="277" loading="lazy" alt="insta post"
+                      class="img-cover">
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" class="insta-post img-holder" style="--width: 276; --height: 277;">
+                    <img src="images/insta-post-4.png" width="276" height="277" loading="lazy" alt="insta post"
+                      class="img-cover">
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" class="insta-post img-holder" style="--width: 276; --height: 277;">
+                    <img src="images/insta-post-5.png" width="276" height="277" loading="lazy" alt="insta post"
+                      class="img-cover">
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" class="insta-post img-holder" style="--width: 276; --height: 277;">
+                    <img src="images/insta-post-6.png" width="276" height="277" loading="lazy" alt="insta post"
+                      class="img-cover">
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" class="insta-post img-holder" style="--width: 276; --height: 277;">
+                    <img src="images/insta-post-7.png" width="276" height="277" loading="lazy" alt="insta post"
+                      class="img-cover">
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" class="insta-post img-holder" style="--width: 276; --height: 277;">
+                    <img src="images/insta-post-8.png" width="276" height="277" loading="lazy" alt="insta post"
+                      class="img-cover">
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" class="insta-post img-holder" style="--width: 276; --height: 277;">
+                    <img src="images/insta-post-9.png" width="276" height="277" loading="lazy" alt="insta post"
+                      class="img-cover">
+                  </a>
+                </li>
+
+              </ul>
+
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+    </article>
+  </main>
+
+
+
+
+
+  <!-- 
+    - #FOOTER
+  -->
+
+  <footer>
+    <div class="container">
+
+      <div class="card footer">
+
+        <div class="section footer-top">
+
+          <div class="footer-brand">
+
+            <a href="#" class="logo">
+              <img src="images/logo.svg" width="119" height="37" loading="lazy" alt="Wren logo">
+            </a>
+
+            <p class="footer-text">
+              When an unknown prnoto sans took a galley and scrambled it to make specimen book not only five When an
+              unknown prnoto sans took a galley and scrambled it to five centurie.
+            </p>
+
+            <p class="footer-list-title">Address</p>
+
+            <address class="footer-text address">
+              123 Main Street <br>
+              New York, NY 10001
+            </address>
+
+          </div>
+
+          <div class="footer-list">
+
+            <p class="footer-list-title">Categories</p>
+
+            <ul>
+
+              <li>
+                <a href="#" class="footer-link hover-2">Action</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link hover-2">Business</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link hover-2">Adventure</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link hover-2">Canada</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link hover-2">America</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link hover-2">Curiosity</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link hover-2">Animal</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link hover-2">Dental</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link hover-2">Biology</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link hover-2">Design</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link hover-2">Breakfast</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link hover-2">Dessert</a>
+              </li>
+
+            </ul>
+
+          </div>
+
+          <div class="footer-list">
+
+            <p class="footer-list-title">Newsletter</p>
+
+            <p class="footer-text">
+              Sign up to be first to receive the latest stories inspiring us, case studies, and industry news.
+            </p>
+
+            <div class="input-wrapper">
+              <input type="text" name="name" placeholder="Your name" required class="input-field" autocomplete="off">
+
+              <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
+            </div>
+
+            <div class="input-wrapper">
+              <input type="email" name="email_address" placeholder="Emaill address" required class="input-field"
+                autocomplete="off">
+
+              <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
+            </div>
+
+            <a href="#" class="btn btn-primary">
+              <span class="span">Subscribe</span>
+
+              <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+            </a>
+
+          </div>
+
+        </div>
+
+        <div class="footer-bottom">
+
+          <p class="copyright">
+            &copy; Developed by <a href="#" class="copyright-link">codewithsadee.</a>
+          </p>
+
+          <ul class="social-list">
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-twitter"></ion-icon>
+
+                <span class="span">Twitter</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-linkedin"></ion-icon>
+
+                <span class="span">LinkedIn</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-instagram"></ion-icon>
+
+                <span class="span">Instagram</span>
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+  </footer>
+
+
+
+
+
+  <!-- 
+    - #BACK TO TOP
+  -->
+
+  <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
+    <ion-icon name="arrow-up-outline" aria-hidden="true"></ion-icon>
+  </a>
+
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="js/index_script.js"></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 </body>
 
