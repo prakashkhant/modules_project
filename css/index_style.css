@@ -101,7 +101,7 @@
    * SPACING
    */
 
-  --section-padding: 70px;
+  --section-padding: 70px ; 
 
   /**
    * TRANSITION
@@ -326,6 +326,7 @@ body.nav-active {
 
 .section {
   padding-block: var(--section-padding);
+  
 }
 
 .section-text {
@@ -373,6 +374,7 @@ body.nav-active {
   padding-block: 24px;
   background-color: var(--bg-oxford-blue-2);
   z-index: 4;
+  
 }
 
 .header.active {
@@ -482,7 +484,10 @@ body.nav-active {
 }
 
 
-
+.main{
+  padding-top: 100px;
+  padding-bottom: 20px;
+}
 
 
 /*-----------------------------------*\
@@ -766,8 +771,11 @@ body.nav-active {
   align-items: center;
   gap: 8px;
   padding: 18px;
-  
+  /* background: var(--lineHeight-1); */
+  background:#ffffffde;
   border-radius: var(--radius-16);
+  font-weight: 200px;
+  
 }
 
 .tag-btn:is(:hover, :focus-visible) {
