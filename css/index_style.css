@@ -178,7 +178,7 @@ address {
 }
 
 html {
-  font-size: 10px;
+  font-size: 12px;
   scroll-behavior: smooth;
 }
 
@@ -217,7 +217,7 @@ body.nav-active {
 \*-----------------------------------*/
 
 .container {
-  padding-inline: 16px;
+  padding-inline: 1px;
 }
 
 .hover-1,
@@ -1289,7 +1289,11 @@ body.nav-active {
 
   }
 
-
+  .navbar,
+  .navbar.active {
+    all: unset;
+    display: block;
+  }
 
   /**
    * REUSED STYLE
@@ -1432,12 +1436,13 @@ body.nav-active {
    */
 
   .container {
-    max-width: 1140px;
+    max-width: 80%;
   }
 
   body.nav-active {
     overflow-y: overlay;
   }
+
 
 
 
