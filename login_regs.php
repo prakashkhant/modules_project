@@ -37,7 +37,7 @@ session_start();
                 <button type="submit" name="log-in" class="btn animation" style="--i:3; --j:24;">Login
                 </button>
                 <div class="logreg-link animation" style="--i:4; --j:25;">
-                    <p>Don't have an account? <a href="#reg" class="register-link">Sign Up</a></p>
+                    <p>Don't have an account? <a href="#" class="register-link">Sign Up</a></p>
                 </div>
 
             </form>
@@ -47,7 +47,7 @@ session_start();
         </div>
 
 
-        <div class="form-box register" id="reg">
+        <div class="form-box register" >
             <h2 class="animation" style="--i:17; --j:0;">Sign Up</h2>
             <form action="#" method="post">
                 <div class="input-box animation" style="--i:18; --j:1;">
@@ -69,7 +69,7 @@ session_start();
                 <button type="submit" class="btn animation" style="--i:21; --j:4;" name="sign-up">Sign Up
                 </button>
                 <div class="logreg-link animation" style="--i:22; --j:5;">
-                    <p>Already have an account? <a href="#login" class="login-link">Login</a></p>
+                    <p>Already have an account? <a href="#" class="login-link">Login</a></p>
                 </div>
 
 
@@ -79,7 +79,7 @@ session_start();
             <h2 class="animation" style="--i:17; --j:0;"> Welcome To Nexus Hub</h2>
         </div>
     </div>
-    <script src="script.js"></script>
+    <script src="js/login_script.js"></script>
 </body>
 
 </html>
@@ -103,7 +103,7 @@ if (isset($_POST['sign-up'])) {
     //echo $sql;
     if (mysqli_query($conn, $sql)) {
         echo "successfull";
-        header("Location: login_reg.php");
+        header("Location: login_regs.php");
 
         exit();
     } else {
