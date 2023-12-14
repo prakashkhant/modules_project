@@ -48,19 +48,16 @@
 
     <header class="header" data-header>
         <div class="container">
-
-            <a href="#" class="logo ">
+        <a href="#" >
+<div class="logo ">
+          
                 
-                    <img src="images/logo.png" width="90px" height="90px" alt="Nexus Hub">
-
-              
-             
+                    <img src="images/logo.png" width="90px" height="90px" alt="Nexus Hub">             
                     <p class="headline headline-3 section-title">Nexus Hub</p>
-                
-               
+                        
 
-            </a>
-
+          
+</div>  </a>
             <nav class="navbar" data-navbar>
 
                 <div class="navbar-top">

@@ -376,6 +376,15 @@ body.nav-active {
   z-index: 4;
   
 }
+.header .logo{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ 
+}
+.header .logo p{
+  margin-left: 2px;
+}
 
 .header.active {
   padding-block: 8px;
