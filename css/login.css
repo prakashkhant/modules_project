@@ -279,3 +279,15 @@ font-weight: 600;
     transform: rotate(-11deg) skewY(-41deg); 
     transition-delay: 1.2s;
 }
+
+/* home btn css */
+.home-btn{
+/* align-self: first baseline;
+position: flex; */
+    left: 10px;
+    top: 10px;
+    margin: 0;
+    position: fixed;
+    color: green;
+    font-size: 2rem;
+}
