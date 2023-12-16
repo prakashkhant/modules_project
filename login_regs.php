@@ -43,7 +43,12 @@ session_start();
             </form>
         </div>
         <div class="info-text login">
-            <h2 class="animation" style="--i:0; --j:20;">Welcome Back To Nexus Hub</h2>
+            
+            <h2 class="animation" style="--i:0; --j:20;"> 
+            <a href="index.php">
+                <img src="images/logo.png" alt="" srcset="" width="70px" height="70px" >
+                </a>
+                Welcome Back To Nexus Hub</h2>
         </div>
 
 
@@ -76,7 +81,13 @@ session_start();
             </form>
         </div>
         <div class="info-text register">
-            <h2 class="animation" style="--i:17; --j:0;"> Welcome To Nexus Hub</h2>
+            <h2 class="animation" style="--i:17; --j:0;"> 
+            <a href="index.php">
+                <img src="images/logo.png" alt="" srcset="" width="70px" height="70px" >
+            </a>
+            Welcome To Nexus Hub
+        </h2>
+
         </div>
     </div>
     <script src="js/login_script.js"></script>
