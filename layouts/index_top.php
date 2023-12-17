@@ -89,7 +89,7 @@
                     </li>
 
                     <li>
-                        <a href="programming.php" class="navbar-link hover-1" data-nav-toggler>Programming Laguages</a>
+                        <a href="programming_home.php" class="navbar-link hover-1" data-nav-toggler>Programming Laguages</a>
                     </li>
 
                 </ul>

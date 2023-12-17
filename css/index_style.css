@@ -267,6 +267,9 @@ body.nav-active {
 .section-title {
   margin-block-end: 10px;
 }
+section{
+  padding-top: 70px;
+}
 
 .headline .span {
   background-image: var(--gradient-1);
