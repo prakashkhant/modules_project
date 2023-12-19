@@ -19,35 +19,35 @@ include './layouts/index_top.php';
         <ul class="grid-list ">
 
             <li>
-                <button class="card tag-btn">
+                <a href="pro_info.php" class="card tag-btn">
                     <img src="images/java.png" width="32" height="32" loading="lazy" alt="JAVA">
 
                     <p class="btn-text">Java</p>
-                </button>
+                </a>
             </li>
 
             <li>
-                <button class="card tag-btn">
+                <a  href="pro_info.php" class="card tag-btn">
                     <img src="images/tag2.png" width="32" height="32" loading="lazy" alt="Culture">
 
                     <p class="btn-text">Python</p>
-                </button>
+                </a>
             </li>
 
             <li>
-                <button class="card tag-btn">
+                <a href="pro_info.php" class="card tag-btn">
                     <img src="images/tag3.png" width="32" height="32" loading="lazy" alt="Lifestyle">
 
                     <p class="btn-text">PHP</p>
-                </button>
+                </a>
             </li>
 
             <li>
-                <button class="card tag-btn">
+                <a href="pro_info.php" class="card tag-btn">
                     <img src="images/tag4.png" width="32" height="32" loading="lazy" alt="Fashion">
 
                     <p class="btn-text">Java-Script</p>
-                </button>
+                </a>
             </li>
 
         </ul>

@@ -504,11 +504,11 @@ include './layouts/index_top.php';
           <ul class="grid-list ">
 
             <li>
-              <button class="card tag-btn">
-                <img src="images/tag1.png" width="32" height="32" loading="lazy" alt="Travel">
+              <a href="pro_info.php" class="card tag-btn">
+                <img src="images/java.png" width="32" height="32" loading="lazy" alt="Travel">
 
                 <p class="btn-text">Java</p>
-              </button>
+              </a>
             </li>
 
             <li>
