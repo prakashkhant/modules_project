@@ -42,7 +42,7 @@ include './layouts/index_top.php';
 
           <div class="hero-banner">
 
-            <img src="images/home-hello.png" width="327" height="490" alt="Wren Clark" class="w-100">
+            <img src="images/home-hello.svg" width="327" height="490" alt="Wren Clark" class="w-100">
 
             <img src="images/pattern-2.svg" width="27" height="26" alt="shape" class="shape shape-1">
 
