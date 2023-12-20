@@ -20,8 +20,9 @@ include './layouts/index_top.php';
             </h1>
 
             <p class="hero-text">
-              I use animation as a third dimension by which to simplify experiences and kuiding thro each and every
-              interaction. I’m not adding motion just to spruce things up, but doing it in ways that.
+            &emsp; Welcome to our multifaceted online hub, 
+            a digital haven designed to cater to your diverse interests and make your leisure moments truly enjoyabl.. Our website is your go-to destination for an immersive and
+            enriching online experience, carefully curated to cater to every facet of your free time. Discover, relax, and stay entertained with us
             </p>
 
             <div class="input-wrapper">
@@ -72,11 +73,11 @@ include './layouts/index_top.php';
             <div class="card-content">
 
               <h2 class="headline headline-2 section-title card-title" id="topic-label">
-                Interseting Pats
+                Interseting Parts
               </h2>
 
               <p class="card-text">
-                Don't miss out on the latest news about Travel tips, Hotels review, Food guide...
+                Here some magics...
               </p>
 
               <div class="btn-group">
@@ -98,7 +99,7 @@ include './layouts/index_top.php';
                   <a href="#" class="slider-card">
 
                     <figure class="slider-banner img-holder" style="--width: 507; --height: 618;">
-                      <img src="images/topic-1.png" width="507" height="618" loading="lazy" alt="Sport"
+                      <img src="images/entertaimnet.jpg" width="507" height="618" loading="lazy" alt="Sport"
                         class="img-cover">
                     </figure>
 
@@ -154,7 +155,7 @@ include './layouts/index_top.php';
                     </figure>
 
                     <div class="slider-content">
-                      <span class="slider-title">Movie</span>
+                      <span class="slider-title">Photo Gallery</span>
 
                       <p class="slider-subtitle">125 Articles</p>
                     </div>
@@ -199,7 +200,7 @@ include './layouts/index_top.php';
         <div class="container">
 
           <h2 class="headline headline-2 section-title">
-            <span class="span">Editor's picked</span>
+            <span class="span">Amazing Blogs</span>
           </h2>
 
           <p class="section-text">
@@ -234,7 +235,7 @@ include './layouts/index_top.php';
 
                   <h3 class="headline headline-3">
                     <a href="#" class="card-title hover-2">
-                      Self-observation is the first step of inner unfolding
+                    How we Implemented Shared Element Transition in react-native-navigation
                     </a>
                   </h3>
 
@@ -272,9 +273,9 @@ include './layouts/index_top.php';
 
                   <div class="card-wrapper">
                     <div class="card-tag">
-                      <a href="#" class="span hover-2">#Design</a>
+                      <a href="#" class="span hover-2">#motivation</a>
 
-                      <a href="#" class="span hover-2">#Movie</a>
+                      <a href="#" class="span hover-2">#facts</a>
                     </div>
 
                     <div class="wrapper">
@@ -324,9 +325,9 @@ include './layouts/index_top.php';
 
                   <div class="card-wrapper">
                     <div class="card-tag">
-                      <a href="#" class="span hover-2">#Design</a>
+                      <a href="#" class="span hover-2">#travel</a>
 
-                      <a href="#" class="span hover-2">#Movie</a>
+                      <a href="#" class="span hover-2">#winter</a>
                     </div>
 
                     <div class="wrapper">
@@ -338,7 +339,7 @@ include './layouts/index_top.php';
 
                   <h3 class="headline headline-3">
                     <a href="#" class="card-title hover-2">
-                      Self-observation is the first step of inner unfolding
+                    Here’s Why You Must Visit Norway In Winter
                     </a>
                   </h3>
 
@@ -376,9 +377,9 @@ include './layouts/index_top.php';
 
                   <div class="card-wrapper">
                     <div class="card-tag">
-                      <a href="#" class="span hover-2">#Design</a>
+                      <a href="#" class="span hover-2">#fun-facts</a>
 
-                      <a href="#" class="span hover-2">#Movie</a>
+                      <a href="#" class="span hover-2">#sky</a>
                     </div>
 
                     <div class="wrapper">
@@ -390,7 +391,7 @@ include './layouts/index_top.php';
 
                   <h3 class="headline headline-3">
                     <a href="#" class="card-title hover-2">
-                      Self-observation is the first step of inner unfolding
+                    Why Does the Sky Look Different Throughout the Year?
                     </a>
                   </h3>
 
@@ -428,9 +429,9 @@ include './layouts/index_top.php';
 
                   <div class="card-wrapper">
                     <div class="card-tag">
-                      <a href="#" class="span hover-2">#Design</a>
+                      <a href="#" class="span hover-2">#galaxy</a>
 
-                      <a href="#" class="span hover-2">#Movie</a>
+                      <a href="#" class="span hover-2">#facts</a>
                     </div>
 
                     <div class="wrapper">
@@ -442,7 +443,7 @@ include './layouts/index_top.php';
 
                   <h3 class="headline headline-3">
                     <a href="#" class="card-title hover-2">
-                      Self-observation is the first step of inner unfolding
+                    Pole star
                     </a>
                   </h3>
 
@@ -487,18 +488,18 @@ include './layouts/index_top.php';
 
 
       <!-- 
-        - #POPULAR TAGS
+        - #POPULAR programming languages TAGS
       -->
 
       <section class="tags" aria-labelledby="tag-label">
         <div class="container">
 
           <h2 class="headline headline-2 section-title" id="tag-label">
-            <span class="span">Popular Languages</span>
+            <span class="span">Programming Languages</span>
           </h2>
 
           <p class="section-text">
-            Programming Languages & Native Languages
+          Popular Programming Languages that you want's to know
           </p>
 
           <ul class="grid-list ">
@@ -535,6 +536,25 @@ include './layouts/index_top.php';
               </button>
             </li>
 
+          </ul>
+
+        </div>
+      </section>
+
+
+      <section class="tags languages" aria-labelledby="tag-label">
+        <div class="container">
+
+          <h2 class="headline headline-2 section-title" id="tag-label">
+            <span class="span"> Languages</span>
+          </h2>
+
+          <p class="section-text">
+          Popular Natives that you want's to know
+          </p>
+
+          <ul class="grid-list ">
+
             <li>
               <button class="card tag-btn">
                 <img src="images/tag5.png" width="32" height="32" loading="lazy" alt="Food">
@@ -559,52 +579,12 @@ include './layouts/index_top.php';
               </button>
             </li>
 
-            <!-- <li>
-              <button class="card tag-btn">
-                <img src="images/tag8.png" width="32" height="32" loading="lazy" alt="Minimal">
-
-                <p class="btn-text">Minimal</p>
-              </button>
-            </li>
-
-            <li>
-              <button class="card tag-btn">
-                <img src="images/tag9.png" width="32" height="32" loading="lazy" alt="Interior">
-
-                <p class="btn-text">Interior</p>
-              </button>
-            </li>
-
-            <li>
-              <button class="card tag-btn">
-                <img src="images/tag10.png" width="32" height="32" loading="lazy" alt="Plant">
-
-                <p class="btn-text">Plant</p>
-              </button>
-            </li>
-
-            <li>
-              <button class="card tag-btn">
-                <img src="images/tag11.png" width="32" height="32" loading="lazy" alt="Nature">
-
-                <p class="btn-text">Nature</p>
-              </button>
-            </li>
-
-            <li>
-              <button class="card tag-btn">
-                <img src="images/tag12.png" width="32" height="32" loading="lazy" alt="Business">
-
-                <p class="btn-text">Business</p>
-              </button>
-            </li> -->
+          
 
           </ul>
 
         </div>
       </section>
-
-
 
 
 
@@ -618,11 +598,11 @@ include './layouts/index_top.php';
           <div class="post-main">
 
             <h2 class="headline headline-2 section-title">
-              <span class="span">Recent posts</span>
+              <span class="span">Latest news</span>
             </h2>
 
             <p class="section-text">
-              Don't miss the latest trends
+              Don't miss the latest news
             </p>
 
             <ul class="grid-list">
@@ -637,7 +617,7 @@ include './layouts/index_top.php';
 
                   <div class="card-content">
 
-                    <a href="#" class="card-badge">Working Tips</a>
+                    <a href="#" class="card-badge">daily</a>
 
                     <h3 class="headline headline-3 card-title">
                       <a href="#" class="link hover-2">Helpful Tips for Working from Home as a Freelancer</a>
@@ -677,10 +657,88 @@ include './layouts/index_top.php';
 
                   <div class="card-content">
 
-                    <a href="#" class="card-badge">Working Tips</a>
+                    <a href="#" class="card-badge">technogolies</a>
 
                     <h3 class="headline headline-3 card-title">
-                      <a href="#" class="link hover-2">Helpful Tips for Working from Home as a Freelancer</a>
+                      <a href="#" class="link hover-2">The most promising tech innovations of 2023</a>
+                    </h3>
+
+                    <p class="card-text">
+                    From mixed-reality headsets to clippable AI wearables, these are the tech products that impressed us the most in 2023.
+                    </p>
+
+                    <div class="card-wrapper">
+                      <div class="card-tag">
+                        <a href="#" class="span hover-2"># technogolies</a>
+
+                        <a href="#" class="span hover-2"># Lifestyle</a>
+                      </div>
+
+                      <div class="wrapper">
+                        <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+
+                        <span class="span">3 mins read</span>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+              </li>
+
+              <li>
+                <div class="recent-post-card">
+
+                  <figure class="card-banner img-holder" style="--width: 271; --height: 258;">
+                    <img src="images/news-3.jpeg" width="271" height="258" loading="lazy"
+                      alt="Helpful Tips for Working from Home as a Freelancer" class="img-cover">
+                  </figure>
+
+                  <div class="card-content">
+
+                    <a href="#" class="card-badge">politics</a>
+
+                    <h3 class="headline headline-3 card-title">
+                      <a href="#" class="link hover-2">Back Back Death penalty for mob lynching under new criminal laws, says Amit Shah</a>
+                    </h3>
+
+                    <p class="card-text">
+                    Union Home Minister Amit Shah speaks in the Lok Sabha during the Winter session of Parliament, in New Delhi, on Wednesday. (PTI)
+                    </p>
+
+                    <div class="card-wrapper">
+                      <div class="card-tag">
+                        <a href="#" class="span hover-2"># Travel</a>
+
+                        <a href="#" class="span hover-2"># Lifestyle</a>
+                      </div>
+
+                      <div class="wrapper">
+                        <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+
+                        <span class="span">3 mins read</span>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+              </li>
+
+              <li>
+                <div class="recent-post-card">
+
+                  <figure class="card-banner img-holder" style="--width: 271; --height: 258;">
+                    <img src="images/educations.jpeg" width="271" height="258" loading="lazy"
+                      alt="Helpful Tips for Working from Home as a Freelancer" class="img-cover">
+                  </figure>
+
+                  <div class="card-content">
+
+                    <a href="#" class="card-badge">Educations</a>
+
+                    <h3 class="headline headline-3 card-title">
+                      <a href="#" class="link hover-2">1070 OBC students benefitted from National Fellowship Scheme in 2022-23, highest in 5 years: Govt</a>
                     </h3>
 
                     <p class="card-text">
@@ -711,101 +769,20 @@ include './layouts/index_top.php';
                 <div class="recent-post-card">
 
                   <figure class="card-banner img-holder" style="--width: 271; --height: 258;">
-                    <img src="images/recent-post-3.jpg" width="271" height="258" loading="lazy"
+                    <img src="images/lifestyles.jpg" width="271" height="258" loading="lazy"
                       alt="Helpful Tips for Working from Home as a Freelancer" class="img-cover">
                   </figure>
 
                   <div class="card-content">
 
-                    <a href="#" class="card-badge">Working Tips</a>
+                    <a href="#" class="card-badge">Lifestyles</a>
 
                     <h3 class="headline headline-3 card-title">
-                      <a href="#" class="link hover-2">Helpful Tips for Working from Home as a Freelancer</a>
+                      <a href="#" class="link hover-2">8 driveable getaways from major cities in India for a memorable holiday season</a>
                     </h3>
 
                     <p class="card-text">
-                      Gosh jaguar ostrich quail one excited dear hello and bound and the and bland moral misheard
-                      roadrunner flapped lynx far that and jeepers giggled far and far
-                    </p>
-
-                    <div class="card-wrapper">
-                      <div class="card-tag">
-                        <a href="#" class="span hover-2"># Travel</a>
-
-                        <a href="#" class="span hover-2"># Lifestyle</a>
-                      </div>
-
-                      <div class="wrapper">
-                        <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
-
-                        <span class="span">3 mins read</span>
-                      </div>
-                    </div>
-
-                  </div>
-
-                </div>
-              </li>
-
-              <li>
-                <div class="recent-post-card">
-
-                  <figure class="card-banner img-holder" style="--width: 271; --height: 258;">
-                    <img src="images/recent-post-4.jpg" width="271" height="258" loading="lazy"
-                      alt="Helpful Tips for Working from Home as a Freelancer" class="img-cover">
-                  </figure>
-
-                  <div class="card-content">
-
-                    <a href="#" class="card-badge">Working Tips</a>
-
-                    <h3 class="headline headline-3 card-title">
-                      <a href="#" class="link hover-2">Helpful Tips for Working from Home as a Freelancer</a>
-                    </h3>
-
-                    <p class="card-text">
-                      Gosh jaguar ostrich quail one excited dear hello and bound and the and bland moral misheard
-                      roadrunner flapped lynx far that and jeepers giggled far and far
-                    </p>
-
-                    <div class="card-wrapper">
-                      <div class="card-tag">
-                        <a href="#" class="span hover-2"># Travel</a>
-
-                        <a href="#" class="span hover-2"># Lifestyle</a>
-                      </div>
-
-                      <div class="wrapper">
-                        <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
-
-                        <span class="span">3 mins read</span>
-                      </div>
-                    </div>
-
-                  </div>
-
-                </div>
-              </li>
-
-              <li>
-                <div class="recent-post-card">
-
-                  <figure class="card-banner img-holder" style="--width: 271; --height: 258;">
-                    <img src="images/recent-post-5.jpg" width="271" height="258" loading="lazy"
-                      alt="Helpful Tips for Working from Home as a Freelancer" class="img-cover">
-                  </figure>
-
-                  <div class="card-content">
-
-                    <a href="#" class="card-badge">Working Tips</a>
-
-                    <h3 class="headline headline-3 card-title">
-                      <a href="#" class="link hover-2">Helpful Tips for Working from Home as a Freelancer</a>
-                    </h3>
-
-                    <p class="card-text">
-                      Gosh jaguar ostrich quail one excited dear hello and bound and the and bland moral misheard
-                      roadrunner flapped lynx far that and jeepers giggled far and far
+                    If you find yourself in major Indian cities, here's a list of driveable destinations for those yearning for a holiday retreat.
                     </p>
 
                     <div class="card-wrapper">
@@ -1079,7 +1056,7 @@ include './layouts/index_top.php';
               </h2>
 
               <p class="card-text">
-                Follow us on instagram
+                Photos | travels | Arts & Crafts
               </p>
 
               <ul class="insta-list">
