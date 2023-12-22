@@ -247,8 +247,15 @@ include 'layouts/index_top.php';
                 </div>
 
                 <div class="video col-10">
-                    <iframe width="100%" height="500px" src="https://www.youtube.com/embed/tgbNymZ7vqY"> </iframe>
+                    <iframe class="video-link" width="100%" height="500px" src="https://www.youtube.com/embed/tgbNymZ7vqY"> </iframe>
                 </div>
+                <style>
+.video-link{
+    border: 3px solid #0099cc;
+    border-radius: 20px;
+}
+
+                </style>
 
 
             </div>
