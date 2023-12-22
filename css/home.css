@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,300;0,500;0,600;0,700;0,800;1,100;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Noto Sans',sans-serif;
+    scroll-behavior: smooth;
+    transition: 0.3 all;
+}
+.container1{
+    max-width: 1400px;
+    margin: auto;
+}
+.container{
+    position: absolute;
+    max-width: 1200px;
+    margin: auto;
+}
+a{
+    text-decoration: none;
+
+}
+li{
+    list-style: none;
+}
+.flex{
+    display: flex;
+    align-items: center;
+}
+
+/* header------------------- */
+
+header{
+    position: sticky;
+    top: 0;
+    padding: 30px;
+    z-index: 9999;
+    transition: 0.3s linear;
+}
+header nav{
+    position:relative;
+    justify-content: space-between;
+}
+.logo{
+    gap:10px
+}
+.logoimg{
+    width:50px;
+    height: 50px;
+}
+.logoimg img{
+    width:100%;
+    height: 100%;
+
+}
+.logo a h1{
+    font-family: sans-serif;
+    font-size: 30px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: #183ea5;
+}
+.navlist ul{
+    gap:40px;
+    font-family: Noto Sans,sans-serif;
+
+}
+.navlist ul li a{
+    font-size: 16px;
+    color: #94a0c9;
+    cursor: pointer;
+    display:flex;
+}
+.navlist ul li .liactive{
+    color:#1cc2e7;
+    font-weight: 600;
+}
+.navlist ul li i{
+    font-size: 15px;
+    margin-left: 6px;
+
+}
+.searchdarksub{
+    gap:20px;
+
+}
+.searchbar i{
+font-size: 20px;
+color: #94a0c9;
+}
+.searchclick{
+    position: absolute;
+    right: 13%;
+    margin-top: 20px;
+    width: 350px;
+    background-color: #e8edf5;
+}
