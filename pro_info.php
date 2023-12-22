@@ -134,6 +134,7 @@ include 'layouts/index_top.php';
         padding: 15px 32px;
         text-align: center;
         text-decoration: none;
+        display: inline-block;
         font-size: 16px;
         border-radius: 20px;
     }
