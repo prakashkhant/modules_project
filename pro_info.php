@@ -122,12 +122,12 @@ include 'layouts/index_top.php';
 
     .btn-test {
 
-        margin: 2px;
-
+        margin: 10px;
+       
+        content: center;
     }
-
-    .btn-test a {
-        background-color: #04AA6D;
+ .button {
+        background: green;
         /* Green */
         border: none;
         color: white;
@@ -136,7 +136,14 @@ include 'layouts/index_top.php';
         text-decoration: none;
         font-size: 16px;
         border-radius: 20px;
+        width: auto;
+        width: fit-content;
     }
+
+ .button:hover {
+    background-color: #3e8e41;
+    font-weight: bold;
+}
     
 </style>
 <section class="info">
@@ -149,7 +156,7 @@ include 'layouts/index_top.php';
             <h1> Java</h1>
         </div>
     </div>
-    </div>
+    
     <div class="row">
         <div class="col-2 menu">
             <ul>
@@ -247,39 +254,23 @@ include 'layouts/index_top.php';
         </div>
 
     </div>
-    </div>
+    
+    <center>
     <div class="btn-test row">
-        <div class="col-12">
-            <center>
-                <a href="#">Test</a>
-            </center>
-        </div>
+                     <a class="button" href="#"><span>Test</span></a>
     </div>
+    </center>
     <div class="buttons row">
-        <div class="col-1 previous">
-            <a href="#" class="buttons">Previous</a> <!-- if id is 1 so not working  -->
+        <div class="col-1 previous " >
+        <a class="button" style="background-color: #0099cc;" href="#">Previous</a> <!-- if id is 1 so not working  -->
         </div>
-        <div class="next col-1col-1">
-            <a href="#" class="buttons">Next</a>
+        <div class="next col-1">
+            <a href="#" class="button"  style="background-color: #0099cc;">Next</a>
         </div>
     </div>
-    <div class="reference col-2">
-
-        <style>
-            .reference {
-                left: 100px;
-                margin-left: 200px;
-            }
-
-            .reference .list-name {
-                padding-left: 100px;
-            }
-        </style>
-        <div class="title">
-            <h3>Reference: </h3>
-        </div>
-        <ul class="list-name">
-            <li>Javatpoint/java</li>
-        </ul>
-    </div>
+   
 </section>
+        </br>
+<?php
+include 'layouts/index_bottom.php';
+?>
