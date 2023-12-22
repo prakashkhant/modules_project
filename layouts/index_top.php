@@ -30,7 +30,7 @@
     - custom css link
   -->
     <link rel="stylesheet" href="css/index_style.css">
-
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" > -->
     <!-- 
     - preload images
   -->
@@ -49,13 +49,14 @@
     <header class="header" data-header>
         <div class="container">
         <a href="#" >
+        <a href="index.php">
 <div class="logo ">
           
                 
-                    <img src="images/logo.png" width="90px" height="90px" alt="Nexus Hub">             
+                    <img src="images/logo.png" width="90px" height="90px" alt="Nexus Hub">          
                     <p class="headline headline-3 section-title">Nexus Hub</p>
                         
-
+                    
           
 </div>  </a>
             <nav class="navbar" data-navbar>

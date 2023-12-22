@@ -268,7 +268,7 @@ body.nav-active {
   margin-block-end: 10px;
 }
 section{
-  padding-top: 70px;
+  padding-top: 30px;
 }
 
 .headline .span {
@@ -1150,7 +1150,7 @@ section{
      * spacing
      */
 
-    --section-padding: 100px;
+    --section-padding: 50px;
 
   }
 

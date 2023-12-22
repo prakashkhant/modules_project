@@ -2,7 +2,8 @@
 include 'layouts/index_top.php';
 ?>
 <style>
-    .lang-name,.buttons {
+    .lang-name,
+    .buttons {
 
         box-shadow: 0 1px 3px #0099cc, 0 1px 2px #0099cc;
         color: whitesmoke;
@@ -101,37 +102,50 @@ include 'layouts/index_top.php';
     .video-section h3 {
         padding: 2% 0 2% 0;
     }
-    .video-list{
+
+    .video-list {
         box-shadow: 0 1px 3px #0099cc;
         margin-top: 1%;
-        
-        
+
+
         height: 500px;
     }
-    
-    .buttons .previous{
+
+    .buttons .previous {
         margin-left: 10%;
     }
-    .buttons .next{
+
+    .buttons .next {
         margin-right: 10%;
         float: right;
     }
-    .btn-test{
+
+    .btn-test {
+
+        margin: 10px;
        
-       margin: 2px;
-      
+        content: center;
     }
-    .btn-test a{
-        background-color: #04AA6D; /* Green */
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-    border-radius: 20px;
+ .button {
+        background: green;
+        /* Green */
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        border-radius: 20px;
+        width: auto;
+        width: fit-content;
     }
+
+ .button:hover {
+    background-color: #3e8e41;
+    font-weight: bold;
+}
+    
 </style>
 <section class="info">
 
@@ -143,7 +157,7 @@ include 'layouts/index_top.php';
             <h1> Java</h1>
         </div>
     </div>
-    </div>
+    
     <div class="row">
         <div class="col-2 menu">
             <ul>
@@ -231,40 +245,40 @@ include 'layouts/index_top.php';
                 <div class="title">
                     <h3>Video : </h3>
                 </div>
-                <div class="row">
-                    <div class="video col-8">
-                        <iframe width="100%" height="500px" src="https://www.youtube.com/embed/tgbNymZ7vqY"> </iframe>
-                    </div>
-                    <div class="video-list col-2 ">
-                            <ul>
-                                <li> what is java ?</li>
-                                <li>Variables</li>
-                                <li>Applets</li>
-                                <li>Inheritence</li>
-                            </ul>
-                        
-                        
-                    </div>
+
+                <div class="video col-10">
+                    <iframe class="video-link" width="100%" height="500px" src="https://www.youtube.com/embed/tgbNymZ7vqY"> </iframe>
                 </div>
+                <style>
+.video-link{
+    border: 3px solid #0099cc;
+    border-radius: 20px;
+}
+
+                </style>
+
+
             </div>
         </div>
 
     </div>
-    </div>
+    
+    <center>
     <div class="btn-test row">
-    <div class="col-12">
-           <center>
-            <a href="#">Test</a>
-        </center> 
+                     <a class="button" href="#"><span>Test</span></a>
     </div>
-    </div>
-    <div class="buttons row">        
-        <div class="col-1 previous">
-           <a href="#">Previous</a> <!-- if id is 1 so not working  -->
+    </center>
+    <div class="buttons row">
+        <div class="col-1 previous " >
+        <a class="button" style="background-color: #0099cc;" href="#">Previous</a> <!-- if id is 1 so not working  -->
         </div>
-        <div class="next col-1col-1">
-           <a href="#">Next</a>
+        <div class="next col-1">
+            <a href="#" class="button"  style="background-color: #0099cc;">Next</a>
         </div>
     </div>
-
+   
 </section>
+        </br>
+<?php
+include 'layouts/index_bottom.php';
+?>
