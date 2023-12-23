@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Online Lanaguge Cources</title>
+
+  <link rel="stylesheet" type="text/css" href="css/language.css">
+
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!--start header section-->
+  <header>
+    <a href="#" class="logo">
+      <img src="images/logo.png">
+    </a>
+    <ul class="navbar">
+      <li> <a href="#home">Home</a></li>
+      <li> <a href="#categories">Categories</a></li>
+      <li> <a href="#languages">Languages</a></li>
+
+    </ul>
+    <div class="header-icons">
+      <a href="#"><i class='bx bxs-user'></i></a>
+      <a href="#"><i class='bx bx-heart'></i></a>
+      <a href="#"><i class='bx bx-cart'></i></a>
+      <div class="bx bx-menu" id="menu-icon"></div>
+    </div>
+  </header>
+
+  <!--start home section-->
+
+  <section class="home" id="home">
+    <div class="home-text">
+      <h6>Best English Learning Platform</h6>
+      <h1>Accesible for Good Knowledge</h1>
+      <p>Speak the World: Your Journey to Language Mastery Starts Here!</p>
+      <div class="latter">
+        <form method="" action="#">
+          <input type="email" placeholder="Write your email" required>
+          <input type="submit" value="Let's Start" required class="button">
+
+        </form>
+      </div>
+    </div>
+
+    <div class="home-img">
+      <img src="images/language/banner.png">
+    </div>
+  </section>
+
+  <!--start container section-->
+
+  <!-- <section class="container">
+    <div class="container-box">
+      <div class="container-img">
+        <img src="images/language/lang3.jpeg">
+      </div>
+      <div class="container-text">
+        <h4>5k</h4>
+        <p>Online Cources</p>
+      </div>
+    </div>
+
+    <div class="container-box">
+      <div class="container-img">
+        <img src="images/language/lang4.png">
+      </div>
+      <div class="container-text">
+        <h4>5k</h4>
+        <p>Online Cources</p>
+      </div>
+    </div>
+
+
+
+    <div class="container-box">
+      <div class="container-img">
+        <img src="images/language/lang7.png">
+      </div>
+      <div class="container-text">
+        <h4>5k</h4>
+        <p>Online Cources</p>
+      </div>
+    </div>
+  </section> -->
+
+  <!--start categories section-->
+
+  <section class="categories" id="categories">
+    <div class="center-text">
+      <h5>★ Popular Languages ★</h5>
+      <h2>Languages that you should know</h2>
+
+    </div>
+
+    <div class="categories-content">
+      <div class="box">
+        <img src="images/language/cat-english.png">
+        <h3>English</h3>
+
+      </div>
+
+      <div class="box">
+        <img src="images/language/cat-german.png">
+        <h3>Germany</h3>
+
+      </div>
+
+      <div class="box">
+        <img src="images/language/cat-french.png">
+        <h3>French</h3>
+
+      </div>
+
+      <div class="box">
+        <img src="images/language/cat-korean.png">
+        <h3>Korean</h3>
+
+      </div>
+      <div class="box">
+        <img src="images/language/cat-sanskrit.png">
+        <h3>Sanskrit</h3>
+
+      </div>
+      <div class="box">
+        <img src="images/language/cat-urdu.png">
+        <h3>Urdu</h3>
+
+      </div>
+
+    </div>
+
+    <!-- 
+    <div class="main-btn">
+      <a href="#" class="btn">All Categories</a>
+    </div> -->
+
+  </section>
+
+  <!--start cources section-->
+
+  <section class="cources" id="cources">
+    <div class="center-text">
+      <h5>★ Premium Courses ★</h5>
+      <h2>Explore Popular Cources</h2>
+    </div>
+
+    <div class="cources-content">
+      <div class="row">
+        <a href="https://www.vocabulary.com/"  target="_blank">
+          <img src="images/language/course-vacb.jpg" width="400px" height="400px">
+          <div class="cources-text">
+            <h5>Advance</h5>
+            <h3>Complete Langauge Vacabulary</h3>
+            <div class="rating">
+              <div class="star">
+                <?php
+                function rating($n)
+                {
+                  for ($i = 1; $i <= $n; $i++) {
+                    echo '<a href="#">' . ' ' . "<i class='bx bxs-star'></i>" . '</a>';
+                  }
+                }
+
+                rating(5);
+                ?>
+
+              </div>
+              <div class="rating">
+                <p>238M Reviews</p>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="row">
+        <a href="https://www.ieltspass.com/courses/online-ielts-course-preparation-training"  target="_blank">
+          <img src="images/language/course-ielts.png">
+          <div class="cources-text">
+            <h5>Advance</h5>
+            <h3>Complete ILETS Learning</h3>
+            <div class="rating">
+              <div class="star">
+                <?php
+
+                rating(4);
+                ?>
+              </div>
+              <div class="rating">
+                <p>207M Reviews</p>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+
+
+
+      <div class="row">
+        <a href="https://www.englishgrammar101.com/"  target="_blank">
+        <img src="images/language/cource-grammer.jpg">
+        <div class="cources-text">
+          <h5>Advance</h5>
+          <h3>Complete Langauge Grammer</h3>
+          <div class="rating">
+            <div class="star">
+              <?php
+
+              rating(3);
+              ?>
+            </div>
+            <div class="rating">
+              <p>105M Reviews</p>
+            </div>
+          </div>
+        </div>
+        </a>
+      </div>
+
+      <div class="row">
+        <a href="https://www.studying-in-germany.org/learn-german/" target="_blank">
+        <img src="images/language/course-german.jpg">
+        <div class="cources-text">
+          <h5>Advance</h5>
+          <h3>Complate German Language</h3>
+          <div class="rating">
+            <div class="star">
+              <?php
+
+              rating(5);
+              ?>
+            </div>
+            <div class="review">
+              <p>145M Reviews</p>
+            </div>
+          </div>
+
+        </div>
+        </a>
+      </div>
+
+    </div>
+
+    <div class="main-btn">
+      <a href="https://www.duolingo.com/"  target="_blank" class="btn">Learn More</a>
+    </div>
+
+  </section>
+
+  <!--start cta section-->
+
+  <section class="cta">
+    <div class="center-text">
+     
+      <h2>Top 4 Universities </h2>
+    </div>
+    <div class="cta-content">
+
+      <div class="cta-img">
+        <img src="images/language/uns-canada.png">
+      </div>
+
+      <div class="cta-img">
+        <img src="images/language/uns-lang2.png">
+      </div>
+
+      <div class="cta-img">
+        <img src="images/language/uns-khwaja.png">
+      </div>
+
+      <div class="cta-img">
+        <img src="images/language/uns-london.png">
+      </div>
+
+    </div>
+  </section>
+
+  <!--start about section-->
+  <section class="about" id="about">
+    <div class="about-img">
+      <img src="images/language/about.png">
+    </div>
+
+    <div class="about-text">
+      <h2>Want To Learn more About Us? </h2>
+      <p>We provide best environment for making your future bright gives Knowledge and confidence for your grouwth.</p>
+      <h4>For any Query !</h4>
+      <a href="#" class="btn">Contact Us</a>
+    </div>
+  </section>
+
+  <script type="text/javascript" src="js/lang.js"></script>
+</body>
+
+</html>
