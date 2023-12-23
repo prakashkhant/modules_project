@@ -8,7 +8,7 @@
     scroll-behavior: smooth;
 }
 :root{
-    --bg-color: #AAF0D1;
+    --bg-color: #8dcefae4;
     --text-color: #22100d;
     --second-color: #FF9966;
     --main-color: #f66962;
@@ -82,7 +82,7 @@ section{
     position: relative;
     height: 100vh;
     width: 100%;
-    background: url(../images/language/fback.jpg);
+    background: url(../images/language/lang2.jpg);
     background-size: cover;
     background-position: center;
     display: grid;
@@ -94,19 +94,20 @@ section{
     font-size: var(--big-font);
     margin: 15px 0 15px;
 }
-.home-text h6{
-   color: var(--main-color); 
+.home-text h5{
+   color: var(--text-color);
    font-size: 18px;
    font-weight: 600;
    letter-spacing: 2px;
 }
 .home-text p{
-    color: var(--second-color);
-    font-size: var(--p-font);
+    color:#eeff55;
+    font-size: 20px;
     font-weight: 500;
+    font-family: 'Times New Roman', Times, serif;
     margin-bottom: 48px;
 }
-.latter form{
+/* .latter form{
     width: 100%;
     max-width: 460px;
     position: relative;
@@ -131,7 +132,7 @@ section{
     cursor: pointer;
     top: 2px;
     right: 1px;
-}
+} */
 .home-img img{
     height: auto;
     width: 100%;
@@ -148,7 +149,7 @@ header.sticky{
     gap: 1.5rem;
     align-items: center;
     cursor: pointer;
-    background: url(../images/language/fback.jpg);
+    background: url(../images/language/lang2.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -159,8 +160,15 @@ header.sticky{
     border: 1px solid #e9ecef;
     border-radius: 20px;
     padding: 20px 30px;
+    
     /* box-shadow: -11.729px -11.729px 32px rgb(255 255 255 / 15%); */
     transition: all .40s ease;
+    width: 300px;
+    height: 400px;
+}
+.container-box img{
+    width: 100%;
+    height: 100%;
 }
 .container-box:hover{
     transform: translateY(-15px);
@@ -175,6 +183,10 @@ header.sticky{
     color: var(--second-color);
     font-weight: 500;
 }
+
+
+
+
 .center-text{
     text-align: center;
 }
@@ -190,7 +202,7 @@ header.sticky{
     line-height: 1.2;
 }
 .categories{
-    background: url(../images/language/fback.jpg);
+    background: url(../images/language/lang2.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -252,7 +264,7 @@ header.sticky{
     transform: scale(0.9) translateY(-5px);
 }
 .cources{
-    background: url(../images/language/fback.jpg);
+    background: url(../images/language/lang2.jpg);
     background-size: cover;
     background-position: center;
    
@@ -339,7 +351,7 @@ header.sticky{
     margin-top: 5rem;
 }
 .about{
-    background: url(../images/language/fback.jpg);
+    background: url(../images/language/lang2.jpg);
     background-size: cover;
     background-position: center;
     display: grid;
