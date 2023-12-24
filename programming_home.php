@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DevBlog - Julia Walker's Personal Blog</title>
+  <title>Nexus Hub</title>
 
   <!--
     - favicon
@@ -37,9 +37,9 @@
 
       <nav class="navbar">
 
-        <a href="#">
-          <img src="images/logo.png" alt="website's logo" width="100" height="100" class="logo-light">
-          <img src="images/logo.png" alt="website's logo" width="100" height="100" class="logo-dark">
+        <a href="index.php">
+          <img src="images/logo_name.png" alt="website's logo" width="250" height="100" class="logo-light">
+          <img src="images/logo_name.png" alt="website's logo" width="250" height="100" class="logo-dark">
         </a>
 
         <div class="btn-group">
@@ -166,10 +166,10 @@
             and other popular languages.
           </p>
 
-          <!-- <div class="btn-group">
-            <a href="#" class="btn btn-primary">Contact Me</a>
-            <a href="#" class="btn btn-secondary">About Me</a>
-          </div> -->
+           <div class="btn-group">
+            <a href="#contact" class="btn btn-primary">About us</a>
+            <!-- <a href="#" class="btn btn-secondary">About Me</a> -->
+          </div> 
 
         </div>
 
@@ -387,24 +387,9 @@
 
             </div>
 
-
-
-
-
-
-
-
-          
-
           </div>
 
-
         </div>
-
-
-
-
-
         <!--
           - ASIDE
         -->
@@ -415,7 +400,7 @@
 
             <h2 class="h2">Languages :</h2>
 
-            <a href="#" class="topic-btn">
+            <a href="pro_single.php" class="topic-btn">
               <div class="icon-box">
                 <!-- <ion-icon name="server-outline"></ion-icon> -->
                 <img src="images/programming/java.png" alt="">
@@ -626,7 +611,7 @@
   <!--
     - custom js link
   -->
-  <script src="js/script.min.js"></script>
+  <script src="js/pro_script.js"></script>
 
   <!--
     - ionicon link

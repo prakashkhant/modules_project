@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DevBlog - Julia Walker's Personal Blog</title>
+    <title>Nexus Hub</title>
 
     <!--
     - favicon
@@ -37,9 +37,9 @@
 
             <nav class="navbar">
 
-                <a href="#">
-                    <img src="images/logo.png" alt="website's logo" width="100" height="100" class="logo-light">
-                    <img src="images/logo.png" alt="website's logo" width="100" height="100" class="logo-dark">
+                <a href="index.php">
+                <img src="images/logo_name.png" alt="website's logo" width="250" height="100" class="logo-light">
+          <img src="images/logo_name.png" alt="website's logo" width="250" height="100" class="logo-dark">
                 </a>
 
                 <div class="btn-group">
@@ -172,10 +172,10 @@
                             popular</abbr> and core topics
                     </p>
 
-                    <!-- <div class="btn-group">
-            <a href="#" class="btn btn-primary">Contact Me</a>
-            <a href="#" class="btn btn-secondary">About Me</a>
-          </div> -->
+                    <div class="btn-group">
+            <a href="index.php" class="btn btn-primary">Go NexusHUb</a>
+            <a href="programming_home.php" class="btn btn-secondary">Back to Home</a>
+          </div>
 
                 </div>
 
@@ -464,7 +464,7 @@
     <!--
     - custom js link
   -->
-    <script src="js/script.min.js"></script>
+    <script src="js/pro_script.js"></script>
 
     <!--
     - ionicon link

@@ -39,3 +39,4 @@ for (let i = 0; i < themeBtn.length; i++) {
   })
 
 }
+document.title = document.title+ " | CodeHub";

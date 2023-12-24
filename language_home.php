@@ -101,41 +101,58 @@
 
     </div>
 
+
     <div class="categories-content">
-      <div class="box">
-        <img src="images/language/cat-english.png">
-        <h3>English</h3>
+      <a href="language_single.php">
+        <div class="box">
+          <img src="images/language/cat-english.png">
+          <h3>English</h3>
 
-      </div>
+        </div>
+      </a>
 
-      <div class="box">
-        <img src="images/language/cat-german.png">
-        <h3>Germany</h3>
+      <a href="language_single.php">
+        <div class="box">
+          <img src="images/language/cat-german.png">
+          <h3>Germany</h3>
 
-      </div>
+        </div>
+      </a>
 
-      <div class="box">
-        <img src="images/language/cat-french.png">
-        <h3>French</h3>
+      <a href="language_single.php">
 
-      </div>
+        <div class="box">
+          <img src="images/language/cat-french.png">
+          <h3>French</h3>
 
-      <div class="box">
-        <img src="images/language/cat-korean.png">
-        <h3>Korean</h3>
+        </div>
+      </a>
 
-      </div>
-      <div class="box">
-        <img src="images/language/cat-sanskrit.png">
-        <h3>Sanskrit</h3>
+      <a href="language_single.php">
+        <div class="box">
+          <img src="images/language/cat-korean.png">
+          <h3>Korean</h3>
 
-      </div>
-      <div class="box">
-        <img src="images/language/cat-urdu.png">
-        <h3>Urdu</h3>
+        </div>
 
-      </div>
+      </a>
 
+      <a href="language_single.php">
+        <div class="box">
+          <img src="images/language/cat-sanskrit.png">
+          <h3>Sanskrit</h3>
+
+        </div>
+
+      </a>
+
+      <a href="language_single.php">
+        <div class="box">
+          <img src="images/language/cat-urdu.png">
+          <h3>Urdu</h3>
+
+        </div>
+      </a>
     </div>
 
     <!-- 
@@ -155,7 +172,7 @@
 
     <div class="cources-content">
       <div class="row">
-        <a href="https://www.vocabulary.com/"  target="_blank">
+        <a href="https://www.vocabulary.com/" target="_blank">
           <img src="images/language/course-vacb.jpg" width="400px" height="400px">
           <div class="cources-text">
             <h5>Advance</h5>
@@ -183,7 +200,7 @@
       </div>
 
       <div class="row">
-        <a href="https://www.ieltspass.com/courses/online-ielts-course-preparation-training"  target="_blank">
+        <a href="https://www.ieltspass.com/courses/online-ielts-course-preparation-training" target="_blank">
           <img src="images/language/course-ielts.png">
           <div class="cources-text">
             <h5>Advance</h5>
@@ -206,52 +223,52 @@
 
 
       <div class="row">
-        <a href="https://www.englishgrammar101.com/"  target="_blank">
-        <img src="images/language/cource-grammer.jpg">
-        <div class="cources-text">
-          <h5>Advance</h5>
-          <h3>Complete Langauge Grammer</h3>
-          <div class="rating">
-            <div class="star">
-              <?php
-
-              rating(3);
-              ?>
-            </div>
+        <a href="https://www.englishgrammar101.com/" target="_blank">
+          <img src="images/language/cource-grammer.jpg">
+          <div class="cources-text">
+            <h5>Advance</h5>
+            <h3>Complete Langauge Grammer</h3>
             <div class="rating">
-              <p>105M Reviews</p>
+              <div class="star">
+                <?php
+
+                rating(3);
+                ?>
+              </div>
+              <div class="rating">
+                <p>105M Reviews</p>
+              </div>
             </div>
           </div>
-        </div>
         </a>
       </div>
 
       <div class="row">
         <a href="https://www.studying-in-germany.org/learn-german/" target="_blank">
-        <img src="images/language/course-german.jpg">
-        <div class="cources-text">
-          <h5>Advance</h5>
-          <h3>Complate German Language</h3>
-          <div class="rating">
-            <div class="star">
-              <?php
+          <img src="images/language/course-german.jpg">
+          <div class="cources-text">
+            <h5>Advance</h5>
+            <h3>Complate German Language</h3>
+            <div class="rating">
+              <div class="star">
+                <?php
 
-              rating(5);
-              ?>
+                rating(5);
+                ?>
+              </div>
+              <div class="review">
+                <p>145M Reviews</p>
+              </div>
             </div>
-            <div class="review">
-              <p>145M Reviews</p>
-            </div>
+
           </div>
-
-        </div>
         </a>
       </div>
 
     </div>
 
     <div class="main-btn">
-      <a href="https://www.duolingo.com/"  target="_blank" class="btn">Learn More</a>
+      <a href="https://www.duolingo.com/" target="_blank" class="btn">Learn More</a>
     </div>
 
   </section>
@@ -260,7 +277,7 @@
 
   <section class="cta">
     <div class="center-text">
-     
+
       <h2>Top 4 Universities </h2>
     </div>
     <div class="cta-content">
