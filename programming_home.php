@@ -542,8 +542,8 @@
       <div class="wrapper">
 
         <a href="#" class="footer-logo">
-          <img src="images/logo_name.png" alt="website's Logo" width="150" height="80" class="logo-light">
-          <img src="images/logo_name.png" alt="website's Logo" width="150" height="80" class="logo-dark">
+          <img src="images/logo_name.png" alt="website's Logo" width="165" height="80" class="logo-light">
+          <img src="images/logo_name.png" alt="website's Logo" width="165" height="80" class="logo-dark">
         </a>
 
         <p class="footer-text">

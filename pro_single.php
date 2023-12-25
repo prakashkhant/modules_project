@@ -38,8 +38,8 @@
             <nav class="navbar">
 
                 <a href="index.php">
-                <img src="images/logo_name.png" alt="website's logo" width="250" height="100" class="logo-light">
-          <img src="images/logo_name.png" alt="website's logo" width="250" height="100" class="logo-dark">
+                    <img src="images/logo_name.png" alt="website's logo" width="250" height="100" class="logo-light">
+                    <img src="images/logo_name.png" alt="website's logo" width="250" height="100" class="logo-dark">
                 </a>
 
                 <div class="btn-group">
@@ -173,9 +173,9 @@
                     </p>
 
                     <div class="btn-group">
-            <a href="index.php" class="btn btn-primary">Go NexusHUb</a>
-            <a href="programming_home.php" class="btn btn-secondary">Back to Home</a>
-          </div>
+                        <a href="index.php" class="btn btn-primary">Go NexusHUb</a>
+                        <a href="programming_home.php" class="btn btn-secondary">Back to Home</a>
+                    </div>
 
                 </div>
 
@@ -293,7 +293,10 @@
                             ?>
                         </div>
                     </div>
-                    <a href="#" class="btn load-more">Next topic</a>
+                    <a href="#" class="btn load-more">Next topic ►
+                   
+                   
+                    </a>
                 </div>
 
 
@@ -351,21 +354,26 @@
                     </div>
 
 
-
+                    <div>
+                        <hr width="100%">
+                    </div>
                     <div class="newsletter">
 
-                        <h2 class="h2">Newsletter</h2>
+                        <h2 class="h2">★ Quize ★</h2>
 
                         <div class="wrapper">
 
                             <p>
-                                Subscribe to our newsletter to be among the first to keep up with the latest updates.
+                                Want to increse your level and test the memeory ?
                             </p>
 
                             <form action="#">
-                                <input type="email" name="email" placeholder="Email Address" required>
 
-                                <button type="submit" class="btn btn-primary">Subscribe</button>
+                              <!-- test link------------------------------ -->
+                                <a href="#">
+                                <button type="submit" class="btn btn-primary">Test</button>
+
+                                </a>
                             </form>
 
                         </div>
@@ -395,8 +403,8 @@
             <div class="wrapper">
 
                 <a href="#" class="footer-logo">
-                    <img src="images/logo_name.png" alt="website's Logo" width="150" height="80" class="logo-light">
-                    <img src="images/logo_name.png" alt="website's Logo" width="150" height="80" class="logo-dark">
+                    <img src="images/logo_name.png" alt="website's Logo" width="165" height="80" class="logo-light">
+                    <img src="images/logo_name.png" alt="website's Logo" width="165" height="80" class="logo-dark">
                 </a>
 
                 <p class="footer-text">
