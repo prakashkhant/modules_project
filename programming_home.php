@@ -1,515 +1,623 @@
-<?php
-include './layouts/index_top.php';
-?>
-<script>
-    document.title = document.title + " | Programming Languages";
-</script>
+<!DOCTYPE html>
+<html lang="en">
 
-<section class="tags" aria-labelledby="tag-label" style="padding-top: 70px;">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nexus Hub</title>
+
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="css/programming_style.css">
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+</head>
+
+<body class="light-theme">
+
+  <!--
+    - #HEADER
+  -->
+
+  <header>
+
     <div class="container">
 
-        <h2 class="headline headline-2 section-title" id="tag-label">
-            <span class="span">Programming Languages</span>
-        </h2>
+      <nav class="navbar">
 
-        <p class="section-text">
-            Some kind of languages that you may to learn
+        <a href="index.php">
+          <img src="images/logo_name.png" alt="website's logo" width="250" height="100" class="logo-light">
+          <img src="images/logo_name.png" alt="website's logo" width="250" height="100" class="logo-dark">
+        </a>
+
+        <div class="btn-group">
+
+          <button class="theme-btn theme-btn-mobile light">
+            <ion-icon name="moon" class="moon"></ion-icon>
+            <ion-icon name="sunny" class="sun"></ion-icon>
+          </button>
+
+          <button class="nav-menu-btn">
+            <ion-icon name="menu-outline"></ion-icon>
+          </button>
+
+        </div>
+
+        <div class="flex-wrapper">
+
+          <ul class="desktop-nav">
+
+            <li>
+              <a href="#" class="nav-link">Home</a>
+            </li>
+
+            <li>
+              <a href="#" class="nav-link">About Me</a>
+            </li>
+
+            <li>
+              <a href="#" class="nav-link">Contact</a>
+            </li>
+
+          </ul>
+
+          <button class="theme-btn theme-btn-desktop light">
+            <ion-icon name="moon" class="moon"></ion-icon>
+            <ion-icon name="sunny" class="sun"></ion-icon>
+          </button>
+
+        </div>
+
+        <div class="mobile-nav">
+
+          <button class="nav-close-btn">
+            <ion-icon name="close-outline"></ion-icon>
+          </button>
+
+          <div class="wrapper">
+
+            <p class="h3 nav-title">Main Menu</p>
+
+            <ul>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Home</a>
+              </li>
+
+              <li class="nav-item">
+                <a href="#" class="nav-link">About Me</a>
+              </li>
+
+              <li class="nav-item">
+                <a href="#" class="nav-link">Contact</a>
+              </li>
+            </ul>
+
+          </div>
+
+          <div>
+
+            <p class="h3 nav-title">Topics</p>
+
+            <ul>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Java</a>
+              </li>
+
+              <li class="nav-item">
+                <a href="#" class="nav-link">Python</a>
+              </li>
+
+              <li class="nav-item">
+                <a href="#" class="nav-link">PHP</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Android</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Javascript</a>
+              </li>
+            </ul>
+
+          </div>
+
+        </div>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+
+
+
+  <main>
+
+    <!--
+      - #HERO SECTION
+    -->
+
+    <div class="hero">
+
+      <div class="container">
+
+        <div class="left">
+
+          <h1 class="h1">
+            Hi, Welcome to <b>CodeHub</b>
+            <!-- <br>Programming languages -->
+          </h1>
+
+          <p class="h3">
+            Here ,you learn  <abbr title="Accessibility">Coding languages</abbr>
+            and other popular languages.
+          </p>
+
+           <div class="btn-group">
+            <a href="#contact" class="btn btn-primary">About us</a>
+            <!-- <a href="#" class="btn btn-secondary">About Me</a> -->
+          </div> 
+
+        </div>
+
+        <div class="right">
+
+          <div class="pattern-bg"></div>
+          <div class="img-box">
+            <img src="images/programming/pro_home.png" alt="home_img" class="hero-img">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+
+
+    <div class="main">
+
+      <div class="container">
+
+        <!--
+          - BLOG SECTION
+        -->
+
+        <div class="blog">
+
+          <h2 class="h2">Remarkeble Topics</h2>
+
+          <div class="blog-card-group">
+
+            <div class="blog-card">
+
+              <div class="blog-card-banner">
+                <img src="images/programming/blog-1.png" alt="Building microservices with Dropwizard, MongoDB & Docker"
+                  width="250" class="blog-banner-img">
+              </div>
+
+              <div class="blog-content-wrapper">
+
+                <button class="blog-topic text-tiny">Java</button>
+
+                <h3>
+                  <a href="#" class="h3">
+                    Building microservices with Dropwizard, MongoDB & Docker
+                  </a>
+                </h3>
+
+                <p class="blog-text">
+                  This NoSQL database oriented to documents (by documents like JSON) combines some of the features from
+                  relational
+                  databases, easy to use and the multi-platform is the best option for scale up and have fault
+                  tolerance, load balancing,
+                  map reduce, etc.
+                </p>
+
+                <div class="wrapper-flex">
+
+                  <div class="profile-wrapper">
+                    <img src="images/programming/author.png" alt="Julia Walker" width="50">
+                  </div>
+
+                  <div class="wrapper">
+                    <a href="#" class="h4">Julia Walker</a>
+
+                    <p class="text-sm">
+                      <time datetime="2022-01-17">Jan 17, 2022</time>
+                      <span class="separator"></span>
+                      <ion-icon name="time-outline"></ion-icon>
+                      <time datetime="PT3M">3 min</time>
+                    </p>
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <div class="blog-card">
+
+              <div class="blog-card-banner">
+                <img src="images/programming/blog-2.png" alt="Fast web page loading on a $20 feature phone" width="250"
+                  class="blog-banner-img">
+              </div>
+
+              <div class="blog-content-wrapper">
+
+                <button class="blog-topic text-tiny">Web Performance</button>
+
+                <h3><a href="" class="h3">Fast web page loading on a $20 feature phone</a></h3>
+
+                <p class="blog-text">
+                  Feature phones are affordable (under $20-25), low-end devices enabling 100s of millions of users in
+                  developing countries
+                  to leverage the web. Think of them as a light version of a smart phone.
+                </p>
+
+                <div class="wrapper-flex">
+
+                  <div class="profile-wrapper">
+                    <img src="images/programming/author.png" alt="Julia walker" width="50">
+                  </div>
+
+                  <div class="wrapper">
+                    <a href="#" class="h4">Julia Walker</a>
+
+                    <p class="text-sm">
+                      <time datetime="2021-12-10">Dec 10, 2021</time>
+                      <span class="separator"></span>
+                      <ion-icon name="time-outline"></ion-icon>
+                      <time datetime="PT2M">2 min</time>
+                    </p>
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <div class="blog-card">
+
+              <div class="blog-card-banner">
+                <img src="images/programming/blog-3.png" alt="Accessibility Tips for Web Developers" width="250"
+                  class="blog-banner-img">
+              </div>
+
+              <div class="blog-content-wrapper">
+
+                <button class="blog-topic text-tiny">Accessibility</button>
+
+                <h3><a href="" class="h3">Accessibility Tips for Web Developers</a></h3>
+
+                <p class="blog-text">
+                  It's awesome to build sites that are inclusive and accessible to everyone. There are at least six key
+                  areas of
+                  disability we can optimize for: visual, hearing, mobility, cognition, speech and neural. Many tools
+                  and resources can
+                  help here, even if you're totally new to web accessibility.
+                </p>
+
+                <div class="wrapper-flex">
+
+                  <div class="profile-wrapper">
+                    <img src="images/programming/author.png" alt="Julia walker" width="50">
+                  </div>
+
+                  <div class="wrapper">
+                    <a href="#" class="h4">Julia Walker</a>
+
+                    <p class="text-sm">
+                      <time datetime="2021-11-28">Nov 28, 2021</time>
+                      <span class="separator"></span>
+                      <ion-icon name="time-outline"></ion-icon>
+                      <time datetime="PT4M">4 min</time>
+                    </p>
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <div class="blog-card">
+
+              <div class="blog-card-banner">
+                <img src="images/programming/blog-4.png" alt="Dynamically Securing Databases using Hashicorp Vault"
+                  width="250" class="blog-banner-img">
+              </div>
+
+              <div class="blog-content-wrapper">
+
+                <button class="blog-topic text-tiny">Database</button>
+
+                <h3><a href="" class="h3">Dynamically Securing Databases using Hashicorp Vault</a></h3>
+
+                <p class="blog-text">
+                  Nowadays, it's hard to profoundly talk about security in the IT industry, since it has to be
+                  considered on so many
+                  different levels: from securing code chunks, securing containers, up to securing complex
+                  infrastructures and defining
+                  strong authorization and authentication policies across the enterprise.
+                </p>
+
+                <div class="wrapper-flex">
+
+                  <div class="profile-wrapper">
+                    <img src="images/programming/author.png" alt="Julia walker" width="50">
+                  </div>
+
+                  <div class="wrapper">
+                    <a href="#" class="h4">Julia Walker</a>
+
+                    <p class="text-sm">
+                      <time datetime="2021-11-20">Nov 20, 2021</time>
+                      <span class="separator"></span>
+                      <ion-icon name="time-outline"></ion-icon>
+                      <time datetime="PT4M">4 min</time>
+                    </p>
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+        <!--
+          - ASIDE
+        -->
+
+        <div class="aside">
+
+          <div class="topics">
+
+            <h2 class="h2">Languages :</h2>
+
+            <a href="pro_single.php" class="topic-btn">
+              <div class="icon-box">
+                <!-- <ion-icon name="server-outline"></ion-icon> -->
+                <img src="images/programming/java.png" alt="">
+              </div>
+
+              <p>Java</p>
+            </a>
+
+            <a href="#" class="topic-btn">
+              <div class="icon-box">
+                <img src="images/programming/python.png" alt="">
+              </div>
+
+              <p>Python</p>
+            </a>
+
+            <a href="#" class="topic-btn">
+              <div class="icon-box">
+                <img src="images/programming/php.png" alt="">
+              </div>
+
+              <p>PHP</p>
+            </a>
+
+            <a href="#" class="topic-btn">
+              <div class="icon-box">
+                <img src="images/programming/android.png" alt="">
+              </div>
+
+              <p>Android</p>
+            </a>
+
+            <a href="#" class="topic-btn">
+              <div class="icon-box">
+                <img src="images/programming/js.png" alt="">
+              </div>
+
+              <p>Javascript</p>
+            </a>
+            
+
+          </div>
+
+          <div class="tags">
+
+            <h2 class="h2">Tags</h2>
+
+            <div class="wrapper">
+
+              <button class="hashtag">#java</button>
+              <button class="hashtag">#object</button>
+              <button class="hashtag">#class</button>
+              <button class="hashtag">#mobility</button>
+              <button class="hashtag">#inclusion</button>
+              <button class="hashtag">#webperf</button>
+              <button class="hashtag">#optimize</button>
+              <button class="hashtag">#performance</button>
+
+            </div>
+
+          </div>
+
+          <div class="contact">
+
+            <h2 class="h2">Let's Talk</h2>
+
+            <div class="wrapper">
+
+              <p>
+                Do you have doubt say on social-link?
+              </p>
+
+              <ul class="social-link">
+
+                <li>
+                  <a href="#" class="icon-box discord">
+                    <ion-icon name="logo-discord"></ion-icon>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" class="icon-box twitter">
+                    <ion-icon name="logo-twitter"></ion-icon>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" class="icon-box facebook">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                  </a>
+                </li>
+
+              </ul>
+
+            </div>
+
+          </div>
+
+          <div class="newsletter">
+
+            <h2 class="h2">Newsletter</h2>
+
+            <div class="wrapper">
+
+              <p>
+                Subscribe to our newsletter to be among the first to keep up with the latest updates.
+              </p>
+
+              <form action="#">
+                <input type="email" name="email" placeholder="Email Address" required>
+
+                <button type="submit" class="btn btn-primary">Subscribe</button>
+              </form>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+
+
+
+
+
+  <!--
+    - #FOOTER
+  -->
+
+  <footer>
+
+    <div class="container">
+
+      <div class="wrapper">
+
+        <a href="#" class="footer-logo">
+          <img src="images/logo_name.png" alt="website's Logo" width="150" height="80" class="logo-light">
+          <img src="images/logo_name.png" alt="website's Logo" width="150" height="80" class="logo-dark">
+        </a>
+
+        <p class="footer-text">
+          Learn about Web accessibility, Web performance, and Database managementMore Languages.
         </p>
 
-        <ul class="grid-list ">
+      </div>
 
-            <li>
-                <a href="pro_info.php" class="card tag-btn">
-                    <img src="images/java.png" width="32" height="32" loading="lazy" alt="JAVA">
+      <div class="wrapper">
 
-                    <p class="btn-text">Java</p>
-                </a>
-            </li>
+        <p class="footer-title">Quick Links</p>
 
-            <li>
-                <a  href="pro_info.php" class="card tag-btn">
-                    <img src="images/tag2.png" width="32" height="32" loading="lazy" alt="Culture">
+        <ul>
 
-                    <p class="btn-text">Python</p>
-                </a>
-            </li>
+          <li>
+            <a href="#" class="footer-link">Advertise with us</a>
+          </li>
 
-            <li>
-                <a href="pro_info.php" class="card tag-btn">
-                    <img src="images/tag3.png" width="32" height="32" loading="lazy" alt="Lifestyle">
+          <li>
+            <a href="#" class="footer-link">About Us</a>
+          </li>
 
-                    <p class="btn-text">PHP</p>
-                </a>
-            </li>
-
-            <li>
-                <a href="pro_info.php" class="card tag-btn">
-                    <img src="images/tag4.png" width="32" height="32" loading="lazy" alt="Fashion">
-
-                    <p class="btn-text">Java-Script</p>
-                </a>
-            </li>
+          <li>
+            <a href="#" class="footer-link">Contact Us</a>
+          </li>
 
         </ul>
 
-    </div>
-</section>
+      </div>
 
-<section class="section recent-post" id="recent" aria-labelledby="recent-label">
-    <div class="container">
+      <div class="wrapper">
 
-        <div class="post-main">
+        <p class="footer-title">Legal Stuff</p>
 
-            <h2 class="headline headline-2 section-title">
-                <span class="span">Are you Know</span>
-            </h2>
+        <ul>
 
-            <p class="section-text">
-                Don't miss the latest trends
-            </p>
+          <li>
+            <a href="#" class="footer-link">Privacy Notice</a>
+          </li>
 
-            <ul class="grid-list">
+          <li>
+            <a href="#" class="footer-link">Cookie Policy</a>
+          </li>
 
-                <li>
-                    <div class="recent-post-card">
+          <li>
+            <a href="#" class="footer-link">Terms Of Use</a>
+          </li>
 
-                        <figure class="card-banner img-holder" style="--width: 271; --height: 258;">
-                            <img src="images/recent-post-1.jpg" width="271" height="258" loading="lazy" alt="Helpful Tips for Working from Home as a Freelancer" class="img-cover">
-                        </figure>
+        </ul>
 
-                        <div class="card-content">
-
-                            <a href="#" class="card-badge">Working Tips</a>
-
-                            <h3 class="headline headline-3 card-title">
-                                <a href="#" class="link hover-2">Helpful Tips for Working from Home as a Freelancer</a>
-                            </h3>
-
-                            <p class="card-text">
-                                Gosh jaguar ostrich quail one excited dear hello and bound and the and bland moral misheard
-                                roadrunner flapped lynx far that and jeepers giggled far and far
-                            </p>
-
-                            <div class="card-wrapper">
-                                <div class="card-tag">
-                                    <a href="#" class="span hover-2"># Travel</a>
-
-                                    <a href="#" class="span hover-2"># Lifestyle</a>
-                                </div>
-
-                                <div class="wrapper">
-                                    <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
-
-                                    <span class="span">3 mins read</span>
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </div>
-                </li>
-
-                <li>
-                    <div class="recent-post-card">
-
-                        <figure class="card-banner img-holder" style="--width: 271; --height: 258;">
-                            <img src="images/recent-post-2.jpg" width="271" height="258" loading="lazy" alt="Helpful Tips for Working from Home as a Freelancer" class="img-cover">
-                        </figure>
-
-                        <div class="card-content">
-
-                            <a href="#" class="card-badge">Working Tips</a>
-
-                            <h3 class="headline headline-3 card-title">
-                                <a href="#" class="link hover-2">Helpful Tips for Working from Home as a Freelancer</a>
-                            </h3>
-
-                            <p class="card-text">
-                                Gosh jaguar ostrich quail one excited dear hello and bound and the and bland moral misheard
-                                roadrunner flapped lynx far that and jeepers giggled far and far
-                            </p>
-
-                            <div class="card-wrapper">
-                                <div class="card-tag">
-                                    <a href="#" class="span hover-2"># Travel</a>
-
-                                    <a href="#" class="span hover-2"># Lifestyle</a>
-                                </div>
-
-                                <div class="wrapper">
-                                    <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
-
-                                    <span class="span">3 mins read</span>
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </div>
-                </li>
-
-                <li>
-                    <div class="recent-post-card">
-
-                        <figure class="card-banner img-holder" style="--width: 271; --height: 258;">
-                            <img src="images/recent-post-3.jpg" width="271" height="258" loading="lazy" alt="Helpful Tips for Working from Home as a Freelancer" class="img-cover">
-                        </figure>
-
-                        <div class="card-content">
-
-                            <a href="#" class="card-badge">Working Tips</a>
-
-                            <h3 class="headline headline-3 card-title">
-                                <a href="#" class="link hover-2">Helpful Tips for Working from Home as a Freelancer</a>
-                            </h3>
-
-                            <p class="card-text">
-                                Gosh jaguar ostrich quail one excited dear hello and bound and the and bland moral misheard
-                                roadrunner flapped lynx far that and jeepers giggled far and far
-                            </p>
-
-                            <div class="card-wrapper">
-                                <div class="card-tag">
-                                    <a href="#" class="span hover-2"># Travel</a>
-
-                                    <a href="#" class="span hover-2"># Lifestyle</a>
-                                </div>
-
-                                <div class="wrapper">
-                                    <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
-
-                                    <span class="span">3 mins read</span>
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </div>
-                </li>
-
-                <li>
-                    <div class="recent-post-card">
-
-                        <figure class="card-banner img-holder" style="--width: 271; --height: 258;">
-                            <img src="images/recent-post-4.jpg" width="271" height="258" loading="lazy" alt="Helpful Tips for Working from Home as a Freelancer" class="img-cover">
-                        </figure>
-
-                        <div class="card-content">
-
-                            <a href="#" class="card-badge">Working Tips</a>
-
-                            <h3 class="headline headline-3 card-title">
-                                <a href="#" class="link hover-2">Helpful Tips for Working from Home as a Freelancer</a>
-                            </h3>
-
-                            <p class="card-text">
-                                Gosh jaguar ostrich quail one excited dear hello and bound and the and bland moral misheard
-                                roadrunner flapped lynx far that and jeepers giggled far and far
-                            </p>
-
-                            <div class="card-wrapper">
-                                <div class="card-tag">
-                                    <a href="#" class="span hover-2"># Travel</a>
-
-                                    <a href="#" class="span hover-2"># Lifestyle</a>
-                                </div>
-
-                                <div class="wrapper">
-                                    <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
-
-                                    <span class="span">3 mins read</span>
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </div>
-                </li>
-
-                <li>
-                    <div class="recent-post-card">
-
-                        <figure class="card-banner img-holder" style="--width: 271; --height: 258;">
-                            <img src="images/recent-post-5.jpg" width="271" height="258" loading="lazy" alt="Helpful Tips for Working from Home as a Freelancer" class="img-cover">
-                        </figure>
-
-                        <div class="card-content">
-
-                            <a href="#" class="card-badge">Working Tips</a>
-
-                            <h3 class="headline headline-3 card-title">
-                                <a href="#" class="link hover-2">Helpful Tips for Working from Home as a Freelancer</a>
-                            </h3>
-
-                            <p class="card-text">
-                                Gosh jaguar ostrich quail one excited dear hello and bound and the and bland moral misheard
-                                roadrunner flapped lynx far that and jeepers giggled far and far
-                            </p>
-
-                            <div class="card-wrapper">
-                                <div class="card-tag">
-                                    <a href="#" class="span hover-2"># Travel</a>
-
-                                    <a href="#" class="span hover-2"># Lifestyle</a>
-                                </div>
-
-                                <div class="wrapper">
-                                    <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
-
-                                    <span class="span">3 mins read</span>
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </div>
-                </li>
-
-            </ul>
-
-            <nav aria-label="pagination" class="pagination">
-
-                <a href="#" class="pagination-btn" aria-label="previous page">
-                    <ion-icon name="arrow-back" aria-hidden="true"></ion-icon>
-                </a>
-
-                <a href="#" class="pagination-btn">1</a>
-                <a href="#" class="pagination-btn">2</a>
-                <a href="#" class="pagination-btn">3</a>
-                <a href="#" class="pagination-btn" aria-label="more page">...</a>
-
-                <a href="#" class="pagination-btn" aria-label="next page">
-                    <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
-                </a>
-
-            </nav>
-
-        </div>
-
-        <!--                   answer type blogs                                    -->
-
-        <div class="post-aside grid-list Popular-Answers">
-
-            <div class="card aside-card">
-
-                <h3 class="headline headline-2 aside-title">
-                    <span class="span">Popular Answers</span>
-                </h3>
-
-                <ul class="popular-list">
-
-                    <li>
-                        <div class="popular-card">
-
-                            <figure class="card-banner img-holder" style="--width: 64; --height: 64;">
-                                <img src="images/popular-post-1.jpg" width="64" height="64" loading="lazy" alt="Creating is a privilege but it’s also a gift" class="img-cover">
-                            </figure>
-
-                            <div class="card-content">
-
-                                <h4 class="headline headline-4 card-title">
-                                    <a href="#" class="link hover-2">What is Java?</a>
-                                </h4>
-
-                                <div class="warpper">
-                                    <p class="card-subtitle">5 min</p>
-
-                                    <time class="publish-date" datetime="2022-04-15">15 April 2022</time>
-                                </div>
-
-                            </div>
-
-                        </div>
-                    </li>
-
-                    <li>
-                        <div class="popular-card">
-
-                            <figure class="card-banner img-holder" style="--width: 64; --height: 64;">
-                                <img src="images/popular-post-2.jpg" width="64" height="64" loading="lazy" alt="Being unique is better than being perfect" class="img-cover">
-                            </figure>
-
-                            <div class="card-content">
-
-                                <h4 class="headline headline-4 card-title">
-                                    <a href="#" class="link hover-2"> What are the code names of android?</a>
-                                </h4>
-
-                                <div class="warpper">
-                                    <p class="card-subtitle">15 mins read</p>
-
-                                    <time class="publish-date" datetime="2022-04-15">14 December 2023</time>
-                                </div>
-
-                            </div>
-
-                        </div>
-                    </li>
-
-                    <li>
-                        <div class="popular-card">
-
-                            <figure class="card-banner img-holder" style="--width: 64; --height: 64;">
-                                <img src="images/popular-post-3.jpg" width="64" height="64" loading="lazy" alt="Every day, in every city and town across the country" class="img-cover">
-                            </figure>
-
-                            <div class="card-content">
-
-                                <h4 class="headline headline-4 card-title">
-                                    <a href="#" class="link hover-2">Every day, in every city and town across the country</a>
-                                </h4>
-
-                                <div class="warpper">
-                                    <p class="card-subtitle">15 mins read</p>
-
-                                    <time class="publish-date" datetime="2022-04-15">15 April 2022</time>
-                                </div>
-
-                            </div>
-
-                        </div>
-                    </li>
-
-                    <li>
-                        <div class="popular-card">
-
-                            <figure class="card-banner img-holder" style="--width: 64; --height: 64;">
-                                <img src="images/popular-post-4.jpg" width="64" height="64" loading="lazy" alt="Your voice, your mind, your story, your vision" class="img-cover">
-                            </figure>
-
-                            <div class="card-content">
-
-                                <h4 class="headline headline-4 card-title">
-                                    <a href="#" class="link hover-2">Your voice, your mind, your story, your vision</a>
-                                </h4>
-
-                                <div class="warpper">
-                                    <p class="card-subtitle">15 mins read</p>
-
-                                    <time class="publish-date" datetime="2022-04-15">15 April 2022</time>
-                                </div>
-
-                            </div>
-
-                        </div>
-                    </li>
-
-                    <li>
-                        <div class="popular-card">
-
-                            <figure class="card-banner img-holder" style="--width: 64; --height: 64;">
-                                <img src="images/popular-post-2.jpg" width="64" height="64" loading="lazy" alt="Being unique is better than being perfect" class="img-cover">
-                            </figure>
-
-                            <div class="card-content">
-
-                                <h4 class="headline headline-4 card-title">
-                                    <a href="#" class="link hover-2">Being unique is better than being perfect</a>
-                                </h4>
-
-                                <div class="warpper">
-                                    <p class="card-subtitle">15 mins read</p>
-
-                                    <time class="publish-date" datetime="2022-04-15">15 April 2022</time>
-                                </div>
-
-                            </div>
-
-                        </div>
-                    </li>
-
-                </ul>
-
-            </div>
-
-            <div class="card aside-card">
-
-                <h3 class="headline headline-2 aside-title">
-                    <span class="span">Last Comment</span>
-                </h3>
-
-                <ul class="comment-list">
-
-                    <li>
-                        <div class="comment-card">
-
-                            <blockquote class="card-text">
-                                “ Gosh jaguar ostrich quail one excited dear hello and bound and the and bland moral misheard
-                                roadrunner “
-                            </blockquote>
-
-                            <div class="profile-card">
-                                <figure class="profile-banner img-holder">
-                                    <img src="images/author-6.png" width="32" height="32" loading="lazy" alt="Jane Cooper">
-                                </figure>
-
-                                <div>
-                                    <p class="card-title">Jane Cooper</p>
-
-                                    <time class="card-date" datetime="2022-04-15">15 April 2022</time>
-                                </div>
-                            </div>
-
-                        </div>
-                    </li>
-
-                    <li>
-                        <div class="comment-card">
-
-                            <blockquote class="card-text">
-                                “ Gosh jaguar ostrich quail one excited dear hello and bound and the and bland moral misheard
-                                roadrunner “
-                            </blockquote>
-
-                            <div class="profile-card">
-                                <figure class="profile-banner img-holder">
-                                    <img src="images/author-7.png" width="32" height="32" loading="lazy" alt="Katen Doe">
-                                </figure>
-
-                                <div>
-                                    <p class="card-title">Katen Doe</p>
-
-                                    <time class="card-date" datetime="2022-04-15">15 April 2022</time>
-                                </div>
-                            </div>
-
-                        </div>
-                    </li>
-
-                    <li>
-                        <div class="comment-card">
-
-                            <blockquote class="card-text">
-                                “ Gosh jaguar ostrich quail one excited dear hello and bound and the and bland moral misheard
-                                roadrunner “
-                            </blockquote>
-
-                            <div class="profile-card">
-                                <figure class="profile-banner img-holder">
-                                    <img src="images/author-8.png" width="32" height="32" loading="lazy" alt="Barbara Cartland">
-                                </figure>
-
-                                <div>
-                                    <p class="card-title">Barbara Cartland</p>
-
-                                    <time class="card-date" datetime="2022-04-15">15 April 2022</time>
-                                </div>
-                            </div>
-
-                        </div>
-                    </li>
-
-                </ul>
-
-            </div>
-
-
-
-        </div>
+      </div>
 
     </div>
-</section>
 
-<?php
-include './layouts/index_bottom.php';
-?>
+    <p class="copyright">
+      &copy; Copyright 2024 <a href="#">spjdeveloper</a>
+    </p>
+
+  </footer>
+
+
+
+
+
+  <!--
+    - custom js link
+  -->
+  <script src="js/pro_script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
