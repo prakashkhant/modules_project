@@ -38,8 +38,8 @@
             <nav class="navbar">
 
                 <a href="index.php">
-                <img src="images/logo_name.png" alt="website's logo" width="250" height="100" class="logo-light">
-          <img src="images/logo_name.png" alt="website's logo" width="250" height="100" class="logo-dark">
+                    <img src="images/logo_name.png" alt="website's logo" width="250" height="100" class="logo-light">
+                    <img src="images/logo_name.png" alt="website's logo" width="250" height="100" class="logo-dark">
                 </a>
 
                 <div class="btn-group">
@@ -163,7 +163,7 @@
                             $lang_name = "Java";
                             echo $lang_name;
                             ?>
-                        </b> Language.
+                        </b> Programming Language.
                         <!-- <br>Programming languages -->
                     </h1>
 
@@ -173,9 +173,9 @@
                     </p>
 
                     <div class="btn-group">
-            <a href="index.php" class="btn btn-primary">Go NexusHUb</a>
-            <a href="programming_home.php" class="btn btn-secondary">Back to Home</a>
-          </div>
+                        <a href="index.php" class="btn btn-primary">Go NexusHUb</a>
+                        <a href="programming_home.php" class="btn btn-secondary">Back to Home</a>
+                    </div>
 
                 </div>
 
@@ -205,108 +205,44 @@
                 <!--
           - BLOG SECTION
         -->
-
-                <div class="blog">
-
-
-
-                    <h2 class="h2">
-
-                        <?php
-                        $topic_name = "What is Java?";
-                        echo $topic_name;
-                        ?>
+                <?php include './database/db.php';
+                $db = new DB();
+                $id = $_GET["id"];
+          
+                $ldata = $db->populate_programming_lang_desc($id);
+               
+                foreach ($ldata as $ld) {
+                    echo "             
+                <div class='blog'>
+                    <h2 class='h2'>
+                       ".$ld['prog_title']."
                     </h2>
 
-                    <div class="blog-card">
+                    <div class='blog-card'>
 
-                        <div class="video-link" style="width: 700px;justify-content:center;">
-                            <iframe width="100%" height="415" src="https://www.youtube.com/embed/mOEL8Q-2bSo?si=YbHvASAmTv8ZtZOo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                        </div>
-
-
+                        <div class='video-link' style='width: 700px;justify-content:center;'>
+                            <iframe width='100%' height='415' src=' ".$ld['prog_video']."' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' allowfullscreen></iframe>
+                        
+                            </div>
 
                     </div>
 
-                    <div class="blog-card">
-                        <div class="blog-card-banner content" style="width: 700px;">
-                            <?php
-                            $def = nl2br("Java is a programming language and a platform. Java is a high level, robust, object-oriented and secure programming language.
-
-                    Java was developed by Sun Microsystems (which is now the subsidiary of Oracle) in the year 1995. James Gosling is known as the father of Java. Before Java, its name was Oak. Since Oak was already a registered company, so James Gosling and his team changed the name from Oak to Java.
-
-                    Platform: Any hardware or software environment in which a program runs, is known as a platform. Since Java has a runtime environment (JRE) and API, it is called a platform.");
-                            echo $def;
-
-
-                            $content = nl2br("
-                    According to Sun, 3 billion devices run Java. There are many devices where Java is currently used. Some of them are as follows:
-
-                    Desktop Applications such as acrobat reader, media player, antivirus, etc.
-                    Web Applications such as irctc.co.in, javatpoint.com, etc.
-                    Enterprise Applications such as banking applications.
-                    Mobile
-                    Embedded System
-                    Smart Card
-                    Robotics
-                    Games, etc.
-                    Types of Java Applications
-                    There are mainly 4 types of applications that can be created using Java programming:
-
-                    1) Standalone Application
-                    Standalone applications are also known as desktop applications or window-based applications. These are traditional software that we need to install on every machine. Examples of standalone application are Media player, antivirus, etc. AWT and Swing are used in Java for creating standalone applications.
-
-                    2) Web Application
-                    An application that runs on the server side and creates a dynamic page is called a web application. Currently, Servlet, JSP, Struts, Spring, Hibernate, JSF, etc. technologies are used for creating web applications in Java.
-
-                    3) Enterprise Application
-                    An application that is distributed in nature, such as banking applications, etc. is called an enterprise application. It has advantages like high-level security, load balancing, and clustering. In Java, EJB is used for creating enterprise applications.
-
-                    4) Mobile Application
-                    An application which is created for mobile devices is called a mobile application. Currently, Android and Java ME are used for creating mobile applications.
-
-                    Java Platforms / Editions
-                    There are 4 platforms or editions of Java:
-
-                    1) Java SE (Java Standard Edition)
-                    It is a Java programming platform. It includes Java programming APIs such as java.lang, java.io, java.net, java.util, java.sql, java.math etc. It includes core topics like OOPs, String, Regex, Exception, Inner classes, Multithreading, I/O Stream, Networking, AWT, Swing, Reflection, Collection, etc.
-
-                    2) Java EE (Java Enterprise Edition)
-                    It is an enterprise platform that is mainly used to develop web and enterprise applications. It is built on top of the Java SE platform. It includes topics like Servlet, JSP, Web Services, EJB, JPA, etc.
-
-                    3) Java ME (Java Micro Edition)
-                    It is a micro platform that is dedicated to mobile applications.
-
-                    4) JavaFX
-                    It is used to develop rich internet applications. It uses a lightweight user interface API.
-
-                    Prerequisite
-                    To learn Java, you must have the basic knowledge of C/C++ programming language.
-
-                    Audience
-                    Our Java programming tutorial is designed to help beginners and professionals.
-
-                    Problem
-                    We assure that you will not find any problem in this Java tutorial. However, if there is any mistake, please post the problem in the contact form.
-               ");
-                            echo $content;
-                            ?>
+                    <div class='blog-card'>
+                        <div class='blog-card-banner content' style='width: 700px;'>
+                        ";
+                        echo nl2br($ld['prog_desc'])."<br>";
+                       $content= nl2br($ld['prog_content']);
+                       echo $content;
+                       echo "
                         </div>
                     </div>
-                    <a href="#" class="btn load-more">Next topic</a>
+                    <a href='#' class='btn load-more'>Next topic ►
+                    </a>
                 </div>
 
-
-
-
-
-
-
-
-
-
-
-
+";
+                            }
+?>
 
 
 
@@ -351,21 +287,26 @@
                     </div>
 
 
-
+                    <div>
+                        <hr width="100%">
+                    </div>
                     <div class="newsletter">
 
-                        <h2 class="h2">Newsletter</h2>
+                        <h2 class="h2">★ Quize ★</h2>
 
                         <div class="wrapper">
 
                             <p>
-                                Subscribe to our newsletter to be among the first to keep up with the latest updates.
+                                Want to increse your level and test the memeory ?
                             </p>
 
                             <form action="#">
-                                <input type="email" name="email" placeholder="Email Address" required>
 
-                                <button type="submit" class="btn btn-primary">Subscribe</button>
+                                <!-- test link------------------------------ -->
+                                <a href="#">
+                                    <button type="submit" class="btn btn-primary">Test</button>
+
+                                </a>
                             </form>
 
                         </div>
@@ -395,8 +336,8 @@
             <div class="wrapper">
 
                 <a href="#" class="footer-logo">
-                    <img src="images/logo_name.png" alt="website's Logo" width="150" height="80" class="logo-light">
-                    <img src="images/logo_name.png" alt="website's Logo" width="150" height="80" class="logo-dark">
+                    <img src="images/logo_name.png" alt="website's Logo" width="165" height="80" class="logo-light">
+                    <img src="images/logo_name.png" alt="website's Logo" width="165" height="80" class="logo-dark">
                 </a>
 
                 <p class="footer-text">

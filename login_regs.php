@@ -21,8 +21,8 @@ session_start();
 
         <div class="form-box login" id="login">
             <h2 class="animation" style="--i:0; --j:21;">Login</h2>
-           
-               
+
+
             <form action="#" method="post">
                 <div class="input-box animation" style="--i:1; --j:22;">
                     <input type="text" name="uname" required>
@@ -43,16 +43,17 @@ session_start();
             </form>
         </div>
         <div class="info-text login">
-            
-            <h2 class="animation" style="--i:0; --j:20;"> 
-            <a href="index.php">
-                <img src="images/logo.png" alt="" srcset="" width="70px" height="70px" >
+
+            <h2 class="animation" style="--i:0; --j:20;">
+                <a href="index.php">
+                    <img src="images/logo.png" alt="" srcset="" width="70px" height="70px">
                 </a>
-                Welcome Back To Nexus Hub</h2>
+                Welcome Back To Nexus Hub
+            </h2>
         </div>
 
 
-        <div class="form-box register" >
+        <div class="form-box register">
             <h2 class="animation" style="--i:17; --j:0;">Sign Up</h2>
             <form action="#" method="post">
                 <div class="input-box animation" style="--i:18; --j:1;">
@@ -81,12 +82,12 @@ session_start();
             </form>
         </div>
         <div class="info-text register">
-            <h2 class="animation" style="--i:17; --j:0;"> 
-            <a href="index.php">
-                <img src="images/logo.png" alt="" srcset="" width="70px" height="70px" >
-            </a>
-            Welcome To Nexus Hub
-        </h2>
+            <h2 class="animation" style="--i:17; --j:0;">
+                <a href="index.php">
+                    <img src="images/logo.png" alt="" srcset="" width="70px" height="70px">
+                </a>
+                Welcome To Nexus Hub
+            </h2>
 
         </div>
     </div>
@@ -99,79 +100,81 @@ session_start();
 
 if (isset($_POST['sign-up'])) {
 
-    include 'db_conn.php';
+    include 'database/db.php';
+
+    $db = new DB();
+    if ($db->connect_DB()) {
 
 
-    $uname = $_POST["username"];
-    $email = $_POST["email"];
+        $uname = $_POST["username"];
+        $email = $_POST["email"];
+        $pass = $_POST["password"];
+        // echo " .$fname .$uname. $email . $phone .$pass . $cpass.$gender";
 
-    $pass = $_POST["password"];
+        $sql = "INSERT INTO userdetails (username,password,email) VALUES('$uname','$pass','$email')";
+        //echo $sql;
+        if (mysqli_query($db->conn, $sql)) {
+            echo "successfull";
+            header("Location: login_regs.php");
 
-
-    // echo " .$fname .$uname. $email . $phone .$pass . $cpass.$gender";
-
-    $sql = "INSERT INTO userdetails (username,password,email) VALUES('$uname','$pass','$email')";
-    //echo $sql;
-    if (mysqli_query($conn, $sql)) {
-        echo "successfull";
-        header("Location: login_regs.php");
-
-        exit();
+            exit();
+        } else {
+            echo "error detected";
+        }
     } else {
-        echo "error deteced";
+        echo "error detected";
     }
 }
 ?>
 
 <?php
 if (isset($_POST['log-in'])) {
-include "db_conn.php";
-if(isset($_POST['uname']) && isset($_POST['pass']))
-{
-    function validate($data){
-        $data=trim($data);
-        $data=stripslashes($data);
-        $data=htmlspecialchars($data);
-        return $data;
-    }
+    include "database/db.php";
 
-    $uname= validate($_POST['uname']);
-    $pass=validate($_POST['pass']);
+    $db = new DB();
+    if ($db->connect_DB()) {
 
-    
-  
-        $sql="SELECT * FROM userdetails WHERE username='$uname' AND password='$pass'";
-        $result=mysqli_query($conn,$sql);
-        if(mysqli_num_rows($result)===1)
-        {
-            $row = mysqli_fetch_assoc($result);
-           
-            if ($row['username'] === $uname && $row['password'] === $pass) {
-            	$_SESSION['username'] = $row['username'];
-            	// $_SESSION['name'] = $row['name'];
-            	$_SESSION['id'] = $row['id'];
-                
-                header("Location: dashboard.php");
-                
-                exit();
+        if (isset($_POST['uname']) && isset($_POST['pass'])) {
+            function validate($data)
+            {
+                $data = trim($data);
+                $data = stripslashes($data);
+                $data = htmlspecialchars($data);
+                return $data;
             }
-            else{
-                echo '<script type="text/JavaScript">alert("username or password incorrect"); 
+
+            $uname = validate($_POST['uname']);
+            $pass = validate($_POST['pass']);
+
+
+
+            $sql = "SELECT * FROM userdetails WHERE username='$uname' AND password='$pass'";
+            $result = mysqli_query($db->conn, $sql);
+            if (mysqli_num_rows($result) === 1) {
+                $row = mysqli_fetch_assoc($result);
+
+                if ($row['username'] === $uname && $row['password'] === $pass) {
+                    $_SESSION['username'] = $row['username'];
+                    // $_SESSION['name'] = $row['name'];
+                    $_SESSION['id'] = $row['id'];
+
+                    header("Location: dashboard.php");
+
+                    exit();
+                } else {
+                    echo '<script type="text/JavaScript">alert("username or password incorrect"); 
                 </script>';
+                    exit();
+                }
+            } else {
+                echo '<script type="text/JavaScript">alert("username or password incorrect");window.location = "login_regs.php";</script>';
+                // header("Location:login_regs.php");
                 exit();
             }
-        }
-        else{
-            echo '<script type="text/JavaScript">alert("username or password incorrect");window.location = "login_regs.php";</script>';
-            // header("Location:login_regs.php");
+        } else {
+            header("Location:login_regs.php");
             exit();
         }
-    
-}
-
-else{
-    header("Location:login_regs.php");
-    exit();
-}
+    }
 }
 ?>

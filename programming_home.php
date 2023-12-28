@@ -162,14 +162,14 @@
           </h1>
 
           <p class="h3">
-            Here ,you learn  <abbr title="Accessibility">Coding languages</abbr>
+            Here ,you learn <abbr title="Accessibility">Coding languages</abbr>
             and other popular languages.
           </p>
 
-           <div class="btn-group">
+          <div class="btn-group">
             <a href="#contact" class="btn btn-primary">About us</a>
             <!-- <a href="#" class="btn btn-secondary">About Me</a> -->
-          </div> 
+          </div>
 
         </div>
 
@@ -205,61 +205,61 @@
           <h2 class="h2">Remarkeble Topics</h2>
 
           <div class="blog-card-group">
+          <?php
+include './database/db.php';
+$db = new DB();
+$data = $db->populate_programming_lang_blogs();
+foreach ($data as $d) {
+  echo "
+<div class='blog-card'>
 
+<div class='blog-card-banner'>
+<img src='images/programming/" . $d["photo"] . "' alt='Building microservices with Dropwizard, MongoDB & Docker'
+width='250' class='blog-banner-img'>
+</div>
+
+<div class='blog-content-wrapper'>
+
+<button class='blog-topic text-tiny'>Java</button>
+
+<h3>
+<a href='pro_single.php?id=".$d["prog_id"]."' class='h3'>
+" . $d["prog_title"] . "
+</a>
+</h3>
+
+<p class='blog-text'>
+" . $d["prog_content"] . "
+</p>
+
+<div class='wrapper-flex'>
+
+<div class='profile-wrapper'>
+<img src='images/programming/author.png' alt='Julia Walker' width='50'>
+</div>
+
+<div class='wrapper'>
+<a href='#' class='h4'>Julia Walker</a>
+
+<p class='text-sm'>
+<time datetime='2022-01-17'> " . $d["publish_date"] . "</time>
+<span class='separator'></span>
+<ion-icon name='time-outline'></ion-icon>
+<time datetime='PT3M'>" . date("i:s", strtotime($d["time"])) . "</time>
+</p>
+</div>
+
+</div>
+
+</div>
+
+</div>";
+}
+?>
             <div class="blog-card">
 
               <div class="blog-card-banner">
-                <img src="images/programming/blog-1.png" alt="Building microservices with Dropwizard, MongoDB & Docker"
-                  width="250" class="blog-banner-img">
-              </div>
-
-              <div class="blog-content-wrapper">
-
-                <button class="blog-topic text-tiny">Java</button>
-
-                <h3>
-                  <a href="#" class="h3">
-                    Building microservices with Dropwizard, MongoDB & Docker
-                  </a>
-                </h3>
-
-                <p class="blog-text">
-                  This NoSQL database oriented to documents (by documents like JSON) combines some of the features from
-                  relational
-                  databases, easy to use and the multi-platform is the best option for scale up and have fault
-                  tolerance, load balancing,
-                  map reduce, etc.
-                </p>
-
-                <div class="wrapper-flex">
-
-                  <div class="profile-wrapper">
-                    <img src="images/programming/author.png" alt="Julia Walker" width="50">
-                  </div>
-
-                  <div class="wrapper">
-                    <a href="#" class="h4">Julia Walker</a>
-
-                    <p class="text-sm">
-                      <time datetime="2022-01-17">Jan 17, 2022</time>
-                      <span class="separator"></span>
-                      <ion-icon name="time-outline"></ion-icon>
-                      <time datetime="PT3M">3 min</time>
-                    </p>
-                  </div>
-
-                </div>
-
-              </div>
-
-            </div>
-
-
-            <div class="blog-card">
-
-              <div class="blog-card-banner">
-                <img src="images/programming/blog-2.png" alt="Fast web page loading on a $20 feature phone" width="250"
-                  class="blog-banner-img">
+                <img src="images/programming/blog-2.png" alt="Fast web page loading on a $20 feature phone" width="250" class="blog-banner-img">
               </div>
 
               <div class="blog-content-wrapper">
@@ -301,8 +301,7 @@
             <div class="blog-card">
 
               <div class="blog-card-banner">
-                <img src="images/programming/blog-3.png" alt="Accessibility Tips for Web Developers" width="250"
-                  class="blog-banner-img">
+                <img src="images/programming/blog-3.png" alt="Accessibility Tips for Web Developers" width="250" class="blog-banner-img">
               </div>
 
               <div class="blog-content-wrapper">
@@ -346,8 +345,7 @@
             <div class="blog-card">
 
               <div class="blog-card-banner">
-                <img src="images/programming/blog-4.png" alt="Dynamically Securing Databases using Hashicorp Vault"
-                  width="250" class="blog-banner-img">
+                <img src="images/programming/blog-4.png" alt="Dynamically Securing Databases using Hashicorp Vault" width="250" class="blog-banner-img">
               </div>
 
               <div class="blog-content-wrapper">
@@ -440,7 +438,7 @@
 
               <p>Javascript</p>
             </a>
-            
+
 
           </div>
 
@@ -542,8 +540,8 @@
       <div class="wrapper">
 
         <a href="#" class="footer-logo">
-          <img src="images/logo_name.png" alt="website's Logo" width="150" height="80" class="logo-light">
-          <img src="images/logo_name.png" alt="website's Logo" width="150" height="80" class="logo-dark">
+          <img src="images/logo_name.png" alt="website's Logo" width="165" height="80" class="logo-light">
+          <img src="images/logo_name.png" alt="website's Logo" width="165" height="80" class="logo-dark">
         </a>
 
         <p class="footer-text">
