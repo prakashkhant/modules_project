@@ -160,8 +160,8 @@
                         Here ,you learn about <b>
 
                             <?php
-                            $lang_name = "Java";
-                            echo $lang_name;
+                            $name= $_GET["name"];
+                            echo "$name";
                             ?>
                         </b> Programming Language.
                         <!-- <br>Programming languages -->
@@ -205,7 +205,8 @@
                 <!--
           - BLOG SECTION
         -->
-                <?php include './database/db.php';
+                <?php
+                 include './database/db.php';
                 $db = new DB();
                 $id = $_GET["id"];
           
@@ -229,11 +230,13 @@
 
                     <div class='blog-card'>
                         <div class='blog-card-banner content' style='width: 700px;'>
+                        <p class='content-text' style="."height:auto%;".">
                         ";
                         echo nl2br($ld['prog_desc'])."<br>";
                        $content= nl2br($ld['prog_content']);
                        echo $content;
                        echo "
+                       </p>
                         </div>
                     </div>
                     <a href='#' class='btn load-more'>Next topic ►

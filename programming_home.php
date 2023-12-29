@@ -231,7 +231,7 @@ width='250' class='blog-banner-img'>
 <button class='blog-topic text-tiny'>".$l_name["cat_name"]."</button>
 
 <h3>
-<a href='pro_single.php?id=".$d["prog_id"]."' class='h3'>
+<a href='pro_single.php?id=".$d["prog_id"]."&name=".$l_name["cat_name"]."' class='h3'>
 " . $d["prog_title"] . "
 </a>
 </h3>
