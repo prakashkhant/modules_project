@@ -208,9 +208,17 @@
           <?php
 include './database/db.php';
 $db = new DB();
+
 $data = $db->populate_programming_lang_blogs();
+
 foreach ($data as $d) {
+  $lang_name=$db->find_programming_lang_name($d["cat_id"]);
+ foreach ($lang_name as $l_name)
+ {
+  
+
   echo "
+ 
 <div class='blog-card'>
 
 <div class='blog-card-banner'>
@@ -220,7 +228,7 @@ width='250' class='blog-banner-img'>
 
 <div class='blog-content-wrapper'>
 
-<button class='blog-topic text-tiny'>Java</button>
+<button class='blog-topic text-tiny'>".$l_name["cat_name"]."</button>
 
 <h3>
 <a href='pro_single.php?id=".$d["prog_id"]."' class='h3'>
@@ -229,7 +237,7 @@ width='250' class='blog-banner-img'>
 </h3>
 
 <p class='blog-text'>
-" . $d["prog_content"] . "
+" . $d["prog_desc"] . "
 </p>
 
 <div class='wrapper-flex'>
@@ -255,8 +263,9 @@ width='250' class='blog-banner-img'>
 
 </div>";
 }
+}
 ?>
-            <div class="blog-card">
+            <!-- <div class="blog-card">
 
               <div class="blog-card-banner">
                 <img src="images/programming/blog-2.png" alt="Fast web page loading on a $20 feature phone" width="250" class="blog-banner-img">
@@ -383,7 +392,7 @@ width='250' class='blog-banner-img'>
 
               </div>
 
-            </div>
+            </div> -->
 
           </div>
 
