@@ -243,7 +243,11 @@ html {
 
 .dark-theme .aside .h2 { color: var(--foreground-primary); }
 
-
+.dark-theme .content-text{
+  
+    color: rgb(255, 255, 255);
+  
+}
 
 
 /*-----------------------------------*\ 
@@ -670,6 +674,10 @@ footer .wrapper { text-align: center; }
     -webkit-box-orient: vertical;
     overflow: hidden;
     margin-bottom: 1rem;
+  }
+
+  .content-text{
+    color: rgb(5, 69, 125);
   }
 
   .blog .wrapper-flex {
