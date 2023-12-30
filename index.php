@@ -1,1142 +1,743 @@
-<?php
-include './layouts/index_top.php';
-?>
+<!DOCTYPE html>
+<html lang="en">
 
-  
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexusHub</title>
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/darkmode.css">
+    <link rel="short icon" href="images/logo.png" type="image/x-icon">
 
-      <!-- 
-        - #HERO
-      -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
 
-      <section class="hero" id="home" aria-label="home">
-        <div class="container">
+<body>
+    <header id="header">
+        <nav class="container1 flex">
+            <div class="logo flex">
+                <div class="logoimg">
+                    <img src="images/logo.png" alt="" srcset="">
+                </div>
+                <a href="/">
+                    <h1 class="webname">NexusHub</h1>
+                </a>
+            </div>
+            <div class="navlist flex">
+                <ul class="flex">
+                    <li><a href="index.php" class="liactive">Home</a></li>
+                    <li><a href="">About Me</a></li>
+                    <li>
+                        <!-- Category<i class="fa-solid fa-sort-down"></i> -->
+                        <div class="dropdown">
+                            <button class="dropbtn">Category<i class="fa-solid fa-sort-down"></i></button>
+                            <div class="dropdown-content">
+                                <a href="#">Link 1</a>
+                                <a href="#">Link 2</a>
+                                <a href="#">Link 3</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="">Blogs<i class="fa-solid fa-sort-down"></i></a></li>
+                    <li><a href="">Entertaiments<i class="fa-solid fa-sort-down"></i></a></li>
+                    <li><a href="programming_home.php">Computer Languages</a></li>
 
-          <div class="hero-content">
+                </ul>
+            </div>
+            <div class="searchdarksub flex">
+                <div class="searchbar">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <div class="searchclick">
+                        <form action="#">
+                            <input type="text" class="form-control" placeholder="Search" id="">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </form>
+                        <div class="tegsec">
+                            <h3>Popular tags:</h3>
+                            <div class="tags flex">
+                                <a href="#">#Travel<span>,</span></a>
+                                <a href="#">#Tech<span>,</span></a>
+                                <a href="#">#Movie<span>,</span></a>
+                                <a href="#">#Lifestyle<span>,</span></a>
+                                <a href="#">#Sport</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="toggle-switch">
+                    <input type="checkbox" name="" class="l toggle-checkbox" id="dark-mode-toggle">
+                    <label for="dark-mode-toggle" class="toggle-label"></label>
+                </div>
+                <button><a href="login_regs.php">Join Me !</a></button>
+            </div>
+        </nav>
+    </header>
 
-            <p class="hero-subtitle">Hello Everyone!</p>
 
-            <h1 class="headline headline-1 section-title">
-              Welcome to <span class="span">Nexus Hub</span>
-            </h1>
+    <main id="main">
+        <section class="biosec container flex">
+            <div class="bio">
+                <h4>Hello Everyone! </h4>
 
-            <p class="hero-text">
-            &emsp; Welcome to our multifaceted online hub, 
-            a digital haven designed to cater to your diverse interests and make your leisure moments truly enjoyabl.. Our website is your go-to destination for an immersive and
-            enriching online experience, carefully curated to cater to every facet of your free time. Discover, relax, and stay entertained with us
-            </p>
+                <h1>Here
+                    <div>
+                        <span class="multi-text">Entertaiments</span>
+                        <span class="blink"></span>
 
-            <div class="input-wrapper">
-
-              <input type="email" name="email_address" placeholder="Type your free Time " required class="input-field"
-                autocomplete="off">
-
-              <button class="btn btn-primary">
-                <span class="span">Go </span>
-
-                <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
-              </button>
+                    </div>
+                </h1>
+                <p>Welcome to our multifaceted online hub,
+                    a digital haven designed to cater to your diverse interests and make your leisure moments truly
+                    enjoyabl..
+                </p>
+                <div class="emailsub">
+                    <form action="#" class="flex">
+                        <input type="email" name="email" id="email" placeholder="Enter your free time ">
+                        <button type="submit"><span>Let's Go </span></button>
+                    </form>
+                </div>
 
             </div>
-
-          </div>
-
-          <div class="hero-banner">
-
-            <img src="images/home-hello.svg" width="327" height="490" alt="Wren Clark" class="w-100">
-
-            <img src="images/pattern-2.svg" width="27" height="26" alt="shape" class="shape shape-1">
-
-            <img src="images/pattern-3.svg" width="27" height="26" alt="shape" class="shape shape-2">
-
-          </div>
-
-          <img src="images/shadow-1.svg" width="500" height="800" alt="" class="hero-bg hero-bg-1">
-
-          <img src="images/shadow-2.svg" width="500" height="500" alt="" class="hero-bg hero-bg-2">
-
-        </div>
-      </section>
-
-
-
-
-
-      <!-- 
-        - #TOPICS
-      -->
-
-      <section class="topics" id="topics" aria-labelledby="topic-label">
-        <div class="container">
-
-          <div class="card topic-card">
-
-            <div class="card-content">
-
-              <h2 class="headline headline-2 section-title card-title" id="topic-label">
-                Interseting Parts
-              </h2>
-
-              <p class="card-text">
-                Here some magics...
-              </p>
-
-              <div class="btn-group">
-                <button class="btn-icon" aria-label="previous" data-slider-prev>
-                  <ion-icon name="arrow-back" aria-hidden="true"></ion-icon>
-                </button>
-
-                <button class="btn-icon" aria-label="next" data-slider-next>
-                  <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
-                </button>
-              </div>
-
+            <div class="bioimg">
+                <img src="images/home.png" alt="">
+                <div class="pattern-1"><img src="images/svg/pattern-1.svg" alt=""></div>
+                <div class="pattern-2"><img src="images/svg/pattern-2.svg" alt=""></div>
+                <div class="pattern-3"><img src="images/svg/pattern-3.svg" alt=""></div>
+                <div class="pattern-4"><img src="images/svg/pattern-4.svg" alt=""></div>
             </div>
+        </section>
+        <!-- hot topics section -->
 
-            <div class="slider" data-slider>
-              <ul class="slider-list" data-slider-container>
-
-                <li class="slider-item">
-                  <a href="#" class="slider-card">
-
-                    <figure class="slider-banner img-holder" style="--width: 507; --height: 618;">
-                      <img src="images/entertaimnet.jpg" width="507" height="618" loading="lazy" alt="Sport"
-                        class="img-cover">
-                    </figure>
-
-                    <div class="slider-content">
-                      <span class="slider-title">Entrtainments</span>
-
-                      <p class="slider-subtitle">38 Articles</p>
-                    </div>
-
-                  </a>
-                </li>
-
-                <li class="slider-item">
-                  <a href="#" class="slider-card">
-
-                    <figure class="slider-banner img-holder" style="--width: 507; --height: 618;">
-                      <img src="images/topic-2.png" width="507" height="618" loading="lazy" alt="Travel"
-                        class="img-cover">
-                    </figure>
-
-                    <div class="slider-content">
-                      <span class="slider-title">News</span>
-
-                      <p class="slider-subtitle">63 Articles</p>
-                    </div>
-
-                  </a>
-                </li>
-
-                <li class="slider-item">
-                  <a href="#" class="slider-card">
-
-                    <figure class="slider-banner img-holder" style="--width: 507; --height: 618;">
-                      <img src="images/topic-3.png" width="507" height="618" loading="lazy" alt="Design"
-                        class="img-cover">
-                    </figure>
-
-                    <div class="slider-content">
-                      <span class="slider-title">Programming Languages</span>
-
-                      <p class="slider-subtitle">78 Articles</p>
-                    </div>
-
-                  </a>
-                </li>
-
-                <li class="slider-item">
-                  <a href="#" class="slider-card">
-
-                    <figure class="slider-banner img-holder" style="--width: 507; --height: 618;">
-                      <img src="images/topic-4.png" width="507" height="618" loading="lazy" alt="Movie"
-                        class="img-cover">
-                    </figure>
-
-                    <div class="slider-content">
-                      <span class="slider-title">Photo Gallery</span>
-
-                      <p class="slider-subtitle">125 Articles</p>
-                    </div>
-
-                  </a>
-                </li>
-
-                <li class="slider-item">
-                  <a href="#" class="slider-card">
-
-                    <figure class="slider-banner img-holder" style="--width: 507; --height: 618;">
-                      <img src="images/topic-5.png" width="507" height="618" loading="lazy" alt="Lifestyle"
-                        class="img-cover">
-                    </figure>
-
-                    <div class="slider-content">
-                      <span class="slider-title">Facts</span>
-
-                      <p class="slider-subtitle">78 Articles</p>
-                    </div>
-
-                  </a>
-                </li>
-
-              </ul>
+        <section class="hottopicsec container flex">
+            <div class="hottopics">
+                <h3>Hot Topics</h3>
+                <p>Don't moss out on the latest news about travel tips, Hotels reviews</p>
+                <div class="lrbtn">
+                    <button class="leftbtn"><i class="fa-solid fa-arrow-left"></i></button>
+                    <button class="rightbtn"><i class="fa-solid fa-arrow-right"></i></button>
+                </div>
             </div>
-
-          </div>
-
-        </div>
-      </section>
-
-
-
-
-
-      <!-- 
-        - #FEATURED POST
-      -->
-
-      <section class="section feature" aria-label="feature" id="featured">
-        <div class="container">
-
-          <h2 class="headline headline-2 section-title">
-            <span class="span">Amazing Blogs</span>
-          </h2>
-
-          <p class="section-text">
-            Featured and highly rated articles
-          </p>
-
-          <ul class="feature-list">
-
-            <li>
-              <div class="card feature-card">
-
-                <figure class="card-banner img-holder" style="--width: 1602; --height: 903;">
-                  <img src="images/featured-1.png" width="1602" height="903" loading="lazy"
-                    alt="Self-observation is the first step of inner unfolding" class="img-cover">
-                </figure>
-
-                <div class="card-content">
-
-                  <div class="card-wrapper">
-                    <div class="card-tag">
-                      <a href="#" class="span hover-2">#Travel</a>
-
-                      <a href="#" class="span hover-2">#Lifestyle</a>
-                    </div>
-
-                    <div class="wrapper">
-                      <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
-
-                      <span class="span">3 mins read</span>
-                    </div>
-                  </div>
-
-                  <h3 class="headline headline-3">
-                    <a href="#" class="card-title hover-2">
-                    How we Implemented Shared Element Transition in react-native-navigation
+            <div class="hotcards flex">
+                <div class="hcard">
+                    <a href="/">
+                        <img src="images/food.jpg" alt="" width="400px" height="300px">
+                        <div class="hdetails">
+                            <div class="hdetail">
+                                <h4>food</h4>
+                                <p>receipe</p>
+                            </div>
+                        </div>
                     </a>
-                  </h3>
-
-                  <div class="card-wrapper">
-
-                    <div class="profile-card">
-                      <img src="images/author-1.png" width="48" height="48" loading="lazy" alt="Joseph"
-                        class="profile-banner">
-
-                      <div>
-                        <p class="card-title">Joseph</p>
-
-                        <p class="card-subtitle">25 Nov 2022</p>
-                      </div>
-                    </div>
-
-                    <a href="#" class="card-btn">Read more</a>
-
-                  </div>
-
                 </div>
-
-              </div>
-            </li>
-
-            <li>
-              <div class="card feature-card">
-
-                <figure class="card-banner img-holder" style="--width: 1602; --height: 903;">
-                  <img src="images/featured-2.png" width="1602" height="903" loading="lazy"
-                    alt="Self-observation is the first step of inner unfolding" class="img-cover">
-                </figure>
-
-                <div class="card-content">
-
-                  <div class="card-wrapper">
-                    <div class="card-tag">
-                      <a href="#" class="span hover-2">#motivation</a>
-
-                      <a href="#" class="span hover-2">#facts</a>
-                    </div>
-
-                    <div class="wrapper">
-                      <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
-
-                      <span class="span">6 mins read</span>
-                    </div>
-                  </div>
-
-                  <h3 class="headline headline-3">
-                    <a href="#" class="card-title hover-2">
-                      Self-observation is the first step of inner unfolding
+                <div class="hcard">
+                    <a href="/">
+                        <img src="images/food.jpg" alt="" width="400px" height="300px">
+                        <div class="hdetails">
+                            <div class="hdetail">
+                                <h4>food</h4>
+                                <p>receipe</p>
+                            </div>
+                        </div>
                     </a>
-                  </h3>
-
-                  <div class="card-wrapper">
-
-                    <div class="profile-card">
-                      <img src="images/author-1.png" width="48" height="48" loading="lazy" alt="Joseph"
-                        class="profile-banner">
-
-                      <div>
-                        <p class="card-title">Joseph</p>
-
-                        <p class="card-subtitle">25 Nov 2022</p>
-                      </div>
-                    </div>
-
-                    <a href="#" class="card-btn">Read more</a>
-
-                  </div>
-
                 </div>
-
-              </div>
-            </li>
-
-            <li>
-              <div class="card feature-card">
-
-                <figure class="card-banner img-holder" style="--width: 1602; --height: 903;">
-                  <img src="images/featured-3.png" width="1602" height="903" loading="lazy"
-                    alt="Self-observation is the first step of inner unfolding" class="img-cover">
-                </figure>
-
-                <div class="card-content">
-
-                  <div class="card-wrapper">
-                    <div class="card-tag">
-                      <a href="#" class="span hover-2">#travel</a>
-
-                      <a href="#" class="span hover-2">#winter</a>
-                    </div>
-
-                    <div class="wrapper">
-                      <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
-
-                      <span class="span">6 mins read</span>
-                    </div>
-                  </div>
-
-                  <h3 class="headline headline-3">
-                    <a href="#" class="card-title hover-2">
-                    Here’s Why You Must Visit Norway In Winter
+                <div class="hcard">
+                    <a href="/">
+                        <img src="images/furniture.jpg" alt="" width="400px" height="300px">
+                        <div class="hdetails">
+                            <div class="hdetail">
+                                <h4>food</h4>
+                                <p>receipe</p>
+                            </div>
+                        </div>
                     </a>
-                  </h3>
-
-                  <div class="card-wrapper">
-
-                    <div class="profile-card">
-                      <img src="images/author-1.png" width="48" height="48" loading="lazy" alt="Joseph"
-                        class="profile-banner">
-
-                      <div>
-                        <p class="card-title">Joseph</p>
-
-                        <p class="card-subtitle">25 Nov 2022</p>
-                      </div>
-                    </div>
-
-                    <a href="#" class="card-btn">Read more</a>
-
-                  </div>
-
                 </div>
-
-              </div>
-            </li>
-
-            <li>
-              <div class="card feature-card">
-
-                <figure class="card-banner img-holder" style="--width: 1602; --height: 903;">
-                  <img src="images/featured-4.png" width="1602" height="903" loading="lazy"
-                    alt="Self-observation is the first step of inner unfolding" class="img-cover">
-                </figure>
-
-                <div class="card-content">
-
-                  <div class="card-wrapper">
-                    <div class="card-tag">
-                      <a href="#" class="span hover-2">#fun-facts</a>
-
-                      <a href="#" class="span hover-2">#sky</a>
-                    </div>
-
-                    <div class="wrapper">
-                      <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
-
-                      <span class="span">6 mins read</span>
-                    </div>
-                  </div>
-
-                  <h3 class="headline headline-3">
-                    <a href="#" class="card-title hover-2">
-                    Why Does the Sky Look Different Throughout the Year?
+                <div class="hcard">
+                    <a href="/">
+                        <img src="images/interior.jpg" alt="" width="400px" height="300px">
+                        <div class="hdetails">
+                            <div class="hdetail">
+                                <h4>food</h4>
+                                <p>receipe</p>
+                            </div>
+                        </div>
                     </a>
-                  </h3>
-
-                  <div class="card-wrapper">
-
-                    <div class="profile-card">
-                      <img src="images/author-1.png" width="48" height="48" loading="lazy" alt="Joseph"
-                        class="profile-banner">
-
-                      <div>
-                        <p class="card-title">Joseph</p>
-
-                        <p class="card-subtitle">25 Nov 2022</p>
-                      </div>
-                    </div>
-
-                    <a href="#" class="card-btn">Read more</a>
-
-                  </div>
-
                 </div>
-
-              </div>
-            </li>
-
-            <li>
-              <div class="card feature-card">
-
-                <figure class="card-banner img-holder" style="--width: 1602; --height: 903;">
-                  <img src="images/featured-5.png" width="1602" height="903" loading="lazy"
-                    alt="Self-observation is the first step of inner unfolding" class="img-cover">
-                </figure>
-
-                <div class="card-content">
-
-                  <div class="card-wrapper">
-                    <div class="card-tag">
-                      <a href="#" class="span hover-2">#galaxy</a>
-
-                      <a href="#" class="span hover-2">#facts</a>
-                    </div>
-
-                    <div class="wrapper">
-                      <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
-
-                      <span class="span">6 mins read</span>
-                    </div>
-                  </div>
-
-                  <h3 class="headline headline-3">
-                    <a href="#" class="card-title hover-2">
-                    Pole star
+                <div class="hcard">
+                    <a href="/">
+                        <img src="images/gimbap.jpg" alt="" width="400px" height="300px">
+                        <div class="hdetails">
+                            <div class="hdetail">
+                                <h4>food</h4>
+                                <p>receipe</p>
+                            </div>
+                        </div>
                     </a>
-                  </h3>
-
-                  <div class="card-wrapper">
-
-                    <div class="profile-card">
-                      <img src="images/author-1.png" width="48" height="48" loading="lazy" alt="Joseph"
-                        class="profile-banner">
-
-                      <div>
-                        <p class="card-title">Joseph</p>
-
-                        <p class="card-subtitle">25 Nov 2022</p>
-                      </div>
-                    </div>
-
-                    <a href="#" class="card-btn">Read more</a>
-
-                  </div>
-
                 </div>
+            </div>
+        </section>
+        <!-- </section>  -->
 
-              </div>
-            </li>
-
-          </ul>
-
-          <a href="#" class="btn btn-secondary">
-            <span class="span">Show More Posts</span>
-
-            <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
-          </a>
-
+        <!-- big title section -->
+        <div class="bigtitle container ">
+            <h2 class="textcolor">Editor's picked</h2>
+            <p>Featured and highly rated articles</p>
         </div>
-
-        <img src="images/shadow-3.svg" width="500" height="1500" loading="lazy" alt="" class="feature-bg">
-
-      </section>
-
-
-
-
-
-      <!-- 
-        - #POPULAR programming languages TAGS
-      -->
-
-      <section class="tags" aria-labelledby="tag-label">
-        <div class="container">
-
-          <h2 class="headline headline-2 section-title" id="tag-label">
-            <span class="span">Programming Languages</span>
-          </h2>
-
-          <p class="section-text">
-          Popular Programming Languages that you want's to know
-          </p>
-
-          <ul class="grid-list ">
-
-            <li>
-              <a href="pro_info.php" class="card tag-btn">
-                <img src="images/java.png" width="32" height="32" loading="lazy" alt="Travel">
-
-                <p class="btn-text">Java</p>
-              </a>
-            </li>
-
-            <li>
-              <button class="card tag-btn">
-                <img src="images/tag2.png" width="32" height="32" loading="lazy" alt="Culture">
-
-                <p class="btn-text">Python</p>
-              </button>
-            </li>
-
-            <li>
-              <button class="card tag-btn">
-                <img src="images/tag3.png" width="32" height="32" loading="lazy" alt="Lifestyle">
-
-                <p class="btn-text">PHP</p>
-              </button>
-            </li>
-
-            <li>
-              <button class="card tag-btn">
-                <img src="images/tag4.png" width="32" height="32" loading="lazy" alt="Fashion">
-
-                <p class="btn-text">Java-Script</p>
-              </button>
-            </li>
-
-          </ul>
-
-        </div>
-      </section>
+        <section class="editorcards container flex">
+            <div class="edcard">
+                <a href="/">
+                    <img src="images/food.jpg" alt="" width="400px" height="300px">
+                    <div class="edcarddet1">
+                        <div class="tegtime flex">
+                            <h5>#food</h5>
+                            <h5 class="flex">
+                                <i class="fa-solid fa-clock"></i>
+                                <span>5</span>mins rated
+                            </h5>
+                        </div>
 
 
-      <section class="tags languages" aria-labelledby="tag-label">
-        <div class="container">
+                        <!-- </a> -->
+                        <!-- </div> -->
+                        <a href="/">
+                            <h2>Welcome to Hub for intresting Blogs</h2>
+                        </a>
 
-          <h2 class="headline headline-2 section-title" id="tag-label">
-            <span class="span"> Languages</span>
-          </h2>
+                        <div class="postby flex">
+                            <div class="author-box flex">
+                                <img src="images/author.png" alt="">
+                                <div class="authoname">
+                                    <h4>Coder</h4>
+                                    <span>03 sep 2023</span>
+                                </div>
+                            </div>
 
-          <p class="section-text">
-          Popular Natives that you want's to know
-          </p>
-
-          <ul class="grid-list ">
-
-            <li>
-              <button class="card tag-btn">
-                <img src="images/tag5.png" width="32" height="32" loading="lazy" alt="Food">
-
-                <p class="btn-text">Korean</p>
-              </button>
-            </li>
-
-            <li>
-              <button class="card tag-btn">
-                <img src="images/tag6.png" width="32" height="32" loading="lazy" alt="Space">
-
-                <p class="btn-text">English</p>
-              </button>
-            </li>
-
-            <li>
-              <button class="card tag-btn">
-                <img src="images/tag7.png" width="32" height="32" loading="lazy" alt="Animal">
-
-                <p class="btn-text">Germany</p>
-              </button>
-            </li>
-
-          
-
-          </ul>
-
-        </div>
-      </section>
-
-
-
-      <!-- 
-        - #RECENT POST
-      -->
-
-      <section class="section recent-post" id="recent" aria-labelledby="recent-label">
-        <div class="container">
-
-          <div class="post-main">
-
-            <h2 class="headline headline-2 section-title">
-              <span class="span">Latest news</span>
-            </h2>
-
-            <p class="section-text">
-              Don't miss the latest news
-            </p>
-
-            <ul class="grid-list">
-
-              <li>
-                <div class="recent-post-card">
-
-                  <figure class="card-banner img-holder" style="--width: 271; --height: 258;">
-                    <img src="images/recent-post-1.jpg" width="271" height="258" loading="lazy"
-                      alt="Helpful Tips for Working from Home as a Freelancer" class="img-cover">
-                  </figure>
-
-                  <div class="card-content">
-
-                    <a href="#" class="card-badge">daily</a>
-
-                    <h3 class="headline headline-3 card-title">
-                      <a href="#" class="link hover-2">Helpful Tips for Working from Home as a Freelancer</a>
-                    </h3>
-
-                    <p class="card-text">
-                      Gosh jaguar ostrich quail one excited dear hello and bound and the and bland moral misheard
-                      roadrunner flapped lynx far that and jeepers giggled far and far
-                    </p>
-
-                    <div class="card-wrapper">
-                      <div class="card-tag">
-                        <a href="#" class="span hover-2"># Travel</a>
-
-                        <a href="#" class="span hover-2"># Lifestyle</a>
-                      </div>
-
-                      <div class="wrapper">
-                        <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
-
-                        <span class="span">3 mins read</span>
-                      </div>
+                            <a href="/" class="readmore"><span>Read More</span></a>
+                        </div>
                     </div>
-
-                  </div>
-
-                </div>
-              </li>
-
-              <li>
-                <div class="recent-post-card">
-
-                  <figure class="card-banner img-holder" style="--width: 271; --height: 258;">
-                    <img src="images/recent-post-2.jpg" width="271" height="258" loading="lazy"
-                      alt="Helpful Tips for Working from Home as a Freelancer" class="img-cover">
-                  </figure>
-
-                  <div class="card-content">
-
-                    <a href="#" class="card-badge">technogolies</a>
-
-                    <h3 class="headline headline-3 card-title">
-                      <a href="#" class="link hover-2">The most promising tech innovations of 2023</a>
-                    </h3>
-
-                    <p class="card-text">
-                    From mixed-reality headsets to clippable AI wearables, these are the tech products that impressed us the most in 2023.
-                    </p>
-
-                    <div class="card-wrapper">
-                      <div class="card-tag">
-                        <a href="#" class="span hover-2"># technogolies</a>
-
-                        <a href="#" class="span hover-2"># Lifestyle</a>
-                      </div>
-
-                      <div class="wrapper">
-                        <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
-
-                        <span class="span">3 mins read</span>
-                      </div>
-                    </div>
-
-                  </div>
-
-                </div>
-              </li>
-
-              <li>
-                <div class="recent-post-card">
-
-                  <figure class="card-banner img-holder" style="--width: 271; --height: 258;">
-                    <img src="images/news-3.jpeg" width="271" height="258" loading="lazy"
-                      alt="Helpful Tips for Working from Home as a Freelancer" class="img-cover">
-                  </figure>
-
-                  <div class="card-content">
-
-                    <a href="#" class="card-badge">politics</a>
-
-                    <h3 class="headline headline-3 card-title">
-                      <a href="#" class="link hover-2">Back Back Death penalty for mob lynching under new criminal laws, says Amit Shah</a>
-                    </h3>
-
-                    <p class="card-text">
-                    Union Home Minister Amit Shah speaks in the Lok Sabha during the Winter session of Parliament, in New Delhi, on Wednesday. (PTI)
-                    </p>
-
-                    <div class="card-wrapper">
-                      <div class="card-tag">
-                        <a href="#" class="span hover-2"># Travel</a>
-
-                        <a href="#" class="span hover-2"># Lifestyle</a>
-                      </div>
-
-                      <div class="wrapper">
-                        <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
-
-                        <span class="span">3 mins read</span>
-                      </div>
-                    </div>
-
-                  </div>
-
-                </div>
-              </li>
-
-              <li>
-                <div class="recent-post-card">
-
-                  <figure class="card-banner img-holder" style="--width: 271; --height: 258;">
-                    <img src="images/educations.jpeg" width="271" height="258" loading="lazy"
-                      alt="Helpful Tips for Working from Home as a Freelancer" class="img-cover">
-                  </figure>
-
-                  <div class="card-content">
-
-                    <a href="#" class="card-badge">Educations</a>
-
-                    <h3 class="headline headline-3 card-title">
-                      <a href="#" class="link hover-2">1070 OBC students benefitted from National Fellowship Scheme in 2022-23, highest in 5 years: Govt</a>
-                    </h3>
-
-                    <p class="card-text">
-                      Gosh jaguar ostrich quail one excited dear hello and bound and the and bland moral misheard
-                      roadrunner flapped lynx far that and jeepers giggled far and far
-                    </p>
-
-                    <div class="card-wrapper">
-                      <div class="card-tag">
-                        <a href="#" class="span hover-2"># Travel</a>
-
-                        <a href="#" class="span hover-2"># Lifestyle</a>
-                      </div>
-
-                      <div class="wrapper">
-                        <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
-
-                        <span class="span">3 mins read</span>
-                      </div>
-                    </div>
-
-                  </div>
-
-                </div>
-              </li>
-
-              <li>
-                <div class="recent-post-card">
-
-                  <figure class="card-banner img-holder" style="--width: 271; --height: 258;">
-                    <img src="images/lifestyles.jpg" width="271" height="258" loading="lazy"
-                      alt="Helpful Tips for Working from Home as a Freelancer" class="img-cover">
-                  </figure>
-
-                  <div class="card-content">
-
-                    <a href="#" class="card-badge">Lifestyles</a>
-
-                    <h3 class="headline headline-3 card-title">
-                      <a href="#" class="link hover-2">8 driveable getaways from major cities in India for a memorable holiday season</a>
-                    </h3>
-
-                    <p class="card-text">
-                    If you find yourself in major Indian cities, here's a list of driveable destinations for those yearning for a holiday retreat.
-                    </p>
-
-                    <div class="card-wrapper">
-                      <div class="card-tag">
-                        <a href="#" class="span hover-2"># Travel</a>
-
-                        <a href="#" class="span hover-2"># Lifestyle</a>
-                      </div>
-
-                      <div class="wrapper">
-                        <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
-
-                        <span class="span">3 mins read</span>
-                      </div>
-                    </div>
-
-                  </div>
-
-                </div>
-              </li>
-
-            </ul>
-
-            <nav aria-label="pagination" class="pagination">
-
-              <a href="#" class="pagination-btn" aria-label="previous page">
-                <ion-icon name="arrow-back" aria-hidden="true"></ion-icon>
-              </a>
-
-              <a href="#" class="pagination-btn">1</a>
-              <a href="#" class="pagination-btn">2</a>
-              <a href="#" class="pagination-btn">3</a>
-              <a href="#" class="pagination-btn" aria-label="more page">...</a>
-
-              <a href="#" class="pagination-btn" aria-label="next page">
-                <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
-              </a>
-
-            </nav>
-
-          </div>
-
-          <div class="post-aside grid-list">
-
-            <div class="card aside-card">
-
-              <h3 class="headline headline-2 aside-title">
-                <span class="span">Popular Posts</span>
-              </h3>
-
-              <ul class="popular-list">
-
-                <li>
-                  <div class="popular-card">
-
-                    <figure class="card-banner img-holder" style="--width: 64; --height: 64;">
-                      <img src="images/popular-post-1.jpg" width="64" height="64" loading="lazy"
-                        alt="Creating is a privilege but it’s also a gift" class="img-cover">
-                    </figure>
-
-                    <div class="card-content">
-
-                      <h4 class="headline headline-4 card-title">
-                        <a href="#" class="link hover-2">Creating is a privilege but it’s also a gift</a>
-                      </h4>
-
-                      <div class="warpper">
-                        <p class="card-subtitle">15 mins read</p>
-
-                        <time class="publish-date" datetime="2022-04-15">15 April 2022</time>
-                      </div>
-
-                    </div>
-
-                  </div>
-                </li>
-
-                <li>
-                  <div class="popular-card">
-
-                    <figure class="card-banner img-holder" style="--width: 64; --height: 64;">
-                      <img src="images/popular-post-2.jpg" width="64" height="64" loading="lazy"
-                        alt="Being unique is better than being perfect" class="img-cover">
-                    </figure>
-
-                    <div class="card-content">
-
-                      <h4 class="headline headline-4 card-title">
-                        <a href="#" class="link hover-2">Being unique is better than being perfect</a>
-                      </h4>
-
-                      <div class="warpper">
-                        <p class="card-subtitle">15 mins read</p>
-
-                        <time class="publish-date" datetime="2022-04-15">15 April 2022</time>
-                      </div>
-
-                    </div>
-
-                  </div>
-                </li>
-
-                <li>
-                  <div class="popular-card">
-
-                    <figure class="card-banner img-holder" style="--width: 64; --height: 64;">
-                      <img src="images/popular-post-3.jpg" width="64" height="64" loading="lazy"
-                        alt="Every day, in every city and town across the country" class="img-cover">
-                    </figure>
-
-                    <div class="card-content">
-
-                      <h4 class="headline headline-4 card-title">
-                        <a href="#" class="link hover-2">Every day, in every city and town across the country</a>
-                      </h4>
-
-                      <div class="warpper">
-                        <p class="card-subtitle">15 mins read</p>
-
-                        <time class="publish-date" datetime="2022-04-15">15 April 2022</time>
-                      </div>
-
-                    </div>
-
-                  </div>
-                </li>
-
-                <li>
-                  <div class="popular-card">
-
-                    <figure class="card-banner img-holder" style="--width: 64; --height: 64;">
-                      <img src="images/popular-post-4.jpg" width="64" height="64" loading="lazy"
-                        alt="Your voice, your mind, your story, your vision" class="img-cover">
-                    </figure>
-
-                    <div class="card-content">
-
-                      <h4 class="headline headline-4 card-title">
-                        <a href="#" class="link hover-2">Your voice, your mind, your story, your vision</a>
-                      </h4>
-
-                      <div class="warpper">
-                        <p class="card-subtitle">15 mins read</p>
-
-                        <time class="publish-date" datetime="2022-04-15">15 April 2022</time>
-                      </div>
-
-                    </div>
-
-                  </div>
-                </li>
-
-                <li>
-                  <div class="popular-card">
-
-                    <figure class="card-banner img-holder" style="--width: 64; --height: 64;">
-                      <img src="images/popular-post-2.jpg" width="64" height="64" loading="lazy"
-                        alt="Being unique is better than being perfect" class="img-cover">
-                    </figure>
-
-                    <div class="card-content">
-
-                      <h4 class="headline headline-4 card-title">
-                        <a href="#" class="link hover-2">Being unique is better than being perfect</a>
-                      </h4>
-
-                      <div class="warpper">
-                        <p class="card-subtitle">15 mins read</p>
-
-                        <time class="publish-date" datetime="2022-04-15">15 April 2022</time>
-                      </div>
-
-                    </div>
-
-                  </div>
-                </li>
-
-              </ul>
-
+                </a>
             </div>
 
-            <div class="card aside-card">
+            <div class="edcard">
+                <a href="/">
+                    <img src="images/food.jpg" alt="" width="400px" height="300px">
+                    <div class="edcarddet1">
+                        <div class="tegtime flex">
+                            <h5>#food</h5>
+                            <h5 class="flex">
+                                <i class="fa-solid fa-clock"></i>
+                                <span>5</span>mins rated
+                            </h5>
+                        </div>
 
-              <h3 class="headline headline-2 aside-title">
-                <span class="span">Last Comment</span>
-              </h3>
 
-              <ul class="comment-list">
+                        <!-- </a> -->
+                        <!-- </div> -->
+                        <a href="/">
+                            <h2>Welcome to Hub for intresting Blogs</h2>
+                        </a>
 
-                <li>
-                  <div class="comment-card">
+                        <div class="postby flex">
+                            <div class="author-box flex">
+                                <img src="images/author.png" alt="">
+                                <div class="authoname">
+                                    <h4>Coder</h4>
+                                    <span>03 sep 2023</span>
+                                </div>
+                            </div>
 
-                    <blockquote class="card-text">
-                      “ Gosh jaguar ostrich quail one excited dear hello and bound and the and bland moral misheard
-                      roadrunner “
-                    </blockquote>
-
-                    <div class="profile-card">
-                      <figure class="profile-banner img-holder">
-                        <img src="images/author-6.png" width="32" height="32" loading="lazy" alt="Jane Cooper">
-                      </figure>
-
-                      <div>
-                        <p class="card-title">Jane Cooper</p>
-
-                        <time class="card-date" datetime="2022-04-15">15 April 2022</time>
-                      </div>
+                            <a href="/" class="readmore"><span>Read More</span></a>
+                        </div>
                     </div>
-
-                  </div>
-                </li>
-
-                <li>
-                  <div class="comment-card">
-
-                    <blockquote class="card-text">
-                      “ Gosh jaguar ostrich quail one excited dear hello and bound and the and bland moral misheard
-                      roadrunner “
-                    </blockquote>
-
-                    <div class="profile-card">
-                      <figure class="profile-banner img-holder">
-                        <img src="images/author-7.png" width="32" height="32" loading="lazy" alt="Katen Doe">
-                      </figure>
-
-                      <div>
-                        <p class="card-title">Katen Doe</p>
-
-                        <time class="card-date" datetime="2022-04-15">15 April 2022</time>
-                      </div>
-                    </div>
-
-                  </div>
-                </li>
-
-                <li>
-                  <div class="comment-card">
-
-                    <blockquote class="card-text">
-                      “ Gosh jaguar ostrich quail one excited dear hello and bound and the and bland moral misheard
-                      roadrunner “
-                    </blockquote>
-
-                    <div class="profile-card">
-                      <figure class="profile-banner img-holder">
-                        <img src="images/author-8.png" width="32" height="32" loading="lazy" alt="Barbara Cartland">
-                      </figure>
-
-                      <div>
-                        <p class="card-title">Barbara Cartland</p>
-
-                        <time class="card-date" datetime="2022-04-15">15 April 2022</time>
-                      </div>
-                    </div>
-
-                  </div>
-                </li>
-
-              </ul>
-
+                </a>
             </div>
 
-            <div class="card aside-card insta-card">
+            <div class="edcard">
+                <a href="/">
+                    <img src="images/food.jpg" alt="" width="400px" height="300px">
+                    <div class="edcarddet1">
+                        <div class="tegtime flex">
+                            <h5>#food</h5>
+                            <h5 class="flex">
+                                <i class="fa-solid fa-clock"></i>
+                                <span>5</span>mins rated
+                            </h5>
+                        </div>
 
-              <!-- <a href="#" class="logo">
-                <img src="images/logo.svg" width="119" height="37" loading="lazy" alt="Wren logo">
-                <p >Photos</p>
-              </a> -->
-              <h2 class="headline headline-2 section-title">
-                <span class="span">Recent Photos</span>
-              </h2>
 
-              <p class="card-text">
-                Photos | travels | Arts & Crafts
-              </p>
+                        <!-- </a> -->
+                        <!-- </div> -->
+                        <a href="/">
+                            <h2>Welcome to Hub for intresting Blogs</h2>
+                        </a>
 
-              <ul class="insta-list">
+                        <div class="postby flex">
+                            <div class="author-box flex">
+                                <img src="images/author.png" alt="">
+                                <div class="authoname">
+                                    <h4>Coder</h4>
+                                    <span>03 sep 2023</span>
+                                </div>
+                            </div>
 
-                <li>
-                  <a href="#" class="insta-post img-holder" style="--width: 276; --height: 277;">
-                    <img src="images/insta-post-1.png" width="276" height="277" loading="lazy" alt="insta post"
-                      class="img-cover">
-                  </a>
-                </li>
-
-                <li>
-                  <a href="#" class="insta-post img-holder" style="--width: 276; --height: 277;">
-                    <img src="images/insta-post-2.png" width="276" height="277" loading="lazy" alt="insta post"
-                      class="img-cover">
-                  </a>
-                </li>
-
-                <li>
-                  <a href="#" class="insta-post img-holder" style="--width: 276; --height: 277;">
-                    <img src="images/insta-post-3.png" width="276" height="277" loading="lazy" alt="insta post"
-                      class="img-cover">
-                  </a>
-                </li>
-
-                <li>
-                  <a href="#" class="insta-post img-holder" style="--width: 276; --height: 277;">
-                    <img src="images/insta-post-4.png" width="276" height="277" loading="lazy" alt="insta post"
-                      class="img-cover">
-                  </a>
-                </li>
-
-                <li>
-                  <a href="#" class="insta-post img-holder" style="--width: 276; --height: 277;">
-                    <img src="images/insta-post-5.png" width="276" height="277" loading="lazy" alt="insta post"
-                      class="img-cover">
-                  </a>
-                </li>
-
-                <li>
-                  <a href="#" class="insta-post img-holder" style="--width: 276; --height: 277;">
-                    <img src="images/insta-post-6.png" width="276" height="277" loading="lazy" alt="insta post"
-                      class="img-cover">
-                  </a>
-                </li>
-
-                <li>
-                  <a href="#" class="insta-post img-holder" style="--width: 276; --height: 277;">
-                    <img src="images/insta-post-7.png" width="276" height="277" loading="lazy" alt="insta post"
-                      class="img-cover">
-                  </a>
-                </li>
-
-                <li>
-                  <a href="#" class="insta-post img-holder" style="--width: 276; --height: 277;">
-                    <img src="images/insta-post-8.png" width="276" height="277" loading="lazy" alt="insta post"
-                      class="img-cover">
-                  </a>
-                </li>
-
-                <li>
-                  <a href="#" class="insta-post img-holder" style="--width: 276; --height: 277;">
-                    <img src="images/insta-post-9.png" width="276" height="277" loading="lazy" alt="insta post"
-                      class="img-cover">
-                  </a>
-                </li>
-
-              </ul>
-
+                            <a href="/" class="readmore"><span>Read More</span></a>
+                        </div>
+                    </div>
+                </a>
             </div>
 
-          </div>
+            <div class="edcard">
+                <a href="/">
+                    <img src="images/food.jpg" alt="" width="400px" height="300px">
+                    <div class="edcarddet1">
+                        <div class="tegtime flex">
+                            <h5>#food</h5>
+                            <h5 class="flex">
+                                <i class="fa-solid fa-clock"></i>
+                                <span>5</span>mins rated
+                            </h5>
+                        </div>
 
+
+                        <!-- </a> -->
+                        <!-- </div> -->
+                        <a href="/">
+                            <h2>Welcome to Hub for intresting Blogs</h2>
+                        </a>
+
+                        <div class="postby flex">
+                            <div class="author-box flex">
+                                <img src="images/author.png" alt="">
+                                <div class="authoname">
+                                    <h4>Coder</h4>
+                                    <span>03 sep 2023</span>
+                                </div>
+                            </div>
+
+                            <a href="/" class="readmore"><span>Read More</span></a>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="edcard">
+                <a href="/">
+                    <img src="images/food.jpg" alt="" width="400px" height="300px">
+                    <div class="edcarddet1">
+                        <div class="tegtime flex">
+                            <h5>#food</h5>
+                            <h5 class="flex">
+                                <i class="fa-solid fa-clock"></i>
+                                <span>5</span>mins rated
+                            </h5>
+                        </div>
+
+
+                        <!-- </a> -->
+                        <!-- </div> -->
+                        <a href="/">
+                            <h2>Welcome to Hub for intresting Blogs</h2>
+                        </a>
+
+                        <div class="postby flex">
+                            <div class="author-box flex">
+                                <img src="images/author.png" alt="">
+                                <div class="authoname">
+                                    <h4>Coder</h4>
+                                    <span>03 sep 2023</span>
+                                </div>
+                            </div>
+
+                            <a href="/" class="readmore"><span>Read More</span></a>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="showmorepost flex">
+                <a href="/">Show More Posts <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </section>
+
+        <!-- contact section -->
+        <div class="contactbanner container flex">
+            <img src="images/contactus.jpg" alt="">
         </div>
-      </section>
+        <div class="bigtitle container ">
+            <h2 class="textcolor">Popular Tegs</h2>
+            <p>Most searched keywords</p>
+        </div>
+
+        <div class="tegsec container flex">
+            <a href="/"><img src="images/business.png" alt="">Business</a>
+            <a href="/"><img src="images/nature.png" alt="">Nature</a>
+            <a href="/"><img src="images/plant.png" alt="">Plant</a>
+            <a href="/"><img src="images/interior.png" alt="">Interior</a>
+            <a href="/"><img src="images/minimal.png" alt="">Minimal</a>
+            <a href="/"><img src="images/animal.png" alt="">Animal</a>
+            <a href="/"><img src="images/space.png" alt="">Space</a>
+            <a href="/"><img src="images/food.png" alt="">Food</a>
+            <a href="/"><img src="images/fashion.png" alt="">Fsahion</a>
+            <a href="/"><img src="images/lifestyle.png" alt="">Lifestyle</a>
+            <a href="/"><img src="images/culture.png" alt="">Culture</a>
+            <a href="/"><img src="images/travel.png" alt="">Travel</a>
+        </div>
+
+        <!-- recentpost section -->
+
+        <section class="recentpostsec container flex">
+            <div class="recentposts">
+                <div class="bigtitle">
+                    <h2 class="textcolor">Popular Tegs</h2>
+                    <p>Most searched keywords</p>
+                </div>
+                <div class="posts">
+                    <div class="post flex">
+                        <a href="/">
+                            <img src="images/nature-card.jpg" alt="">
+                        </a>
+                        <div class="postdetails">
+                            <div class="postlabel">
+                                <a href="/">Nature</a>
+                            </div>
+                            <a href="/">
+                                <h2>Best ways for growing environment at home</h2>
+                            </a>
+                            <p>take small but impactful steps towards environmental stewardship and sustainability
+                                within the comfort of your own home, contribuiting to a planet</p>
+                            <div class="posttimeteg flex">
+                                <div class="flex">
+                                    <h5><span>#</span>Travel</h5>
+                                    <h5><span>$</span>Lifestyle</h5>
+                                </div>
+                                <div class="tegtime">
+                                    <h5 class="flex">
+                                        <i class="fa-regular fa-clock"></i>
+                                        <span>5</span>mins read
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="post flex">
+                        <a href="/">
+                            <img src="images/nature-card.jpg" alt="">
+                        </a>
+                        <div class="postdetails">
+                            <div class="postlabel">
+                                <a href="/">Nature</a>
+                            </div>
+                            <a href="/">
+                                <h2>Best ways for growing environment at home</h2>
+                            </a>
+                            <p>take small but impactful steps towards environmental stewardship and sustainability
+                                within the comfort of your own home, contribuiting to a planet</p>
+                            <div class="posttimeteg flex">
+                                <div class="flex">
+                                    <h5><span>#</span>Travel</h5>
+                                    <h5><span>$</span>Lifestyle</h5>
+                                </div>
+                                <div class="tegtime">
+                                    <h5 class="flex">
+                                        <i class="fa-regular fa-clock"></i>
+                                        <span>5</span>mins read
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="post flex">
+                        <a href="/">
+                            <img src="images/nature-card.jpg" alt="">
+                        </a>
+                        <div class="postdetails">
+                            <div class="postlabel">
+                                <a href="/">Nature</a>
+                            </div>
+                            <a href="/">
+                                <h2>Best ways for growing environment at home</h2>
+                            </a>
+                            <p>take small but impactful steps towards environmental stewardship and sustainability
+                                within the comfort of your own home, contribuiting to a planet</p>
+                            <div class="posttimeteg flex">
+                                <div class="flex">
+                                    <h5><span>#</span>Travel</h5>
+                                    <h5><span>$</span>Lifestyle</h5>
+                                </div>
+                                <div class="tegtime">
+                                    <h5 class="flex">
+                                        <i class="fa-regular fa-clock"></i>
+                                        <span>5</span>mins read
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="post flex">
+                        <a href="/">
+                            <img src="images/nature-card.jpg" alt="">
+                        </a>
+                        <div class="postdetails">
+                            <div class="postlabel">
+                                <a href="/">Nature</a>
+                            </div>
+                            <a href="/">
+                                <h2>Best ways for growing environment at home</h2>
+                            </a>
+                            <p>take small but impactful steps towards environmental stewardship and sustainability
+                                within the comfort of your own home, contribuiting to a planet</p>
+                            <div class="posttimeteg flex">
+                                <div class="flex">
+                                    <h5><span>#</span>Travel</h5>
+                                    <h5><span>$</span>Lifestyle</h5>
+                                </div>
+                                <div class="tegtime">
+                                    <h5 class="flex">
+                                        <i class="fa-regular fa-clock"></i>
+                                        <span>5</span>mins read
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="post flex">
+                        <a href="/">
+                            <img src="images/nature-card.jpg" alt="">
+                        </a>
+                        <div class="postdetails">
+                            <div class="postlabel">
+                                <a href="/">Nature</a>
+                            </div>
+                            <a href="/">
+                                <h2>Best ways for growing environment at home</h2>
+                            </a>
+                            <p>take small but impactful steps towards environmental stewardship and sustainability
+                                within the comfort of your own home, contribuiting to a planet</p>
+                            <div class="posttimeteg flex">
+                                <div class="flex">
+                                    <h5><span>#</span>Travel</h5>
+                                    <h5><span>$</span>Lifestyle</h5>
+                                </div>
+                                <div class="tegtime">
+                                    <h5 class="flex">
+                                        <i class="fa-regular fa-clock"></i>
+                                        <span>5</span>mins read
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="postslider">
+                <dic class="popularposts">
+                    <div class="poptitle">
+                        <h3>Popular Posts</h3>
+                    </div>
+                    <div class="populposts">
+                        <div class="popupost flex">
+                            <img src="images/work-freelancer.png" alt="">
+                            <div class="popupostde">
+                                <a href="/">
+                                    <h4>Helpful Tips for working from home as a freelancer</h4>
+                                </a>
+                                <div class="poputime flex">
+                                    <h5><span>5</span>mins read</h5>
+                                    <p>-</p>
+                                    <h5>03 sep 2023</h5>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="popupost flex">
+                            <img src="images/work-freelancer.png" alt="">
+                            <div class="popupostde">
+                                <a href="/">
+                                    <h4>Helpful Tips for working from home as a freelancer</h4>
+                                </a>
+                                <div class="poputime flex">
+                                    <h5><span>5</span>mins read</h5>
+                                    <p>-</p>
+                                    <h5>03 sep 2023</h5>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="popupost flex">
+                            <img src="images/work-freelancer.png" alt="">
+                            <div class="popupostde">
+                                <a href="/">
+                                    <h4>Helpful Tips for working from home as a freelancer</h4>
+                                </a>
+                                <div class="poputime flex">
+                                    <h5><span>5</span>mins read</h5>
+                                    <p>-</p>
+                                    <h5>03 sep 2023</h5>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="popupost flex">
+                            <img src="images/work-freelancer.png" alt="">
+                            <div class="popupostde">
+                                <a href="/">
+                                    <h4>Helpful Tips for working from home as a freelancer</h4>
+                                </a>
+                                <div class="poputime flex">
+                                    <h5><span>5</span>mins read</h5>
+                                    <p>-</p>
+                                    <h5>03 sep 2023</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popularposts">
+                        <div class="poptitle">
+                            <h3>Last Comments</h3>
+                        </div>
+                        <div class="comment">
+                            <p><span>"</span>
+                                share your comments and ask your queries to us and also share your feedback to our
+                                website
+                            </p>
+                            <div class="authorcomment flex">
+                                <img src="images/author.png" alt="">
+                                <div class="authortimename">
+                                    <h5>coder</h5>
+                                    <span>03 Sep 2023</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="comment">
+                            <p><span>"</span>
+                                share your comments and ask your queries to us and also share your feedback to our
+                                website
+                            </p>
+                            <div class="authorcomment flex">
+                                <img src="images/author.png" alt="">
+                                <div class="authortimename">
+                                    <h5>coder</h5>
+                                    <span>03 Sep 2023</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="comment">
+                            <p><span>"</span>
+                                share your comments and ask your queries to us and also share your feedback to our
+                                website
+                            </p>
+                            <div class="authorcomment flex">
+                                <img src="images/author.png" alt="">
+                                <div class="authortimename">
+                                    <h5>coder</h5>
+                                    <span>03 Sep 2023</span>
+                                </div>
+                            </div>
+                        </div>
 
 
-  <!-- 
-    - #FOOTER
-  -->
-  <?php
-include './layouts/index_bottom.php';
-?>
+                    </div>
+            </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- footer section -->
+    <footer class="container">
+        <section class="foootersec flex">
+            <div class="logofooter">
+                <div class="logof">
+                    <a href="/" class="flex">
+                        <img src="images/logo.png" alt="">
+                        <h1>NexusHub</h1>
+                    </a>
+
+                </div>
+
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Optio consequatur cum obcaecati autem
+                    reiciendis ut
+                    eveniet ex eaque.
+                </p>
+                <h4>Address</h4>
+                <p>123 Lorem Street</p>
+                <p>India, Gujrata</p>
+            </div>
+            <div class="categoriesfooter">
+                <h3>Categories</h3>
+                <div class="flex">
+                    <div class="catefbx">
+                        <ul>
+                            <li><a href="/">Entertainments</a></li>
+                            <li><a href="/">Photos</a></li>
+                            <li><a href="/">Languages</a></li>
+                            <li><a href="/">Computer Languages</a></li>
+                            <li><a href="/">News Portal</a></li>
+                            <li><a href="/">Blogs</a></li>
+
+                        </ul>
+                    </div>
+
+                    <div class="catefbx">
+                        <ul>
+                            <li><a href="/">Entertainments</a></li>
+                            <li><a href="/">Photos</a></li>
+                            <li><a href="/">Languages</a></li>
+                            <li><a href="/">Computer Languages</a></li>
+                            <li><a href="/">News Portal</a></li>
+                            <li><a href="/">Blogs</a></li>
+
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+            <div class="newsletterfooter" id="subform">
+                <h3>Newsletter</h3>
+                <p>Lorem ipsum dolor sit, consectetur adipisicing. elit. harum, doloribus</p>
+                <form action="#" class="flex">
+                    <div class="flex">
+                        <i class="fa-regular fa-user"></i>
+                        <input type="name" placeholder="Your Name">
+                    </div>
+
+                    <div class="flex">
+                        <i class="fa-regular fa-envelope"></i>
+                        <input type="name" placeholder="Email Address">
+                    </div>
+                    <button type="submit" class="flex">Subsribe<i class="fa-solid fa-arrow-right"></i></button>
+                </form>
+            </div>
+        </section>
+        <div class="themeauthor container flex">
+            <div class="createdby">
+                <h4>&copy; 2023 Created by <a href="https://www.codingwebstudio.com/" target="_blank" title="codingwebstudio">codingwebstudio.com</a></h4>
+            </div>
+            <div class="social flex">
+                <div class="socialcon">
+                    <i class="fa-brands fa-twitter"></i>
+                    <h4>Twitter</h4>
+                </div>
+
+                <div class="socialcon">
+                    <i class="fa-brands fa-instagram"></i>
+                    <h4>Instagram</h4>
+                </div>
+
+                <div class="socialcon">
+                    <i class="fa-brands fa-facebook"></i>
+                    <h4>Facebook</h4>
+                </div>
+
+            </div>
+        </div>
+
+    </footer>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

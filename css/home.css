@@ -56,6 +56,9 @@ li {
 
 /* header------------------- */
 
+
+
+
 header {
     position: sticky;
     top: 0;
@@ -118,7 +121,8 @@ header nav {
 
 }
 
-.navlist ul li a {
+.navlist ul li a,
+.navlist ul li {
     font-size: 16px;
     color: #94a0c9;
     cursor: pointer;
