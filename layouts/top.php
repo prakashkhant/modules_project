@@ -31,8 +31,8 @@ if (!isset($_SESSION['id']) && !isset($_SESSION['username'])) {
                 <i class="fas fa-tachometer-alt me-2"></i>Dashboard</a>
             <a href="admintab.php" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i class="fas fa-users-cog me-2"></i>Admins</a>
             <a href="#" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i class="fas fa-users me-2"></i>Users</a>
-            <a href="#" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i class="fas fa-edit me-2"></i>Add Itmes</a>
-            <a href="addModule.php" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i class="fas fa-sitemap me-2"></i>Add Module</a>
+            <a href="additem.php" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i class="fas fa-edit me-2"></i>Add Itmes</a>
+            <!-- <a href="addModule.php" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i class="fas fa-sitemap me-2"></i>Add Module</a> -->
             <!-- <a href="#" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i class="fas fa-gift me-2"></i>Comments/Likes</a> -->
             <a href="#" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i class="fas fa-comment-dots me-2"></i>Comments/Likes</a>
             <!-- <a href="#" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i

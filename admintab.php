@@ -7,7 +7,7 @@ include './layouts/top.php';
         <p>Admin Tab</p>
     </div>
 
-    <div class="p-1 bg-white shadow-sm d-flex justify-content-around align-items-center rounded w-25 m-3">
+    <div class="p-0 bg-white shadow-sm d-flex justify-content-around align-items-center rounded w-25 m-3">
         <div>
             <p class="fs-5 fw-bold">Total Admins</p>
             <!-- here php scrip for admil total -->
