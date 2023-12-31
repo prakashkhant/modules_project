@@ -27,17 +27,9 @@
                 <ul class="flex">
                     <li><a href="index.php" class="liactive">Home</a></li>
                     <li><a href="">About Me</a></li>
-                    <li>
-                        <!-- Category<i class="fa-solid fa-sort-down"></i> -->
-                        <div class="dropdown">
-                            <button class="dropbtn">Category<i class="fa-solid fa-sort-down"></i></button>
-                            <div class="dropdown-content">
-                                <a href="#">Link 1</a>
-                                <a href="#">Link 2</a>
-                                <a href="#">Link 3</a>
-                            </div>
-                        </div>
-                    </li>
+                    <li><a href="">Category<i class="fa-solid fa-sort-down"></i></li>
+
+                    
                     <li><a href="">Blogs<i class="fa-solid fa-sort-down"></i></a></li>
                     <li><a href="">Entertaiments<i class="fa-solid fa-sort-down"></i></a></li>
                     <li><a href="programming_home.php">Computer Languages</a></li>
@@ -54,7 +46,7 @@
                         </form>
                         <div class="tegsec">
                             <h3>Popular tags:</h3>
-                            <div class="tags flex">
+                            <div class="tegs flex">
                                 <a href="#">#Travel<span>,</span></a>
                                 <a href="#">#Tech<span>,</span></a>
                                 <a href="#">#Movie<span>,</span></a>

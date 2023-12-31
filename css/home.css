@@ -64,7 +64,8 @@ header {
     top: 0;
     padding: 30px;
     z-index: 9999;
-    transition: 0.3s all;
+    transition: 0.3s linear; 
+    /* linear */
 }
 
 #header.scrolled {
@@ -79,7 +80,7 @@ header nav {
 }
 
 .logo {
-    gap: 10px
+    gap: 10px;
 }
 
 .logoimg {
@@ -98,7 +99,7 @@ header nav {
     font-size: 30px;
     font-weight: 900;
     letter-spacing: 2px;
-
+    color: #555;
 }
 
 .webname {
@@ -159,7 +160,7 @@ header nav {
     background-color: #e8edf5;
     border: 1px solid #e9eef5;
     border-radius: 10px;
-    padding: 5px;
+    padding: 10px;
     overflow: hidden;
     z-index: 1;
     display: none;
@@ -173,7 +174,7 @@ header nav {
     border-radius: 10px;
     font-size: 14px;
     line-height: 1px;
-    padding: 20px 15px 20px 15px;
+    padding: 20px 15px 10px 15px;
 }
 
 .searchclick form input {
@@ -194,29 +195,29 @@ header nav {
     right: 25px;
 }
 
-.tagsec {
+.tegsec {
     padding: 10px 23px;
 
 }
 
-.tagsec h3 {
+.tegsec h3 {
     font-size: 15px;
     color: #555;
     font-weight: 500;
 }
 
-.tags {
+.tegs {
     gap: 10px;
-    padding: 1px 0;
+    padding: 10px 0;
 }
 
-.tags a {
+.tegs a {
     font-size: 14px;
     color: #94a9c9;
 
 }
 
-.tags a:hover {
+.tegs a:hover {
 
     color: #3b5377;
     font-weight: 600;
@@ -234,7 +235,7 @@ header nav {
 
 .l {
     background-color: rgba(0, 0, 0, 0.7);
-    border-radius: 0.7em;
+    border-radius: 0.75em;
     box-shadow: 0.125em 0.125em 0 0.125em rgba(0, 0, 0, 0.3) inset;
     color: #fdea7b;
     display: inline-flex;
@@ -253,12 +254,13 @@ header nav {
 
 .l::before,
 .l::after {
-    content: '';
+    content: "";
     display: block;
 }
 
 .l::before {
     background-color: #d7d7d7;
+    /* background-origin: 50%; */
     border-radius: 50%;
     width: 1.2em;
     height: 1.2em;
@@ -275,8 +277,8 @@ header nav {
     border-left: 0.4em solid #d8d8d8;
     border-right: 0 solid transparent;
     transition: border-left-color 0.1s 0.3s ease-out, transform 0.3s ease-out;
-    transform: translate(-22.5%);
-    transform-origin: 25% 25%;
+    transform: translateX(-22.5%);
+    transform-origin: 25% 50%;
     width: 1.2em;
     height: 1em;
 
@@ -292,12 +294,12 @@ header nav {
 
 .l:checked::before {
     background-color: currentColor;
-    transform: translate(125%);
+    transform: translateX(125%);
 }
 
 .l:checked::after {
     border-left-color: currentColor;
-    transform: translate(-2.5%) rotateY(180deg);
+    transform: translateX(-2.5%) rotateY(180deg);
 }
 
 .l:focus {
