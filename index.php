@@ -80,7 +80,7 @@
                 <h4>Hello Everyone! </h4>
 
                 <h1>Here
-                    <div>
+              <div>
                         <span class="multi-text">Entertaiments</span>
                         <span class="blink"></span>
 
