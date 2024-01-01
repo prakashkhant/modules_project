@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 31, 2023 at 05:23 PM
--- Server version: 10.4.28-MariaDB
--- PHP Version: 8.2.4
+-- Generation Time: Jan 01, 2024 at 04:25 PM
+-- Server version: 10.4.22-MariaDB
+-- PHP Version: 8.1.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -30,7 +30,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `category` (
   `cat_id` int(11) NOT NULL,
   `cat_name` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `category`
@@ -56,20 +56,6 @@ INSERT INTO `category` (`cat_id`, `cat_name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `flc`
---
-
-CREATE TABLE `flc` (
-  `flc_id` int(11) NOT NULL,
-  `comment` text NOT NULL,
-  `liked` tinyint(1) NOT NULL,
-  `item_id` int(11) NOT NULL,
-  `uid` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `item`
 --
 
@@ -84,10 +70,10 @@ CREATE TABLE `item` (
   `publish_by` text NOT NULL,
   `publish_date` date NOT NULL,
   `module_id` int(11) NOT NULL,
-  `categories` varchar(50) NOT NULL,
+  `categorie` int(50) NOT NULL,
   `keywords` varchar(50) NOT NULL,
   `time` time NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -99,7 +85,7 @@ CREATE TABLE `modules` (
   `mid` int(11) NOT NULL,
   `module_name` varchar(30) NOT NULL,
   `photo` varchar(30) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `modules`
@@ -115,6 +101,20 @@ INSERT INTO `modules` (`mid`, `module_name`, `photo`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `review`
+--
+
+CREATE TABLE `review` (
+  `flc_id` int(11) NOT NULL,
+  `comment` text NOT NULL,
+  `liked` tinyint(1) NOT NULL,
+  `item_id` int(11) NOT NULL,
+  `uid` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `userdetails`
 --
 
@@ -126,7 +126,7 @@ CREATE TABLE `userdetails` (
   `email` varchar(20) NOT NULL,
   `phone` int(11) NOT NULL,
   `gender` varchar(6) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `userdetails`
@@ -150,26 +150,27 @@ ALTER TABLE `category`
   ADD PRIMARY KEY (`cat_id`);
 
 --
--- Indexes for table `flc`
---
-ALTER TABLE `flc`
-  ADD PRIMARY KEY (`flc_id`),
-  ADD KEY `forign key` (`uid`),
-  ADD KEY `item_id` (`item_id`);
-
---
 -- Indexes for table `item`
 --
 ALTER TABLE `item`
   ADD PRIMARY KEY (`id`),
   ADD KEY `module_id` (`module_id`),
-  ADD KEY `categories` (`categories`);
+  ADD KEY `categories` (`categorie`),
+  ADD KEY `categorie` (`categorie`);
 
 --
 -- Indexes for table `modules`
 --
 ALTER TABLE `modules`
   ADD PRIMARY KEY (`mid`);
+
+--
+-- Indexes for table `review`
+--
+ALTER TABLE `review`
+  ADD PRIMARY KEY (`flc_id`),
+  ADD KEY `forign key` (`uid`),
+  ADD KEY `item_id` (`item_id`);
 
 --
 -- Indexes for table `userdetails`
@@ -188,12 +189,6 @@ ALTER TABLE `category`
   MODIFY `cat_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
--- AUTO_INCREMENT for table `flc`
---
-ALTER TABLE `flc`
-  MODIFY `flc_id` int(11) NOT NULL AUTO_INCREMENT;
-
---
 -- AUTO_INCREMENT for table `item`
 --
 ALTER TABLE `item`
@@ -206,6 +201,12 @@ ALTER TABLE `modules`
   MODIFY `mid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
+-- AUTO_INCREMENT for table `review`
+--
+ALTER TABLE `review`
+  MODIFY `flc_id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `userdetails`
 --
 ALTER TABLE `userdetails`
@@ -216,17 +217,18 @@ ALTER TABLE `userdetails`
 --
 
 --
--- Constraints for table `flc`
---
-ALTER TABLE `flc`
-  ADD CONSTRAINT `flc_ibfk_1` FOREIGN KEY (`uid`) REFERENCES `userdetails` (`uid`),
-  ADD CONSTRAINT `flc_ibfk_2` FOREIGN KEY (`item_id`) REFERENCES `item` (`id`);
-
---
 -- Constraints for table `item`
 --
 ALTER TABLE `item`
-  ADD CONSTRAINT `item_ibfk_1` FOREIGN KEY (`module_id`) REFERENCES `modules` (`mid`);
+  ADD CONSTRAINT `item_ibfk_1` FOREIGN KEY (`module_id`) REFERENCES `modules` (`mid`),
+  ADD CONSTRAINT `item_ibfk_2` FOREIGN KEY (`categorie`) REFERENCES `category` (`cat_id`);
+
+--
+-- Constraints for table `review`
+--
+ALTER TABLE `review`
+  ADD CONSTRAINT `review_ibfk_1` FOREIGN KEY (`uid`) REFERENCES `userdetails` (`uid`),
+  ADD CONSTRAINT `review_ibfk_2` FOREIGN KEY (`item_id`) REFERENCES `item` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
