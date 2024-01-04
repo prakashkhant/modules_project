@@ -72,7 +72,7 @@
                 <h4>Hello Everyone! </h4>
 
                 <h1>Here
-              <div>
+                    <div>
                         <span class="multi-text">Entertaiments</span>
                         <span class="blink"></span>
 
@@ -102,8 +102,8 @@
 
         <section class="hottopicsec container flex">
             <div class="hottopics">
-                <h3>Hot Topics</h3>
-                <p>Don't moss out on the latest news about travel tips, Hotels reviews</p>
+                <h3>Interested Topics</h3>
+                <p>Don't moss any Things  :</p>
                 <div class="lrbtn">
                     <button class="leftbtn"><i class="fa-solid fa-arrow-left"></i></button>
                     <button class="rightbtn"><i class="fa-solid fa-arrow-right"></i></button>
@@ -115,8 +115,8 @@
                         <img src="images/food.jpg" alt="" width="400px" height="300px">
                         <div class="hdetails">
                             <div class="hdetail">
-                                <h4>food</h4>
-                                <p>receipe</p>
+                                <h4>Entertainments</h4>
+                                <p>5 Articles</p>
                             </div>
                         </div>
                     </a>
