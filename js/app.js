@@ -41,7 +41,7 @@ toggleCheckbox.addEventListener('change',function(){
 
  document.addEventListener('DOMContentLoaded' , function(){
  const options = {
-    strings: ['CWS' , 'Coder' , 'Designer' , 'Youtuber' , 'Blogger'],
+    strings: ['Entertainments','Blogs','News','Coding','Photos'],
     typeSpeed:150,
     backSpeed:50,
     backDelay: 3000,
@@ -118,16 +118,16 @@ cardWrapperChildren.slice(0, column).forEach(item => {
 
   cardWrapper.onscroll = function(){
     if (cardWrapper.scrollLeft === 0) {
-        cardWrapper.classList.add('no-smooth')
-        cardWrapper.scrollLeft = cardWrapper.scrollWidth - (2 * cardWrapper.offsetWidth)
+        cardWrapper.classList.add('no-smooth');
+        cardWrapper.scrollLeft = cardWrapper.scrollWidth - (2 * cardWrapper.offsetWidth);
         cardWrapper.classList.remove('no-smooth');
     }
     else if (cardWrapper.scrollLeft === cardWrapper.scrollWidth - cardWrapper.offsetWidth){
-        cardWrapper.classList.add('no-smooth')
-        cardWrapper.scrollLeft = cardWrapper.offsetWidth
+        cardWrapper.classList.add('no-smooth');
+        cardWrapper.scrollLeft = cardWrapper.offsetWidth;
         cardWrapper.classList.remove('no-smooth');
     }
-  }
+  
   if (autoScroll) {
     clearTimeout(autoScroll)
   }
@@ -137,3 +137,4 @@ cardWrapperChildren.slice(0, column).forEach(item => {
     cardWrapper.scrollLeft += widthToScroll
   }, 3000)
 
+  }

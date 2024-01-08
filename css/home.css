@@ -195,12 +195,12 @@ header nav {
     right: 25px;
 }
 
-.tegsec {
+.tagsec {
     padding: 10px 23px;
 
 }
 
-.tegsec h3 {
+.tagsec h3 {
     font-size: 15px;
     color: #555;
     font-weight: 500;
@@ -288,7 +288,7 @@ header nav {
 /* cheched */
 .l:checked {
     background-color: rgb(215 202 202/ 45%);
-    box-shadow: 0.125em 0.125em rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0.125em 0.125em  rgba(0, 0, 0, 0.1) inset;
     border: 1px solid #999;
 }
 
@@ -774,6 +774,7 @@ header nav {
 
 .tegtime {
     justify-content: space-between;
+    margin: 20px 0;
 }
 
 .tegtime h5 {
@@ -874,7 +875,7 @@ header nav {
 
 /* tegsec start */
 
-.tegsec {
+ .tegsec {
     justify-content: space-between;
     overflow: hidden;
     gap: 5px;
@@ -907,7 +908,7 @@ header nav {
 .tegsec a:hover {
     background-color: #fff;
     transform: translateY(-5px);
-}
+} 
 
 /* recentpostsec start */
 
@@ -1001,7 +1002,7 @@ header nav {
     margin-top: 60px;
 }
 
-.popularposts {
+.popularposts {  
     width: 100%;
     background-color: #e8edf5;
     border: 1px solid #c2d4ee;
@@ -1046,7 +1047,7 @@ header nav {
     border-bottom: 1px solid #99999971;
 }
 
-.popupostde:last-child .popupostde {
+.popupost:last-child .popupostde {
     border: none;
 }
 
@@ -1116,7 +1117,7 @@ header nav {
 /* footer start */
 footer {
     height: auto;
-    padding: 80px 80px 0px 80px;
+    padding: 10px 10px 0px 10px;
     border: 1px solid #c2d4ee;
     background-color: #e8edf5;
     border-radius: 40px;
@@ -1300,3 +1301,4 @@ footer {
 .socialcon i{
     color: #708ab0;
 }
+

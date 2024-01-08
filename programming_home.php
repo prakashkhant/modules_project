@@ -60,7 +60,7 @@
           <ul class="desktop-nav">
 
             <li>
-              <a href="#" class="nav-link">Home</a>
+              <a href="index.php" class="nav-link">Home</a>
             </li>
 
             <li>
@@ -210,9 +210,9 @@ include './database/db.php';
 $db = new DB();
 
 $data = $db->populate_programming_lang_blogs();
-
+// print_r($data);
 foreach ($data as $d) {
-  $lang_name=$db->find_programming_lang_name($d["cat_id"]);
+  $lang_name=$db->find_category_name($d["categorie"]);
  foreach ($lang_name as $l_name)
  {
   
@@ -222,7 +222,7 @@ foreach ($data as $d) {
 <div class='blog-card'>
 
 <div class='blog-card-banner'>
-<img src='images/programming/" . $d["photo"] . "' alt='Building microservices with Dropwizard, MongoDB & Docker'
+<img src='images/programming/" . $d["photopath"] . "' alt='Building microservices with Dropwizard, MongoDB & Docker'
 width='250' class='blog-banner-img'>
 </div>
 
@@ -231,13 +231,13 @@ width='250' class='blog-banner-img'>
 <button class='blog-topic text-tiny'>".$l_name["cat_name"]."</button>
 
 <h3>
-<a href='pro_single.php?id=".$d["prog_id"]."&name=".$l_name["cat_name"]."' class='h3'>
-" . $d["prog_title"] . "
+<a href='pro_single.php?id=".$d["id"]."&name=".$l_name["cat_name"]."&c=".$d["categorie"]."' class='h3'>
+" . $d["title"] . "
 </a>
 </h3>
 
 <p class='blog-text'>
-" . $d["prog_desc"] . "
+" . $d["description"] . "
 </p>
 
 <div class='wrapper-flex'>
@@ -265,134 +265,7 @@ width='250' class='blog-banner-img'>
 }
 }
 ?>
-            <!-- <div class="blog-card">
-
-              <div class="blog-card-banner">
-                <img src="images/programming/blog-2.png" alt="Fast web page loading on a $20 feature phone" width="250" class="blog-banner-img">
-              </div>
-
-              <div class="blog-content-wrapper">
-
-                <button class="blog-topic text-tiny">Web Performance</button>
-
-                <h3><a href="" class="h3">Fast web page loading on a $20 feature phone</a></h3>
-
-                <p class="blog-text">
-                  Feature phones are affordable (under $20-25), low-end devices enabling 100s of millions of users in
-                  developing countries
-                  to leverage the web. Think of them as a light version of a smart phone.
-                </p>
-
-                <div class="wrapper-flex">
-
-                  <div class="profile-wrapper">
-                    <img src="images/programming/author.png" alt="Julia walker" width="50">
-                  </div>
-
-                  <div class="wrapper">
-                    <a href="#" class="h4">Julia Walker</a>
-
-                    <p class="text-sm">
-                      <time datetime="2021-12-10">Dec 10, 2021</time>
-                      <span class="separator"></span>
-                      <ion-icon name="time-outline"></ion-icon>
-                      <time datetime="PT2M">2 min</time>
-                    </p>
-                  </div>
-
-                </div>
-
-              </div>
-
-            </div>
-
-
-            <div class="blog-card">
-
-              <div class="blog-card-banner">
-                <img src="images/programming/blog-3.png" alt="Accessibility Tips for Web Developers" width="250" class="blog-banner-img">
-              </div>
-
-              <div class="blog-content-wrapper">
-
-                <button class="blog-topic text-tiny">Accessibility</button>
-
-                <h3><a href="" class="h3">Accessibility Tips for Web Developers</a></h3>
-
-                <p class="blog-text">
-                  It's awesome to build sites that are inclusive and accessible to everyone. There are at least six key
-                  areas of
-                  disability we can optimize for: visual, hearing, mobility, cognition, speech and neural. Many tools
-                  and resources can
-                  help here, even if you're totally new to web accessibility.
-                </p>
-
-                <div class="wrapper-flex">
-
-                  <div class="profile-wrapper">
-                    <img src="images/programming/author.png" alt="Julia walker" width="50">
-                  </div>
-
-                  <div class="wrapper">
-                    <a href="#" class="h4">Julia Walker</a>
-
-                    <p class="text-sm">
-                      <time datetime="2021-11-28">Nov 28, 2021</time>
-                      <span class="separator"></span>
-                      <ion-icon name="time-outline"></ion-icon>
-                      <time datetime="PT4M">4 min</time>
-                    </p>
-                  </div>
-
-                </div>
-
-              </div>
-
-            </div>
-
-
-            <div class="blog-card">
-
-              <div class="blog-card-banner">
-                <img src="images/programming/blog-4.png" alt="Dynamically Securing Databases using Hashicorp Vault" width="250" class="blog-banner-img">
-              </div>
-
-              <div class="blog-content-wrapper">
-
-                <button class="blog-topic text-tiny">Database</button>
-
-                <h3><a href="" class="h3">Dynamically Securing Databases using Hashicorp Vault</a></h3>
-
-                <p class="blog-text">
-                  Nowadays, it's hard to profoundly talk about security in the IT industry, since it has to be
-                  considered on so many
-                  different levels: from securing code chunks, securing containers, up to securing complex
-                  infrastructures and defining
-                  strong authorization and authentication policies across the enterprise.
-                </p>
-
-                <div class="wrapper-flex">
-
-                  <div class="profile-wrapper">
-                    <img src="images/programming/author.png" alt="Julia walker" width="50">
-                  </div>
-
-                  <div class="wrapper">
-                    <a href="#" class="h4">Julia Walker</a>
-
-                    <p class="text-sm">
-                      <time datetime="2021-11-20">Nov 20, 2021</time>
-                      <span class="separator"></span>
-                      <ion-icon name="time-outline"></ion-icon>
-                      <time datetime="PT4M">4 min</time>
-                    </p>
-                  </div>
-
-                </div>
-
-              </div>
-
-            </div> -->
+           
 
           </div>
 

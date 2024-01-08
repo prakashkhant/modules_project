@@ -60,7 +60,7 @@
                     <ul class="desktop-nav">
 
                         <li>
-                            <a href="#" class="nav-link">Home</a>
+                            <a href="programming_home.php" class="nav-link">Home</a>
                         </li>
 
                         <li>
@@ -149,54 +149,7 @@
         <!--
       - #HERO SECTION
     -->
-
-        <div class="hero">
-
-            <div class="container">
-
-                <div class="left">
-
-                    <h1 class="h1">
-                        Here ,you learn about <b>
-
-                            <?php
-                            $name= $_GET["name"];
-                            echo "$name";
-                            ?>
-                        </b> Programming Language.
-                        <!-- <br>Programming languages -->
-                    </h1>
-
-                    <p class="h3">
-                        most <abbr title="Accessibility">
-                            popular</abbr> and core topics
-                    </p>
-
-                    <div class="btn-group">
-                        <a href="index.php" class="btn btn-primary">Go NexusHUb</a>
-                        <a href="programming_home.php" class="btn btn-secondary">Back to Home</a>
-                    </div>
-
-                </div>
-
-                <!-- <div class="right">
-
-          <div class="pattern-bg"></div>
-          <div class="img-box">
-            <img src="images/programming/lang_home.png" alt="home_img" class="hero-img">
-            <div class="shape shape-1"></div>
-            <div class="shape shape-2"></div>
-          </div>
-
-        </div> -->
-
-            </div>
-
-        </div>
-
-
-
-
+                      
 
         <div class="main">
 
@@ -209,20 +162,20 @@
                  include './database/db.php';
                 $db = new DB();
                 $id = $_GET["id"];
-          
-                $ldata = $db->populate_programming_lang_desc($id);
+                $cid=$_GET["c"];
+                $ldata = $db->populate_item_content($id);
                
                 foreach ($ldata as $ld) {
                     echo "             
                 <div class='blog'>
                     <h2 class='h2'>
-                       ".$ld['prog_title']."
+                       ".$ld['title']."
                     </h2>
 
                     <div class='blog-card'>
 
                         <div class='video-link' style='width: 700px;justify-content:center;'>
-                            <iframe width='100%' height='415' src=' ".$ld['prog_video']."' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' allowfullscreen></iframe>
+                            <iframe  width='100%' height='415' src=' ".$ld['videopath']."' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' allowfullscreen></iframe>
                         
                             </div>
 
@@ -232,8 +185,8 @@
                         <div class='blog-card-banner content' style='width: 700px;'>
                         <p class='content-text' style="."height:auto%;".">
                         ";
-                        echo nl2br($ld['prog_desc'])."<br>";
-                       $content= nl2br($ld['prog_content']);
+                        echo nl2br($ld['description'])."<br>";
+                       $content= nl2br($ld['content']);
                        echo $content;
                        echo "
                        </p>
@@ -245,6 +198,7 @@
 
 ";
                             }
+                            
 ?>
 
 
@@ -258,33 +212,17 @@
                     <div class="topics">
 
                         <h2 class="h2">Topics :</h2>
-
-                        <a href="#" class="topic-btn">
-
-
-                            <p>What is Java ?</p>
-                        </a>
-
-                        <a href="#" class="topic-btn">
-
-                            <p>Variables</p>
-                        </a>
-
-                        <a href="#" class="topic-btn">
-
-                            <p>object and class</p>
-                        </a>
-
-                        <a href="#" class="topic-btn">
-
-                            <p>pandas</p>
-                        </a>
-
-                        <a href="#" class="topic-btn">
+            
+                         <?php $tdata=$db->fetch_titles_list($cid); 
+                         foreach( $tdata as $td){
+                         echo " 
+                        
+                        <a href='pro_single.php?id=".$td["id"]."&c=".$td["categorie"]."' class='topic-btn'>
 
 
-                            <p>applet</p>
-                        </a>
+                            <p>".$td["title"]."</p>
+                        </a>";} ?>
+
 
 
                     </div>

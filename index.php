@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/darkmode.css">
     <link rel="short icon" href="images/logo.png" type="image/x-icon">
-
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
@@ -27,9 +27,7 @@
                 <ul class="flex">
                     <li><a href="index.php" class="liactive">Home</a></li>
                     <li><a href="">About Me</a></li>
-                    <li><a href="">Category<i class="fa-solid fa-sort-down"></i></li>
-
-                    
+                    <li><a href="">Category<i class="fa-solid fa-sort-down"></i></a></li>
                     <li><a href="">Blogs<i class="fa-solid fa-sort-down"></i></a></li>
                     <li><a href="">Entertaiments<i class="fa-solid fa-sort-down"></i></a></li>
                     <li><a href="programming_home.php">Computer Languages</a></li>
@@ -44,7 +42,7 @@
                             <input type="text" class="form-control" placeholder="Search" id="">
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </form>
-                        <div class="tegsec">
+                        <div class="tagsec">
                             <h3>Popular tags:</h3>
                             <div class="tegs flex">
                                 <a href="#">#Travel<span>,</span></a>
@@ -103,7 +101,7 @@
         <section class="hottopicsec container flex">
             <div class="hottopics">
                 <h3>Interested Topics</h3>
-                <p>Don't moss any Things  :</p>
+                <p>Don't moss any Things :</p>
                 <div class="lrbtn">
                     <button class="leftbtn"><i class="fa-solid fa-arrow-left"></i></button>
                     <button class="rightbtn"><i class="fa-solid fa-arrow-right"></i></button>
@@ -146,6 +144,50 @@
                 <div class="hcard">
                     <a href="/">
                         <img src="images/interior.jpg" alt="" width="400px" height="300px">
+                        <div class="hdetails">
+                            <div class="hdetail">
+                                <h4>food</h4>
+                                <p>receipe</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="hcard">
+                    <a href="/">
+                        <img src="images/gimbap.jpg" alt="" width="400px" height="300px">
+                        <div class="hdetails">
+                            <div class="hdetail">
+                                <h4>food</h4>
+                                <p>receipe</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="hcard">
+                    <a href="/">
+                        <img src="images/gimbap.jpg" alt="" width="400px" height="300px">
+                        <div class="hdetails">
+                            <div class="hdetail">
+                                <h4>food</h4>
+                                <p>receipe</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="hcard">
+                    <a href="/">
+                        <img src="images/gimbap.jpg" alt="" width="400px" height="300px">
+                        <div class="hdetails">
+                            <div class="hdetail">
+                                <h4>food</h4>
+                                <p>receipe</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="hcard">
+                    <a href="/">
+                        <img src="images/gimbap.jpg" alt="" width="400px" height="300px">
                         <div class="hdetails">
                             <div class="hdetail">
                                 <h4>food</h4>
@@ -524,7 +566,7 @@
                 </div>
             </div>
             <div class="postslider">
-                <dic class="popularposts">
+                <div class="popularposts">
                     <div class="poptitle">
                         <h3>Popular Posts</h3>
                     </div>
@@ -584,62 +626,76 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="popupost flex">
+                            <img src="images/work-freelancer.png" alt="">
+                            <div class="popupostde">
+                                <a href="/">
+                                    <h4>Helpful Tips for working from home as a freelancer</h4>
+                                </a>
+                                <div class="poputime flex">
+                                    <h5><span>5</span>mins read</h5>
+                                    <p>-</p>
+                                    <h5>03 sep 2023</h5>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="popularposts">
-                        <div class="poptitle">
-                            <h3>Last Comments</h3>
-                        </div>
-                        <div class="comment">
-                            <p><span>"</span>
-                                share your comments and ask your queries to us and also share your feedback to our
-                                website
-                            </p>
-                            <div class="authorcomment flex">
-                                <img src="images/author.png" alt="">
-                                <div class="authortimename">
-                                    <h5>coder</h5>
-                                    <span>03 Sep 2023</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="comment">
-                            <p><span>"</span>
-                                share your comments and ask your queries to us and also share your feedback to our
-                                website
-                            </p>
-                            <div class="authorcomment flex">
-                                <img src="images/author.png" alt="">
-                                <div class="authortimename">
-                                    <h5>coder</h5>
-                                    <span>03 Sep 2023</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="comment">
-                            <p><span>"</span>
-                                share your comments and ask your queries to us and also share your feedback to our
-                                website
-                            </p>
-                            <div class="authorcomment flex">
-                                <img src="images/author.png" alt="">
-                                <div class="authortimename">
-                                    <h5>coder</h5>
-                                    <span>03 Sep 2023</span>
-                                </div>
-                            </div>
-                        </div>
-
-
+                </div>
+                <div class="popularposts">
+                    <div class="poptitle">
+                        <h3>Last Comments</h3>
                     </div>
-            </div>
+                    <div class="comment">
+                        <p><span>"</span>
+                            share your comments and ask your queries to us and also share your feedback to our
+                            website
+                        </p>
+                        <div class="authorcomment flex">
+                            <img src="images/author.png" alt="">
+                            <div class="authortimename">
+                                <h5>coder</h5>
+                                <span>03 Sep 2023</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="comment">
+                        <p><span>"</span>
+                            share your comments and ask your queries to us and also share your feedback to our
+                            website
+                        </p>
+                        <div class="authorcomment flex">
+                            <img src="images/author.png" alt="">
+                            <div class="authortimename">
+                                <h5>coder</h5>
+                                <span>03 Sep 2023</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="comment">
+                        <p><span>"</span>
+                            share your comments and ask your queries to us and also share your feedback to our
+                            website
+                        </p>
+                        <div class="authorcomment flex">
+                            <img src="images/author.png" alt="">
+                            <div class="authortimename">
+                                <h5>coder</h5>
+                                <span>03 Sep 2023</span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
             </div>
         </section>
     </main>
 
     <!-- footer section -->
-    <footer class="container">
+    <footer class="container2">
         <section class="foootersec flex">
             <div class="logofooter">
                 <div class="logof">
@@ -649,60 +705,17 @@
                     </a>
 
                 </div>
-
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Optio consequatur cum obcaecati autem
-                    reiciendis ut
-                    eveniet ex eaque.
-                </p>
                 <h4>Address</h4>
                 <p>123 Lorem Street</p>
                 <p>India, Gujrata</p>
             </div>
-            <div class="categoriesfooter">
-                <h3>Categories</h3>
-                <div class="flex">
-                    <div class="catefbx">
-                        <ul>
-                            <li><a href="/">Entertainments</a></li>
-                            <li><a href="/">Photos</a></li>
-                            <li><a href="/">Languages</a></li>
-                            <li><a href="/">Computer Languages</a></li>
-                            <li><a href="/">News Portal</a></li>
-                            <li><a href="/">Blogs</a></li>
-
-                        </ul>
-                    </div>
-
-                    <div class="catefbx">
-                        <ul>
-                            <li><a href="/">Entertainments</a></li>
-                            <li><a href="/">Photos</a></li>
-                            <li><a href="/">Languages</a></li>
-                            <li><a href="/">Computer Languages</a></li>
-                            <li><a href="/">News Portal</a></li>
-                            <li><a href="/">Blogs</a></li>
-
-                        </ul>
-                    </div>
-
-                </div>
-            </div>
+       
             <div class="newsletterfooter" id="subform">
-                <h3>Newsletter</h3>
-                <p>Lorem ipsum dolor sit, consectetur adipisicing. elit. harum, doloribus</p>
-                <form action="#" class="flex">
-                    <div class="flex">
-                        <i class="fa-regular fa-user"></i>
-                        <input type="name" placeholder="Your Name">
-                    </div>
-
-                    <div class="flex">
-                        <i class="fa-regular fa-envelope"></i>
-                        <input type="name" placeholder="Email Address">
-                    </div>
+                <h3>Contact us</h3>
+                <p>This website bulid under gudileis of Komal dave , As project of sem 6 in Ty Bsc Computer science. </p>
+               
                     <button type="submit" class="flex">Subsribe<i class="fa-solid fa-arrow-right"></i></button>
-                </form>
+               
             </div>
         </section>
         <div class="themeauthor container flex">
@@ -729,6 +742,7 @@
         </div>
 
     </footer>
+    <?php include 'top_up.php'; ?>
     <script src="js/app.js"></script>
 </body>
 

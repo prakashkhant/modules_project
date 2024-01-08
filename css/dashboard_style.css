@@ -1,8 +1,15 @@
 :root {
-    --main-bg-color: #564dd4;
-    --main-text-color: #005e9d;
-    --second-text-color: #7f6ad5;
-    --second-bg-color: #ffee99;
+    --main-bg-color: #1b193c;
+    --main-text-color: #d8d8d8;
+    --second-text-color: #e9f6f5;
+    --second-bg-color: linear-gradient(
+      to right,
+      #a1b8fa,
+      #83a4ff,
+      #02a2a8dd,
+      #019393,
+      #0569ab
+    ) ,transparent 50%;
   }
   
   .primary-text {
@@ -12,6 +19,7 @@
   .second-text {
     color: var(--second-text-color);
   }
+ 
   
   .primary-bg {
     background-color: var(--main-bg-color);
@@ -29,11 +37,11 @@
     overflow-x: hidden;
     background: linear-gradient(
       to right,
-      #82ece7,
-      #c2f5f3,
-      #cbf6f7,
-      #d4f8f8,
-      #ddfaf8
+      #0637bd,
+      #00aba5,
+      #02a2a8dd,
+      #019393,
+      #0569ab
     );
   }
   
@@ -44,6 +52,12 @@
     -moz-transition: margin 0.25s ease-out;
     -o-transition: margin 0.25s ease-out;
     transition: margin 0.25s ease-out;
+    background:linear-gradient(
+      to right,
+      #001c6a,
+      #091e76d8,
+      #094d7b
+    );
   }
   
   #sidebar-wrapper .sidebar-heading {
@@ -86,7 +100,7 @@
     padding: 15px 30px;
     margin-bottom: 20px;
     color: #005e9d;
-    border: 1px solid #ffffff;
+   
     font-size: 36px;
     font-weight: 500;
   }
@@ -122,43 +136,3 @@
       margin-left: -15rem;
     }
   }
-
-  .dropbtn {
-    background-color: #4CAF50;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .dropdown {
-    position: relative;
-    display: inline-block;
-  }
-  
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
-  
-  .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-
-  .dropdown-content a:hover {background-color: #f1f1f1}
-
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
-  
-  .dropdown:hover .dropbtn {
-    background-color: #3e8e41;
-  }  

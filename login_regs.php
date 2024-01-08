@@ -103,27 +103,7 @@ if (isset($_POST['sign-up'])) {
     include 'database/db.php';
 
     $db = new DB();
-    if ($db->connect_DB()) {
-
-
-        $uname = $_POST["username"];
-        $email = $_POST["email"];
-        $pass = $_POST["password"];
-        // echo " .$fname .$uname. $email . $phone .$pass . $cpass.$gender";
-
-        $sql = "INSERT INTO userdetails (username,password,email) VALUES('$uname','$pass','$email')";
-        //echo $sql;
-        if (mysqli_query($db->conn, $sql)) {
-            echo "successfull";
-            header("Location: login_regs.php");
-
-            exit();
-        } else {
-            echo "error detected";
-        }
-    } else {
-        echo "error detected";
-    }
+   
 }
 ?>
 
@@ -132,49 +112,6 @@ if (isset($_POST['log-in'])) {
     include "database/db.php";
 
     $db = new DB();
-    if ($db->connect_DB()) {
-
-        if (isset($_POST['uname']) && isset($_POST['pass'])) {
-            function validate($data)
-            {
-                $data = trim($data);
-                $data = stripslashes($data);
-                $data = htmlspecialchars($data);
-                return $data;
-            }
-
-            $uname = validate($_POST['uname']);
-            $pass = validate($_POST['pass']);
-
-
-
-            $sql = "SELECT * FROM userdetails WHERE username='$uname' AND password='$pass'";
-            $result = mysqli_query($db->conn, $sql);
-            if (mysqli_num_rows($result) === 1) {
-                $row = mysqli_fetch_assoc($result);
-
-                if ($row['username'] === $uname && $row['password'] === $pass) {
-                    $_SESSION['username'] = $row['username'];
-                    // $_SESSION['name'] = $row['name'];
-                    $_SESSION['id'] = $row['id'];
-
-                    header("Location: dashboard.php");
-
-                    exit();
-                } else {
-                    echo '<script type="text/JavaScript">alert("username or password incorrect"); 
-                </script>';
-                    exit();
-                }
-            } else {
-                echo '<script type="text/JavaScript">alert("username or password incorrect");window.location = "login_regs.php";</script>';
-                // header("Location:login_regs.php");
-                exit();
-            }
-        } else {
-            header("Location:login_regs.php");
-            exit();
-        }
-    }
+    $db->login_user();
 }
 ?>
