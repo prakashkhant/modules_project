@@ -280,7 +280,7 @@ width='250' class='blog-banner-img'>
 
             <h2 class="h2">Languages :</h2>
 
-            <a href="pro_single.php" class="topic-btn">
+            <a href="pro_single.php?id=1&c=2" class="topic-btn">
               <div class="icon-box">
                 <!-- <ion-icon name="server-outline"></ion-icon> -->
                 <img src="images/programming/java.png" alt="">
@@ -289,7 +289,7 @@ width='250' class='blog-banner-img'>
               <p>Java</p>
             </a>
 
-            <a href="#" class="topic-btn">
+            <a href="pro_single.php?id=1&c=1" class="topic-btn">
               <div class="icon-box">
                 <img src="images/programming/python.png" alt="">
               </div>
@@ -297,7 +297,7 @@ width='250' class='blog-banner-img'>
               <p>Python</p>
             </a>
 
-            <a href="#" class="topic-btn">
+            <a href="pro_single.php?id=1&c=3" class="topic-btn">
               <div class="icon-box">
                 <img src="images/programming/php.png" alt="">
               </div>
@@ -305,7 +305,7 @@ width='250' class='blog-banner-img'>
               <p>PHP</p>
             </a>
 
-            <a href="#" class="topic-btn">
+            <a href="pro_single.php?id=1&c=5" class="topic-btn">
               <div class="icon-box">
                 <img src="images/programming/android.png" alt="">
               </div>
@@ -313,7 +313,7 @@ width='250' class='blog-banner-img'>
               <p>Android</p>
             </a>
 
-            <a href="#" class="topic-btn">
+            <a href="pro_single.php?id=1&c=4" class="topic-btn">
               <div class="icon-box">
                 <img src="images/programming/js.png" alt="">
               </div>

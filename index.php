@@ -27,7 +27,7 @@
                 <ul class="flex">
                     <li><a href="index.php" class="liactive">Home</a></li>
                     <li><a href="">About Me</a></li>
-                    <li><a href="">Category<i class="fa-solid fa-sort-down"></i></a></li>
+                    <li><a href="language_home.php">Native Languages<i class="fa-solid fa-sort-down"></i></a></li>
                     <li><a href="">Blogs<i class="fa-solid fa-sort-down"></i></a></li>
                     <li><a href="">Entertaiments<i class="fa-solid fa-sort-down"></i></a></li>
                     <li><a href="programming_home.php">Computer Languages</a></li>
