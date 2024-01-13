@@ -52,13 +52,14 @@ function fetchData($query){
         }
     }
 
-    function fetch_titles_list($cid){
+    function fetch_items_list($cid){
         if ($this->connect_DB()) {
             $query = "SELECT * FROM `item` WHERE `categorie`= " . $cid;
             
             return $this->fetchData($query);
         }
     }
+    
     function login_user(){
         
         if ($this->connect_DB()) {

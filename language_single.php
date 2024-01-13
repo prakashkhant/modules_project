@@ -70,8 +70,17 @@
     </div>
 
     <div class="categories-content">
-   
-        <iframe  class="box" src="https://www.youtube.com/embed/ZIw6qG4BDZg?si=dLTr7QDdqiZoI7Ck" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <?php
+                 include './database/db.php';
+                $db = new DB();
+                
+                $cid=$_GET["c"];
+                $ldata = $db->fetch_items_list($cid);
+               
+                foreach ($ldata as $ld) {
+                    echo "
+        <iframe  class='box' src='".$ld["videopath"]."' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' allowfullscreen></iframe>
+          ";} ?>
         <iframe  class="box" src="https://www.youtube.com/embed/ZIw6qG4BDZg?si=dLTr7QDdqiZoI7Ck" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         <iframe  class="box" src="https://www.youtube.com/embed/ZIw6qG4BDZg?si=dLTr7QDdqiZoI7Ck" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         <iframe  class="box" src="https://www.youtube.com/embed/ZIw6qG4BDZg?si=dLTr7QDdqiZoI7Ck" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>

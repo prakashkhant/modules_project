@@ -213,7 +213,7 @@
 
                         <h2 class="h2">Topics :</h2>
             
-                         <?php $tdata=$db->fetch_titles_list($cid); 
+                         <?php $tdata=$db->fetch_items_list($cid); 
                          foreach( $tdata as $td){
                          echo " 
                         

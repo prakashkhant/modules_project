@@ -103,7 +103,7 @@
 
 
     <div class="categories-content">
-      <a href="language_single.php">
+      <a href="language_single.php?c=16">
         <div class="box">
           <img src="images/language/cat-english.png">
           <h3>English</h3>
