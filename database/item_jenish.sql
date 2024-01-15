@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 15, 2024 at 01:08 PM
+-- Generation Time: Jan 15, 2024 at 12:54 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.1
 
@@ -27,8 +27,8 @@ SET time_zone = "+00:00";
 -- Table structure for table `item`
 --
 
-CREATE TABLE IF NOT EXISTS `item` (
-  `id` int(20) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `item` (
+  `id` int(20) NOT NULL,
   `title` varchar(50) NOT NULL,
   `description` text NOT NULL,
   `content` text NOT NULL,
@@ -40,16 +40,8 @@ CREATE TABLE IF NOT EXISTS `item` (
   `module_id` int(11) NOT NULL,
   `categorie` int(50) NOT NULL,
   `keywords` varchar(50) NOT NULL,
-  `time` time NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `module_id` (`module_id`),
-  KEY `categories` (`categorie`),
-  KEY `categorie` (`categorie`)
-) ENGINE=InnoDB AUTO_INCREMENT=40 DEFAULT CHARSET=latin1;
-
---
--- RELATIONSHIPS FOR TABLE `item`:
---
+  `time` time NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `item`
@@ -85,6 +77,29 @@ INSERT INTO `item` (`id`, `title`, `description`, `content`, `photopath`, `video
 (28, 'Features of Java', 'The primary objective of Java programming language creation was to make it portable, simple and secure programming language. Apart from this, there are also some excellent features which play an important role in the popularity of this language. The features of Java are also known as Java buzzwords', 'A list of the most important features of the Java language is given below.\r\n\r\nSimple\r\nObject-Oriented\r\nPortable\r\nPlatform independent\r\nSecured\r\nRobust\r\nArchitecture neutral\r\nInterpreted\r\nHigh Performance\r\nMultithreaded\r\nDistributed\r\nDynamic\r\nSimple\r\nJava is very easy to learn, and its syntax is simple, clean and easy to understand. According to Sun Microsystem, Java language is a simple programming language because:\r\n\r\nJava syntax is based on C++ (so easier for programmers to learn it after C++).\r\nJava has removed many complicated and rarely-used features, for example, explicit pointers, operator overloading, etc.\r\nThere is no need to remove unreferenced objects because there is an Automatic Garbage Collection in Java.\r\nObject-oriented\r\nJava is an object-oriented programming language. Everything in Java is an object. Object-oriented means we organize our software as a combination of different types of objects that incorporate both data and behavior.\r\n\r\nObject-oriented programming (OOPs) is a methodology that simplifies software development and maintenance by providing some rules.\r\n\r\nBasic concepts of OOPs are:\r\n\r\nObject\r\nClass\r\nInheritance\r\nPolymorphism\r\nAbstraction\r\nEncapsulation\r\nPlatform Independent\r\nJava is platform independent because it is different from other languages like C, C++, etc. which are compiled into platform specific machines while Java is a write once, run anywhere language. A platform is the hardware or software environment in which a program runs.\r\n\r\nThere are two types of platforms software-based and hardware-based. Java provides a software-based platform.\r\n\r\nThe Java platform differs from most other platforms in the sense that it is a software-based platform that runs on top of other hardware-based platforms. It has two components:\r\n\r\nRuntime Environment\r\nAPI(Application Programming Interface)\r\nJava code can be executed on multiple platforms, for example, Windows, Linux, Sun Solaris, Mac/OS, etc. Java code is compiled by the compiler and converted into bytecode. This bytecode is a platform-independent code because it can be run on multiple platforms, i.e., Write Once and Run Anywhere (WORA).', 'java_feature.png', 'https://www.youtube.com/embed/O5hShUO6wxs?si=KsLY2cOhQ6DXELlg', 'https://take.quiz-maker.com/QBNZN1OSA', 'prakash khant s', '2024-01-11', 4, 2, '#feature', '00:06:25'),
 (29, 'What Are Tenses?', 'Explaining tenses, tense is a verb-based means of indicating the timing, and occasionally the continuance or completion, of an action or condition in connection to the period of speaking.\r\n\r\n', 'Tenses can be broadly classified into three broad categories:\r\n\r\nPast Tense\r\nPresent Tense\r\nFuture Tense', 'eng_tense.png', 'https://www.youtube.com/embed/97ZgXLQxkpU?si=kcOiErb-yDqXCBt1', 'https://take.quiz-maker.com/QBN1JF0YL', 'Patel jenish k', '2024-01-11', 3, 16, '#tenses,#past,#future,#present', '00:04:12'),
 (30, 'Rules Of Tenses', 'English phrases or sentences are formed using tenses rules. There are three forms of tenses: present tense, past tense, and future tense. The past relates to what happened much before, the present tense relates to what is occurring now, and the future tense relates to what will happen after now. They essentially depict temporal elements based on the actual timing.', ' Tenses are form of verb that reflects the time of action happened or happening or will happen. Tenses are generally divided into three forms:\r\n\r\nPresent\r\nPast\r\nFuture. \r\nHowever, they comprise sub-sections to describe the precise time of action. Rules of Tenses aid a student to understand how to use different tenses in a sentence accurately, without making a grammatical error.', 'eng_tens_rule.png', 'https://www.youtube.com/embed/SEO9YPzSH-0?si=sblktUFvtCl_Z6R8', 'https://take.quiz-maker.com/QEP4T2U5G', 'Patel Jenish k', '2024-01-11', 3, 16, '#rules,#principles', '00:11:27');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `item`
+--
+ALTER TABLE `item`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `module_id` (`module_id`),
+  ADD KEY `categories` (`categorie`),
+  ADD KEY `categorie` (`categorie`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `item`
+--
+ALTER TABLE `item`
+  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
