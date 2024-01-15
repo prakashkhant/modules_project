@@ -79,7 +79,10 @@
                
                 foreach ($ldata as $ld) {
                     echo "
-        <iframe  class='box' src='".$ld["videopath"]."' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' allowfullscreen></iframe>
+                    <div class='box'>
+        <iframe src='".$ld["videopath"]."' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' allowfullscreen></iframe>
+        <a href='".$ld["test_link"]."' target='_blank' class='btn btn-primary'>Test</a>
+          
           ";} ?>
        
         <!-- <iframe  class="box" src="https://www.youtube.com/embed/ZIw6qG4BDZg?si=dLTr7QDdqiZoI7Ck" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->

@@ -1069,7 +1069,7 @@ footer .wrapper { text-align: center; }
   .newsletter .btn-primary {
     margin-inline: auto;
     margin: auto; /* fallback for margin-inline */
-    
+    text-align: center;
   }
 
 

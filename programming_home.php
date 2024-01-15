@@ -285,7 +285,9 @@ width='250' class='blog-banner-img'>
             // print_r($data);
             foreach ($cat_list as $cl) {
               $item_id=$db->fetch_items_list($cl["cat_id"]);
+              
               foreach ($item_id as $ci) {
+
                 echo "
                 <a href='pro_single.php?id=" . $ci["id"] . "&c=" . $cl["cat_id"] . "' class='topic-btn'>
                 <div class='icon-box'>

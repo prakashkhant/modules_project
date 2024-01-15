@@ -187,6 +187,7 @@
                         ";
                         echo nl2br($ld['description'])."<br>";
                        $content= nl2br($ld['content']);
+                       $test_link=$ld["test_link"];
                        echo $content;
                        echo "
                        </p>
@@ -235,13 +236,10 @@
                                 Want to increse your level and test the memeory ?
                             </p>
 
-                            <form action="#">
+                            <form>
 
                                 <!-- test link------------------------------ -->
-                                <a href="#">
-                                    <button type="submit" class="btn btn-primary">Test</button>
-
-                                </a>
+                                <a href="<?php echo $test_link; ?>" target="_blank" class="btn btn-primary">Test</a>
                             </form>
 
                         </div>
