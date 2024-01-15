@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Online Lanaguge Cources</title>
+  <title>NexusHub | languages</title>
 
   <link rel="stylesheet" type="text/css" href="css/language.css">
 
@@ -103,56 +103,29 @@
 
 
     <div class="categories-content">
-      <a href="language_single.php?c=16">
-        <div class="box">
-          <img src="images/language/cat-english.png">
-          <h3>English</h3>
 
-        </div>
-      </a>
+    <?php
+            include './database/db.php';
+            $db = new DB();
+            $cat_list = $db->fetch_category_list(3);
+            foreach ($cat_list as $cl) {
+              echo "
+              <a href='language_single.php?c=".$cl["cat_id"]."&cn=".$cl["cat_name"]."'>
+  <div class='box'>
+    <img src='images/language/".$cl["cat_photo"]."'>
+    <h3>".$cl["cat_name"]."</h3>
 
-      <a href="language_single.php">
+  </div>
+</a>
+       " ; } ?>
+
+      <!-- <a href="language_single.php">
         <div class="box">
           <img src="images/language/cat-german.png">
           <h3>Germany</h3>
 
         </div>
-      </a>
-
-      <a href="language_single.php">
-
-        <div class="box">
-          <img src="images/language/cat-french.png">
-          <h3>French</h3>
-
-        </div>
-      </a>
-
-      <a href="language_single.php">
-        <div class="box">
-          <img src="images/language/cat-korean.png">
-          <h3>Korean</h3>
-
-        </div>
-
-      </a>
-
-      <a href="language_single.php">
-        <div class="box">
-          <img src="images/language/cat-sanskrit.png">
-          <h3>Sanskrit</h3>
-
-        </div>
-
-      </a>
-
-      <a href="language_single.php">
-        <div class="box">
-          <img src="images/language/cat-urdu.png">
-          <h3>Urdu</h3>
-
-        </div>
-      </a>
+      </a> -->
     </div>
 
     <!-- 

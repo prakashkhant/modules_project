@@ -192,18 +192,12 @@
                        </p>
                         </div>
                     </div>
-                    <a href='#' class='btn load-more'>Next topic ►
+                    <a href='pro_single.php?id=".($id +1 )."&c=".$ld["categorie"]."' class='btn load-more'>Next topic ►
                     </a>
-                </div>
-
-";
-                            }
-                            
+                </div>     ";       }    
+                //next button not working correctly                    
 ?>
-
-
-
-                <!--
+   <!--
           - ASIDE
         -->
 

@@ -196,7 +196,7 @@ header.sticky{
 }
 .categories-content{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+    grid-template-columns: repeat(auto-fit, minmax(500px, auto));
     gap: 1.5rem;
     align-items: center;
     cursor: pointer;
@@ -209,8 +209,8 @@ header.sticky{
     padding: 2px;
     box-shadow: -2.729px -2.729px 3px rgb(255 255 255 / 15%);
     transition: all .40s ease;
-    width: 350px;
-    height: 250px;
+    width: 400px;
+    height: 300px;
 }
 
 .box:hover{

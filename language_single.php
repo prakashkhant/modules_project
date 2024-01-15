@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>English Learning</title>
+  <title>NexusHub | languages</title>
 
   <link rel="stylesheet" type="text/css" href="css/langsing.css">
 
@@ -46,7 +46,7 @@
     <div class="home-text">
       <!-- <h6>Best English Learning Platform</h6> -->
       <!-- <h1>Accesible for Good Knowledge</h1> -->
-      <h1>Best English Learning Platform</h1>
+      <h1>Best <?php echo $_GET["cn"]; ?> Learning Platform</h1>
       <p>"Elevate Your Voice: Learn, Connect, Flourish!"</p>
       <!-- <div class="latter">
         <form>
@@ -81,10 +81,8 @@
                     echo "
         <iframe  class='box' src='".$ld["videopath"]."' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' allowfullscreen></iframe>
           ";} ?>
-        <iframe  class="box" src="https://www.youtube.com/embed/ZIw6qG4BDZg?si=dLTr7QDdqiZoI7Ck" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        <iframe  class="box" src="https://www.youtube.com/embed/ZIw6qG4BDZg?si=dLTr7QDdqiZoI7Ck" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        <iframe  class="box" src="https://www.youtube.com/embed/ZIw6qG4BDZg?si=dLTr7QDdqiZoI7Ck" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        <iframe  class="box" src="https://www.youtube.com/embed/ZIw6qG4BDZg?si=dLTr7QDdqiZoI7Ck" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+       
+        <!-- <iframe  class="box" src="https://www.youtube.com/embed/ZIw6qG4BDZg?si=dLTr7QDdqiZoI7Ck" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
 
     
      
@@ -95,16 +93,15 @@
     
   </section>
   <!--start container section-->
-  
-  <section class="container">
   <div class="center-text">
     <h2>◆ Helpful Books ◆</h2>
     
-    </div>
-     
+    </div>     
+  <section class="container">
+ 
     <div class="container-box">
      
-        <img src="images/language/book-oxford.png">
+        <img src="images/language/book-spinsh.jpg">
 
      
     </div>

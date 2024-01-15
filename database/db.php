@@ -59,6 +59,13 @@ function fetchData($query){
             return $this->fetchData($query);
         }
     }
+
+    function fetch_category_list($id){
+        if ($this->connect_DB()) {
+            $query = "SELECT * FROM `category` WHERE `mid`= " . $id;          
+            return $this->fetchData($query);
+        }
+    }
     
     function login_user(){
         

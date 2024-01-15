@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 05, 2024 at 06:43 AM
+-- Generation Time: Jan 05, 2024 at 06:39 AM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.1
 
@@ -20,6 +20,41 @@ SET time_zone = "+00:00";
 --
 -- Database: `nexushub`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `category`
+--
+
+CREATE TABLE `category` (
+  `cat_id` int(11) NOT NULL,
+  `cat_name` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `category`
+--
+
+INSERT INTO `category` (`cat_id`, `cat_name`) VALUES
+(1, 'Python'),
+(2, 'Java'),
+(3, 'PHP'),
+(4, 'Java Script'),
+(5, 'Android'),
+(6, 'Movie'),
+(7, 'Drama'),
+(8, 'Web Series'),
+(9, 'Short Series'),
+(10, 'Kids'),
+(11, 'Korean'),
+(12, 'Japanese'),
+(13, 'Traveling'),
+(14, 'Food'),
+(15, 'Culture'),
+(16, 'Engish'),
+(17, 'Korean'),
+(18, 'German');
 
 -- --------------------------------------------------------
 
@@ -55,11 +90,81 @@ INSERT INTO `item` (`id`, `title`, `description`, `content`, `photopath`, `video
 (5, 'What is Java', 'Our core Java programming tutorial is designed for students and working professionals. Java is an object-oriented, class-based, concurrent, secured and general-purpose computer-programming language. It is a widely used robust technology.', 'Java is a programming language and a platform. Java is a high level, robust, object-oriented and secure programming language.\r\n\r\nJava was developed by Sun Microsystems (which is now the subsidiary of Oracle) in the year 1995. James Gosling is known as the father of Java. Before Java, its name was Oak. Since Oak was already a registered company, so James Gosling and his team changed the name from Oak to Java.\r\n\r\nPlatform: Any hardware or software environment in which a program runs, is known as a platform. Since Java has a runtime environment (JRE) and API, it is called a platform.', 'images/java.jpg', 'https://www.youtube.com/embed/mAtkPQO1FcA?si=4JYKZCvzG9u1te6B', '#', 'Park Jimin', '2023-12-25', 4, 2, 'java, programming', '00:03:08'),
 (6, 'What is the English', 'nglish is a West Germanic language in the Indo-European language family, whose speakers, called Anglophones, originated in early medieval England. The namesake of the language is the Angles, one of the ancient Germanic peoples that migrated to the island of Great Britain.', 'Five of the letters in the English Alphabet are vowels: A, E, I, O, U.\r\nThe remaining 21 letters are consonants: B, C, D, F, G, H, J, K, L, M, N, P, Q, R, S, T, V, X, Z, and usually W and Y.\r\nWritten English includes the digraphs: ch ci ck gh ng ph qu rh sc sh th ti wh wr zh. These are not considered separate letters of the alphabet.\r\nTwo letters, “A” and “I,” also constitute words.', 'images/english.jpg', 'https://www.youtube.com/embed/hQEeGqZxhgA?si=u884lR0SN4j20d_t', '#', '', '0000-00-00', 3, 16, 'english, language', '00:10:00'),
 (17, 'What is Korean Language', 'The Korean written language is properly called Hangul, although its English spelling is not always identical across sources. Korean was written with Chinese characters, but this was replaced by the hangul alphabet.', 'Hangul is the writing system of the Korean language. Hangul is made up of 14 consonants and 10 vowels, making it an alphabet with a total of 24 letters. It is the official writing system in South Korea and North Korea (where it is known as Chos?n muntcha), and it is used by diaspora Koreans across the world.', 'images/hangul.jpg', 'https://www.youtube.com/embed/KN4mysljHYc?si=RHtwl7RSLQVrU0I', '#', '', '0000-00-00', 3, 17, 'korean,hangul, language', '00:10:00'),
-(18, 'What is German Language', 'The German language is a West Germanic language spoken by 121 million native speakers and used by around 80 million non-native speakers. Combined, this makes the German language the tenth most spoken language worldwide.', 'Much like the English alphabet, German has 26 standard letters. However, the German alphabet contains one additional character and umlauted forms of three vowels.\r\n\r\nThe German ligature (additional character): The letter ß, is also known as the \"sharp S\", \"eszett\" or \"scharfes S\", and is the only German letter that is not part of the Latin/Roman alphabet. The letter is pronounced (like the \"s\" in \"see\"). The ß is not used in any other language.', 'images/german.jpg', 'https://www.youtube.com/embed/nf1rzqG3nvA?si=4Chu-uB4aEtzD79V', '', '', '0000-00-00', 3, 18, 'german, language', '00:10:00');
+(18, 'What is German Language', 'The German language is a West Germanic language spoken by 121 million native speakers and used by around 80 million non-native speakers. Combined, this makes the German language the tenth most spoken language worldwide.', 'Much like the English alphabet, German has 26 standard letters. However, the German alphabet contains one additional character and umlauted forms of three vowels.\r\n\r\nThe German ligature (additional character): The letter ß, is also known as the \"sharp S\", \"eszett\" or \"scharfes S\", and is the only German letter that is not part of the Latin/Roman alphabet. The letter is pronounced (like the \"s\" in \"see\"). The ß is not used in any other language.', 'images/german.jpg', 'https://www.youtube.com/embed/nf1rzqG3nvA?si=4Chu-uB4aEtzD79V', '3', '', '0000-00-00', 3, 18, 'german, language', '00:10:00');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `modules`
+--
+
+CREATE TABLE `modules` (
+  `mid` int(11) NOT NULL,
+  `module_name` varchar(30) NOT NULL,
+  `photo` varchar(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `modules`
+--
+
+INSERT INTO `modules` (`mid`, `module_name`, `photo`) VALUES
+(1, 'Entertaimnets', ''),
+(2, 'Blog', ''),
+(3, 'Languages', ''),
+(4, 'Programming Languages', ''),
+(5, '', '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `review`
+--
+
+CREATE TABLE `review` (
+  `flc_id` int(11) NOT NULL,
+  `comment` text NOT NULL,
+  `liked` tinyint(1) NOT NULL,
+  `item_id` int(11) NOT NULL,
+  `uid` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `userdetails`
+--
+
+CREATE TABLE `userdetails` (
+  `uid` int(11) NOT NULL,
+  `username` varchar(20) NOT NULL,
+  `fullname` varchar(20) NOT NULL,
+  `password` varchar(20) NOT NULL,
+  `email` varchar(20) NOT NULL,
+  `phone` int(11) NOT NULL,
+  `gender` varchar(6) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `userdetails`
+--
+
+INSERT INTO `userdetails` (`uid`, `username`, `fullname`, `password`, `email`, `phone`, `gender`) VALUES
+(1, 'prakash', '', '123', '', 0, ''),
+(2, 'kishan', '', '123', '', 0, ''),
+(3, 'khant', 'kishan', '123', 'khan', 123, 'none'),
+(4, 'khant', 'kishan', '123', 'khan', 123, 'none'),
+(5, 'shizu', 'shehnaz', '123', 's@123', 1234, 'female');
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `category`
+--
+ALTER TABLE `category`
+  ADD PRIMARY KEY (`cat_id`);
 
 --
 -- Indexes for table `item`
@@ -71,14 +176,58 @@ ALTER TABLE `item`
   ADD KEY `categorie` (`categorie`);
 
 --
+-- Indexes for table `modules`
+--
+ALTER TABLE `modules`
+  ADD PRIMARY KEY (`mid`);
+
+--
+-- Indexes for table `review`
+--
+ALTER TABLE `review`
+  ADD PRIMARY KEY (`flc_id`),
+  ADD KEY `forign key` (`uid`),
+  ADD KEY `item_id` (`item_id`);
+
+--
+-- Indexes for table `userdetails`
+--
+ALTER TABLE `userdetails`
+  ADD PRIMARY KEY (`uid`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `category`
+--
+ALTER TABLE `category`
+  MODIFY `cat_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `item`
 --
 ALTER TABLE `item`
   MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+
+--
+-- AUTO_INCREMENT for table `modules`
+--
+ALTER TABLE `modules`
+  MODIFY `mid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT for table `review`
+--
+ALTER TABLE `review`
+  MODIFY `flc_id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `userdetails`
+--
+ALTER TABLE `userdetails`
+  MODIFY `uid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- Constraints for dumped tables
@@ -90,6 +239,13 @@ ALTER TABLE `item`
 ALTER TABLE `item`
   ADD CONSTRAINT `item_ibfk_1` FOREIGN KEY (`module_id`) REFERENCES `modules` (`mid`),
   ADD CONSTRAINT `item_ibfk_2` FOREIGN KEY (`categorie`) REFERENCES `category` (`cat_id`);
+
+--
+-- Constraints for table `review`
+--
+ALTER TABLE `review`
+  ADD CONSTRAINT `review_ibfk_1` FOREIGN KEY (`uid`) REFERENCES `userdetails` (`uid`),
+  ADD CONSTRAINT `review_ibfk_2` FOREIGN KEY (`item_id`) REFERENCES `item` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

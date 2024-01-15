@@ -205,19 +205,18 @@
           <h2 class="h2">Remarkeble Topics</h2>
 
           <div class="blog-card-group">
-          <?php
-include './database/db.php';
-$db = new DB();
+            <?php
+            include './database/db.php';
+            $db = new DB();
 
-$data = $db->populate_programming_lang_blogs();
-// print_r($data);
-foreach ($data as $d) {
-  $lang_name=$db->find_category_name($d["categorie"]);
- foreach ($lang_name as $l_name)
- {
-  
+            $data = $db->populate_programming_lang_blogs();
+            // print_r($data);
+            foreach ($data as $d) {
+              $lang_name = $db->find_category_name($d["categorie"]);
+              foreach ($lang_name as $l_name) {
 
-  echo "
+
+                echo "
  
 <div class='blog-card'>
 
@@ -228,10 +227,10 @@ width='250' class='blog-banner-img'>
 
 <div class='blog-content-wrapper'>
 
-<button class='blog-topic text-tiny'>".$l_name["cat_name"]."</button>
+<button class='blog-topic text-tiny'>" . $l_name["cat_name"] . "</button>
 
 <h3>
-<a href='pro_single.php?id=".$d["id"]."&name=".$l_name["cat_name"]."&c=".$d["categorie"]."' class='h3'>
+<a href='pro_single.php?id=" . $d["id"] . "&name=" . $l_name["cat_name"] . "&c=" . $d["categorie"] . "' class='h3'>
 " . $d["title"] . "
 </a>
 </h3>
@@ -262,10 +261,10 @@ width='250' class='blog-banner-img'>
 </div>
 
 </div>";
-}
-}
-?>
-           
+              }
+            }
+            ?>
+
 
           </div>
 
@@ -279,48 +278,35 @@ width='250' class='blog-banner-img'>
           <div class="topics">
 
             <h2 class="h2">Languages :</h2>
+            <?php
 
-            <a href="pro_single.php?id=1&c=2" class="topic-btn">
-              <div class="icon-box">
-                <!-- <ion-icon name="server-outline"></ion-icon> -->
-                <img src="images/programming/java.png" alt="">
-              </div>
+            $cat_list = $db->fetch_category_list(4);
+           
+            // print_r($data);
+            foreach ($cat_list as $cl) {
+              $item_id=$db->fetch_items_list($cl["cat_id"]);
+              foreach ($item_id as $ci) {
+                echo "
+                <a href='pro_single.php?id=" . $ci["id"] . "&c=" . $cl["cat_id"] . "' class='topic-btn'>
+                <div class='icon-box'>
+                  <!-- <ion-icon name='server-outline'></ion-icon> -->
+                  <img src='images/programming/" . $cl["cat_photo"] . "' alt=''>
+                </div>
 
-              <p>Java</p>
-            </a>
+                <p>" . $cl["cat_name"] . "</p>
+              </a> 
+                    ";
+                    break;
+              }
+            } ?>
 
-            <a href="pro_single.php?id=1&c=1" class="topic-btn">
+            <!-- <a href="pro_single.php?id=1&c=1" class="topic-btn">
               <div class="icon-box">
                 <img src="images/programming/python.png" alt="">
               </div>
 
               <p>Python</p>
-            </a>
-
-            <a href="pro_single.php?id=1&c=3" class="topic-btn">
-              <div class="icon-box">
-                <img src="images/programming/php.png" alt="">
-              </div>
-
-              <p>PHP</p>
-            </a>
-
-            <a href="pro_single.php?id=1&c=5" class="topic-btn">
-              <div class="icon-box">
-                <img src="images/programming/android.png" alt="">
-              </div>
-
-              <p>Android</p>
-            </a>
-
-            <a href="pro_single.php?id=1&c=4" class="topic-btn">
-              <div class="icon-box">
-                <img src="images/programming/js.png" alt="">
-              </div>
-
-              <p>Javascript</p>
-            </a>
-
+            </a> -->
 
           </div>
 
