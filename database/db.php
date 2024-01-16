@@ -66,6 +66,18 @@ function fetchData($query){
             return $this->fetchData($query);
         }
     }
+    function fetch_all_items(){
+        if ($this->connect_DB()) {
+            $query = "SELECT * FROM `item`";          
+            return $this->fetchData($query);
+        }
+    }
+    function count_rows_table($tb_name){
+        if ($this->connect_DB()) {
+            $query = "SELECT count(*) FROM `$tb_name`";          
+            return $this->fetchData($query);
+        }
+    }
     
     function login_user(){
         

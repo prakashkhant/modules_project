@@ -7,7 +7,17 @@ include './layouts/top.php';
         <div class="col-md-3">
             <div class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
                 <div>
-                    <h3 class="fs-2">7</h3>
+                    <h3 class="fs-2">
+                        <?php 
+                          include './database/db.php';
+                          $db = new DB();
+                            $count_no=$db->count_rows_table("modules") ;
+                            foreach($count_no as $cn)
+                            {
+                                echo $cn[0];
+                            }
+                        ?>
+                    </h3>
                     <p class="fs-5">Modules</p>
                 </div>
                 <i class="fas fa-sitemap fs-1 primary-text border rounded-full secondary-bg p-3"></i>
@@ -17,7 +27,15 @@ include './layouts/top.php';
         <div class="col-md-3">
             <div class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
                 <div>
-                    <h3 class="fs-2">300</h3>
+                    <h3 class="fs-2">
+                        <?php
+                    $count_no=$db->count_rows_table("item") ;
+                            foreach($count_no as $cn)
+                            {
+                                echo $cn[0];
+                            }
+                            ?>
+                    </h3>
                     <p class="fs-5">Items</p>
                 </div>
                 <i class="fas fa-edit fs-1 primary-text border rounded-full secondary-bg p-3"></i>
@@ -27,14 +45,22 @@ include './layouts/top.php';
         <div class="col-md-3">
             <div class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
                 <div>
-                    <h3 class="fs-2">39</h3>
+                    <h3 class="fs-2">
+                    <?php
+                    $count_no=$db->count_rows_table("userdetails") ;
+                            foreach($count_no as $cn)
+                            {
+                                echo $cn[0];
+                            }
+                            ?>
+                    </h3>
                     <p class="fs-5">Users</p>
                 </div>
                 <i class="fas fa-users fs-1 primary-text border rounded-full secondary-bg p-3"></i>
             </div>
         </div>
 
-        <div class="col-md-3">
+        <!-- <div class="col-md-3">
             <div class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
                 <div>
                     <h3 class="fs-2">3</h3>
@@ -42,7 +68,7 @@ include './layouts/top.php';
                 </div>
                 <i class="fas fa-user-tie fs-1 primary-text border rounded-full secondary-bg p-3"></i>
             </div>
-        </div>
+        </div> -->
     </div>
 
     <div class="row my-5">
@@ -51,85 +77,40 @@ include './layouts/top.php';
             <table class="table bg-white rounded shadow-sm  table-hover">
                 <thead>
                     <tr>
-                        <th scope="col" width="50">#</th>
-                        <th scope="col">Product</th>
-                        <th scope="col">Customer</th>
-                        <th scope="col">Price</th>
+                        <th scope="col" width="50">#id</th>
+                        <th scope="col">Title</th>
+                        <th scope="col">Module</th>
+                        <th scope="col">Category</th>
+                        <th scope="col">Publish Date</th>
+                        <th scope="col">Publish By</th>
+                        <th scope="col">Actions</th>
+                        <th scope="col">view</th>
                     </tr>
                 </thead>
                 <tbody>
+                <?php
+               
+                
+                $items = $db->fetch_all_items();
+               
+                foreach ($items as $item) { 
+                    echo "
                     <tr>
-                        <th scope="row">1</th>
-                        <td>Television</td>
-                        <td>Jonny</td>
-                        <td>$1200</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Laptop</td>
-                        <td>Kenny</td>
-                        <td>$750</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>Cell Phone</td>
-                        <td>Jenny</td>
-                        <td>$600</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">4</th>
-                        <td>Fridge</td>
-                        <td>Killy</td>
-                        <td>$300</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">5</th>
-                        <td>Books</td>
-                        <td>Filly</td>
-                        <td>$120</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">6</th>
-                        <td>Gold</td>
-                        <td>Bumbo</td>
-                        <td>$1800</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">7</th>
-                        <td>Pen</td>
-                        <td>Bilbo</td>
-                        <td>$75</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">8</th>
-                        <td>Notebook</td>
-                        <td>Frodo</td>
-                        <td>$36</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">9</th>
-                        <td>Dress</td>
-                        <td>Kimo</td>
-                        <td>$255</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">10</th>
-                        <td>Paint</td>
-                        <td>Zico</td>
-                        <td>$434</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">11</th>
-                        <td>Carpet</td>
-                        <td>Jeco</td>
-                        <td>$1236</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">12</th>
-                        <td>Food</td>
-                        <td>Haso</td>
-                        <td>$422</td>
-                    </tr>
+                        <th scope='row' style='color:red;'>".$item["id"]."</th>                       
+                        <td  style='color:green;'>".$item["title"]."</td>
+                        <td  style='color:blue;'>".$item["module_id"]."</td>
+                        <td  style='color:blue;'>".$item["categorie"]."</td>
+                        <td>".$item["publish_date"]."</td>
+                        <td>".$item["publish_by"]."</td>
+                        <td>Update/delete</td>
+                        <td>
+                            <a href='#'> <i class='fas fa-eye'></i>
+                             </a>
+                        </td>
+                    </tr> ";
+                     } ?>
+                   
+                    
                 </tbody>
             </table>
         </div>
