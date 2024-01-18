@@ -212,7 +212,7 @@
             $data = $db->populate_programming_lang_blogs();
             // print_r($data);
             foreach ($data as $d) {
-              $lang_name = $db->find_category_name($d["categorie"]);
+              $lang_name = $db->find_category_name($d["category"]);
               foreach ($lang_name as $l_name) {
 
 
@@ -230,7 +230,7 @@ width='250' class='blog-banner-img'>
 <button class='blog-topic text-tiny'>" . $l_name["cat_name"] . "</button>
 
 <h3>
-<a href='pro_single.php?id=" . $d["id"] . "&name=" . $l_name["cat_name"] . "&c=" . $d["categorie"] . "' class='h3'>
+<a href='pro_single.php?id=" . $d["id"] . "&name=" . $l_name["cat_name"] . "&c=" . $d["category"] . "' class='h3'>
 " . $d["title"] . "
 </a>
 </h3>

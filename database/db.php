@@ -54,7 +54,7 @@ function fetchData($query){
 
     function fetch_items_list($cid){
         if ($this->connect_DB()) {
-            $query = "SELECT * FROM `item` WHERE `categorie`= " . $cid;
+            $query = "SELECT * FROM `item` WHERE `category`= " . $cid;
             
             return $this->fetchData($query);
         }
@@ -156,6 +156,25 @@ function fetchData($query){
             }
         } else {
             echo "error detected";
+        }
+    }
+
+    function add_item($title,$desc,$content,$photo,$video,$test_link,$pub_by,$pub_date,$mod_id,$cat_id,$keywords,$time){
+        if ($this->connect_DB()) {
+            $title=$_POST["tbTitle"];
+    $desc=$_POST["tdDescription"];
+    $mod_name=$_POST["module-name"];
+    $cat_name=$_POST["cat-name"];
+    $content=$_POST["tdContentArea"];
+    $pub_name=$_POST["tbPublishBy"];
+    $pub_date=$_POST["dtPublishDate"];
+    $photo=$_POST["photopath"];
+    $video=$_POST["tbvideopath"];
+    $test_link=$_POST["tbTestLink"];
+    $keywords=$_POST["tbKeywords"];
+    $time_dur=$_POST["hours"] +":" +$_POST["minutes"] +":"+$_POST["seconds"];
+    
+    $sql="INSERT INTO `item` (title,description,content,photopath,videopath,test_link,publish_by,publish_date,module_id,category,keywords,time)";
         }
     }
 }
