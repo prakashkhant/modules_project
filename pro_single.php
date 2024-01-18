@@ -193,7 +193,7 @@
                        </p>
                         </div>
                     </div>
-                    <a href='pro_single.php?id=".($id +1 )."&c=".$ld["categorie"]."' class='btn load-more'>Next topic ►
+                    <a href='pro_single.php?id=".($id +1 )."&c=".$ld["category"]."' class='btn load-more'>Next topic ►
                     </a>
                 </div>     ";       }    
                 //next button not working correctly                    
@@ -212,7 +212,7 @@
                          foreach( $tdata as $td){
                          echo " 
                         
-                        <a href='pro_single.php?id=".$td["id"]."&c=".$td["categorie"]."' class='topic-btn'>
+                        <a href='pro_single.php?id=".$td["id"]."&c=".$td["category"]."' class='topic-btn'>
 
 
                             <p>".$td["title"]."</p>

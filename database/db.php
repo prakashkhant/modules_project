@@ -17,21 +17,22 @@ class DB
         }
         return true;
     }
-function fetchData($query){
-  
-            $result = mysqli_query($this->conn, $query);
-            $ldata = [];
-            while ($row = mysqli_fetch_array($result)) {
-                array_push($ldata, $row);
-            }
-            return $ldata;  
-}
+    function fetchData($query)
+    {
+
+        $result = mysqli_query($this->conn, $query);
+        $ldata = [];
+        while ($row = mysqli_fetch_array($result)) {
+            array_push($ldata, $row);
+        }
+        return $ldata;
+    }
     function populate_programming_lang_blogs()
     {
         if ($this->connect_DB()) {
             $query = "SELECT * FROM `item` WHERE `module_id`=4";
-           
-          return $this->fetchData($query);
+
+            return $this->fetchData($query);
         }
     }
 
@@ -52,44 +53,50 @@ function fetchData($query){
         }
     }
 
-    function fetch_items_list($cid){
+    function fetch_items_list($cid)
+    {
         if ($this->connect_DB()) {
-            $query = "SELECT * FROM `item` WHERE `categorie`= " . $cid;
-            
+            $query = "SELECT * FROM `item` WHERE `category`= " . $cid;
+
             return $this->fetchData($query);
         }
     }
 
-    function fetch_category_list($id){
+    function fetch_category_list($id)
+    {
         if ($this->connect_DB()) {
-            $query = "SELECT * FROM `category` WHERE `mid`= " . $id;          
+            $query = "SELECT * FROM `category` WHERE `mid`= " . $id;
             return $this->fetchData($query);
         }
     }
 
-    function fetch_modules_list(){
+    function fetch_modules_list()
+    {
         if ($this->connect_DB()) {
-            $query = "SELECT * FROM `modules`";          
+            $query = "SELECT * FROM `modules`";
             return $this->fetchData($query);
         }
     }
-    
 
-    function fetch_all_items(){
+
+    function fetch_all_items()
+    {
         if ($this->connect_DB()) {
-            $query = "SELECT * FROM `item` ORDER BY `id` desc";          
+            $query = "SELECT * FROM `item` ORDER BY `id` desc";
             return $this->fetchData($query);
         }
     }
-    function count_rows_table($tb_name){
+    function count_rows_table($tb_name)
+    {
         if ($this->connect_DB()) {
-            $query = "SELECT count(*) FROM `$tb_name`";          
+            $query = "SELECT count(*) FROM `$tb_name`";
             return $this->fetchData($query);
         }
     }
-    
-    function login_user(){
-        
+
+    function login_user()
+    {
+
         if ($this->connect_DB()) {
 
             if (isset($_POST['uname']) && isset($_POST['pass'])) {
@@ -100,24 +107,24 @@ function fetchData($query){
                     $data = htmlspecialchars($data);
                     return $data;
                 }
-    
+
                 $uname = validate($_POST['uname']);
                 $pass = validate($_POST['pass']);
-    
-    
-    
+
+
+
                 $sql = "SELECT * FROM userdetails WHERE username='$uname' AND password='$pass'";
                 $result = mysqli_query($this->conn, $sql);
                 if (mysqli_num_rows($result) === 1) {
                     $row = mysqli_fetch_assoc($result);
-    
+
                     if ($row['username'] === $uname && $row['password'] === $pass) {
                         $_SESSION['username'] = $row['username'];
                         // $_SESSION['name'] = $row['name'];
                         $_SESSION['id'] = $row['id'];
-    
+
                         header("Location: dashboard.php");
-    
+
                         exit();
                     } else {
                         echo '<script type="text/JavaScript">alert("username or password incorrect"); 
@@ -135,7 +142,8 @@ function fetchData($query){
             }
         }
     }
-    function sign_up(){
+    function sign_up()
+    {
         if ($this->connect_DB()) {
 
 
@@ -143,13 +151,13 @@ function fetchData($query){
             $email = $_POST["email"];
             $pass = $_POST["password"];
             // echo " .$fname .$uname. $email . $phone .$pass . $cpass.$gender";
-    
+
             $sql = "INSERT INTO userdetails (username,password,email) VALUES('$uname','$pass','$email')";
             //echo $sql;
             if (mysqli_query($this->conn, $sql)) {
                 echo "successfull";
                 header("Location: login_regs.php");
-    
+
                 exit();
             } else {
                 echo "error detected";
@@ -158,4 +166,50 @@ function fetchData($query){
             echo "error detected";
         }
     }
+
+    // database actions    
+
+    function add_item()
+    {
+        if ($this->connect_DB()) {
+            $title = $_POST["tbTitle"];
+            $desc = $_POST["tdDescription"];
+            $mod_id = $_POST["module-name"];
+            $cat_id = $_POST["cat-name"];
+            $content = $_POST["tdContentArea"];
+            $pub_by = $_POST["tbPublishBy"];
+            $pub_date = date("Y-m-d");
+            $photo = $_POST["photopath"];
+            $video = $_POST["tbvideopath"];
+            $test_link = $_POST["tbTestLink"];
+            $keywords = $_POST["tbKeywords"];
+            $time_dur = $_POST["hours"] . ":" . $_POST["minutes"] . ":" . $_POST["seconds"];
+
+            $sql = "INSERT INTO `item` (title,description,content,photopath,videopath,test_link,publish_by,publish_date,module_id,category,keywords,time)
+     VALUES ('$title','$desc','$content','$photo','$video','$test_link','$pub_by','$pub_date',$mod_id,$cat_id,'$keywords','$time_dur')";
+
+
+            if (mysqli_query($this->conn, $sql)) {
+                echo "successfull";
+                header("Location: dashboard.php");
+
+                exit();
+            } else {
+                echo "error detected";
+            }
+        }
+    }
+    // $title,$desc,$content,$photo,$video,$test_link,$pub_by,$pub_date,$mod_id,$cat_id,$keywords,$time_dur
+    function delete_item($id){
+        if ($this->connect_DB()) {
+        $sql="DELETE FROM `item` WHERE id=".$id;
+        // return $sql;
+        if (mysqli_query($this->conn, $sql)) {
+            echo "Record deleted successfully";
+            header("Location: dashboard.php");
+          } else {
+            echo "Error deleting record: " . mysqli_error($this->conn);
+          }
+    }
+}
 }

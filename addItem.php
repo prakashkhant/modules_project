@@ -88,7 +88,7 @@ if (isset($_GET['mid'])) {
         </div>
     </div>
     <div class="col-12  form-box  flex pd-4" style="width: 700px;padding: bottem 10px;">
-        <form class=" ms-2 mb-5">
+        <form class=" ms-2 mb-5" action="#" method="post">
             <div class="row mb-3">
 
                 <div class="col-sm-5">
@@ -109,7 +109,7 @@ if (isset($_GET['mid'])) {
 
                 </div>
                 <div class="col-sm-5 ms-4">
-                    <select class="form-select form-select-sm  " aria-label="Small select example">
+                    <select class="form-select form-select-sm  " name="cat-name" aria-label="Small select example">
 
                         <?php
                         $cat_list = $db->fetch_category_list($mid);
@@ -127,20 +127,20 @@ if (isset($_GET['mid'])) {
             <div class="row mb-3 title">
                 <label for="title" class="col-sm-2 col-form-label ">Title </label>
                 <div class="col-sm-8">
-                    <input type="text" class="form-control mt-2" width="20" id="tbTitle">
+                    <input type="text" class="form-control mt-2" width="20" id="tbTitle" name="tbTitle">
                 </div>
             </div>
 
             <div class="row mb-3 description">
                 <label for="Description" class="col-sm-2 col-form-label ">Description</label>
                 <div class="col-sm-8">
-                    <textarea type="text" class="form-control mt-2" id="tdDescription" cols="40" rows="3"></textarea>
+                    <textarea type="text" class="form-control mt-2" name="tdDescription" id="tdDescription" cols="40" rows="3"></textarea>
                 </div>
             </div>
             <div class="row mb-3 contentArea">
                 <label for="contentArea" class="col-sm-2 col-form-label ">Content </label>
                 <div class="col-sm-9">
-                    <textarea type="text" class="form-control mt-2" id="tdContentArea" cols="40" rows="7"></textarea>
+                    <textarea type="text" class="form-control mt-2" name="tdContentArea" id="tdContentArea" cols="40" rows="7"></textarea>
                 </div>
             </div>
             <div class="row mb-3 publish-details">
@@ -150,11 +150,11 @@ if (isset($_GET['mid'])) {
 
                 </div>
 
-                <label for="datePublish" class="col-sm-2 col-form-label">Publish Date </label>
+                <!-- <label for="datePublish" class="col-sm-2 col-form-label">Publish Date </label>
                 <div class="col-sm-3">
-                    <input type="date" class="form-control " id="datePublish" name="dtPublishDate">
+                    <input type="date" min="2017-04-01" max="2017-04-30" class="form-control " id="datePublish" name="dtPublishDate">
 
-                </div>
+                </div> -->
             </div>
             <div class="row mb-3 media-box">
                 <label for="filePhoto" class="col-sm-2 col-form-label ">Photo </label>
@@ -220,7 +220,7 @@ if (isset($_GET['mid'])) {
                 </div>
             </div>
 
-            <button type="submit" class="row btn btn-primary w-75">submit</button>
+            <button type="submit" name="submit" class="row btn btn-primary w-75">submit</button>
         </form>
     </div>
 </div>
@@ -254,4 +254,19 @@ if (isset($_GET['mid'])) {
 </script>
 <?php
 include 'layouts/bottom.php';
+
+
+
+?>
+
+<!-- add details in databse -->
+
+<?php 
+if(isset($_POST["submit"])){
+    
+//    echo " <script>alert('$module_name');</script>";
+$data=$db->add_item();
+print_r($data);
+}
+
 ?>
