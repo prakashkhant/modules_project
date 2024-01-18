@@ -66,9 +66,18 @@ function fetchData($query){
             return $this->fetchData($query);
         }
     }
+
+    function fetch_modules_list(){
+        if ($this->connect_DB()) {
+            $query = "SELECT * FROM `modules`";          
+            return $this->fetchData($query);
+        }
+    }
+    
+
     function fetch_all_items(){
         if ($this->connect_DB()) {
-            $query = "SELECT * FROM `item`";          
+            $query = "SELECT * FROM `item` ORDER BY `id` desc";          
             return $this->fetchData($query);
         }
     }

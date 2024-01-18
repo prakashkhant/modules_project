@@ -1,5 +1,12 @@
 <?php
 include 'layouts/top.php';
+include 'database/db.php';
+$db = new DB();
+if (isset($_GET['mid'])) {
+    $mid = $_GET['mid'];
+} else {
+    $mid = 1;
+}
 ?>
 
 <!-- 
@@ -56,44 +63,62 @@ include 'layouts/top.php';
 
 </div>
 <style>
-    .image-box{
+    .image-box {
         width: 35%;
         box-shadow: inset;
-        margin-left:10px;
+        margin-left: 10px;
+        position: sticky;
+        top: 3rem;
+        margin-bottom: 98px;
     }
-    .form-box{
-        background: rgba(255,255,255,0.2);
-       
-        width: 55%;  
-  justify-content: center;
-  padding-top: 4rem;
+
+    .form-box {
+        background: rgba(255, 255, 255, 0.2);
+
+        width: 55%;
+        justify-content: center;
+        padding-top: 4rem;
     }
+    
 </style>
-<div class="row container-fluid ">
+<div class="row container-fluid ms-5  ">
     <div class="col-3 image-box">
-        <div class="add-img  flex" style="width: 400px;">
+        <div class="add-img  flex" style="width: 350px;">
             <img src="images/add-item.png" alt="" srcset="" width="100%" height="100%">
         </div>
     </div>
-    <div class="col-12  form-box">
-        <form class="ms-20 ms-5">
+    <div class="col-12  form-box  flex pd-4" style="width: 700px;padding: bottem 10px;">
+        <form class=" ms-2 mb-5">
             <div class="row mb-3">
 
                 <div class="col-sm-5">
-                    <select class="form-select form-select-sm  " aria-label="Small select example">
-                        <option selected>--Select Module--</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
+                    <select class="form-select form-select-sm " onchange="fillSubCategory()" id="module_name" name="module-name" aria-label="Small select example">
+
+                        <?php
+                        $module_list = $db->fetch_modules_list();
+
+                        foreach ($module_list as $ml) {
+                            if ($mid == $ml["mid"]) {
+                                $s = "selected";
+                            }
+                            echo "<option value=" . $ml["mid"] . " $s >" . $ml["module_name"] . "</option>";
+                            $s = "";
+                        }
+                        ?>
                     </select>
 
                 </div>
                 <div class="col-sm-5 ms-4">
                     <select class="form-select form-select-sm  " aria-label="Small select example">
-                        <option selected>--Categories--</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
+
+                        <?php
+                        $cat_list = $db->fetch_category_list($mid);
+
+                        foreach ($cat_list as $cl) {
+
+                            echo "<option value=" . $cl["mid"] . ">" . $cl["cat_name"] . "</option>";
+                        }
+                        ?>
                     </select>
 
                 </div>
@@ -161,16 +186,72 @@ include 'layouts/top.php';
             </div>
             <div class="row mb-3 timebox">
                 <label for="time-tb" class="col-sm-2 col-form-label">Time Duration </label>
-                <div class="col-sm-3">
-                    <input type="time" class="form-control " id="timeDuration" name="tbTimeDuration">
+                <div class="col-sm-8">
+                    <!-- <input type="time" class="form-control " id="timeDuration" name="tbTimeDuration"  > -->
+                    <label for="hours"> Hours:</label>
+                    <select id="hours" name="hours" onchange="updateDuration()" >
+                        <?php
+                        // Populate hours dynamically
+                        for ($i = 0; $i <= 23; $i++) {
+                            echo "<option value='$i'>$i</option>";
+                        }
+                        ?>
+                    </select>
 
+                    <label for="minutes"> Minutes:</label>
+                    <select id="minutes" name="minutes" onchange="updateDuration()">
+                        <?php
+                        // Populate minutes dynamically
+                        for ($i = 0; $i <= 59; $i++) {
+                            echo "<option value='$i'>$i</option>";
+                        }
+                        ?>
+                    </select>
+                    <label for="seconds"> Seconds:</label>
+                    <select id="seconds" name="seconds" onchange="updateDuration()">
+                        <?php
+                        // Populate seconds dynamically
+                        for ($i = 0; $i <= 59; $i++) {
+                            echo "<option value='$i'>$i</option>";
+                        }
+                        ?>
+                    </select>
+                    <!-- <p id="duration">Selected Duration: 0 hours 0 minutes</p> -->
                 </div>
             </div>
 
-            <button type="submit" class="btn btn-primary">submit</button>
+            <button type="submit" class="row btn btn-primary w-75">submit</button>
         </form>
     </div>
 </div>
+<div class="footer">
+    <style>
+        .footer{
+            width: 100%;
+            height: 10px;
+            background: #0ff345;
+            position: relative;
+            margin-top: 70px;
+        }
+        .btn{
+            /* align-items: center; */
+            margin-left: 10%;
+        }
+    </style>
+</div>
+<script>
+    function fillSubCategory() {
+        mid = document.getElementById("module_name").value;
+        window.location.replace("?mid=" + mid);
+    }
+
+    function updateDuration() {
+        var hours = document.getElementById('hours').value;
+        var minutes = document.getElementById('minutes').value;
+
+        // document.getElementById('duration').innerText = "Selected Duration: " + hours + " hours " + minutes + " minutes";
+    }
+</script>
 <?php
 include 'layouts/bottom.php';
 ?>
