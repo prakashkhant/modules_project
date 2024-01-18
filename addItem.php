@@ -150,11 +150,11 @@ if (isset($_GET['mid'])) {
 
                 </div>
 
-                <label for="datePublish" class="col-sm-2 col-form-label">Publish Date </label>
+                <!-- <label for="datePublish" class="col-sm-2 col-form-label">Publish Date </label>
                 <div class="col-sm-3">
-                    <input type="date" class="form-control " id="datePublish" name="dtPublishDate">
+                    <input type="date" min="2017-04-01" max="2017-04-30" class="form-control " id="datePublish" name="dtPublishDate">
 
-                </div>
+                </div> -->
             </div>
             <div class="row mb-3 media-box">
                 <label for="filePhoto" class="col-sm-2 col-form-label ">Photo </label>
@@ -263,20 +263,10 @@ include 'layouts/bottom.php';
 
 <?php 
 if(isset($_POST["submit"])){
-    $title=$_POST["tbTitle"];
-    $desc=$_POST["tdDescription"];
-    $mod_name=$_POST["module-name"];
-    $cat_name=$_POST["cat-name"];
-    $content=$_POST["tdContentArea"];
-    $pub_name=$_POST["tbPublishBy"];
-    $pub_date=$_POST["dtPublishDate"];
-    $photo=$_POST["photopath"];
-    $video=$_POST["tbvideopath"];
-    $test_link=$_POST["tbTestLink"];
-    $keywords=$_POST["tbKeywords"];
-    $time_dur=$_POST["hours"] +":" +$_POST["minutes"] +":"+$_POST["seconds"];
-   echo " <script>alert('$module_name');</script>";
-   
+    
+//    echo " <script>alert('$module_name');</script>";
+$data=$db->add_item();
+print_r($data);
 }
 
 ?>

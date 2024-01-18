@@ -99,10 +99,10 @@ include './layouts/top.php';
                         <th scope='row' style='color:red;'>".$item["id"]."</th>                       
                         <td  style='color:green;'>".$item["title"]."</td>
                         <td  style='color:blue;'>".$item["module_id"]."</td>
-                        <td  style='color:blue;'>".$item["categorie"]."</td>
+                        <td  style='color:blue;'>".$item["category"]."</td>
                         <td>".$item["publish_date"]."</td>
                         <td>".$item["publish_by"]."</td>
-                        <td>Update/delete</td>
+                        <td>Update/<a href='delete-item.php?id=".$item["id"]."'>delete</td>
                         <td>
                             <a href='#'> <i class='fas fa-eye'></i>
                              </a>
