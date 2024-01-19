@@ -1,81 +1,56 @@
 
-</article>
-  </main>
-<footer>
-    <div class="container" >
+</main>
 
-      <div class="card footer">
+<!-- footer section -->
+<footer class="container2">
+    <section class="foootersec flex">
+        <div class="logofooter">
+            <div class="logof">
+                <a href="/" class="flex">
+                    <img src="images/logo.png" alt="">
+                    <h1>NexusHub</h1>
+                </a>
 
-      
+            </div>
+            <h4>Address</h4>
+            <p>123 Lorem Street</p>
+            <p>India, Gujrata</p>
+        </div>
+   
+        <div class="newsletterfooter" id="subform">
+            <h3>Contact us</h3>
+            <p>This website bulid under gudileis of Komal dave , As project of sem 6 in Ty Bsc Computer science. </p>
+           
+                <button type="submit" class="flex">Subsribe<i class="fa-solid fa-arrow-right"></i></button>
+           
+        </div>
+    </section>
+    <div class="themeauthor container flex">
+        <div class="createdby">
+            <h4>&copy; 2023 Created by <a href="https://www.codingwebstudio.com/" target="_blank" title="codingwebstudio">codingwebstudio.com</a></h4>
+        </div>
+        <div class="social flex">
+            <div class="socialcon">
+                <i class="fa-brands fa-twitter"></i>
+                <h4>Twitter</h4>
+            </div>
 
-        <div class="footer-bottom">
+            <div class="socialcon">
+                <i class="fa-brands fa-instagram"></i>
+                <h4>Instagram</h4>
+            </div>
 
-          <p class="copyright">
-            &copy; Developed by <a href="#" class="copyright-link">SPJdevelopers</a>
-          </p>
-
-          <ul class="social-list">
-
-            <li>
-              <a href="#" class="social-link">
-                <ion-icon name="logo-twitter"></ion-icon>
-
-                <span class="span">Twitter</span>
-              </a>
-            </li>
-
-            <li>
-              <a href="#" class="social-link">
-                <ion-icon name="logo-linkedin"></ion-icon>
-
-                <span class="span">LinkedIn</span>
-              </a>
-            </li>
-
-            <li>
-              <a href="#" class="social-link">
-                <ion-icon name="logo-instagram"></ion-icon>
-
-                <span class="span">Instagram</span>
-              </a>
-            </li>
-
-          </ul>
+            <div class="socialcon">
+                <i class="fa-brands fa-facebook"></i>
+                <h4>Facebook</h4>
+            </div>
 
         </div>
-
-      </div>
-
     </div>
-  </footer>
 
-
-
-
-
-  <!-- 
-    - #BACK TO TOP
-  -->
-
-  <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
-    <ion-icon name="arrow-up-outline" aria-hidden="true"></ion-icon>
-  </a>
-
-
-
-
-
-  <!-- 
-    - custom js link
-  -->
-  <script src="js/index_script.js"></script>
-
-  <!-- 
-    - ionicon link
-  -->
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
+</footer>
+<?php include 'top_up.php'; ?>
+    <script src="js/app.js"></script>
 </body>
 
 </html>
