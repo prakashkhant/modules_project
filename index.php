@@ -631,3 +631,4 @@
         </section>
    
   <?php include 'layouts/index_bottom.php' ?>
+  <script src="js/app.js"></script>

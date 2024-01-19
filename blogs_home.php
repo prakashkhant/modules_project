@@ -2,118 +2,122 @@
 include 'layouts/index_top.php';
 ?>
 
-<script src="js/bloge_js.js"></script>
-<section class="hottopicsec container flex">
-    <div class="hottopics">
-        <h3>Interested Topics</h3>
-        <p>Don't moss any Things :</p>
-        <div class="lrbtn">
-            <button class="leftbtn"><i class="fa-solid fa-arrow-left"></i></button>
-            <button class="rightbtn"><i class="fa-solid fa-arrow-right"></i></button>
-        </div>
-    </div>
-    <div class="hotcards flex">
-        <div class="hcard">
-            <a href="/">
-                <img src="images/food.jpg" alt="" width="400px" height="300px">
-                <div class="hdetails">
-                    <div class="hdetail">
-                        <h4>Entertainments</h4>
-                        <p>5 Articles</p>
-                    </div>
+
+
+        <!-- hot topics section -->
+
+        <section class="hottopicsec container flex">
+            <div class="hottopics">
+                <h3>Interested Topics</h3>
+                <p>Don't moss any Things :</p>
+                <div class="lrbtn">
+                    <button class="leftbtn"><i class="fa-solid fa-arrow-left"></i></button>
+                    <button class="rightbtn"><i class="fa-solid fa-arrow-right"></i></button>
                 </div>
-            </a>
-        </div>
-        <div class="hcard">
-            <a href="/">
-                <img src="images/food.jpg" alt="" width="400px" height="300px">
-                <div class="hdetails">
-                    <div class="hdetail">
-                        <h4>food</h4>
-                        <p>receipe</p>
-                    </div>
+            </div>
+            <div class="hotcards flex">
+                <div class="hcard">
+                    <a href="/">
+                        <img src="images/food.jpg" alt="" width="400px" height="300px">
+                        <div class="hdetails">
+                            <div class="hdetail">
+                                <h4>Entertainments</h4>
+                                <p>5 Articles</p>
+                            </div>
+                        </div>
+                    </a>
                 </div>
-            </a>
-        </div>
-        <div class="hcard">
-            <a href="/">
-                <img src="images/furniture.jpg" alt="" width="400px" height="300px">
-                <div class="hdetails">
-                    <div class="hdetail">
-                        <h4>food</h4>
-                        <p>receipe</p>
-                    </div>
+                <div class="hcard">
+                    <a href="/">
+                        <img src="images/food.jpg" alt="" width="400px" height="300px">
+                        <div class="hdetails">
+                            <div class="hdetail">
+                                <h4>food</h4>
+                                <p>receipe</p>
+                            </div>
+                        </div>
+                    </a>
                 </div>
-            </a>
-        </div>
-        <div class="hcard">
-            <a href="/">
-                <img src="images/interior.jpg" alt="" width="400px" height="300px">
-                <div class="hdetails">
-                    <div class="hdetail">
-                        <h4>food</h4>
-                        <p>receipe</p>
-                    </div>
+                <div class="hcard">
+                    <a href="/">
+                        <img src="images/furniture.jpg" alt="" width="400px" height="300px">
+                        <div class="hdetails">
+                            <div class="hdetail">
+                                <h4>food</h4>
+                                <p>receipe</p>
+                            </div>
+                        </div>
+                    </a>
                 </div>
-            </a>
-        </div>
-        <div class="hcard">
-            <a href="/">
-                <img src="images/gimbap.jpg" alt="" width="400px" height="300px">
-                <div class="hdetails">
-                    <div class="hdetail">
-                        <h4>food</h4>
-                        <p>receipe</p>
-                    </div>
+                <div class="hcard">
+                    <a href="/">
+                        <img src="images/interior.jpg" alt="" width="400px" height="300px">
+                        <div class="hdetails">
+                            <div class="hdetail">
+                                <h4>food</h4>
+                                <p>receipe</p>
+                            </div>
+                        </div>
+                    </a>
                 </div>
-            </a>
-        </div>
-        <div class="hcard">
-            <a href="/">
-                <img src="images/gimbap.jpg" alt="" width="400px" height="300px">
-                <div class="hdetails">
-                    <div class="hdetail">
-                        <h4>food</h4>
-                        <p>receipe</p>
-                    </div>
+                <div class="hcard">
+                    <a href="/">
+                        <img src="images/gimbap.jpg" alt="" width="400px" height="300px">
+                        <div class="hdetails">
+                            <div class="hdetail">
+                                <h4>food</h4>
+                                <p>receipe</p>
+                            </div>
+                        </div>
+                    </a>
                 </div>
-            </a>
-        </div>
-        <div class="hcard">
-            <a href="/">
-                <img src="images/gimbap.jpg" alt="" width="400px" height="300px">
-                <div class="hdetails">
-                    <div class="hdetail">
-                        <h4>food</h4>
-                        <p>receipe</p>
-                    </div>
+                <div class="hcard">
+                    <a href="/">
+                        <img src="images/gimbap.jpg" alt="" width="400px" height="300px">
+                        <div class="hdetails">
+                            <div class="hdetail">
+                                <h4>food</h4>
+                                <p>receipe</p>
+                            </div>
+                        </div>
+                    </a>
                 </div>
-            </a>
-        </div>
-        <div class="hcard">
-            <a href="/">
-                <img src="images/gimbap.jpg" alt="" width="400px" height="300px">
-                <div class="hdetails">
-                    <div class="hdetail">
-                        <h4>food</h4>
-                        <p>receipe</p>
-                    </div>
+                <div class="hcard">
+                    <a href="/">
+                        <img src="images/gimbap.jpg" alt="" width="400px" height="300px">
+                        <div class="hdetails">
+                            <div class="hdetail">
+                                <h4>food</h4>
+                                <p>receipe</p>
+                            </div>
+                        </div>
+                    </a>
                 </div>
-            </a>
-        </div>
-        <div class="hcard">
-            <a href="/">
-                <img src="images/gimbap.jpg" alt="" width="400px" height="300px">
-                <div class="hdetails">
-                    <div class="hdetail">
-                        <h4>food</h4>
-                        <p>receipe</p>
-                    </div>
+                <div class="hcard">
+                    <a href="/">
+                        <img src="images/gimbap.jpg" alt="" width="400px" height="300px">
+                        <div class="hdetails">
+                            <div class="hdetail">
+                                <h4>food</h4>
+                                <p>receipe</p>
+                            </div>
+                        </div>
+                    </a>
                 </div>
-            </a>
-        </div>
-    </div>
-</section>
+                <div class="hcard">
+                    <a href="/">
+                        <img src="images/gimbap.jpg" alt="" width="400px" height="300px">
+                        <div class="hdetails">
+                            <div class="hdetail">
+                                <h4>food</h4>
+                                <p>receipe</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- </section>  -->
 
         <!-- big title section -->
         <div class="bigtitle container ">
@@ -501,4 +505,5 @@ include 'layouts/index_top.php';
 <?php
 include 'layouts/index_bottom.php';
 
-?>
+?>/
+<script src="js/blog_js.js"></script>
