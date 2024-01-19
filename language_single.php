@@ -280,7 +280,7 @@
       </div>
     </section>
 
-  <script type="text/javascript" src="js/lang.js"></script>
+  <script type="text/javascript" src="js/language.js"></script>
 </body>
 
 </html>
