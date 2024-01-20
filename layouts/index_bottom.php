@@ -50,7 +50,7 @@
 
 </footer>
 <?php include 'top_up.php'; ?>
-    <script src="js/app.js"></script>
+    
 </body>
 
 </html>
