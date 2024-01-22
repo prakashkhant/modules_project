@@ -1,5 +1,5 @@
 
-</main>
+
 
 <!-- footer section -->
 <footer class="container2">
