@@ -1,7 +1,7 @@
 <?php include 'layouts/index_top.php' ?>
 
 
-   
+<main id="main">
         <section class="biosec container flex">
             <div class="bio">
                 <h4>Hello Everyone! </h4>
@@ -629,6 +629,6 @@
 
             </div>
         </section>
-   
+</main>
   <?php include 'layouts/index_bottom.php' ?>
   <script src="js/app.js"></script>

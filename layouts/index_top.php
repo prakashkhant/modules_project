@@ -62,4 +62,3 @@
             </div>
         </nav>
     </header>
-    <main id="main">
