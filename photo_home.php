@@ -131,72 +131,30 @@ $db = new DB(); ?>
     <!-- hots section -->
     <section class="hots" id="hots">
         <div class="title">
-            <h2>Our Most Popular <br>Collection</h2>
+            <h2>Our Best <br>Collection</h2>
         </div>
 
         <div class="hots-content">
-            <div class="col-content">
-                <img src="images/photo/hot1.jpg">
-                <h5>Scienrio</h5>
-                <p>Shizu</p>
-                <div class="soical-content">
-                    <a href=""><i class='bx bx-heart'></i></a>
-                    <a href=""><i class='bx bx-share-alt'></i></a>
-                    <a href=""><i class='bx bx-download'></i></a>
-                </div>
-            </div>
-            <div class="col-content">
-                <img src="images/photo/hot2.jpg">
-                <h5>Medalish</h5>
-                <p>Shizu</p>
-                <div class="soical-content">
-                    <a href=""><i class='bx bx-heart'></i></a>
-                    <a href=""><i class='bx bx-share-alt'></i></a>
-                    <a href=""><i class='bx bx-download'></i></a>
-                </div>
-            </div>
-            <div class="col-content">
-                <img src="images/photo/hot3.jpg">
-                <h5>Colouring</h5>
-                <p>Piku</p>
-                <div class="soical-content">
-                    <a href=""><i class='bx bx-heart'></i></a>
-                    <a href=""><i class='bx bx-share-alt'></i></a>
-                    <a href=""><i class='bx bx-download'></i></a>
-                </div>
-            </div>
-            <div class="col-content">
-                <img src="images/photo/hot4.jpg">
-                <h5>Love</h5>
-                <p>Piku</p>
-                <div class="soical-content">
-                    <a href=""><i class='bx bx-heart'></i></a>
-                    <a href=""><i class='bx bx-share-alt'></i></a>
-                    <a href=""><i class='bx bx-download'></i></a>
-                </div>
-            </div>
-
-            <div class="col-content">
-                <img src="images/photo/hot5.jpg">
-                <h5>tree blosm</h5>
-                <p>Shizu</p>
-                <div class="soical-content">
-                    <a href=""><i class='bx bx-heart'></i></a>
-                    <a href=""><i class='bx bx-share-alt'></i></a>
-                    <a href=""><i class='bx bx-download'></i></a>
-                </div>
-            </div>
-
-            <div class="col-content">
-                <img src="images/photo/hot6.jpg">
-                <h5>Moon Love</h5>
-                <p>shizu</p>
-                <div class="soical-content">
-                    <a href=""><i class='bx bx-heart'></i></a>
-                    <a href=""><i class='bx bx-share-alt'></i></a>
-                    <a href=""><i class='bx bx-download'></i></a>
-                </div>
-            </div>
+        <?php
+            $p_images = $db->fetch_items_by_module(5);
+          
+            // print_r($data);
+            $count=0;
+            foreach ($p_images as $pi) {
+              $count+=1;
+              echo "
+              <div class='col-content'>
+  <img src='images/photo/".$pi["photopath"]."'>
+  <h5>".$pi["title"]."</h5>
+  <p>".$pi["publish_by"]."</p>
+  <div class='soical-content'>
+      <a href=''><i class='bx bx-heart'></i></a>
+      <a href=''><i class='bx bx-share-alt'></i></a>
+      <a href=''><i class='bx bx-download'></i></a>
+  </div>
+</div>
+            "; }?>
+         
         </div>
     </section>
     <!-- Newsletter -->

@@ -181,7 +181,7 @@
 }
 .popular-content{
    display: grid;
-   grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+   grid-template-columns: repeat(auto-fit, minmax(300px, auto));
    grid-gap: 2rem;
    align-items: center;
    text-align: center;
