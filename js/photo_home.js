@@ -14,4 +14,4 @@ window.onscroll = () => {
 menu.classList.remove('bx-x');
 navbar.classList.remove('open');
 };
-document.title = document.title+ " | Photo Gllery";
+// document.title = document.title+ " | Photo Gllery";

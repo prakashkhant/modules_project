@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Photo Gallery </title>
+    <title>Nexushub|Photo Gallery </title>
     <link rel="stylesheet" type="text/css" href="css/photo_home.css">
 
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
@@ -62,7 +62,7 @@
 
             <div class="category-box">
                 <div class="category-img">
-                    <img src="images/photo/cat2.png">
+                    <img src="images/photo/pop1.jpg">
                 </div>
                 <h4>Beautifull Places</h4>
                 <p>150 views</p>
@@ -169,33 +169,63 @@
                 <img src="images/photo/hot1.jpg">
                 <h5>Scienrio</h5>
                 <p>Shizu</p>
+                <div class="soical-content">
+                <a href=""><i class='bx bx-heart'></i></a>               
+                <a href=""><i class='bx bx-share-alt'></i></a>
+                <a href=""><i class='bx bx-download' ></i></a>
+            </div>
             </div>
             <div class="col-content">
                 <img src="images/photo/hot2.jpg">
                 <h5>Medalish</h5>
                 <p>Shizu</p>
+                <div class="soical-content">
+                <a href=""><i class='bx bx-heart'></i></a>               
+                <a href=""><i class='bx bx-share-alt'></i></a>
+                <a href=""><i class='bx bx-download' ></i></a>
+            </div>
             </div>
             <div class="col-content">
                 <img src="images/photo/hot3.jpg">
                 <h5>Colouring</h5>
                 <p>Piku</p>
+                <div class="soical-content">
+                <a href=""><i class='bx bx-heart'></i></a>               
+                <a href=""><i class='bx bx-share-alt'></i></a>
+                <a href=""><i class='bx bx-download' ></i></a>
+            </div>
             </div>
             <div class="col-content">
                 <img src="images/photo/hot4.jpg">
                 <h5>Love</h5>
                 <p>Piku</p>
+                <div class="soical-content">
+                <a href=""><i class='bx bx-heart'></i></a>               
+                <a href=""><i class='bx bx-share-alt'></i></a>
+                <a href=""><i class='bx bx-download' ></i></a>
+            </div>
             </div>
 
             <div class="col-content">
                 <img src="images/photo/hot5.jpg">
                 <h5>tree blosm</h5>
                 <p>Shizu</p>
+                <div class="soical-content">
+                <a href=""><i class='bx bx-heart'></i></a>               
+                <a href=""><i class='bx bx-share-alt'></i></a>
+                <a href=""><i class='bx bx-download' ></i></a>
+            </div>
             </div>
 
             <div class="col-content">
                 <img src="images/photo/hot6.jpg">
                 <h5>Moon Love</h5>
                 <p>shizu</p>
+                <div class="soical-content">
+                <a href=""><i class='bx bx-heart'></i></a>               
+                <a href=""><i class='bx bx-share-alt'></i></a>
+                <a href=""><i class='bx bx-download' ></i></a>
+            </div>
             </div>
         </div>
     </section>

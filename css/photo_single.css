@@ -1,3 +1,4 @@
+
  *{
     padding: 0;
     margin: 0;
@@ -228,8 +229,8 @@
    position: relative;
 }
 .col-content img{
-   width: 210px;
-   height: 250px;
+   width: 240px;
+   height: 300px;
    object-fit: cover;
    border-radius: 15px;
    filter: brightness(80%);
@@ -258,6 +259,28 @@
    filter: brightness(100%) hue-rotate(45deg);
    transform: scale(1.04);
    cursor: pointer;
+}
+.col-content .soical-content{
+    font-size: 20px;
+    padding: 5px;
+    margin-left: 30px;
+    border: 2px solid black;
+    border-radius: 5px ;
+    width: 240px;
+    align-items: center;
+}
+.soical-content a{
+    text-decoration: none;
+    color: red;
+    margin-right: 1.2rem;
+    box-shadow: #6e54fa;
+}
+.soical-content a:hover{
+    /* transform: rotate(180deg); */
+    transition: all 1s ease-out;
+   transform: translateY(4px);
+   
+   color: #1067cc;
 }
 .newsletter{
    display: flex;
