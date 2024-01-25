@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
+<?php include 'database/db.php';
+$db = new DB(); ?>
 
 <head>
     <meta charset="UTF-8">
@@ -11,9 +13,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
 </head>
 
@@ -93,27 +93,38 @@
             <h2>Our Latest <br>Combination</h2>
         </div>
         <div class="popular-content">
-            <div class="box">
-                <div class="thum">
-                    <img src="images/photo/pop1.jpg">
+            <?php
+            $pc = $db->fetch_items_by_module(5);
+          
+            // print_r($data);
+            $count=0;
+            foreach ($pc as $d) {
+              $count+=1;
+              if ($count==7){
+                break;
+              }
+              echo "
+           
+            <div class='box'>
+                <div class='thum'>
+                    <img src='images/photo/".$d["photopath"]."'>
 
                 </div>
-                <div class="dest-content">
-                    <div class="location">
-                        <h4>London</h4>
+                <div class='dest-content'>
+                    <div class='location'>
+                        <h4>test</h4>
 
                     </div>
-                    <div class="stars">
-                        <a href="#"><i class='bx bxs-star'></i></a>
-                        <a href="#"><i class='bx bxs-star'></i></a>
-                        <a href="#"><i class='bx bxs-star'></i></a>
-                        <a href="#"><i class='bx bxs-star'></i></a>
-                        <a href="#"><i class='bx bxs-star'></i></a>
+                    <div class='stars'>
+                        <a href='#'><i class='bx bxs-star'></i></a>
+                        <a href='#'><i class='bx bxs-star'></i></a>
+                        <a href='#'><i class='bx bxs-star'></i></a>
+                        <a href='#'><i class='bx bxs-star'></i></a>
+                        <a href='#'><i class='bx bxs-star'></i></a>
 
                     </div>
                 </div>
-            </div>
-
+            </div> "; } ?>
             <div class="box">
                 <div class="thum">
                     <img src="images/photo/pop2.jpg">
@@ -170,40 +181,40 @@
                 <h5>Scienrio</h5>
                 <p>Shizu</p>
                 <div class="soical-content">
-                <a href=""><i class='bx bx-heart'></i></a>               
-                <a href=""><i class='bx bx-share-alt'></i></a>
-                <a href=""><i class='bx bx-download' ></i></a>
-            </div>
+                    <a href=""><i class='bx bx-heart'></i></a>
+                    <a href=""><i class='bx bx-share-alt'></i></a>
+                    <a href=""><i class='bx bx-download'></i></a>
+                </div>
             </div>
             <div class="col-content">
                 <img src="images/photo/hot2.jpg">
                 <h5>Medalish</h5>
                 <p>Shizu</p>
                 <div class="soical-content">
-                <a href=""><i class='bx bx-heart'></i></a>               
-                <a href=""><i class='bx bx-share-alt'></i></a>
-                <a href=""><i class='bx bx-download' ></i></a>
-            </div>
+                    <a href=""><i class='bx bx-heart'></i></a>
+                    <a href=""><i class='bx bx-share-alt'></i></a>
+                    <a href=""><i class='bx bx-download'></i></a>
+                </div>
             </div>
             <div class="col-content">
                 <img src="images/photo/hot3.jpg">
                 <h5>Colouring</h5>
                 <p>Piku</p>
                 <div class="soical-content">
-                <a href=""><i class='bx bx-heart'></i></a>               
-                <a href=""><i class='bx bx-share-alt'></i></a>
-                <a href=""><i class='bx bx-download' ></i></a>
-            </div>
+                    <a href=""><i class='bx bx-heart'></i></a>
+                    <a href=""><i class='bx bx-share-alt'></i></a>
+                    <a href=""><i class='bx bx-download'></i></a>
+                </div>
             </div>
             <div class="col-content">
                 <img src="images/photo/hot4.jpg">
                 <h5>Love</h5>
                 <p>Piku</p>
                 <div class="soical-content">
-                <a href=""><i class='bx bx-heart'></i></a>               
-                <a href=""><i class='bx bx-share-alt'></i></a>
-                <a href=""><i class='bx bx-download' ></i></a>
-            </div>
+                    <a href=""><i class='bx bx-heart'></i></a>
+                    <a href=""><i class='bx bx-share-alt'></i></a>
+                    <a href=""><i class='bx bx-download'></i></a>
+                </div>
             </div>
 
             <div class="col-content">
@@ -211,10 +222,10 @@
                 <h5>tree blosm</h5>
                 <p>Shizu</p>
                 <div class="soical-content">
-                <a href=""><i class='bx bx-heart'></i></a>               
-                <a href=""><i class='bx bx-share-alt'></i></a>
-                <a href=""><i class='bx bx-download' ></i></a>
-            </div>
+                    <a href=""><i class='bx bx-heart'></i></a>
+                    <a href=""><i class='bx bx-share-alt'></i></a>
+                    <a href=""><i class='bx bx-download'></i></a>
+                </div>
             </div>
 
             <div class="col-content">
@@ -222,10 +233,10 @@
                 <h5>Moon Love</h5>
                 <p>shizu</p>
                 <div class="soical-content">
-                <a href=""><i class='bx bx-heart'></i></a>               
-                <a href=""><i class='bx bx-share-alt'></i></a>
-                <a href=""><i class='bx bx-download' ></i></a>
-            </div>
+                    <a href=""><i class='bx bx-heart'></i></a>
+                    <a href=""><i class='bx bx-share-alt'></i></a>
+                    <a href=""><i class='bx bx-download'></i></a>
+                </div>
             </div>
         </div>
     </section>

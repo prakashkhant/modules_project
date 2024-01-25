@@ -209,9 +209,14 @@
             include './database/db.php';
             $db = new DB();
 
-            $data = $db->populate_programming_lang_blogs();
+            $data = $db->fetch_items_by_module(4);
             // print_r($data);
+            $count=0;
             foreach ($data as $d) {
+              $count+=1;
+              if ($count==7){
+                break;
+              }
               $lang_name = $db->find_category_name($d["category"]);
               foreach ($lang_name as $l_name) {
 

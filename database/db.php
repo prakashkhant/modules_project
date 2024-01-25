@@ -27,10 +27,10 @@ class DB
         }
         return $ldata;
     }
-    function populate_programming_lang_blogs()
+    function fetch_items_by_module($mid)
     {
         if ($this->connect_DB()) {
-            $query = "SELECT * FROM `item` WHERE `module_id`=4";
+            $query = "SELECT * FROM `item` WHERE `module_id`=$mid ORDER BY `id` DESC";
 
             return $this->fetchData($query);
         }
