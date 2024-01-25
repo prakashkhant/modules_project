@@ -133,15 +133,17 @@
 .category-box{
    background: var(--bg-color);
    border: 1px solid #f0eded;
-   padding: 50px 10px;
+   padding: 20px 40px;
    border-radius: 4px;
    transition: all 0.5s ease 0s;
    cursor: pointer;
 }
 .category-img {
-   width: 285px;
-   height: 300px;
+   width: 200px;
+   height: 240px;
    background-color: red;
+   align-items: center;
+ 
 }
 .category-img img{
    height: 100%;
@@ -152,11 +154,14 @@
    border-radius: 4px;
    margin-bottom: 15px;
    cursor: pointer;
+   align-self: center;
+   
 }
 .category-box h4{
    font-size: 24px;
    font-weight: 600;
    margin-bottom: 8px;
+   word-wrap: none;
 }
 .category-box p{
    font-size: 15px;
@@ -247,7 +252,7 @@
    font-weight: 500;
    color: var(--bg-color);
    left: 15px;
-   bottom: 60px;
+   bottom: 80px;
    padding-left: 40px;
 }
 .col-content p{
@@ -255,7 +260,7 @@
    font-size: 15px;
    color: var(--bg-color);
    left: 15px;
-   bottom: 30px;
+   bottom: 50px;
    letter-spacing: 2px;
    padding-left: 40px;
 }

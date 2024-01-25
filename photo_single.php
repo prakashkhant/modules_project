@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<?php include 'database/db.php'; $db=new DB();?>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -51,6 +51,7 @@
     </div>
 
     <div class="collection-content">
+      
         <div class="col-content">
             <img src="images/photo/hot1.jpg">
             <h5>Scienrio</h5>
