@@ -243,7 +243,7 @@
    font-weight: 500;
    color: var(--bg-color);
    left: 15px;
-   bottom: 60px;
+   bottom: 80px;
    padding-left: 40px;
 }
 .col-content p{
@@ -251,7 +251,7 @@
    font-size: 15px;
    color: var(--bg-color);
    left: 15px;
-   bottom: 30px;
+   bottom: 50px;
    letter-spacing: 2px;
    padding-left: 40px;
 }
