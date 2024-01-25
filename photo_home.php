@@ -112,7 +112,7 @@ $db = new DB(); ?>
                 </div>
                 <div class='dest-content'>
                     <div class='location'>
-                        <h4>test</h4>
+                        <h4>".$d["title"]."</h4>
 
                     </div>
                     <div class='stars'>
@@ -125,48 +125,7 @@ $db = new DB(); ?>
                     </div>
                 </div>
             </div> "; } ?>
-            <div class="box">
-                <div class="thum">
-                    <img src="images/photo/pop2.jpg">
-
-                </div>
-                <div class="dest-content">
-                    <div class="location">
-                        <h4>Dubai</h4>
-
-                    </div>
-                    <div class="stars">
-                        <a href="#"><i class='bx bxs-star'></i></a>
-                        <a href="#"><i class='bx bxs-star'></i></a>
-                        <a href="#"><i class='bx bxs-star'></i></a>
-                        <a href="#"><i class='bx bxs-star'></i></a>
-                        <a href="#"><i class='bx bxs-star'></i></a>
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="box">
-                <div class="thum">
-                    <img src="images/photo/pop3.jpg">
-
-                </div>
-                <div class="dest-content">
-                    <div class="location">
-                        <h4>Paris</h4>
-
-                    </div>
-                    <div class="stars">
-                        <a href="#"><i class='bx bxs-star'></i></a>
-                        <a href="#"><i class='bx bxs-star'></i></a>
-                        <a href="#"><i class='bx bxs-star'></i></a>
-                        <a href="#"><i class='bx bxs-star'></i></a>
-                        <a href="#"><i class='bx bxs-star'></i></a>
-
-                    </div>
-                </div>
-            </div>
-        </div>
+         
 
     </section>
     <!-- hots section -->
