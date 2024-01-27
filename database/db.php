@@ -7,7 +7,15 @@ class DB
     public $password = "";
     public $db_name = "nexushub";
     public $conn;
+    function session_check()
+    {
 
+        session_start();
+        if (empty($_SESSION['username']) || $_SESSION['username'] == '') {
+            header("Location: login_regs.php");
+            die();
+        }
+    }
     function connect_DB()
     {
         $this->conn = mysqli_connect($this->sname, $this->uname, $this->password, $this->db_name);
@@ -123,7 +131,7 @@ class DB
                         // $_SESSION['name'] = $row['name'];
                         $_SESSION['id'] = $row['id'];
 
-                        header("Location: dashboard.php");
+                        header("Location: index.php");
 
                         exit();
                     } else {
@@ -200,16 +208,17 @@ class DB
         }
     }
     // $title,$desc,$content,$photo,$video,$test_link,$pub_by,$pub_date,$mod_id,$cat_id,$keywords,$time_dur
-    function delete_item($id){
+    function delete_item($id)
+    {
         if ($this->connect_DB()) {
-        $sql="DELETE FROM `item` WHERE id=".$id;
-        // return $sql;
-        if (mysqli_query($this->conn, $sql)) {
-            echo "Record deleted successfully";
-            header("Location: dashboard.php");
-          } else {
-            echo "Error deleting record: " . mysqli_error($this->conn);
-          }
+            $sql = "DELETE FROM `item` WHERE id=" . $id;
+            // return $sql;
+            if (mysqli_query($this->conn, $sql)) {
+                echo "Record deleted successfully";
+                header("Location: dashboard.php");
+            } else {
+                echo "Error deleting record: " . mysqli_error($this->conn);
+            }
+        }
     }
-}
 }

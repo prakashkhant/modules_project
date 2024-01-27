@@ -1,3 +1,9 @@
+
+<?php 
+  include './database/db.php';
+  $db = new DB();
+  $db->session_check();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -206,8 +212,6 @@
 
           <div class="blog-card-group">
             <?php
-            include './database/db.php';
-            $db = new DB();
 
             $data = $db->fetch_items_by_module(4);
             // print_r($data);

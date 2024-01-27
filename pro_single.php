@@ -1,3 +1,8 @@
+<?php       include './database/db.php';
+                $db = new DB();
+                $db->session_check();
+                ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -159,8 +164,7 @@
           - BLOG SECTION
         -->
                 <?php
-                 include './database/db.php';
-                $db = new DB();
+            
                 $id = $_GET["id"];
                 $cid=$_GET["c"];
                 $ldata = $db->populate_item_content($id);

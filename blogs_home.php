@@ -1,3 +1,7 @@
+<?php       include './database/db.php';
+                $db = new DB();
+                $db->session_check();
+                ?>
 <!DOCTYPE html>
 <html lang="en">
 
