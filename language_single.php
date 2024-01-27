@@ -38,7 +38,9 @@
 
     </ul>
     <div class="header-icons">
-      <a href="dashboard.php"><i class='bx bxs-user'></i></a>
+    <?php 
+            $db->login_dashboard();
+            ?>
       
       <div class="bx bx-menu" id="menu-icon"></div>
     </div>

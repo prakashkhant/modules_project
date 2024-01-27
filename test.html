@@ -1,51 +1,10 @@
-<?php
-include './database/db.php';
-$db = new DB();
-$data = $db->populate_programming_lang_blogs();
-foreach ($data as $d) {
-  echo "
-<div class='blog-card'>
-
-<div class='blog-card-banner'>
-<img src='images/programming/" . $d["prog_title"] . "' alt='Building microservices with Dropwizard, MongoDB & Docker'
-width='250' class='blog-banner-img'>
+<div class='col-content'>
+  <img src='images/photo/hot1.jpg'>
+  <h5>Scienrio</h5>
+  <p>Shizu</p>
+  <div class='soical-content'>
+      <a href=''><i class='bx bx-heart'></i></a>
+      <a href=''><i class='bx bx-share-alt'></i></a>
+      <a href=''><i class='bx bx-download'></i></a>
+  </div>
 </div>
-
-<div class='blog-content-wrapper'>
-
-<button class='blog-topic text-tiny'>Java</button>
-
-<h3>
-<a href='#' class='h3'>
-" . $d["prog_title"] . "
-</a>
-</h3>
-
-<p class='blog-text'>
-" . $d["prog_content"] . "
-</p>
-
-<div class='wrapper-flex'>
-
-<div class='profile-wrapper'>
-<img src='images/programming/author.png' alt='Julia Walker' width='50'>
-</div>
-
-<div class='wrapper'>
-<a href='#' class='h4'>Julia Walker</a>
-
-<p class='text-sm'>
-<time datetime='2022-01-17'> " . $d["publish_date"] . "</time>
-<span class='separator'></span>
-<ion-icon name='time-outline'></ion-icon>
-<time datetime='PT3M'>" . date("i:s", strtotime($d["time"])) . "</time>
-</p>
-</div>
-
-</div>
-
-</div>
-
-</div>";
-}
-?>

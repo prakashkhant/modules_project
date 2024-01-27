@@ -82,7 +82,9 @@
                         <ion-icon name="moon" class="moon"></ion-icon>
                         <ion-icon name="sunny" class="sun"></ion-icon>
                     </button>
-
+                    <?php 
+            $db->login_dashboard();
+            ?>
                 </div>
 
                 <div class="mobile-nav">

@@ -37,6 +37,9 @@
             <li><a href="#contact">Contact</a></li> -->
 
         </ul>
+        <?php 
+            $db->login_dashboard();
+            ?>
     </header>
 
     <!--home section  -->

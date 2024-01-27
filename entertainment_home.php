@@ -50,7 +50,9 @@
                         <div class="subscribe flex">
                             <i class="fas fa-search"></i>
                             <i id="palybtn" class="fas fa-user"></i>
-                            <button>SUBSCRIBE</button>
+                            <?php 
+            $db->login_dashboard();
+            ?>
                         </div>
                     </div>
                 </div>

@@ -7,6 +7,7 @@ class DB
     public $password = "";
     public $db_name = "nexushub";
     public $conn;
+    // checking session if not present not access any pages
     function session_check()
     {
 
@@ -14,6 +15,17 @@ class DB
         if (empty($_SESSION['username']) || $_SESSION['username'] == '') {
             header("Location: login_regs.php");
             die();
+        }
+    }
+    // login button :checking session for dashboard redirect
+    function login_dashboard(){
+        
+        if (empty($_SESSION["username"]) || $_SESSION["username"] == '')
+        {
+            echo " <button class='btn btn-primary'><a href='login_regs.php'>Join Me !</a></button>";
+        }else{
+          
+           echo " <button class='btn btn-primary'><a href='dashboard.php'>".$_SESSION["username"]."!</a> </button>";
         }
     }
     function connect_DB()
@@ -101,7 +113,7 @@ class DB
             return $this->fetchData($query);
         }
     }
-
+// login function
     function login_user()
     {
 

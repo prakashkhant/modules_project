@@ -31,8 +31,11 @@
             <li><a href="#popular">Popular</a></li>
             <li><a href="#hots">Hots</a></li>
             <li><a href="#contact">Contact</a></li>
-
+            
         </ul>
+        <?php 
+            $db->login_dashboard();
+            ?>
     </header>
 
     <!--home section  -->

@@ -33,7 +33,9 @@
 
     </ul>
     <div class="header-icons">
-      <a href="dashboard.php"><i class='bx bxs-user'></i></a>
+    <?php 
+            $db->login_dashboard();
+            ?>
       
       <div class="bx bx-menu" id="menu-icon"></div>
     </div>
@@ -109,8 +111,7 @@
     <div class="categories-content">
 
     <?php
-            include './database/db.php';
-            $db = new DB();
+           
             $cat_list = $db->fetch_category_list(3);
             foreach ($cat_list as $cl) {
               echo "

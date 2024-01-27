@@ -148,7 +148,9 @@
 
             </nav>
 
-            <a href="#" class="btn btn-primary">Subscribe</a>
+            <?php 
+            $db->login_dashboard();
+            ?>
 
             <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
                 <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>

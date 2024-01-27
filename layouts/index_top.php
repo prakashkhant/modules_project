@@ -1,3 +1,10 @@
+<?php
+    session_start();
+    include './database/db.php';
+    $db = new DB();
+    
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,7 +20,7 @@
 </head>
 
 <body>
-<header id="header">
+    <header id="header">
         <nav class="container1 flex">
             <div class="logo flex">
                 <div class="logoimg">
@@ -58,7 +65,10 @@
                     <input type="checkbox" name="" class="l toggle-checkbox" id="dark-mode-toggle">
                     <label for="dark-mode-toggle" class="toggle-label"></label>
                 </div>
-                <button><a href="login_regs.php">Join Me !</a></button>
+                <?php
+                    $db->login_dashboard();
+                ?>
+
             </div>
         </nav>
     </header>
