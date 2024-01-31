@@ -15,7 +15,23 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<style>
+    .hidden {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+}
 
+input[type=checkbox]+label {
+  color: #ccc;
+  font-style: italic;
+}
+
+input[type=checkbox]:checked+label {
+  color: #f00;
+  font-style: normal;
+}
+    </style>
 </head>
 
 <body>
@@ -152,7 +168,9 @@
   <h5>".$pi["title"]."</h5>
   <p>".$pi["publish_by"]."</p>
   <div class='soical-content'>
-      <a href=''><i class='bx bx-heart'></i></a>
+  <input type='checkbox' class='hidden' name='cb' id='cb'>
+<label for='cb'><i class='bx bx-heart'></i></label>
+      
       <a href=''><i class='bx bx-share-alt'></i></a>
       <a href=''><i class='bx bx-download'></i></a>
   </div>
