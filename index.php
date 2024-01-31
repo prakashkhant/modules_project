@@ -634,31 +634,31 @@
                 <ul class="insta-list">
 
                     <li>
-                        <a href="#" class="insta-post img-holder" style="--width: 276; --height: 277;">
+                        <a href="photo_single.php" class="insta-post img-holder" style="--width: 276; --height: 277;">
                             <img src="images/photo/hot3.jpg" width="100px" height="100px" loading="lazy" alt="insta post" class="img-cover">
                         </a>
                     </li>
 
                     <li>
-                        <a href="#" class="insta-post img-holder" style="--width: 276; --height: 277;">
+                        <a href="photo_single.php" class="insta-post img-holder" style="--width: 276; --height: 277;">
                             <img src="images/photo/hot4.jpg" width="100px" height="100px" loading="lazy" alt="insta post" class="img-cover">
                         </a>
                     </li>
 
                     <li>
-                        <a href="#" class="insta-post img-holder" style="--width: 276; --height: 277;">
+                        <a href="photo_single.php" class="insta-post img-holder" style="--width: 276; --height: 277;">
                             <img src="images/photo/hot1.jpg" width="100px" height="100px" loading="lazy" alt="insta post" class="img-cover">
                         </a>
                     </li>
 
                     <li>
-                        <a href="#" class="insta-post img-holder" style="--width: 276; --height: 277;">
+                        <a href="photo_single.php" class="insta-post img-holder" style="--width: 276; --height: 277;">
                             <img src="images/photo/hot2.jpg" width="100px" height="100px" loading="lazy" alt="insta post" class="img-cover">
                         </a>
                     </li>
 
                     <li>
-                        <a href="#" class="insta-post img-holder" style="--width: 276; --height: 277;">
+                        <a href="photo_single.php" class="insta-post img-holder" style="--width: 276; --height: 277;">
                             <img src="images/photo/hot3.jpg" width="100px" height="100px" loading="lazy" alt="insta post" class="img-cover">
                         </a>
                     </li>

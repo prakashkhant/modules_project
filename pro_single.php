@@ -1,3 +1,8 @@
+<?php       include './database/db.php';
+                $db = new DB();
+                $db->session_check();
+                ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -77,7 +82,9 @@
                         <ion-icon name="moon" class="moon"></ion-icon>
                         <ion-icon name="sunny" class="sun"></ion-icon>
                     </button>
-
+                    <?php 
+            $db->login_dashboard();
+            ?>
                 </div>
 
                 <div class="mobile-nav">
@@ -159,8 +166,7 @@
           - BLOG SECTION
         -->
                 <?php
-                 include './database/db.php';
-                $db = new DB();
+            
                 $id = $_GET["id"];
                 $cid=$_GET["c"];
                 $ldata = $db->populate_item_content($id);

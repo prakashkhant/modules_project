@@ -1,3 +1,8 @@
+<?php       include './database/db.php';
+                $db = new DB();
+                $db->session_check();
+                ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -33,9 +38,10 @@
 
     </ul>
     <div class="header-icons">
-      <a href="#"><i class='bx bxs-user'></i></a>
-      <a href="#"><i class='bx bx-heart'></i></a>
-      <a href="#"><i class='bx bx-cart'></i></a>
+    <?php 
+            $db->login_dashboard();
+            ?>
+      
       <div class="bx bx-menu" id="menu-icon"></div>
     </div>
   </header>
@@ -71,9 +77,7 @@
 
     <div class="categories-content">
     <?php
-                 include './database/db.php';
-                $db = new DB();
-                
+            
                 $cid=$_GET["c"];
                 $ldata = $db->fetch_items_list($cid);
                

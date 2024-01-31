@@ -1,8 +1,9 @@
-<!DOCTYPE html>
+<?php       include './database/db.php';
+                $db = new DB();
+                $db->session_check();
+                ?>
+                <!DOCTYPE html>
 <html lang="en">
-<?php include 'database/db.php';
-$db = new DB(); ?>
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -30,8 +31,11 @@ $db = new DB(); ?>
             <li><a href="#popular">Popular</a></li>
             <li><a href="#hots">Hots</a></li>
             <li><a href="#contact">Contact</a></li>
-
+            
         </ul>
+        <?php 
+            $db->login_dashboard();
+            ?>
     </header>
 
     <!--home section  -->
@@ -112,7 +116,7 @@ $db = new DB(); ?>
                 </div>
                 <div class='dest-content'>
                     <div class='location'>
-                        <h4>test</h4>
+                        <h4>".$d["title"]."</h4>
 
                     </div>
                     <div class='stars'>
@@ -125,119 +129,36 @@ $db = new DB(); ?>
                     </div>
                 </div>
             </div> "; } ?>
-            <div class="box">
-                <div class="thum">
-                    <img src="images/photo/pop2.jpg">
-
-                </div>
-                <div class="dest-content">
-                    <div class="location">
-                        <h4>Dubai</h4>
-
-                    </div>
-                    <div class="stars">
-                        <a href="#"><i class='bx bxs-star'></i></a>
-                        <a href="#"><i class='bx bxs-star'></i></a>
-                        <a href="#"><i class='bx bxs-star'></i></a>
-                        <a href="#"><i class='bx bxs-star'></i></a>
-                        <a href="#"><i class='bx bxs-star'></i></a>
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="box">
-                <div class="thum">
-                    <img src="images/photo/pop3.jpg">
-
-                </div>
-                <div class="dest-content">
-                    <div class="location">
-                        <h4>Paris</h4>
-
-                    </div>
-                    <div class="stars">
-                        <a href="#"><i class='bx bxs-star'></i></a>
-                        <a href="#"><i class='bx bxs-star'></i></a>
-                        <a href="#"><i class='bx bxs-star'></i></a>
-                        <a href="#"><i class='bx bxs-star'></i></a>
-                        <a href="#"><i class='bx bxs-star'></i></a>
-
-                    </div>
-                </div>
-            </div>
-        </div>
+         
 
     </section>
     <!-- hots section -->
     <section class="hots" id="hots">
         <div class="title">
-            <h2>Our Most Popular <br>Collection</h2>
+            <h2>Our Best <br>Collection</h2>
         </div>
 
         <div class="hots-content">
-            <div class="col-content">
-                <img src="images/photo/hot1.jpg">
-                <h5>Scienrio</h5>
-                <p>Shizu</p>
-                <div class="soical-content">
-                    <a href=""><i class='bx bx-heart'></i></a>
-                    <a href=""><i class='bx bx-share-alt'></i></a>
-                    <a href=""><i class='bx bx-download'></i></a>
-                </div>
-            </div>
-            <div class="col-content">
-                <img src="images/photo/hot2.jpg">
-                <h5>Medalish</h5>
-                <p>Shizu</p>
-                <div class="soical-content">
-                    <a href=""><i class='bx bx-heart'></i></a>
-                    <a href=""><i class='bx bx-share-alt'></i></a>
-                    <a href=""><i class='bx bx-download'></i></a>
-                </div>
-            </div>
-            <div class="col-content">
-                <img src="images/photo/hot3.jpg">
-                <h5>Colouring</h5>
-                <p>Piku</p>
-                <div class="soical-content">
-                    <a href=""><i class='bx bx-heart'></i></a>
-                    <a href=""><i class='bx bx-share-alt'></i></a>
-                    <a href=""><i class='bx bx-download'></i></a>
-                </div>
-            </div>
-            <div class="col-content">
-                <img src="images/photo/hot4.jpg">
-                <h5>Love</h5>
-                <p>Piku</p>
-                <div class="soical-content">
-                    <a href=""><i class='bx bx-heart'></i></a>
-                    <a href=""><i class='bx bx-share-alt'></i></a>
-                    <a href=""><i class='bx bx-download'></i></a>
-                </div>
-            </div>
-
-            <div class="col-content">
-                <img src="images/photo/hot5.jpg">
-                <h5>tree blosm</h5>
-                <p>Shizu</p>
-                <div class="soical-content">
-                    <a href=""><i class='bx bx-heart'></i></a>
-                    <a href=""><i class='bx bx-share-alt'></i></a>
-                    <a href=""><i class='bx bx-download'></i></a>
-                </div>
-            </div>
-
-            <div class="col-content">
-                <img src="images/photo/hot6.jpg">
-                <h5>Moon Love</h5>
-                <p>shizu</p>
-                <div class="soical-content">
-                    <a href=""><i class='bx bx-heart'></i></a>
-                    <a href=""><i class='bx bx-share-alt'></i></a>
-                    <a href=""><i class='bx bx-download'></i></a>
-                </div>
-            </div>
+        <?php
+            $p_images = $db->fetch_items_by_module(5);
+          
+            // print_r($data);
+            $count=0;
+            foreach ($p_images as $pi) {
+              $count+=1;
+              echo "
+              <div class='col-content'>
+  <img src='images/photo/".$pi["photopath"]."'>
+  <h5>".$pi["title"]."</h5>
+  <p>".$pi["publish_by"]."</p>
+  <div class='soical-content'>
+      <a href=''><i class='bx bx-heart'></i></a>
+      <a href=''><i class='bx bx-share-alt'></i></a>
+      <a href=''><i class='bx bx-download'></i></a>
+  </div>
+</div>
+            "; }?>
+         
         </div>
     </section>
     <!-- Newsletter -->

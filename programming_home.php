@@ -1,3 +1,8 @@
+<?php
+include './database/db.php';
+$db = new DB();
+$db->session_check();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -77,7 +82,9 @@
             <ion-icon name="moon" class="moon"></ion-icon>
             <ion-icon name="sunny" class="sun"></ion-icon>
           </button>
-
+          <?php
+          $db->login_dashboard();
+          ?>
         </div>
 
         <div class="mobile-nav">
@@ -206,15 +213,13 @@
 
           <div class="blog-card-group">
             <?php
-            include './database/db.php';
-            $db = new DB();
 
             $data = $db->fetch_items_by_module(4);
             // print_r($data);
-            $count=0;
+            $count = 0;
             foreach ($data as $d) {
-              $count+=1;
-              if ($count==7){
+              $count += 1;
+              if ($count == 7) {
                 break;
               }
               $lang_name = $db->find_category_name($d["category"]);
@@ -286,11 +291,11 @@ width='250' class='blog-banner-img'>
             <?php
 
             $cat_list = $db->fetch_category_list(4);
-           
+
             // print_r($data);
             foreach ($cat_list as $cl) {
-              $item_id=$db->fetch_items_list($cl["cat_id"]);
-              
+              $item_id = $db->fetch_items_list($cl["cat_id"]);
+
               foreach ($item_id as $ci) {
 
                 echo "
@@ -303,7 +308,7 @@ width='250' class='blog-banner-img'>
                 <p>" . $cl["cat_name"] . "</p>
               </a> 
                     ";
-                    break;
+                break;
               }
             } ?>
 
