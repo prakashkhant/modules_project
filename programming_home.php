@@ -227,50 +227,50 @@ $db->session_check();
 
 
                 echo "
- 
-<div class='blog-card'>
+                  
+                  <div class='blog-card'>
 
-<div class='blog-card-banner'>
-<img src='images/programming/" . $d["photopath"] . "' alt='Building microservices with Dropwizard, MongoDB & Docker'
-width='250' class='blog-banner-img'>
-</div>
+                  <div class='blog-card-banner'>
+                  <img src='images/programming/" . $d["photopath"] . "' alt='Building microservices with Dropwizard, MongoDB & Docker'
+                  width='250' class='blog-banner-img'>
+                  </div>
 
-<div class='blog-content-wrapper'>
+                  <div class='blog-content-wrapper'>
 
-<button class='blog-topic text-tiny'>" . $l_name["cat_name"] . "</button>
+                  <button class='blog-topic text-tiny'>" . $l_name["cat_name"] . "</button>
 
-<h3>
-<a href='pro_single.php?id=" . $d["id"] . "&name=" . $l_name["cat_name"] . "&c=" . $d["category"] . "' class='h3'>
-" . $d["title"] . "
-</a>
-</h3>
+                  <h3>
+                  <a href='pro_single.php?id=" . $d["id"] . "&name=" . $l_name["cat_name"] . "&c=" . $d["category"] . "' class='h3'>
+                  " . $d["title"] . "
+                  </a>
+                  </h3>
 
-<p class='blog-text'>
-" . $d["description"] . "
-</p>
+                  <p class='blog-text'>
+                  " . $d["description"] . "
+                  </p>
 
-<div class='wrapper-flex'>
+                  <div class='wrapper-flex'>
 
-<div class='profile-wrapper'>
-<img src='images/programming/author.png' alt='Julia Walker' width='50'>
-</div>
+                  <div class='profile-wrapper'>
+                  <img src='images/programming/author.png' alt='Julia Walker' width='50'>
+                  </div>
 
-<div class='wrapper'>
-<a href='#' class='h4'>Julia Walker</a>
+                  <div class='wrapper'>
+                  <a href='#' class='h4'>Julia Walker</a>
 
-<p class='text-sm'>
-<time datetime='2022-01-17'> " . $d["publish_date"] . "</time>
-<span class='separator'></span>
-<ion-icon name='time-outline'></ion-icon>
-<time datetime='PT3M'>" . date("i:s", strtotime($d["time"])) . "</time>
-</p>
-</div>
+                  <p class='text-sm'>
+                  <time datetime='2022-01-17'> " . $d["publish_date"] . "</time>
+                  <span class='separator'></span>
+                  <ion-icon name='time-outline'></ion-icon>
+                  <time datetime='PT3M'>" . date("i:s", strtotime($d["time"])) . "</time>
+                  </p>
+                  </div>
 
-</div>
+                  </div>
 
-</div>
+                  </div>
 
-</div>";
+                  </div>";
               }
             }
             ?>
