@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/about.css">
+
+    <title>about us</title>
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="heading">
+        <h1>About Us </h1>
+        <p>Nexushub is Provide The best experience to the user for spending its time efficiently and being happy</p>
+    </div>
+    <div class="container">
+        <section class="about">
+            <div class="about-image">
+                <img src="images/about.jpeg" alt="">
+                <div class="hidden">
+                <img src="images/about.jpeg" alt="">
+                </div>
+            </div>
+            <div class="about-content">
+                <h2>Our Best Part</h2>
+                <p>Nexushub is a dynamic and multifaceted online platform that stands at the intersection of technology
+                    and creativity. Conceived as the culmination of our last year BSc Computer Science project, Nexushub
+                    brings together a diverse range of modules to cater to the varied interests of our users.</p>
+                <a href='#' class='read-more' onclick='showHiddenContent(this)'>Read More</a>
+               <div class="hidden">
+            <p><?php echo nl2br("Hello Dear,
+
+Nexushub is a dynamic and multifaceted online platform that stands at the intersection of technology and creativity. Conceived as the culmination of our last year BSc Computer Science project, Nexushub brings together a diverse range of modules to cater to the varied interests of our users.
+
+At the heart of Nexushub is a vibrant blogging community, where individuals can share their thoughts, insights, and experiences on a wide array of topics. Whether it's the latest in technology, personal anecdotes, or thought-provoking ideas, our blog module serves as a space for engaging and meaningful discussions.
+
+Entertainment takes center stage in Nexushub with a dedicated module that offers a mix of captivating content. From trending videos to curated playlists, users can immerse themselves in a world of entertainment tailored to their preferences.
+
+For those eager to enhance their skills, Nexushub provides a unique learning experience with modules focused on coding languages. Whether you're a novice or an experienced coder, our platform offers resources, tutorials, and interactive challenges to help you sharpen your programming skills.
+
+Embracing diversity, Nexushub also features modules dedicated to native languages. Users can explore and celebrate linguistic richness through articles, interactive lessons, and cultural insights, fostering a sense of community and appreciation for different languages.
+
+Capturing moments in time is made easy with our photo module, allowing users to showcase their creativity through visual storytelling. From breathtaking landscapes to personal milestones, Nexushub is the canvas for individuals to share their visual narratives.
+
+As we evolve, Nexushub remains committed to providing a seamless and enriching experience for our users. Join us on this exciting journey where technology meets creativity, and together, let's explore the boundless possibilities of Nexushub.
+               
+                Thank you for being a part of our project."); ?>
+                <br>
+                Best regards,<br>
+                The Nexushub Team
+            </p>
+        </div>
+            </div>
+           
+        </section>
+       
+    </div>
+
+    <script>
+        function showHiddenContent(button) {
+            // Get the parent element of the button
+            var parentElement = button.parentElement;
+
+            // Hide the "Read More" button
+            button.style.display = 'none';
+
+            // Get the hidden content
+            var hiddenContent = parentElement.querySelector('.hidden');
+
+            // Make the hidden content visible
+            hiddenContent.style.display = 'block';
+        }
+    </script>
+</body>
+
+</html>
