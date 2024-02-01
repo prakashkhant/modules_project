@@ -18,7 +18,7 @@ session_start();
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
         <link rel="stylesheet" href="css/dashboard_style.css" />
-        <title>Admin Dashboard</title>
+        <title>Nexushub | Dashboard</title>
         <link rel="icon" type="image/x-icon" href="./images/website_icon.png">
     </head>
 
@@ -27,19 +27,19 @@ session_start();
 <div class="d-flex" id="wrapper">
     <!-- Sidebar -->
     <div class=" sidebar " id="sidebar-wrapper">
-        <div class="sidebar-heading text-center py-4 primary-text fs-4 fw-bold text-uppercase border-bottom"><i class="fas fa-user-secret me-4 "></i>Admin</div>
+        <div class="sidebar-heading  py-4 primary-text fs-4 fw-bold text-uppercase border-bottom"><img src="images/logo.png" alt="" srcset="" width="50px" height="50px">NEXUS HUB</div>
         <div class="list-group list-group-flush my-3">
             <a href="dashboard.php" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
                 <i class="fas fa-tachometer-alt me-2"></i>Dashboard</a>
-            <a href="admintab.php" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i class="fas fa-users-cog me-2"></i>Admins</a>
-            <a href="#" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i class="fas fa-users me-2"></i>Users</a>
+
+
             <a href="additem.php" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i class="fas fa-edit me-2"></i>Add Itmes</a>
             <!-- <a href="addModule.php" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i class="fas fa-sitemap me-2"></i>Add Module</a> -->
             <!-- <a href="#" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i class="fas fa-gift me-2"></i>Comments/Likes</a> -->
             <a href="#" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i class="fas fa-comment-dots me-2"></i>Comments/Likes</a>
             <!-- <a href="#" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
                         class="fas fa-map-marker-alt me-2"></i>Outlet</a>      -->
-            <a href="logout.php" class="list-group-item list-group-item-action bg-transparent text-danger fw-bold"><i class="fas fa-power-off me-2"></i>Logout</a>
+            <a href="logout.php" class="list-group-item align-bottom list-group-item-action bg-transparent text-danger logout fw-bold"><i class="fas fa-power-off me-2"></i>Logout</a>
         </div>
     </div>
     <!-- /#sidebar-wrapper -->
