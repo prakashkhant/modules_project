@@ -29,7 +29,7 @@ session_start();
         <div class=" sidebar " id="sidebar-wrapper">
             <div class="sidebar-heading  py-4 primary-text fs-4 fw-bold text-uppercase border-bottom"><img src="images/logo.png" alt="" srcset="" width="50px" height="50px">NEXUS HUB</div>
             <div class="list-group list-group-flush my-3">
-                <a href="dashboard.php" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
+                <a href="admin_dashboard.php" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
                     <i class="fas fa-tachometer-alt me-2"></i>Dashboard</a>
                 <a href="admintab.php" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i class="fas fa-users-cog me-2"></i>Admins</a>
                 <a href="#" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i class="fas fa-users me-2"></i>Users</a>

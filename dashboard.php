@@ -1,4 +1,5 @@
 <?php
+
 include './layouts/top.php';
 ?>
 
@@ -75,7 +76,7 @@ include './layouts/top.php';
                 <?php
                
                 
-                $items = $db->fetch_all_items();
+                $items = $db->fetch_all_user_items($uname);
                
                 foreach ($items as $item) { 
                     echo "

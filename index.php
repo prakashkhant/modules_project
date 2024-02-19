@@ -46,7 +46,7 @@
         </div>
         <div class="hotcards flex">
             <div class="hcard">
-                <a href="/">
+                <a href="entertainment_home.php">
                     <img src="images/food.jpg" alt="" width="400px" height="300px">
                     <div class="hdetails">
                         <div class="hdetail">

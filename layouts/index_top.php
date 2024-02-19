@@ -36,7 +36,7 @@
                     <li><a href="">About Me</a></li>
                     <li><a href="language_home.php">Native Languages<i class="fa-solid fa-sort-down"></i></a></li>
                     <li><a href="blogs_home.php">Blogs<i class="fa-solid fa-sort-down"></i></a></li>
-                    <li><a href="">Entertaiments<i class="fa-solid fa-sort-down"></i></a></li>
+                    <li><a href="entertainment_home.php">Entertaiments<i class="fa-solid fa-sort-down"></i></a></li>
                     <li><a href="programming_home.php">Computer Languages</a></li>
 
                 </ul>

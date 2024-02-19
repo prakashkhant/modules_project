@@ -6,7 +6,7 @@ session_start();
 // else if (!isset($_SESSION['id']) && !isset($_SESSION['username'])) {
 //     header("Location: index.php");
 // }
-
+$uname= $_SESSION['username'];
 ?>
     <!DOCTYPE html>
     <html lang="en">
@@ -17,7 +17,7 @@ session_start();
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-        <link rel="stylesheet" href="css/dashboard_style.css" />
+        <link rel="stylesheet" href="css/dashboard.css" />
         <title>Nexushub | Dashboard</title>
         <link rel="icon" type="image/x-icon" href="./images/website_icon.png">
     </head>
@@ -63,7 +63,7 @@ session_start();
                             <a class="nav-link dropdown-toggle second-text fw-bold " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 <i class="fas fa-user me-2"></i>
                                 <span class="admin-name second-text">
-                                    <?php echo $_SESSION['username'] ?>
+                                    <?php echo $uname; ?>
                                 </span>
                             </a>
 

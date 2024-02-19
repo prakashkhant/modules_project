@@ -75,6 +75,7 @@ As we evolve, Nexushub remains committed to providing a seamless and enriching e
 
             // Make the hidden content visible
             hiddenContent.style.display = 'block';
+            
         }
     </script>
 </body>

@@ -99,6 +99,13 @@ class DB
     }
 
 
+    function fetch_all_user_items($uname)
+    {
+        if ($this->connect_DB()) {
+            $query = "SELECT * FROM `item` WHERE `publish_by`='$uname' ORDER BY `id` desc";
+            return $this->fetchData($query);
+        }
+    }
     function fetch_all_items()
     {
         if ($this->connect_DB()) {
@@ -241,4 +248,5 @@ class DB
             }
         }
     }
+   
 }
