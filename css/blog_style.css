@@ -1376,5 +1376,30 @@
       gap: 40px;
       padding-inline: 120px;
     }
+    /*-----------------------------------*\
+    Like button
+  \*-----------------------------------*/
+  .likeBtn{
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #DF1278;
+    background: none;
+    border: none;
+    transition-property: transform;
+    transition-duration: 0.1s;
+    transition-timing-function: ease-in;
+  }
+
+  .likeBtn:hover{
+    transform: scale(1.5);
+  }
+
+  .likes{
+    margin: 0px 10px 0px 0px;
+    font-size: medium;
+  }
+  
   
   }

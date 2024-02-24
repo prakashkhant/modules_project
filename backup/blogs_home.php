@@ -1,10 +1,7 @@
-<?php       
-    include './database/db.php';
-    $db = new DB();
-    session_start();
-    $db->session_check();
-    $db->connect_DB();
-?>
+<?php       include './database/db.php';
+                $db = new DB();
+                $db->session_check();
+                ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,18 +21,13 @@
     - favicon
   -->
     <link rel="shortcut icon" href="images/logo.png" type="image/svg+xml">
-    <script src="https://kit.fontawesome.com/e6a8e37cff.js" crossorigin="anonymous"></script>
-    <!-- <script src="js/review.js"></script> -->
+
     <!-- 
     - google font link
   -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.7.1.js"
-        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- 
     - custom css link
@@ -243,8 +235,7 @@
                                     <a href="blogs_cate_single.php" class="slider-card">
 
                                         <figure class="slider-banner img-holder" style="--width: 507; --height: 618;">
-                                            <img src="images/blogs/topic-1.png" width="507" height="618" loading="lazy"
-                                                alt="Sport" class="img-cover">
+                                            <img src="images/blogs/topic-1.png" width="507" height="618" loading="lazy" alt="Sport" class="img-cover">
                                         </figure>
 
                                         <div class="slider-content">
@@ -260,8 +251,7 @@
                                     <a href="blogs_cate_single.php" class="slider-card">
 
                                         <figure class="slider-banner img-holder" style="--width: 507; --height: 618;">
-                                            <img src="images/blogs/topic-2.png" width="507" height="618" loading="lazy"
-                                                alt="Travel" class="img-cover">
+                                            <img src="images/blogs/topic-2.png" width="507" height="618" loading="lazy" alt="Travel" class="img-cover">
                                         </figure>
 
                                         <div class="slider-content">
@@ -277,8 +267,7 @@
                                     <a href="blogs_cate_single.php" class="slider-card">
 
                                         <figure class="slider-banner img-holder" style="--width: 507; --height: 618;">
-                                            <img src="images/blogs/topic-3.png" width="507" height="618" loading="lazy"
-                                                alt="Design" class="img-cover">
+                                            <img src="images/blogs/topic-3.png" width="507" height="618" loading="lazy" alt="Design" class="img-cover">
                                         </figure>
 
                                         <div class="slider-content">
@@ -294,8 +283,7 @@
                                     <a href="blogs_cate_single.php" class="slider-card">
 
                                         <figure class="slider-banner img-holder" style="--width: 507; --height: 618;">
-                                            <img src="images/blogs/topic-4.png" width="507" height="618" loading="lazy"
-                                                alt="Movie" class="img-cover">
+                                            <img src="images/blogs/topic-4.png" width="507" height="618" loading="lazy" alt="Movie" class="img-cover">
                                         </figure>
 
                                         <div class="slider-content">
@@ -311,8 +299,7 @@
                                     <a href="blogs_cate_single.php" class="slider-card">
 
                                         <figure class="slider-banner img-holder" style="--width: 507; --height: 618;">
-                                            <img src="images/blogs/topic-5.png" width="507" height="618" loading="lazy"
-                                                alt="Lifestyle" class="img-cover">
+                                            <img src="images/blogs/topic-5.png" width="507" height="618" loading="lazy" alt="Lifestyle" class="img-cover">
                                         </figure>
 
                                         <div class="slider-content">
@@ -341,7 +328,7 @@
       -->
 
             <section class="section feature" aria-label="feature" id="featured">
-                <div class="container" id="itemContainer">
+                <div class="container">
 
                     <h2 class="headline headline-2 section-title">
                         <span class="span">Editor's picked</span>
@@ -351,84 +338,46 @@
                         Featured and highly rated articles
                     </p>
 
-                    <ul class="feature-list" id="itemlist">
-                        <?php 
-                        $res = $db->fetch_items_by_module(2);
-                        $i=0;
-                        foreach($res as $r){ 
-                            if($i < 5){?>
+                    <ul class="feature-list">
+
                         <li>
                             <div class="card feature-card">
 
                                 <figure class="card-banner img-holder" style="--width: 1602; --height: 903;">
-                                    <img src="images/blogs/<?php echo $r["photopath"] ?>" width="1602" height="903"
-                                        loading="lazy" alt="Self-observation is the first step of inner unfolding"
-                                        class="img-cover">
+                                    <img src="images/blogs/featured-1.png" width="1602" height="903" loading="lazy" alt="Self-observation is the first step of inner unfolding" class="img-cover">
                                 </figure>
 
                                 <div class="card-content">
 
                                     <div class="card-wrapper">
                                         <div class="card-tag">
-                                            <?php
-                                                $itemid = $r["id"];
-                                                $uid = 0;
-                                                if(isset($_SESSION["id"])){
-                                                    $uid = $_SESSION["id"];
-                                                }
-                                                
-                                                $sql = mysqli_query($db->conn, "SELECT flc_id FROM review WHERE item_id = $itemid AND uid = $uid AND liked = 1");
-                                                if(mysqli_num_rows($sql) > 0){ ?>
-                                            <button class="likeBtn" id="like<?php echo $r['id'] ?>"
-                                                onclick="unlikePost(<?php echo $itemid ?>, <?php echo $uid ?>)">
-                                                <i class="fa-solid fa-heart"></i>
-                                            </button>
-                                            <?php } else { ?>
-                                            <button class="likeBtn" id="like<?php echo $r['id'] ?>"
-                                                onclick="likePost(<?php echo $itemid ?>, <?php echo $uid ?>)">
-                                                <i class="fa-regular fa-heart"></i>
-                                            </button>
-                                            <?php
-                                            }
-                                            $sql = mysqli_query($db->conn, "SELECT flc_id FROM review WHERE item_id = $itemid AND liked = 1");
-                                                $likes = mysqli_num_rows($sql); ?>
-                                                <h6 class="likes"><?php echo $likes ?></h6>
-                                            <?php 
-                                            
-                                                $tags = [];
-                                                $tags = explode(",", $r["keywords"]);
+                                            <a href="#" class="span hover-2">#Travel</a>
 
-                                                foreach($tags as $key){ ?>
-                                            <a href="#" class="span hover-2">&#x23;<?php echo $key ?></a>
-                                            <?php    
-                                                }
-                                            ?>
+                                            <a href="#" class="span hover-2">#Lifestyle</a>
                                         </div>
 
                                         <div class="wrapper">
-                                            <?php $time = date('i', strtotime($r["time"])) ?>
-                                            <span class="span"><i
-                                                    class="fa-regular fa-clock"></i>&nbsp;&nbsp;<?php echo $time ?> mins
-                                                read</span>
+                                            <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+
+                                            <span class="span">3 mins read</span>
                                         </div>
                                     </div>
 
                                     <h3 class="headline headline-3">
                                         <a href="blogs_single.php" class="card-title hover-2">
-                                            <?php echo $r["title"] ?>
+                                            Self-observation is the first step of inner unfolding
                                         </a>
                                     </h3>
 
                                     <div class="card-wrapper">
 
                                         <div class="profile-card">
-                                            <img src="images/blogs/author-1.png" width="48" height="48" loading="lazy"
-                                                alt="Joseph" class="profile-banner">
+                                            <img src="images/blogs/author-1.png" width="48" height="48" loading="lazy" alt="Joseph" class="profile-banner">
 
                                             <div>
-                                                <p class="card-title"><?php echo $r["publish_by"] ?></p>
-                                                <?php $publish = date('d M, Y', strtotime($r["publish_date"])) ?>
-                                                <p class="card-subtitle"><?php echo $publish ?></p>
+                                                <p class="card-title">Joseph</p>
+
+                                                <p class="card-subtitle">25 Nov 2022</p>
                                             </div>
                                         </div>
 
@@ -440,15 +389,7 @@
 
                             </div>
                         </li>
-                        <?php
-                        $i++;
-                         }
-                        }
-                        ?>
 
-
-
-                        <!-- 
                         <li>
                             <div class="card feature-card">
 
@@ -647,7 +588,7 @@
                                 </div>
 
                             </div>
-                        </li> -->
+                        </li>
 
                     </ul>
 
@@ -690,9 +631,7 @@
                                 <div class="recent-post-card">
 
                                     <figure class="card-banner img-holder" style="--width: 271; --height: 258;">
-                                        <img src="images/blogs/recent-post-1.jpg" width="271" height="258"
-                                            loading="lazy" alt="Helpful Tips for Working from Home as a Freelancer"
-                                            class="img-cover">
+                                        <img src="images/blogs/recent-post-1.jpg" width="271" height="258" loading="lazy" alt="Helpful Tips for Working from Home as a Freelancer" class="img-cover">
                                     </figure>
 
                                     <div class="card-content">
@@ -700,13 +639,11 @@
                                         <a href="#" class="card-badge">Working Tips</a>
 
                                         <h3 class="headline headline-3 card-title">
-                                            <a href="#" class="link hover-2">Helpful Tips for Working from Home as a
-                                                Freelancer</a>
+                                            <a href="#" class="link hover-2">Helpful Tips for Working from Home as a Freelancer</a>
                                         </h3>
 
                                         <p class="card-text">
-                                            Gosh jaguar ostrich quail one excited dear hello and bound and the and bland
-                                            moral misheard
+                                            Gosh jaguar ostrich quail one excited dear hello and bound and the and bland moral misheard
                                             roadrunner flapped lynx far that and jeepers giggled far and far
                                         </p>
 
@@ -733,9 +670,7 @@
                                 <div class="recent-post-card">
 
                                     <figure class="card-banner img-holder" style="--width: 271; --height: 258;">
-                                        <img src="images/blogs/recent-post-2.jpg" width="271" height="258"
-                                            loading="lazy" alt="Helpful Tips for Working from Home as a Freelancer"
-                                            class="img-cover">
+                                        <img src="images/blogs/recent-post-2.jpg" width="271" height="258" loading="lazy" alt="Helpful Tips for Working from Home as a Freelancer" class="img-cover">
                                     </figure>
 
                                     <div class="card-content">
@@ -743,13 +678,11 @@
                                         <a href="#" class="card-badge">Working Tips</a>
 
                                         <h3 class="headline headline-3 card-title">
-                                            <a href="#" class="link hover-2">Helpful Tips for Working from Home as a
-                                                Freelancer</a>
+                                            <a href="#" class="link hover-2">Helpful Tips for Working from Home as a Freelancer</a>
                                         </h3>
 
                                         <p class="card-text">
-                                            Gosh jaguar ostrich quail one excited dear hello and bound and the and bland
-                                            moral misheard
+                                            Gosh jaguar ostrich quail one excited dear hello and bound and the and bland moral misheard
                                             roadrunner flapped lynx far that and jeepers giggled far and far
                                         </p>
 
@@ -776,9 +709,7 @@
                                 <div class="recent-post-card">
 
                                     <figure class="card-banner img-holder" style="--width: 271; --height: 258;">
-                                        <img src="images/blogs/recent-post-3.jpg" width="271" height="258"
-                                            loading="lazy" alt="Helpful Tips for Working from Home as a Freelancer"
-                                            class="img-cover">
+                                        <img src="images/blogs/recent-post-3.jpg" width="271" height="258" loading="lazy" alt="Helpful Tips for Working from Home as a Freelancer" class="img-cover">
                                     </figure>
 
                                     <div class="card-content">
@@ -786,13 +717,11 @@
                                         <a href="#" class="card-badge">Working Tips</a>
 
                                         <h3 class="headline headline-3 card-title">
-                                            <a href="#" class="link hover-2">Helpful Tips for Working from Home as a
-                                                Freelancer</a>
+                                            <a href="#" class="link hover-2">Helpful Tips for Working from Home as a Freelancer</a>
                                         </h3>
 
                                         <p class="card-text">
-                                            Gosh jaguar ostrich quail one excited dear hello and bound and the and bland
-                                            moral misheard
+                                            Gosh jaguar ostrich quail one excited dear hello and bound and the and bland moral misheard
                                             roadrunner flapped lynx far that and jeepers giggled far and far
                                         </p>
 
@@ -819,9 +748,7 @@
                                 <div class="recent-post-card">
 
                                     <figure class="card-banner img-holder" style="--width: 271; --height: 258;">
-                                        <img src="images/blogs/recent-post-4.jpg" width="271" height="258"
-                                            loading="lazy" alt="Helpful Tips for Working from Home as a Freelancer"
-                                            class="img-cover">
+                                        <img src="images/blogs/recent-post-4.jpg" width="271" height="258" loading="lazy" alt="Helpful Tips for Working from Home as a Freelancer" class="img-cover">
                                     </figure>
 
                                     <div class="card-content">
@@ -829,13 +756,11 @@
                                         <a href="#" class="card-badge">Working Tips</a>
 
                                         <h3 class="headline headline-3 card-title">
-                                            <a href="#" class="link hover-2">Helpful Tips for Working from Home as a
-                                                Freelancer</a>
+                                            <a href="#" class="link hover-2">Helpful Tips for Working from Home as a Freelancer</a>
                                         </h3>
 
                                         <p class="card-text">
-                                            Gosh jaguar ostrich quail one excited dear hello and bound and the and bland
-                                            moral misheard
+                                            Gosh jaguar ostrich quail one excited dear hello and bound and the and bland moral misheard
                                             roadrunner flapped lynx far that and jeepers giggled far and far
                                         </p>
 
@@ -862,9 +787,7 @@
                                 <div class="recent-post-card">
 
                                     <figure class="card-banner img-holder" style="--width: 271; --height: 258;">
-                                        <img src="images/blogs/recent-post-5.jpg" width="271" height="258"
-                                            loading="lazy" alt="Helpful Tips for Working from Home as a Freelancer"
-                                            class="img-cover">
+                                        <img src="images/blogs/recent-post-5.jpg" width="271" height="258" loading="lazy" alt="Helpful Tips for Working from Home as a Freelancer" class="img-cover">
                                     </figure>
 
                                     <div class="card-content">
@@ -872,13 +795,11 @@
                                         <a href="#" class="card-badge">Working Tips</a>
 
                                         <h3 class="headline headline-3 card-title">
-                                            <a href="#" class="link hover-2">Helpful Tips for Working from Home as a
-                                                Freelancer</a>
+                                            <a href="#" class="link hover-2">Helpful Tips for Working from Home as a Freelancer</a>
                                         </h3>
 
                                         <p class="card-text">
-                                            Gosh jaguar ostrich quail one excited dear hello and bound and the and bland
-                                            moral misheard
+                                            Gosh jaguar ostrich quail one excited dear hello and bound and the and bland moral misheard
                                             roadrunner flapped lynx far that and jeepers giggled far and far
                                         </p>
 
@@ -937,15 +858,13 @@
                                     <div class="comment-card">
 
                                         <blockquote class="card-text">
-                                            “ Gosh jaguar ostrich quail one excited dear hello and bound and the and
-                                            bland moral misheard
+                                            “ Gosh jaguar ostrich quail one excited dear hello and bound and the and bland moral misheard
                                             roadrunner “
                                         </blockquote>
 
                                         <div class="profile-card">
                                             <figure class="profile-banner img-holder">
-                                                <img src="images/blogs/author-6.png" width="32" height="32"
-                                                    loading="lazy" alt="Jane Cooper">
+                                                <img src="images/blogs/author-6.png" width="32" height="32" loading="lazy" alt="Jane Cooper">
                                             </figure>
 
                                             <div>
@@ -962,15 +881,13 @@
                                     <div class="comment-card">
 
                                         <blockquote class="card-text">
-                                            “ Gosh jaguar ostrich quail one excited dear hello and bound and the and
-                                            bland moral misheard
+                                            “ Gosh jaguar ostrich quail one excited dear hello and bound and the and bland moral misheard
                                             roadrunner “
                                         </blockquote>
 
                                         <div class="profile-card">
                                             <figure class="profile-banner img-holder">
-                                                <img src="images/blogs/author-7.png" width="32" height="32"
-                                                    loading="lazy" alt="Katen Doe">
+                                                <img src="images/blogs/author-7.png" width="32" height="32" loading="lazy" alt="Katen Doe">
                                             </figure>
 
                                             <div>
@@ -987,15 +904,13 @@
                                     <div class="comment-card">
 
                                         <blockquote class="card-text">
-                                            “ Gosh jaguar ostrich quail one excited dear hello and bound and the and
-                                            bland moral misheard
+                                            “ Gosh jaguar ostrich quail one excited dear hello and bound and the and bland moral misheard
                                             roadrunner “
                                         </blockquote>
 
                                         <div class="profile-card">
                                             <figure class="profile-banner img-holder">
-                                                <img src="images/blogs/author-8.png" width="32" height="32"
-                                                    loading="lazy" alt="Barbara Cartland">
+                                                <img src="images/blogs/author-8.png" width="32" height="32" loading="lazy" alt="Barbara Cartland">
                                             </figure>
 
                                             <div>
@@ -1046,15 +961,14 @@
                         </div>
 
                         <p class="footer-text">
-                            This is blog website module that you see diffrent diffrent cate posts ,we hope you like this
-                            , and enjoy this when you read .
+                            This is blog website module that you see diffrent diffrent cate posts ,we hope you like this , and enjoy this when you read .
                         </p>
 
                         <p class="footer-list-title">Made by :</p>
 
                         <address class="footer-text address">
                             xt9develeopers <br>
-                            Gujarat, India
+                            Gujarat, India 
                         </address>
 
                     </div>
@@ -1081,9 +995,9 @@
                                 <a href="#" class="footer-link hover-2">Canada</a>
                             </li>
 
+                           
 
-
-
+                          
 
                             <li>
                                 <a href="#" class="footer-link hover-2">Design</a>
@@ -1106,20 +1020,17 @@
                         <p class="footer-list-title">Newsletter</p>
 
                         <p class="footer-text">
-                            Sign up to be first to receive the latest stories inspiring us, case studies, and intersting
-                            things.
+                            Sign up to be first to receive the latest stories inspiring us, case studies, and intersting things.
                         </p>
 
                         <div class="input-wrapper">
-                            <input type="text" name="name" placeholder="Your name" required class="input-field"
-                                autocomplete="off">
+                            <input type="text" name="name" placeholder="Your name" required class="input-field" autocomplete="off">
 
                             <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
                         </div>
 
                         <div class="input-wrapper">
-                            <input type="email" name="email_address" placeholder="Emaill address" required
-                                class="input-field" autocomplete="off">
+                            <input type="email" name="email_address" placeholder="Emaill address" required class="input-field" autocomplete="off">
 
                             <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
                         </div>
@@ -1147,7 +1058,7 @@
     - #BACK TO TOP
   -->
 
-    <?php include 'top_up.php'; ?>
+ <?php include 'top_up.php'; ?>
 
 
 
@@ -1164,36 +1075,5 @@
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 </body>
-<script>
-function likePost(item, user) {
-    $.ajax({
-        url: "review.php",
-        type: "POST",
-        data: {
-            "review": "like",
-            "item": item,
-            "user": user
-        },
-        success : (resp) => {
-            $("#itemlist").load(location.href + " #itemlist");
-        }
-    });
-}
-
-function unlikePost(item, user) {
-    $.ajax({
-        url: "review.php",
-        type: "POST",
-        data: {
-            "review": "unlike",
-            "item": item,
-            "user": user
-        },
-        success : (resp) => {
-            $("#itemlist").load(location.href + " #itemlist");
-        }
-    });
-}
-</script>
 
 </html>
