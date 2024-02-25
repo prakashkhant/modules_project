@@ -10,7 +10,6 @@ class DB
     // checking session if not present not access any pages
     function session_check()
     {
-
         session_start();
         if (empty($_SESSION['username']) || $_SESSION['username'] == '') {
             header("Location: login_regs.php");
@@ -156,7 +155,7 @@ class DB
                     if ($row['username'] === $uname && $row['password'] === $pass) {
                         $_SESSION['username'] = $row['username'];
                         // $_SESSION['name'] = $row['name'];
-                        $_SESSION['id'] = $row['id'];
+                        $_SESSION['id'] = $row['uid'];
 
                         header("Location: index.php");
 
