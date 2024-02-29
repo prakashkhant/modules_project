@@ -1,4 +1,6 @@
-<?php include 'layouts/index_top.php' ?>
+<?php
+
+include 'layouts/index_top.php' ?>
 
 
 <main id="main">
@@ -45,105 +47,24 @@
             </div>
         </div>
         <div class="hotcards flex">
-            <div class="hcard">
-                <a href="entertainment_home.php">
-                    <img src="images/food.jpg" alt="" width="400px" height="300px">
-                    <div class="hdetails">
-                        <div class="hdetail">
-                            <h4>Entertainments</h4>
-                            <p>5 Articles</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="hcard">
-                <a href="/">
-                    <img src="images/food.jpg" alt="" width="400px" height="300px">
-                    <div class="hdetails">
-                        <div class="hdetail">
-                            <h4>food</h4>
-                            <p>receipe</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="hcard">
-                <a href="/">
-                    <img src="images/furniture.jpg" alt="" width="400px" height="300px">
-                    <div class="hdetails">
-                        <div class="hdetail">
-                            <h4>food</h4>
-                            <p>receipe</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="hcard">
-                <a href="/">
-                    <img src="images/interior.jpg" alt="" width="400px" height="300px">
-                    <div class="hdetails">
-                        <div class="hdetail">
-                            <h4>food</h4>
-                            <p>receipe</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="hcard">
-                <a href="/">
-                    <img src="images/gimbap.jpg" alt="" width="400px" height="300px">
-                    <div class="hdetails">
-                        <div class="hdetail">
-                            <h4>food</h4>
-                            <p>receipe</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="hcard">
-                <a href="/">
-                    <img src="images/gimbap.jpg" alt="" width="400px" height="300px">
-                    <div class="hdetails">
-                        <div class="hdetail">
-                            <h4>food</h4>
-                            <p>receipe</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="hcard">
-                <a href="/">
-                    <img src="images/gimbap.jpg" alt="" width="400px" height="300px">
-                    <div class="hdetails">
-                        <div class="hdetail">
-                            <h4>food</h4>
-                            <p>receipe</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="hcard">
-                <a href="/">
-                    <img src="images/gimbap.jpg" alt="" width="400px" height="300px">
-                    <div class="hdetails">
-                        <div class="hdetail">
-                            <h4>food</h4>
-                            <p>receipe</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="hcard">
-                <a href="/">
-                    <img src="images/gimbap.jpg" alt="" width="400px" height="300px">
-                    <div class="hdetails">
-                        <div class="hdetail">
-                            <h4>food</h4>
-                            <p>receipe</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
+            <?php
+            $ml = $db->fetch_modules_list();
+            foreach ($ml as $ml) {
+                echo "
+    <div class='hcard'>
+  <a href='entertainment_home.php'>
+      <img src='images/" . $ml["photo"] . "' alt='' width='400px' height='300px'>
+      <div class='hdetails'>
+          <div class='hdetail'>
+              <h4>" . $ml["module_name"] . "</h4>
+              <p>5 Articles</p>
+          </div>
+      </div>
+  </a>
+</div>
+    ";
+            }
+            ?>
         </div>
     </section>
     <!-- </section>  -->
@@ -154,175 +75,53 @@
         <p>Featured and highly rated articles</p>
     </div>
     <section class="editorcards container flex">
-        <div class="edcard">
-            <a href="/">
-                <img src="images/food.jpg" alt="" width="400px" height="300px">
-                <div class="edcarddet1">
-                    <div class="tegtime flex">
-                        <h5>#food</h5>
-                        <h5 class="flex">
-                            <i class="fa-solid fa-clock"></i>
-                            <span>5</span>mins rated
-                        </h5>
-                    </div>
 
 
-                    <!-- </a> -->
-                    <!-- </div> -->
-                    <a href="/">
-                        <h2>Welcome to Hub for intresting Blogs</h2>
-                    </a>
-
-                    <div class="postby flex">
-                        <div class="author-box flex">
-                            <img src="images/author.png" alt="">
-                            <div class="authoname">
-                                <h4>Coder</h4>
-                                <span>03 sep 2023</span>
-                            </div>
-                        </div>
-
-                        <a href="/" class="readmore"><span>Read More</span></a>
-                    </div>
+        <?php
+        $bd = $db->fetch_random_items_by_module(2);
+        $i = 1;
+        foreach ($bd as $bd) {
+            if ($i > 5) {
+                break;
+            }
+            echo "<div class='edcard'>
+        <a href='/'>
+            <img src='images/blogs/" . $bd["photopath"] . "' alt='' width='400px' height='300px'>
+            <div class='edcarddet1'>
+                <div class='tegtime flex'>
+                    <h5>#food</h5>
+                    <h5 class='flex'>
+                        <i class='fa-solid fa-clock'></i>
+                        <span>" . $bd["time"] . "</span>mins rated
+                    </h5>
                 </div>
-            </a>
-        </div>
-
-        <div class="edcard">
-            <a href="/">
-                <img src="images/food.jpg" alt="" width="400px" height="300px">
-                <div class="edcarddet1">
-                    <div class="tegtime flex">
-                        <h5>#food</h5>
-                        <h5 class="flex">
-                            <i class="fa-solid fa-clock"></i>
-                            <span>5</span>mins rated
-                        </h5>
-                    </div>
-
-
-                    <!-- </a> -->
-                    <!-- </div> -->
-                    <a href="/">
-                        <h2>Welcome to Hub for intresting Blogs</h2>
-                    </a>
-
-                    <div class="postby flex">
-                        <div class="author-box flex">
-                            <img src="images/author.png" alt="">
-                            <div class="authoname">
-                                <h4>Coder</h4>
-                                <span>03 sep 2023</span>
-                            </div>
+      
+      
+                <!-- </a> -->
+                <!-- </div> -->
+                <a href='/'>
+                    <h2>" . $bd["title"] . "</h2>
+                </a>
+      
+                <div class='postby flex'>
+                    <div class='author-box flex'>
+                        <img src='images/author.png' alt=''>
+                        <div class='authoname'>
+                            <h4>" . $bd["publish_by"] . "</h4>
+                            <span>" . $bd["publish_date"] . "</span>
                         </div>
-
-                        <a href="/" class="readmore"><span>Read More</span></a>
                     </div>
+      
+                    <a href='/' class='readmore'><span>Read More</span></a>
                 </div>
-            </a>
-        </div>
-
-        <div class="edcard">
-            <a href="/">
-                <img src="images/food.jpg" alt="" width="400px" height="300px">
-                <div class="edcarddet1">
-                    <div class="tegtime flex">
-                        <h5>#food</h5>
-                        <h5 class="flex">
-                            <i class="fa-solid fa-clock"></i>
-                            <span>5</span>mins rated
-                        </h5>
-                    </div>
+            </div>
+        </a>
+      </div>";
+            $i++;
+        }
+        ?>
 
 
-                    <!-- </a> -->
-                    <!-- </div> -->
-                    <a href="/">
-                        <h2>Welcome to Hub for intresting Blogs</h2>
-                    </a>
-
-                    <div class="postby flex">
-                        <div class="author-box flex">
-                            <img src="images/author.png" alt="">
-                            <div class="authoname">
-                                <h4>Coder</h4>
-                                <span>03 sep 2023</span>
-                            </div>
-                        </div>
-
-                        <a href="/" class="readmore"><span>Read More</span></a>
-                    </div>
-                </div>
-            </a>
-        </div>
-
-        <div class="edcard">
-            <a href="/">
-                <img src="images/food.jpg" alt="" width="400px" height="300px">
-                <div class="edcarddet1">
-                    <div class="tegtime flex">
-                        <h5>#food</h5>
-                        <h5 class="flex">
-                            <i class="fa-solid fa-clock"></i>
-                            <span>5</span>mins rated
-                        </h5>
-                    </div>
-
-
-                    <!-- </a> -->
-                    <!-- </div> -->
-                    <a href="/">
-                        <h2>Welcome to Hub for intresting Blogs</h2>
-                    </a>
-
-                    <div class="postby flex">
-                        <div class="author-box flex">
-                            <img src="images/author.png" alt="">
-                            <div class="authoname">
-                                <h4>Coder</h4>
-                                <span>03 sep 2023</span>
-                            </div>
-                        </div>
-
-                        <a href="/" class="readmore"><span>Read More</span></a>
-                    </div>
-                </div>
-            </a>
-        </div>
-
-        <div class="edcard">
-            <a href="/">
-                <img src="images/food.jpg" alt="" width="400px" height="300px">
-                <div class="edcarddet1">
-                    <div class="tegtime flex">
-                        <h5>#food</h5>
-                        <h5 class="flex">
-                            <i class="fa-solid fa-clock"></i>
-                            <span>5</span>mins rated
-                        </h5>
-                    </div>
-
-
-                    <!-- </a> -->
-                    <!-- </div> -->
-                    <a href="/">
-                        <h2>Welcome to Hub for intresting Blogs</h2>
-                    </a>
-
-                    <div class="postby flex">
-                        <div class="author-box flex">
-                            <img src="images/author.png" alt="">
-                            <div class="authoname">
-                                <h4>Coder</h4>
-                                <span>03 sep 2023</span>
-                            </div>
-                        </div>
-
-                        <a href="/" class="readmore"><span>Read More</span></a>
-                    </div>
-                </div>
-            </a>
-        </div>
         <div class="showmorepost flex">
             <a href="/">Show More Posts <i class="fa-solid fa-arrow-right"></i></a>
         </div>
@@ -333,23 +132,45 @@
         <img src="images/contactus.jpg" alt="">
     </div>
     <div class="bigtitle container ">
-        <h2 class="textcolor">Popular Tegs</h2>
-        <p>Most searched keywords</p>
+        <h2 class="textcolor">Popular Programming Languages</h2>
+
     </div>
 
     <div class="tegsec container flex">
-        <a href="/"><img src="images/business.png" alt="">Business</a>
-        <a href="/"><img src="images/nature.png" alt="">Nature</a>
-        <a href="/"><img src="images/plant.png" alt="">Plant</a>
-        <a href="/"><img src="images/interior.png" alt="">Interior</a>
-        <a href="/"><img src="images/minimal.png" alt="">Minimal</a>
-        <a href="/"><img src="images/animal.png" alt="">Animal</a>
-        <a href="/"><img src="images/space.png" alt="">Space</a>
-        <a href="/"><img src="images/food.png" alt="">Food</a>
-        <a href="/"><img src="images/fashion.png" alt="">Fsahion</a>
-        <a href="/"><img src="images/lifestyle.png" alt="">Lifestyle</a>
-        <a href="/"><img src="images/culture.png" alt="">Culture</a>
-        <a href="/"><img src="images/travel.png" alt="">Travel</a>
+        <?php
+        $pl = $db->fetch_category_list(4);
+
+        foreach ($pl as $pl) {
+            $item_id = $db->fetch_items_list($pl["cat_id"]);
+            foreach ($item_id as $ci) {
+
+                echo "<a href='pro_single.php?id=" . $ci["id"] . "&c=" . $pl["cat_id"] . "'><img src='images/programming/" . $pl["cat_photo"] . "' alt=''>" . $pl["cat_name"] . "</a>";
+                break;
+            }
+        }
+        ?>
+
+        <!-- <a href="/"><img src="images/nature.png" alt="">Nature</a> -->
+
+    </div>
+    <div class="bigtitle container ">
+        <h2 class="textcolor">Popular Native Languages</h2>
+        <!-- <p>Most searched keywords</p> -->
+    </div>
+
+    <div class="tegsec container flex">
+        <?php
+        $pl = $db->fetch_category_list(3);
+
+        foreach ($pl as $pl) {
+            $item_id = $db->fetch_items_list($pl["cat_id"]);
+            foreach ($item_id as $ci) {
+
+                echo "<a href='pro_single.php?id=" . $ci["id"] . "&c=" . $pl["cat_id"] . "'><img src='images/language/" . $pl["cat_photo"] . "' alt=''>" . $pl["cat_name"] . "</a>";
+                break;
+            }
+        }
+        ?>
     </div>
 
     <!-- recentpost section -->
@@ -357,149 +178,56 @@
     <section class="recentpostsec container flex">
         <div class="recentposts">
             <div class="bigtitle">
-                <h2 class="textcolor">Popular Tegs</h2>
-                <p>Most searched keywords</p>
+                <h2 class="textcolor">Popular Programming Blogs</h2>
+
             </div>
             <div class="posts">
-                <div class="post flex">
-                    <a href="/">
-                        <img src="images/nature-card.jpg" alt="">
-                    </a>
-                    <div class="postdetails">
-                        <div class="postlabel">
-                            <a href="/">Nature</a>
-                        </div>
-                        <a href="/">
-                            <h2>Best ways for growing environment at home</h2>
-                        </a>
-                        <p>take small but impactful steps towards environmental stewardship and sustainability
-                            within the comfort of your own home, contribuiting to a planet</p>
-                        <div class="posttimeteg flex">
-                            <div class="flex">
-                                <h5><span>#</span>Travel</h5>
-                                <h5><span>$</span>Lifestyle</h5>
-                            </div>
-                            <div class="tegtime">
-                                <h5 class="flex">
-                                    <i class="fa-regular fa-clock"></i>
-                                    <span>5</span>mins read
-                                </h5>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <?php
 
-                <div class="post flex">
-                    <a href="/">
-                        <img src="images/nature-card.jpg" alt="">
-                    </a>
-                    <div class="postdetails">
-                        <div class="postlabel">
-                            <a href="/">Nature</a>
-                        </div>
-                        <a href="/">
-                            <h2>Best ways for growing environment at home</h2>
-                        </a>
-                        <p>take small but impactful steps towards environmental stewardship and sustainability
-                            within the comfort of your own home, contribuiting to a planet</p>
-                        <div class="posttimeteg flex">
-                            <div class="flex">
-                                <h5><span>#</span>Travel</h5>
-                                <h5><span>$</span>Lifestyle</h5>
-                            </div>
-                            <div class="tegtime">
-                                <h5 class="flex">
-                                    <i class="fa-regular fa-clock"></i>
-                                    <span>5</span>mins read
-                                </h5>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                $data = $db->fetch_random_items_by_module(4);
+                // print_r($data);
+                $count = 0;
+                foreach ($data as $d) {
+                    $count += 1;
+                    if ($count == 7) {
+                        break;
+                    }
+                    $lang_name = $db->find_category_name($d["category"]);
+                    foreach ($lang_name as $l_name) {
+                        echo "
+        
+<div class='post flex'>
+<a href='pro_single.php?id=" . $d["id"] . "&name=" . $l_name["cat_name"] . "&c=" . $d["category"] . "'>
+    <img src='images/programming/" . $d["photopath"] . "' alt=''>
+</a>
+<div class='postdetails'>
+    <div class='postlabel'>
+        <a href=''>" . $l_name["cat_name"] . "</a>
+    </div>
+    <a href='/'>
+        <h2> " . $d["title"] . "</h2>
+    </a>
+    <p>  " . nl2br($d["description"]) . "</p>
+    <div class='posttimeteg flex'>
+        <div class='flex'>
+            <h5><span>#</span>Travel</h5>
+            <h5><span>$</span>Lifestyle</h5>
+        </div>
+        <div class='tegtime'>
+            <h5 class='flex'>
+                <i class='fa-regular fa-clock'></i>
+                <span>5</span>mins read
+            </h5>
+        </div>
+    </div>
+</div>
+</div>
+";
+                    }
+                }
+                ?>
 
-                <div class="post flex">
-                    <a href="/">
-                        <img src="images/nature-card.jpg" alt="">
-                    </a>
-                    <div class="postdetails">
-                        <div class="postlabel">
-                            <a href="/">Nature</a>
-                        </div>
-                        <a href="/">
-                            <h2>Best ways for growing environment at home</h2>
-                        </a>
-                        <p>take small but impactful steps towards environmental stewardship and sustainability
-                            within the comfort of your own home, contribuiting to a planet</p>
-                        <div class="posttimeteg flex">
-                            <div class="flex">
-                                <h5><span>#</span>Travel</h5>
-                                <h5><span>$</span>Lifestyle</h5>
-                            </div>
-                            <div class="tegtime">
-                                <h5 class="flex">
-                                    <i class="fa-regular fa-clock"></i>
-                                    <span>5</span>mins read
-                                </h5>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="post flex">
-                    <a href="/">
-                        <img src="images/nature-card.jpg" alt="">
-                    </a>
-                    <div class="postdetails">
-                        <div class="postlabel">
-                            <a href="/">Nature</a>
-                        </div>
-                        <a href="/">
-                            <h2>Best ways for growing environment at home</h2>
-                        </a>
-                        <p>take small but impactful steps towards environmental stewardship and sustainability
-                            within the comfort of your own home, contribuiting to a planet</p>
-                        <div class="posttimeteg flex">
-                            <div class="flex">
-                                <h5><span>#</span>Travel</h5>
-                                <h5><span>$</span>Lifestyle</h5>
-                            </div>
-                            <div class="tegtime">
-                                <h5 class="flex">
-                                    <i class="fa-regular fa-clock"></i>
-                                    <span>5</span>mins read
-                                </h5>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="post flex">
-                    <a href="/">
-                        <img src="images/nature-card.jpg" alt="">
-                    </a>
-                    <div class="postdetails">
-                        <div class="postlabel">
-                            <a href="/">Nature</a>
-                        </div>
-                        <a href="/">
-                            <h2>Best ways for growing environment at home</h2>
-                        </a>
-                        <p>take small but impactful steps towards environmental stewardship and sustainability
-                            within the comfort of your own home, contribuiting to a planet</p>
-                        <div class="posttimeteg flex">
-                            <div class="flex">
-                                <h5><span>#</span>Travel</h5>
-                                <h5><span>$</span>Lifestyle</h5>
-                            </div>
-                            <div class="tegtime">
-                                <h5 class="flex">
-                                    <i class="fa-regular fa-clock"></i>
-                                    <span>5</span>mins read
-                                </h5>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
         <div class="postslider">
@@ -627,65 +355,26 @@
 
             </div>
             <div class=" aside-card insta-card popularposts">
-            <div class="poptitle">
+                <div class="poptitle">
                     <h3>Photos Gallery</h3>
                 </div>
 
                 <ul class="insta-list">
-
-                    <li>
-                        <a href="photo_single.php" class="insta-post img-holder" style="--width: 276; --height: 277;">
-                            <img src="images/photo/hot3.jpg" width="100px" height="100px" loading="lazy" alt="insta post" class="img-cover">
+                    <?php $data = $db->fetch_random_items_by_module(5);
+                    // print_r($data);
+                    $count = 0;
+                    foreach ($data as $d) {
+                        $count += 1;
+                        if ($count == 13) {
+                            break;
+                        }
+                        echo "<li>
+                        <a href='photo_single.php' class='insta-post img-holder' style='--width: 276; --height: 277;'>
+                            <img src='images/photo/".$d["photopath"]."' width='100px' height='100px' loading='lazy' alt='insta post' class='img-cover'>
                         </a>
-                    </li>
-
-                    <li>
-                        <a href="photo_single.php" class="insta-post img-holder" style="--width: 276; --height: 277;">
-                            <img src="images/photo/hot4.jpg" width="100px" height="100px" loading="lazy" alt="insta post" class="img-cover">
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="photo_single.php" class="insta-post img-holder" style="--width: 276; --height: 277;">
-                            <img src="images/photo/hot1.jpg" width="100px" height="100px" loading="lazy" alt="insta post" class="img-cover">
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="photo_single.php" class="insta-post img-holder" style="--width: 276; --height: 277;">
-                            <img src="images/photo/hot2.jpg" width="100px" height="100px" loading="lazy" alt="insta post" class="img-cover">
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="photo_single.php" class="insta-post img-holder" style="--width: 276; --height: 277;">
-                            <img src="images/photo/hot3.jpg" width="100px" height="100px" loading="lazy" alt="insta post" class="img-cover">
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#" class="insta-post img-holder" style="--width: 276; --height: 277;">
-                            <img src="images/photo/hot3.jpg" width="100px" height="100px" loading="lazy" alt="insta post" class="img-cover">
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#" class="insta-post img-holder" style="--width: 276; --height: 277;">
-                            <img src="images/photo/hot4.jpg"width="100px" height="100px" loading="lazy" alt="insta post" class="img-cover">
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#" class="insta-post img-holder" style="--width: 276; --height: 277;">
-                            <img src="images/photo/hot2.jpg" width="100px" height="100px" loading="lazy" alt="insta post" class="img-cover">
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#" class="insta-post img-holder" style="--width: 276; --height: 277;">
-                            <img src="images/photo/hot1.jpg" width="100px" height="100px" loading="lazy" alt="insta post" class="img-cover">
-                        </a>
-                    </li>
+                    </li>";
+                    } ?>
+                    
 
                 </ul>
 

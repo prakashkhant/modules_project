@@ -23,10 +23,9 @@
         <section class="about">
             <div class="about-image">
                 <img src="images/about.jpeg" alt="">
-                <div class="hidden">
-                <img src="images/about.jpeg" alt="">
-                </div>
+                
             </div>
+           
             <div class="about-content">
                 <h2>Our Best Part</h2>
                 <p>Nexushub is a dynamic and multifaceted online platform that stands at the intersection of technology
@@ -66,16 +65,16 @@ As we evolve, Nexushub remains committed to providing a seamless and enriching e
         function showHiddenContent(button) {
             // Get the parent element of the button
             var parentElement = button.parentElement;
-
+            
             // Hide the "Read More" button
             button.style.display = 'none';
 
             // Get the hidden content
             var hiddenContent = parentElement.querySelector('.hidden');
-
+            //var aboutdata= parentElement.querySelector('about-image');
             // Make the hidden content visible
             hiddenContent.style.display = 'block';
-            
+            //aboutdata.style.display = 'none';
         }
     </script>
 </body>

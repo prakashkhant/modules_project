@@ -54,6 +54,15 @@ class DB
             return $this->fetchData($query);
         }
     }
+    function fetch_random_items_by_module($mid)
+    {
+        if ($this->connect_DB()) {
+            $query = "SELECT * FROM `item` WHERE `module_id`=$mid ORDER BY RAND()
+            LIMIT 80";
+
+            return $this->fetchData($query);
+        }
+    }
 
     function populate_item_content($pid)
     {
@@ -180,17 +189,18 @@ class DB
     {
         if ($this->connect_DB()) {
 
-
+            if (isset($_POST['username']) && isset($_POST['email']) && isset($_POST['password']))
+             {
             $uname = $_POST["username"];
             $email = $_POST["email"];
             $pass = $_POST["password"];
-            // echo " .$fname .$uname. $email . $phone .$pass . $cpass.$gender";
+             echo " $uname. $email  .$pass ";
 
             $sql = "INSERT INTO userdetails (username,password,email) VALUES('$uname','$pass','$email')";
             //echo $sql;
             if (mysqli_query($this->conn, $sql)) {
-                echo "successfull";
-                header("Location: login_regs.php");
+                echo "<script type='text/JavaScript'>alert('successfull')</script>";
+                // header("Location: login_regs.php");
 
                 exit();
             } else {
@@ -198,7 +208,7 @@ class DB
             }
         } else {
             echo "error detected";
-        }
+        }}
     }
 
     // database actions    

@@ -33,7 +33,7 @@
             <div class="navlist flex">
                 <ul class="flex">
                     <li><a href="index.php" class="liactive">Home</a></li>
-                    <li><a href="">About Me</a></li>
+                    <li><a href="about.php">About Me</a></li>
                     <li><a href="language_home.php">Native Languages<i class="fa-solid fa-sort-down"></i></a></li>
                     <li><a href="blogs_home.php">Blogs<i class="fa-solid fa-sort-down"></i></a></li>
                     <li><a href="entertainment_home.php">Entertaiments<i class="fa-solid fa-sort-down"></i></a></li>
