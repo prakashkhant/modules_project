@@ -1,7 +1,7 @@
-<?php       include './database/db.php';
-                $db = new DB();
-                $db->session_check();
-                ?>
+<?php include './database/db.php';
+$db = new DB();
+$db->session_check();
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -148,7 +148,7 @@
 
             </nav>
 
-            <?php 
+            <?php
             $db->login_dashboard();
             ?>
 
@@ -493,7 +493,7 @@
     - #FOOTER
   -->
 
-  <footer>
+    <footer>
         <div class="container">
 
             <div class="card footer">
@@ -519,7 +519,7 @@
 
                         <address class="footer-text address">
                             xt9develeopers <br>
-                            Gujarat, India 
+                            Gujarat, India
                         </address>
 
                     </div>
@@ -546,9 +546,9 @@
                                 <a href="#" class="footer-link hover-2">Canada</a>
                             </li>
 
-                           
 
-                          
+
+
 
                             <li>
                                 <a href="#" class="footer-link hover-2">Design</a>

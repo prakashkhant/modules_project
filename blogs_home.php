@@ -1166,6 +1166,7 @@
 </body>
 <script>
 function likePost(item, user) {
+    console.log("Item : "+item+"\nUser :"+user);
     $.ajax({
         url: "review.php",
         type: "POST",

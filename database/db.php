@@ -10,7 +10,6 @@ class DB
     // checking session if not present not access any pages
     function session_check()
     {
-
         session_start();
         if (empty($_SESSION['username']) || $_SESSION['username'] == '') {
             header("Location: login_regs.php");
@@ -51,6 +50,15 @@ class DB
     {
         if ($this->connect_DB()) {
             $query = "SELECT * FROM `item` WHERE `module_id`=$mid ORDER BY `id` DESC";
+
+            return $this->fetchData($query);
+        }
+    }
+    function fetch_random_items_by_module($mid)
+    {
+        if ($this->connect_DB()) {
+            $query = "SELECT * FROM `item` WHERE `module_id`=$mid ORDER BY RAND()
+            LIMIT 80";
 
             return $this->fetchData($query);
         }
@@ -156,7 +164,7 @@ class DB
                     if ($row['username'] === $uname && $row['password'] === $pass) {
                         $_SESSION['username'] = $row['username'];
                         // $_SESSION['name'] = $row['name'];
-                        $_SESSION['id'] = $row['id'];
+                        $_SESSION['id'] = $row['uid'];
 
                         header("Location: index.php");
 
@@ -181,17 +189,18 @@ class DB
     {
         if ($this->connect_DB()) {
 
-
+            if (isset($_POST['username']) && isset($_POST['email']) && isset($_POST['password']))
+             {
             $uname = $_POST["username"];
             $email = $_POST["email"];
             $pass = $_POST["password"];
-            // echo " .$fname .$uname. $email . $phone .$pass . $cpass.$gender";
+             echo " $uname. $email  .$pass ";
 
             $sql = "INSERT INTO userdetails (username,password,email) VALUES('$uname','$pass','$email')";
             //echo $sql;
             if (mysqli_query($this->conn, $sql)) {
-                echo "successfull";
-                header("Location: login_regs.php");
+                echo "<script type='text/JavaScript'>alert('successfull')</script>";
+                // header("Location: login_regs.php");
 
                 exit();
             } else {
@@ -199,7 +208,7 @@ class DB
             }
         } else {
             echo "error detected";
-        }
+        }}
     }
 
     // database actions    
