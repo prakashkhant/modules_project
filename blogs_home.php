@@ -1,9 +1,9 @@
-<?php       
-    include './database/db.php';
-    $db = new DB();
-    session_start();
-    $db->session_check();
-    $db->connect_DB();
+<?php
+include './database/db.php';
+$db = new DB();
+
+$db->session_check();
+$db->connect_DB();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -31,10 +31,8 @@
   -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.7.1.js"
-        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 
 
     <!-- 
@@ -155,7 +153,7 @@
 
             </nav>
 
-            <?php 
+            <?php
             $db->login_dashboard();
             ?>
 
@@ -239,90 +237,34 @@
                         <div class="slider" data-slider>
                             <ul class="slider-list" data-slider-container>
 
-                                <li class="slider-item">
-                                    <a href="blogs_cate_single.php" class="slider-card">
+           
+                                <?php
+                                $cd = $db->fetch_category_list(2);
 
-                                        <figure class="slider-banner img-holder" style="--width: 507; --height: 618;">
-                                            <img src="images/blogs/topic-1.png" width="507" height="618" loading="lazy"
-                                                alt="Sport" class="img-cover">
-                                        </figure>
+                               
+                                foreach ($cd as $cd) {
+                               
 
-                                        <div class="slider-content">
-                                            <span class="slider-title">Sport</span>
-
-                                            <p class="slider-subtitle">38 Articles</p>
-                                        </div>
-
-                                    </a>
-                                </li>
-
-                                <li class="slider-item">
-                                    <a href="blogs_cate_single.php" class="slider-card">
-
-                                        <figure class="slider-banner img-holder" style="--width: 507; --height: 618;">
-                                            <img src="images/blogs/topic-2.png" width="507" height="618" loading="lazy"
-                                                alt="Travel" class="img-cover">
-                                        </figure>
-
-                                        <div class="slider-content">
-                                            <span class="slider-title">Travel</span>
-
-                                            <p class="slider-subtitle">63 Articles</p>
-                                        </div>
-
-                                    </a>
-                                </li>
-
-                                <li class="slider-item">
-                                    <a href="blogs_cate_single.php" class="slider-card">
-
-                                        <figure class="slider-banner img-holder" style="--width: 507; --height: 618;">
-                                            <img src="images/blogs/topic-3.png" width="507" height="618" loading="lazy"
-                                                alt="Design" class="img-cover">
-                                        </figure>
-
-                                        <div class="slider-content">
-                                            <span class="slider-title">Design</span>
-
-                                            <p class="slider-subtitle">78 Articles</p>
-                                        </div>
-
-                                    </a>
-                                </li>
-
-                                <li class="slider-item">
-                                    <a href="blogs_cate_single.php" class="slider-card">
-
-                                        <figure class="slider-banner img-holder" style="--width: 507; --height: 618;">
-                                            <img src="images/blogs/topic-4.png" width="507" height="618" loading="lazy"
-                                                alt="Movie" class="img-cover">
-                                        </figure>
-
-                                        <div class="slider-content">
-                                            <span class="slider-title">Movie</span>
-
-                                            <p class="slider-subtitle">125 Articles</p>
-                                        </div>
-
-                                    </a>
-                                </li>
-
-                                <li class="slider-item">
-                                    <a href="blogs_cate_single.php" class="slider-card">
-
-                                        <figure class="slider-banner img-holder" style="--width: 507; --height: 618;">
-                                            <img src="images/blogs/topic-5.png" width="507" height="618" loading="lazy"
-                                                alt="Lifestyle" class="img-cover">
-                                        </figure>
-
-                                        <div class="slider-content">
-                                            <span class="slider-title">Lifestyle</span>
-
-                                            <p class="slider-subtitle">78 Articles</p>
-                                        </div>
-
-                                    </a>
-                                </li>
+                                        echo "
+                                        <li class='slider-item'>
+                                        <a href='blogs_cate_single.php?c=".$cd["cat_id"]."' class='slider-card'>
+                                    
+                                            <figure class='slider-banner img-holder' style='--width: 507; --height: 618;'>
+                                                <img src='images/blogs/".$cd["cat_photo"]."' width='507' height='618' loading='lazy'
+                                                    alt='Sport' class='img-cover'>
+                                            </figure>
+                                    
+                                            <div class='slider-content'>
+                                                <span class='slider-title'>".$cd["cat_name"]."</span>
+                                    
+                                                <p class='slider-subtitle'>38 Articles</p>
+                                            </div>
+                                    
+                                        </a>
+                                    </li> 
+                                     ";
+                                }
+                                ?>
 
                             </ul>
                         </div>
@@ -352,302 +294,95 @@
                     </p>
 
                     <ul class="feature-list" id="itemlist">
-                        <?php 
-                        $res = $db->fetch_items_by_module(2);
-                        $i=0;
-                        foreach($res as $r){ 
-                            if($i < 5){?>
-                        <li>
-                            <div class="card feature-card">
-
-                                <figure class="card-banner img-holder" style="--width: 1602; --height: 903;">
-                                    <img src="images/blogs/<?php echo $r["photopath"] ?>" width="1602" height="903"
-                                        loading="lazy" alt="Self-observation is the first step of inner unfolding"
-                                        class="img-cover">
-                                </figure>
-
-                                <div class="card-content">
-
-                                    <div class="card-wrapper">
-                                        <div class="card-tag">
-                                            <?php
-                                                $itemid = $r["id"];
-                                                $uid = 0;
-                                                if(isset($_SESSION["id"])){
-                                                    $uid = $_SESSION["id"];
-                                                }
-                                                
-                                                $sql = mysqli_query($db->conn, "SELECT flc_id FROM review WHERE item_id = $itemid AND uid = $uid AND liked = 1");
-                                                if(mysqli_num_rows($sql) > 0){ ?>
-                                            <button class="likeBtn" id="like<?php echo $r['id'] ?>"
-                                                onclick="unlikePost(<?php echo $itemid ?>, <?php echo $uid ?>)">
-                                                <i class="fa-solid fa-heart"></i>
-                                            </button>
-                                            <?php } else { ?>
-                                            <button class="likeBtn" id="like<?php echo $r['id'] ?>"
-                                                onclick="likePost(<?php echo $itemid ?>, <?php echo $uid ?>)">
-                                                <i class="fa-regular fa-heart"></i>
-                                            </button>
-                                            <?php
-                                            }
-                                            $sql = mysqli_query($db->conn, "SELECT flc_id FROM review WHERE item_id = $itemid AND liked = 1");
-                                                $likes = mysqli_num_rows($sql); ?>
-                                                <h6 class="likes"><?php echo $likes ?></h6>
-                                            <?php 
-                                            
-                                                $tags = [];
-                                                $tags = explode(",", $r["keywords"]);
-
-                                                foreach($tags as $key){ ?>
-                                            <a href="#" class="span hover-2">&#x23;<?php echo $key ?></a>
-                                            <?php    
-                                                }
-                                            ?>
-                                        </div>
-
-                                        <div class="wrapper">
-                                            <?php $time = date('i', strtotime($r["time"])) ?>
-                                            <span class="span"><i
-                                                    class="fa-regular fa-clock"></i>&nbsp;&nbsp;<?php echo $time ?> mins
-                                                read</span>
-                                        </div>
-                                    </div>
-
-                                    <h3 class="headline headline-3">
-                                        <a href="blogs_single.php" class="card-title hover-2">
-                                            <?php echo $r["title"] ?>
-                                        </a>
-                                    </h3>
-
-                                    <div class="card-wrapper">
-
-                                        <div class="profile-card">
-                                            <img src="images/blogs/author-1.png" width="48" height="48" loading="lazy"
-                                                alt="Joseph" class="profile-banner">
-
-                                            <div>
-                                                <p class="card-title"><?php echo $r["publish_by"] ?></p>
-                                                <?php $publish = date('d M, Y', strtotime($r["publish_date"])) ?>
-                                                <p class="card-subtitle"><?php echo $publish ?></p>
-                                            </div>
-                                        </div>
-
-                                        <a href="#" class="card-btn">Read this -></a>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-                        </li>
                         <?php
-                        $i++;
-                         }
+                        $res = $db->fetch_items_by_module(2);
+                        $i = 0;
+                        foreach ($res as $r) {
+                            if ($i < 5) { ?>
+                                <li>
+                                    <div class="card feature-card">
+
+                                        <figure class="card-banner img-holder" style="--width: 1602; --height: 903;">
+                                            <img src="images/blogs/<?php echo $r["photopath"] ?>" width="1602" height="903" loading="lazy" alt="Self-observation is the first step of inner unfolding" class="img-cover">
+                                        </figure>
+
+                                        <div class="card-content">
+
+                                            <div class="card-wrapper">
+                                                <div class="card-tag">
+                                                    <?php
+                                                    $itemid = $r["id"];
+                                                    $uid = 0;
+                                                    if (isset($_SESSION["id"])) {
+                                                        $uid = $_SESSION["id"];
+                                                    }
+
+                                                    $sql = mysqli_query($db->conn, "SELECT flc_id FROM review WHERE item_id = $itemid AND uid = $uid AND liked = 1");
+                                                    if (mysqli_num_rows($sql) > 0) { ?>
+                                                        <button class="likeBtn" id="like<?php echo $r['id'] ?>" onclick="unlikePost(<?php echo $itemid ?>, <?php echo $uid ?>)">
+                                                            <i class="fa-solid fa-heart"></i>
+                                                        </button>
+                                                    <?php } else { ?>
+                                                        <button class="likeBtn" id="like<?php echo $r['id'] ?>" onclick="likePost(<?php echo $itemid ?>, <?php echo $uid ?>)">
+                                                            <i class="fa-regular fa-heart"></i>
+                                                        </button>
+                                                    <?php
+                                                    }
+                                                    $sql = mysqli_query($db->conn, "SELECT flc_id FROM review WHERE item_id = $itemid AND liked = 1");
+                                                    $likes = mysqli_num_rows($sql); ?>
+                                                    <h6 class="likes"><?php echo $likes ?></h6>
+                                                    <?php
+
+                                                    $tags = [];
+                                                    $tags = explode(",", $r["keywords"]);
+
+                                                    foreach ($tags as $key) { ?>
+                                                        <a href="#" class="span hover-2">&#x23;<?php echo $key ?></a>
+                                                    <?php
+                                                    }
+                                                    ?>
+                                                </div>
+
+                                                <div class="wrapper">
+                                                    <?php $time = date('i', strtotime($r["time"])) ?>
+                                                    <span class="span"><i class="fa-regular fa-clock"></i>&nbsp;&nbsp;<?php echo $time ?> mins
+                                                        read</span>
+                                                </div>
+                                            </div>
+
+                                            <h3 class="headline headline-3">
+                                                <a href="blogs_single.php" class="card-title hover-2">
+                                                    <?php echo $r["title"] ?>
+                                                </a>
+                                            </h3>
+
+                                            <div class="card-wrapper">
+
+                                                <div class="profile-card">
+                                                    <img src="images/blogs/author-1.png" width="48" height="48" loading="lazy" alt="Joseph" class="profile-banner">
+
+                                                    <div>
+                                                        <p class="card-title"><?php echo $r["publish_by"] ?></p>
+                                                        <?php $publish = date('d M, Y', strtotime($r["publish_date"])) ?>
+                                                        <p class="card-subtitle"><?php echo $publish ?></p>
+                                                    </div>
+                                                </div>
+
+                                                <a href="#" class="card-btn">Read this -></a>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </li>
+                        <?php
+                                $i++;
+                            }
                         }
                         ?>
 
 
-
-                        <!-- 
-                        <li>
-                            <div class="card feature-card">
-
-                                <figure class="card-banner img-holder" style="--width: 1602; --height: 903;">
-                                    <img src="images/blogs/featured-2.png" width="1602" height="903" loading="lazy" alt="Self-observation is the first step of inner unfolding" class="img-cover">
-                                </figure>
-
-                                <div class="card-content">
-
-                                    <div class="card-wrapper">
-                                        <div class="card-tag">
-                                            <a href="#" class="span hover-2">#Design</a>
-
-                                            <a href="#" class="span hover-2">#Movie</a>
-                                        </div>
-
-                                        <div class="wrapper">
-                                            <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
-
-                                            <span class="span">6 mins read</span>
-                                        </div>
-                                    </div>
-
-                                    <h3 class="headline headline-3">
-                                        <a href="blogs_single.php" class="card-title hover-2">
-                                            Self-observation is the first step of inner unfolding
-                                        </a>
-                                    </h3>
-
-                                    <div class="card-wrapper">
-
-                                        <div class="profile-card">
-                                            <img src="images/blogs/author-1.png" width="48" height="48" loading="lazy" alt="Joseph" class="profile-banner">
-
-                                            <div>
-                                                <p class="card-title">Joseph</p>
-
-                                                <p class="card-subtitle">25 Nov 2022</p>
-                                            </div>
-                                        </div>
-
-                                        <a href="#" class="card-btn">Read this -></a>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-                        </li>
-
-                        <li>
-                            <div class="card feature-card">
-
-                                <figure class="card-banner img-holder" style="--width: 1602; --height: 903;">
-                                    <img src="images/blogs/featured-3.png" width="1602" height="903" loading="lazy" alt="Self-observation is the first step of inner unfolding" class="img-cover">
-                                </figure>
-
-                                <div class="card-content">
-
-                                    <div class="card-wrapper">
-                                        <div class="card-tag">
-                                            <a href="#" class="span hover-2">#Design</a>
-
-                                            <a href="#" class="span hover-2">#Movie</a>
-                                        </div>
-
-                                        <div class="wrapper">
-                                            <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
-
-                                            <span class="span">6 mins read</span>
-                                        </div>
-                                    </div>
-
-                                    <h3 class="headline headline-3">
-                                        <a href="#" class="card-title hover-2">
-                                            Self-observation is the first step of inner unfolding
-                                        </a>
-                                    </h3>
-
-                                    <div class="card-wrapper">
-
-                                        <div class="profile-card">
-                                            <img src="images/blogs/author-1.png" width="48" height="48" loading="lazy" alt="Joseph" class="profile-banner">
-
-                                            <div>
-                                                <p class="card-title">Joseph</p>
-
-                                                <p class="card-subtitle">25 Nov 2022</p>
-                                            </div>
-                                        </div>
-
-                                        <a href="#" class="card-btn">Read more</a>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-                        </li>
-
-                        <li>
-                            <div class="card feature-card">
-
-                                <figure class="card-banner img-holder" style="--width: 1602; --height: 903;">
-                                    <img src="images/blogs/featured-4.png" width="1602" height="903" loading="lazy" alt="Self-observation is the first step of inner unfolding" class="img-cover">
-                                </figure>
-
-                                <div class="card-content">
-
-                                    <div class="card-wrapper">
-                                        <div class="card-tag">
-                                            <a href="#" class="span hover-2">#Design</a>
-
-                                            <a href="#" class="span hover-2">#Movie</a>
-                                        </div>
-
-                                        <div class="wrapper">
-                                            <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
-
-                                            <span class="span">6 mins read</span>
-                                        </div>
-                                    </div>
-
-                                    <h3 class="headline headline-3">
-                                        <a href="#" class="card-title hover-2">
-                                            Self-observation is the first step of inner unfolding
-                                        </a>
-                                    </h3>
-
-                                    <div class="card-wrapper">
-
-                                        <div class="profile-card">
-                                            <img src="images/blogs/author-1.png" width="48" height="48" loading="lazy" alt="Joseph" class="profile-banner">
-
-                                            <div>
-                                                <p class="card-title">Joseph</p>
-
-                                                <p class="card-subtitle">25 Nov 2022</p>
-                                            </div>
-                                        </div>
-
-                                        <a href="#" class="card-btn">Read more</a>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-                        </li>
-
-                        <li>
-                            <div class="card feature-card">
-
-                                <figure class="card-banner img-holder" style="--width: 1602; --height: 903;">
-                                    <img src="images/blogs/featured-5.png" width="1602" height="903" loading="lazy" alt="Self-observation is the first step of inner unfolding" class="img-cover">
-                                </figure>
-
-                                <div class="card-content">
-
-                                    <div class="card-wrapper">
-                                        <div class="card-tag">
-                                            <a href="#" class="span hover-2">#Design</a>
-
-                                            <a href="#" class="span hover-2">#Movie</a>
-                                        </div>
-
-                                        <div class="wrapper">
-                                            <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
-
-                                            <span class="span">6 mins read</span>
-                                        </div>
-                                    </div>
-
-                                    <h3 class="headline headline-3">
-                                        <a href="#" class="card-title hover-2">
-                                            Self-observation is the first step of inner unfolding
-                                        </a>
-                                    </h3>
-
-                                    <div class="card-wrapper">
-
-                                        <div class="profile-card">
-                                            <img src="images/blogs/author-1.png" width="48" height="48" loading="lazy" alt="Joseph" class="profile-banner">
-
-                                            <div>
-                                                <p class="card-title">Joseph</p>
-
-                                                <p class="card-subtitle">25 Nov 2022</p>
-                                            </div>
-                                        </div>
-
-                                        <a href="#" class="card-btn">Read more</a>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-                        </li> -->
 
                     </ul>
 
@@ -690,9 +425,7 @@
                                 <div class="recent-post-card">
 
                                     <figure class="card-banner img-holder" style="--width: 271; --height: 258;">
-                                        <img src="images/blogs/recent-post-1.jpg" width="271" height="258"
-                                            loading="lazy" alt="Helpful Tips for Working from Home as a Freelancer"
-                                            class="img-cover">
+                                        <img src="images/blogs/recent-post-1.jpg" width="271" height="258" loading="lazy" alt="Helpful Tips for Working from Home as a Freelancer" class="img-cover">
                                     </figure>
 
                                     <div class="card-content">
@@ -733,9 +466,7 @@
                                 <div class="recent-post-card">
 
                                     <figure class="card-banner img-holder" style="--width: 271; --height: 258;">
-                                        <img src="images/blogs/recent-post-2.jpg" width="271" height="258"
-                                            loading="lazy" alt="Helpful Tips for Working from Home as a Freelancer"
-                                            class="img-cover">
+                                        <img src="images/blogs/recent-post-2.jpg" width="271" height="258" loading="lazy" alt="Helpful Tips for Working from Home as a Freelancer" class="img-cover">
                                     </figure>
 
                                     <div class="card-content">
@@ -776,9 +507,7 @@
                                 <div class="recent-post-card">
 
                                     <figure class="card-banner img-holder" style="--width: 271; --height: 258;">
-                                        <img src="images/blogs/recent-post-3.jpg" width="271" height="258"
-                                            loading="lazy" alt="Helpful Tips for Working from Home as a Freelancer"
-                                            class="img-cover">
+                                        <img src="images/blogs/recent-post-3.jpg" width="271" height="258" loading="lazy" alt="Helpful Tips for Working from Home as a Freelancer" class="img-cover">
                                     </figure>
 
                                     <div class="card-content">
@@ -819,9 +548,7 @@
                                 <div class="recent-post-card">
 
                                     <figure class="card-banner img-holder" style="--width: 271; --height: 258;">
-                                        <img src="images/blogs/recent-post-4.jpg" width="271" height="258"
-                                            loading="lazy" alt="Helpful Tips for Working from Home as a Freelancer"
-                                            class="img-cover">
+                                        <img src="images/blogs/recent-post-4.jpg" width="271" height="258" loading="lazy" alt="Helpful Tips for Working from Home as a Freelancer" class="img-cover">
                                     </figure>
 
                                     <div class="card-content">
@@ -862,9 +589,7 @@
                                 <div class="recent-post-card">
 
                                     <figure class="card-banner img-holder" style="--width: 271; --height: 258;">
-                                        <img src="images/blogs/recent-post-5.jpg" width="271" height="258"
-                                            loading="lazy" alt="Helpful Tips for Working from Home as a Freelancer"
-                                            class="img-cover">
+                                        <img src="images/blogs/recent-post-5.jpg" width="271" height="258" loading="lazy" alt="Helpful Tips for Working from Home as a Freelancer" class="img-cover">
                                     </figure>
 
                                     <div class="card-content">
@@ -944,8 +669,7 @@
 
                                         <div class="profile-card">
                                             <figure class="profile-banner img-holder">
-                                                <img src="images/blogs/author-6.png" width="32" height="32"
-                                                    loading="lazy" alt="Jane Cooper">
+                                                <img src="images/blogs/author-6.png" width="32" height="32" loading="lazy" alt="Jane Cooper">
                                             </figure>
 
                                             <div>
@@ -969,8 +693,7 @@
 
                                         <div class="profile-card">
                                             <figure class="profile-banner img-holder">
-                                                <img src="images/blogs/author-7.png" width="32" height="32"
-                                                    loading="lazy" alt="Katen Doe">
+                                                <img src="images/blogs/author-7.png" width="32" height="32" loading="lazy" alt="Katen Doe">
                                             </figure>
 
                                             <div>
@@ -994,8 +717,7 @@
 
                                         <div class="profile-card">
                                             <figure class="profile-banner img-holder">
-                                                <img src="images/blogs/author-8.png" width="32" height="32"
-                                                    loading="lazy" alt="Barbara Cartland">
+                                                <img src="images/blogs/author-8.png" width="32" height="32" loading="lazy" alt="Barbara Cartland">
                                             </figure>
 
                                             <div>
@@ -1111,15 +833,13 @@
                         </p>
 
                         <div class="input-wrapper">
-                            <input type="text" name="name" placeholder="Your name" required class="input-field"
-                                autocomplete="off">
+                            <input type="text" name="name" placeholder="Your name" required class="input-field" autocomplete="off">
 
                             <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
                         </div>
 
                         <div class="input-wrapper">
-                            <input type="email" name="email_address" placeholder="Emaill address" required
-                                class="input-field" autocomplete="off">
+                            <input type="email" name="email_address" placeholder="Emaill address" required class="input-field" autocomplete="off">
 
                             <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
                         </div>
@@ -1165,36 +885,36 @@
 
 </body>
 <script>
-function likePost(item, user) {
-    console.log("Item : "+item+"\nUser :"+user);
-    $.ajax({
-        url: "review.php",
-        type: "POST",
-        data: {
-            "review": "like",
-            "item": item,
-            "user": user
-        },
-        success : (resp) => {
-            $("#itemlist").load(location.href + " #itemlist");
-        }
-    });
-}
+    function likePost(item, user) {
+        console.log("Item : " + item + "\nUser :" + user);
+        $.ajax({
+            url: "review.php",
+            type: "POST",
+            data: {
+                "review": "like",
+                "item": item,
+                "user": user
+            },
+            success: (resp) => {
+                $("#itemlist").load(location.href + " #itemlist");
+            }
+        });
+    }
 
-function unlikePost(item, user) {
-    $.ajax({
-        url: "review.php",
-        type: "POST",
-        data: {
-            "review": "unlike",
-            "item": item,
-            "user": user
-        },
-        success : (resp) => {
-            $("#itemlist").load(location.href + " #itemlist");
-        }
-    });
-}
+    function unlikePost(item, user) {
+        $.ajax({
+            url: "review.php",
+            type: "POST",
+            data: {
+                "review": "unlike",
+                "item": item,
+                "user": user
+            },
+            success: (resp) => {
+                $("#itemlist").load(location.href + " #itemlist");
+            }
+        });
+    }
 </script>
 
 </html>

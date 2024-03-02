@@ -103,7 +103,7 @@ if (isset($_POST['sign-up'])) {
     include 'database/db.php';
 
     $db = new DB();
-   
+   $db->sign_up();
 }
 ?>
 

@@ -194,8 +194,17 @@ class DB
             $uname = $_POST["username"];
             $email = $_POST["email"];
             $pass = $_POST["password"];
-             echo " $uname. $email  .$pass ";
+           
+            $sl = "SELECT * FROM userdetails WHERE username='$uname' AND password='$pass'";
+            $result = mysqli_query($this->conn, $sl);
+            if (mysqli_num_rows($result) === 1) {
+                $row = mysqli_fetch_assoc($result);
 
+                if ($row['username'] === $uname){
+                    echo "<script type='text/JavaScript'>alert('user already exit')</script>";
+                    exit;
+
+                }}
             $sql = "INSERT INTO userdetails (username,password,email) VALUES('$uname','$pass','$email')";
             //echo $sql;
             if (mysqli_query($this->conn, $sql)) {
