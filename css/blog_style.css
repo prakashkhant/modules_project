@@ -24,13 +24,13 @@
     --bg-wild-blue-yonder:gainsboro;
     --bg-carolina-blue: hsla(199, 89%, 49%, 1);
     --bg-prussian-blue: hsla(216, 33%, 20%, 1);
-    --bg-oxford-blue:gainsboro;
-    --bg-oxford-blue-2: hsla(222, 47%, 11%, 1);
+    --bg-oxford-blue:rgb(224, 255, 254);
+    --bg-oxford-blue-2: rgb(219, 253, 255);
   
     /** Text colors */
     --text-white: hsla(0, 0%, 100%, 1);
     --text-alice-blue: rgb(0, 89, 212);
-    --text-columbia-blue: rgb(28, 28, 28);
+    --text-columbia-blue: rgb(211, 211, 211);
     --text-wild-blue-yonder: rgb(27, 45, 73);
     --text-carolina-blue: rgba(114, 210, 255, 0.801);
     --text-shadow-blue: rgb(55, 58, 232);
@@ -756,7 +756,7 @@
   }
   
   .recent-post-card .card-badge {
-    background-color: red;
+    background-color: rgb(138, 217, 208);
     max-width: max-content;
     color: var(--text-white);
     font-size: var(--fontSize-8);
@@ -808,7 +808,7 @@
   .aside-card {
     padding: 25px;
     border-radius: var(--radius-16);
-    background-color: gainsboro;
+    background-color: rgb(243, 255, 255);
   }
   
   .aside-title { margin-block-end: 40px; }
