@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE-edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>News Application</title>
+    <title>Nexus hub | Newzies</title>
     <link rel="stylesheet" href="css/news_home.css">
 </head>
 <body>
+<video autoplay muted loop id="myVideo">
+  <source src="images/istockphoto-1420147711-640_adpp_is.mp4" type="video/mp4">
+</video>
     <nav>
         <div class="main-nav container flex">
             <a href="#" onclick="reload()" class="company-logo">
@@ -48,6 +51,6 @@
         </div>
     </template>
     
-    <script src="news.js"></script>
+    <script src="js/news.js"></script>
 </body>
 </html>
