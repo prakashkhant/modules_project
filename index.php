@@ -93,7 +93,7 @@ include 'layouts/index_top.php' ?>
             <img src='images/blogs/" . $bd["photopath"] . "' alt='' width='400px' height='300px'>
             <div class='edcarddet1'>
                 <div class='tegtime flex'>
-                    <h5>#food</h5>
+                    <h5>#".$bd["keywords"]."</h5>
                     <h5 class='flex'>
                         <i class='fa-solid fa-clock'></i>
                         <span>" . $time . "</span>mins rated
@@ -190,6 +190,8 @@ include 'layouts/index_top.php' ?>
                 // print_r($data);
                 $count = 0;
                 foreach ($data as $d) {
+                    $time = date('h i s', strtotime($d["time"]));
+                    $publish = date('d M, Y', strtotime($d["publish_date"]));
                     $count += 1;
                     if ($count == 7) {
                         break;
@@ -212,13 +214,13 @@ include 'layouts/index_top.php' ?>
     <p>  " . nl2br($d["description"]) . "</p>
     <div class='posttimeteg flex'>
         <div class='flex'>
-            <h5><span>#</span>Travel</h5>
-            <h5><span>$</span>Lifestyle</h5>
+            <h5><span>Tegs  :</span> ".$d["keywords"]."</h5>
+       
         </div>
         <div class='tegtime'>
             <h5 class='flex'>
                 <i class='fa-regular fa-clock'></i>
-                <span>5</span>mins read
+                <span>".$time."</span>mins read
             </h5>
         </div>
     </div>
