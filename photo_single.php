@@ -78,7 +78,7 @@ $cid = $_GET["c"];
 
         <ul class="navbar">
 
-            <li><a href="#home">Home</a> </li>
+            <li><a href="photo_home.php">Home</a> </li>
             <li><a href="#collection">Collection</a></li>
             <!-- <li><a href="#popular">Popular</a></li>
             <li><a href="#hots">Hots</a></li>
