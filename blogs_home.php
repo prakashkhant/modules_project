@@ -250,7 +250,7 @@ $db->connect_DB();
                                         <a href='blogs_cate_single.php?c=" . $cd["cat_id"] . "' class='slider-card'>
                                     
                                             <figure class='slider-banner img-holder' style='--width: 507; --height: 618;'>
-                                                <img src='images/blogs/" . $cd["cat_photo"] . "' width='507' height='618' loading='lazy'
+                                                <img src='images/".$cd["cat_photo"] . "' width='507' height='618' loading='lazy'
                                                     alt='Sport' class='img-cover'>
                                             </figure>
                                     

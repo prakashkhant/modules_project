@@ -22,7 +22,7 @@ $db->session_check();
 </video>
     <nav>
         <div class="main-nav container flex">
-            <a href="#" onclick="reload()" class="company-logo">
+            <a href="index.php" onclick="reload()" class="company-logo">
                 <img src="images/logo_name.png" alt="company logo">
             </a>
             <div class="nav-links">
