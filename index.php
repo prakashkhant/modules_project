@@ -19,12 +19,12 @@ include 'layouts/index_top.php' ?>
                 a digital haven designed to cater to your diverse interests and make your leisure moments truly
                 enjoyabl..
             </p>
-            <div class="emailsub">
+            <!-- <div class="emailsub">
                 <form action="#" class="flex">
                     <input type="email" name="email" id="email" placeholder="Enter your free time ">
                     <button type="submit"><span>Let's Go </span></button>
                 </form>
-            </div>
+            </div> -->
 
         </div>
         <div class="bioimg">

@@ -15,6 +15,7 @@ $db->session_check();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nexus hub | Newzies</title>
     <link rel="stylesheet" href="css/news_home.css">
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
 </head>
 <body>
 <video autoplay muted loop id="myVideo">

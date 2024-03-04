@@ -14,7 +14,7 @@
   <link rel="stylesheet" type="text/css" href="css/language.css">
 
   <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-
+  <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
@@ -23,8 +23,8 @@
 <body>
   <!--start header section-->
   <header>
-    <a href="#" class="logo">
-      <img src="images/logo.png">
+    <a href="index.php" class="logo">
+      <img src="images/logo.png" > 
     </a>
     <ul class="navbar">
       <li> <a href="#home">Home</a></li>

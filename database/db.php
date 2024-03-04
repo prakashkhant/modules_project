@@ -58,7 +58,7 @@ class DB
     {
         if ($this->connect_DB()) {
             $query = "SELECT * FROM `item` WHERE `module_id`=$mid ORDER BY RAND()
-            LIMIT 80";
+            LIMIT 99";
 
             return $this->fetchData($query);
         }

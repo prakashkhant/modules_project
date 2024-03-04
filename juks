@@ -1,0 +1,45 @@
+<section class="popular" id="popular">
+		<div class="title">
+			<h2>Our Latest <br>Combination</h2>
+		</div>
+		<div class="popular-content">
+			<?php
+			$pc = $db->fetch_items_by_module(5);
+
+			// print_r($data);
+			$count = 0;
+			foreach ($pc as $d) {
+				$count += 1;
+				if ($count == 7) {
+					break;
+				}
+				echo "
+
+            <div class='box'>
+                <div class='thum'>
+                    <img src='images/photo/" . $d["photopath"] . "'>
+
+                </div>
+                <div class='dest-content'>
+                    <div class='location'>
+                        <h4>" . $d["title"] . "</h4>
+
+                    </div>
+                    <div class='stars'>
+                        <a href='#'><i class='bx bxs-star'></i></a>
+                        <a href='#'><i class='bx bxs-star'></i></a>
+                        <a href='#'><i class='bx bxs-star'></i></a>
+                        <a href='#'><i class='bx bxs-star'></i></a>
+                        <a href='#'><i class='bx bxs-star'></i></a>
+
+                    </div>
+                </div>
+            </div> ";
+			} ?>
+
+
+	</section>
+
+
+
+    <!-- photo rating likes share commment section box -->

@@ -448,7 +448,7 @@ $db->connect_DB();
                                                 <a href='#' class='card-badge'><?php echo $cn["cat_name"];?></a>
 
                                                 <h3 class='headline headline-3 card-title'>
-                                                    <a href='#' class='link hover-2'><?php echo $d["title"];?> </a>
+                                                 <?php  echo " <a href='blogs_single.php?c=".$d["category"]."&id=".$d["id"]."'  class='link hover-2'>"; ?><?php echo $d["title"];?> </a>
                                                 </h3>
 
                                                 <p class='card-text'>

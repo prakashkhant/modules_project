@@ -65,7 +65,7 @@
     display: none;
  }
  section{
-    padding: 80px 18%;
+    padding: 50px 10%;
  }
  .home{
     position: relative;
@@ -160,7 +160,7 @@
 .category-box h4{
    font-size: 24px;
    font-weight: 600;
-   margin-bottom: 8px;
+   margin-bottom: 5px;
    word-wrap: none;
 }
 .category-box p{
