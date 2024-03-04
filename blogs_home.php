@@ -286,7 +286,7 @@ $db->connect_DB();
                 <div class="container" id="itemContainer">
 
                     <h2 class="headline headline-2 section-title">
-                        <span class="span">Editor's picked</span>
+                        <span class="span">Recommends Photos</span>
                     </h2>
 
                     <p class="section-text">
@@ -351,9 +351,12 @@ $db->connect_DB();
                                             </div>
 
                                             <h3 class="headline headline-3">
-                                                <a href="blogs_single.php" class="card-title hover-2">
-                                                    <?php echo $r["title"] ?>
-                                                </a>
+                                            <?php
+                                                echo "
+                                                <a href='blogs_single.php?c=".$r["category"]."&id=".$r["id"]."' class='card-title hover-2'>
+                                                    
+                                                      ".$r["title"]." 
+                                                </a>" ;?>
                                             </h3>
 
                                             <div class="card-wrapper">
@@ -367,9 +370,10 @@ $db->connect_DB();
                                                         <p class="card-subtitle"><?php echo $publish ?></p>
                                                     </div>
                                                 </div>
-
-                                                <a href="#" class="card-btn">Read this -></a>
-
+                                                <?php
+                                                echo "
+                                                <a href='blogs_single.php?c=".$r["category"]."&id=".$r["id"]."' class='card-btn'>Read this -></a>
+                                                       "; ?>
                                             </div>
 
                                         </div>

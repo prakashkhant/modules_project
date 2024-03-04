@@ -132,8 +132,9 @@ class DB
     function login_user()
     {
 
-        if ($this->connect_DB()) {
-
+        if ($this->connect_DB()) 
+        {
+            try{
             if (isset($_POST['uname']) && isset($_POST['pass'])) {
                 function validate($data)
                 {
@@ -183,8 +184,11 @@ class DB
                 header("Location:login_regs.php");
                 exit();
             }
+
+        }catch(Exception $et){
+            echo "<script type='text/JavaScript'>alert(".$et.");window.location = 'login_regs.php';</script>";
         }
-    }
+    }}
     function sign_up()
     {
         if ($this->connect_DB()) {
@@ -267,4 +271,26 @@ class DB
         }
     }
    
+    //review table : like comment : 
+    function review_lcs(){
+        if ($this->connect_DB()) {
+            if(isset($_POST["review"]) && $_POST["review"] == "like"){
+                $itemid = $_POST["item"];
+                $uid = $_POST["user"];
+                
+                $res = mysqli_query($this->conn, "INSERT INTO review(comment, liked, item_id, uid) VALUES('', 1, $itemid, $uid)");
+            }
+        
+            if(isset($_POST["review"]) && $_POST["review"] == "unlike"){
+                $itemid = $_POST["item"];
+                $uid = $_POST["user"];
+        
+                $res = mysqli_query($this->conn, "UPDATE review SET liked = 0 WHERE item_id = $itemid AND uid = $uid");
+            }
+            
+            if(isset($_POST["review"]) && $_POST["review"] == "comment"){
+        
+            }
+        }
+    }
 }

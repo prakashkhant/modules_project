@@ -13,21 +13,21 @@
 
             </div>
             <h4>Address</h4>
-            <p>123 Lorem Street</p>
-            <p>India, Gujrata</p>
+            <p>XT9 City </p>
+            <p>Gujarat , India</p>
         </div>
    
         <div class="newsletterfooter" id="subform">
-            <h3>Contact us</h3>
+            <h3>About us</h3>
             <p>This website bulid under gudileis of Komal dave , As project of sem 6 in Ty Bsc Computer science. </p>
            
-                <button type="submit" class="flex">Subsribe<i class="fa-solid fa-arrow-right"></i></button>
+                <button type="submit" class="flex">Read me<i class="fa-solid fa-arrow-right"></i></button>
            
         </div>
     </section>
     <div class="themeauthor container flex">
         <div class="createdby">
-            <h4>&copy; 2023 Created by <a href="https://www.codingwebstudio.com/" target="_blank" title="codingwebstudio">codingwebstudio.com</a></h4>
+            <h4>&copy; 2024 Created by <a href="https://www.codingwebstudio.com/" target="_blank" title="codingwebstudio">spjdevlopers.cpm</a></h4>
         </div>
         <div class="social flex">
             <div class="socialcon">
