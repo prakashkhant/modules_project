@@ -182,28 +182,37 @@ $cid = $_GET["c"];
             <section class="section feature" aria-label="feature" id="featured">
                 <div class="container">
                     <style>
-                        .card{
+                        .card {
                             display: block;
                             flex-wrap: wrap;
                             gap: 30px;
                             width: 1100px;
                             justify-content: center;
                         }
-                            .card .hd{
-                                    font-size: 48px;
-                                    color: #709694;
-                                    text-align: center;
-                                    margin: 5px;
-                            }
-                            .card .img-holder{
-                                width: 80%;
-                                height: 50%;
-                                margin-left: 10%;
-                            }
-                            .card .img-holder img{
-                                width:100%;
-                                height:100% ;
-                            }
+
+                        .card-text {
+                            font-size: 20px;
+                            font-family: 'Times New Roman', Times, serif;
+                        }
+
+                        .card .hd {
+                            font-size: 48px;
+                            color: #709694;
+                            text-align: center;
+                            margin: 5px;
+                        }
+
+                        .card .img-holder {
+                            width: 50%;
+                            height: 30%;
+                            margin-left: 10%;
+                        }
+
+                        .card .img-holder img {
+                            width: 100%;
+                            height: 100%;
+                        }
+
                         section {
                             margin-top: 10px;
                             width: 100%;
@@ -215,23 +224,25 @@ $cid = $_GET["c"];
                             padding: 5px 10px;
                             border-radius: 10px;
                         }
-                        .fontsize-2{
-                            font-size: 20px;
-                            color:blue;
+
+                        .fontsize-2 {
+                            font-size: 16px;
+                            color: blue;
                             text-transform: capitalize;
                         }
-                            
+
                         .so:hover {
                             transform: background translate3d(180deg);
                         }
-                        .card-content{
+
+                        .card-content {
                             margin: 5% 10%;
                             /* margin-bottom: 0; */
                         }
                     </style>
                     <ul class="feature-list">
                         <?php
-                       
+
                         $cs = $db->populate_item_content($id);
                         // print_r($cs);
                         foreach ($cs as $cs) {
@@ -241,7 +252,7 @@ $cid = $_GET["c"];
                             <li>
                                 <div class='card feature-card'>
                                 <h3 class='headline headline-3 hd'>
-                                <a href='' class='card-title hover-2'>
+                                <a href='' class='card-title hover-2 ' >
                                 " . $cs["title"] . "
                                 </a>
                             </h3>
@@ -276,14 +287,14 @@ $cid = $_GET["c"];
                                                 <img src='images/blogs/author-1.png' width='48' height='48' loading='lazy' alt='Joseph' class='profile-banner'>
 
                                                 <div>
-                                                    <p class='card-title'>" . $cs["publish_by"] . "</p>
+                                                    <p class='card-title publish_by'>" . $cs["publish_by"] . "</p>
 
-                                                    <p class='card-subtitle'>" .  $publish  . "</p>
+                                                    <p class='card-subtitle pd'>" .  $publish  . "</p>
                                                 </div>
                                             </div>
 
-                                            <a href='#' class='so btn'>Comment</a>
-                                            <a href='#' class='so btn'>Share</a>
+                                            <button onclick='downloadPDF()' class='so btn'>Download PDF</button>
+                                          
                                             <a href='#' class='so btn'>Like</a>
 
                                         </div>
@@ -294,21 +305,61 @@ $cid = $_GET["c"];
                             </li>
                             ";
                         }
+                        
                         ?>
-
-
-
                     </ul>
-
-
-
                 </div>
 
                 <img src="images/blogs/shadow-3.svg" width="500" height="1500" loading="lazy" alt="" class="feature-bg">
 
             </section>
 
+            <?php
+                        // Retrieve blog content (you can get this from a database or any other source)
+                        $blogTitle = "Sample Blog Title";
+                        $readingTime = "5 minutes";
+                        $imageUrl = "https://via.placeholder.com/400x300";
+                        $blogContent = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget purus eu nisi suscipit feugiat. Donec sed malesuada mi. Nullam eget tristique justo, vel accumsan massa. Nam dictum feugiat dui non aliquam.";
+                        $publisherName = "John Doe";
+                        $publishDate = "March 4, 2024";
 
+                        // Include the Dompdf library
+                        require_once 'dompdf/autoload.inc.php';
+
+                        // Use the Dompdf namespace
+                        use Dompdf\Dompdf;
+                        use Dompdf\Options;
+
+                        // Initialize Dompdf options
+                        $options = new Options();
+                        $options->set('isHtml5ParserEnabled', true);
+                        $options->set('isRemoteEnabled', true);
+
+                        // Instantiate Dompdf
+                        $dompdf = new Dompdf($options);
+
+                        // HTML content for the PDF
+                                            $html = "
+                                    <h1>$blogTitle</h1>
+                                    <p>Reading Time: $readingTime</p>
+                                    <img src='$imageUrl' alt='Blog Image'>
+                                    <p>$blogContent</p>
+                                    <p>Published by: $publisherName</p>
+                                    <p>Published on: $publishDate</p>
+                                ";
+
+                        // Load HTML content into Dompdf
+                        $dompdf->loadHtml($html);
+
+                        // Set paper size and orientation
+                        $dompdf->setPaper('A4', 'portrait');
+
+                        // Render the HTML as PDF
+                        $dompdf->render();
+
+                        // Output PDF as a download
+                        $dompdf->stream('blog.pdf', array('Attachment' => 0));
+            ?>
 
 
         </article>
@@ -442,6 +493,7 @@ $cid = $_GET["c"];
   -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
 
 </body>
 

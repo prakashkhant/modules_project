@@ -57,7 +57,7 @@ $db->session_check();
 <body>
 	<!-- header -->
 	<header>
-		<a href="#" class="logo">Nexus HUb</a>
+		<a href="index.php" class="logo">Nexus HUb</a>
 		<div class="bx bx-menu" id="menu-icon"></div>
 
 		<ul class="navbar">

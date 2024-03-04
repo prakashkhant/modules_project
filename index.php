@@ -89,7 +89,7 @@ include 'layouts/index_top.php' ?>
                 break;
             }
             echo "<div class='edcard'>
-        <a href='/'>
+        <a href='blogs_single.php?c=".$bd["category"]."&id=".$bd["id"]."'>
             <img src='images/blogs/" . $bd["photopath"] . "' alt='' width='400px' height='300px'>
             <div class='edcarddet1'>
                 <div class='tegtime flex'>
@@ -103,7 +103,7 @@ include 'layouts/index_top.php' ?>
       
                 <!-- </a> -->
                 <!-- </div> -->
-                <a href='/'>
+                <a href='blogs_single.php?c=".$bd["category"]."&id=".$bd["id"]."'>
                     <h2>" . $bd["title"] . "</h2>
                 </a>
       
@@ -116,7 +116,7 @@ include 'layouts/index_top.php' ?>
                         </div>
                     </div>
       
-                    <a href='/' class='readmore'><span>Read More</span></a>
+                    <a href='blogs_single.php?c=".$bd["category"]."&id=".$bd["id"]."' class='readmore'><span>Read More</span></a>
                 </div>
             </div>
         </a>

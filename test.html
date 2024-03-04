@@ -1,1 +1,68 @@
-<a href='blogs_single.php?c=".$cl["category"]."&id=".$cl["id"]."' class='card-btn'>Read this -></a>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Blog Post</title>
+    <style>
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding-top: 20px;
+        }
+        h1 {
+            color: blue;
+            text-align: center;
+        }
+        img {
+            display: block;
+            margin: 0 auto;
+            width: 400px;
+            height: 500px;
+        }
+        p {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .publisher-info {
+            float: left;
+            width: 50%;
+        }
+        .publisher-info img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .actions {
+            float: right;
+            width: 50%;
+            text-align: right;
+        }
+        .keywords {
+            font-size: 12px;
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <h1>Blog Title</h1>
+            <img src="https://via.placeholder.com/400x500" alt="Blog Image">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget purus eu nisi suscipit feugiat. Donec sed malesuada mi. Nullam eget tristique justo, vel accumsan massa. Nam dictum feugiat dui non aliquam.</p>
+            <div class="publisher-info">
+                <img src="https://via.placeholder.com/50" alt="Publisher Photo">
+                <span>Publisher Name</span><br>
+                <span>Publish Date</span>
+            </div>
+            <div class="actions">
+                <button>Download</button>
+                <button>Share</button>
+                <button>Like</button>
+            </div>
+            <div class="keywords">
+                <p>Keywords: lorem, ipsum, dolor, sit, amet</p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
