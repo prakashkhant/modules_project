@@ -1,8 +1,6 @@
 <?php
 
 include 'layouts/index_top.php' ?>
-
-
 <main id="main">
     <section class="biosec container flex">
         <div class="bio">
@@ -71,8 +69,8 @@ include 'layouts/index_top.php' ?>
 
     <!-- big title section -->
     <div class="bigtitle container ">
-        <h2 class="textcolor">Editor's picked</h2>
-        <p>Featured and highly rated articles</p>
+        <h2 class="textcolor">Engaging Blogs </h2>
+        <p>That Will Capture Your Attention</p>
     </div>
     <section class="editorcards container flex">
 
@@ -80,7 +78,10 @@ include 'layouts/index_top.php' ?>
         <?php
         $bd = $db->fetch_random_items_by_module(2);
         $i = 1;
+       
         foreach ($bd as $bd) {
+            $time = date('i', strtotime($bd["time"]));
+            $publish = date('d M, Y', strtotime($bd["publish_date"]));
             if ($i > 5) {
                 break;
             }
@@ -92,7 +93,7 @@ include 'layouts/index_top.php' ?>
                     <h5>#food</h5>
                     <h5 class='flex'>
                         <i class='fa-solid fa-clock'></i>
-                        <span>" . $bd["time"] . "</span>mins rated
+                        <span>" . $time. "</span>mins rated
                     </h5>
                 </div>
       
@@ -108,7 +109,7 @@ include 'layouts/index_top.php' ?>
                         <img src='images/author.png' alt=''>
                         <div class='authoname'>
                             <h4>" . $bd["publish_by"] . "</h4>
-                            <span>" . $bd["publish_date"] . "</span>
+                            <span>" . $publish . "</span>
                         </div>
                     </div>
       
@@ -122,15 +123,13 @@ include 'layouts/index_top.php' ?>
         ?>
 
 
-        <div class="showmorepost flex">
-            <a href="/">Show More Posts <i class="fa-solid fa-arrow-right"></i></a>
-        </div>
+       
     </section>
 
     <!-- contact section -->
-    <div class="contactbanner container flex">
+    <!-- <div class="contactbanner container flex">
         <img src="images/contactus.jpg" alt="">
-    </div>
+    </div> -->
     <div class="bigtitle container ">
         <h2 class="textcolor">Popular Programming Languages</h2>
 

@@ -106,7 +106,7 @@ $db->session_check();
 								<a href='photo_single.php?c=".$pc["cat_id"]."'><img src='images/".$pc["cat_photo"]."'></a>
 							</div>
 						
-						<h4>Nature Scienrio</h4>
+						<h4>".$pc["cat_name"]."</h4>
 						<p>".$c[$i]." Photos</p>
 					</div>		
 					";
@@ -138,8 +138,8 @@ $db->session_check();
 							<a href='photo_single.php?c=".$pi["category"]."'>
 								<img src='images/photo/" . $pi["photopath"] . "'>
 							</a>
-								<h5>" . $pi["title"] . "</h5>
-								<p>" . $pi["publish_by"] . "</p>
+							<h5>".ucfirst($pi["title"])."</h5>
+							<p>".ucfirst($pi["publish_by"])."</p>
  							</div>
             ";
 			} ?>
