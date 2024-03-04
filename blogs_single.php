@@ -1,7 +1,9 @@
-<?php       include './database/db.php';
-                $db = new DB();
-                $db->session_check();
-                ?>
+<?php include './database/db.php';
+$db = new DB();
+$db->session_check();
+$id = $_GET["id"];
+$cid = $_GET["c"];
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -92,7 +94,7 @@
                     </li>
 
                     <li>
-                        <a href="blogs_home.php#" class="navbar-link hover-1" data-nav-toggler>Contact</a>
+                        <a href="about.php" class="navbar-link hover-1" data-nav-toggler>About us</a>
                     </li>
 
                 </ul>
@@ -148,7 +150,7 @@
 
             </nav>
 
-            <?php 
+            <?php
             $db->login_dashboard();
             ?>
             <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
@@ -169,36 +171,6 @@
         - #HERO
       -->
 
-            <section class="hero" id="home" aria-label="home">
-                <div class="container">
-
-                    <div class="hero-content">
-
-
-                        <h1 class="headline headline-1 section-title">
-                             <span class="span">this is title </span>
-                        </h1>
-                    </div>
-
-                    <div class="hero-banner">
-
-                        <!-- <img src="images/blogs/hero-banner.png" width="327" height="490" alt="Wren Clark" class="w-100"> -->
-
-                        <img src="images/blogs/pattern-2.svg" width="27" height="26" alt="shape" class="shape shape-1">
-
-                        <img src="images/blogs/pattern-3.svg" width="27" height="26" alt="shape" class="shape shape-2">
-
-                    </div>
-
-                    <img src="images/blogs/shadow-1.svg" width="500" height="800" alt="" class="hero-bg hero-bg-1">
-
-                    <img src="images/blogs/shadow-2.svg" width="500" height="500" alt="" class="hero-bg hero-bg-2">
-
-                </div>
-            </section>
-
-
-
 
 
 
@@ -209,87 +181,121 @@
 
             <section class="section feature" aria-label="feature" id="featured">
                 <div class="container">
+                    <style>
+                        .card{
+                            display: block;
+                            flex-wrap: wrap;
+                            gap: 30px;
+                            width: 1100px;
+                            justify-content: center;
+                        }
+                            .card .hd{
+                                    font-size: 48px;
+                                    color: #709694;
+                                    text-align: center;
+                                    margin: 5px;
+                            }
+                            .card .img-holder{
+                                width: 80%;
+                                height: 50%;
+                                margin-left: 10%;
+                            }
+                            .card .img-holder img{
+                                width:100%;
+                                height:100% ;
+                            }
+                        section {
+                            margin-top: 10px;
+                            width: 100%;
+                        }
 
+                        .so {
+                            color: darkblue;
+                            font-size: 24px;
+                            padding: 5px 10px;
+                            border-radius: 10px;
+                        }
+                        .fontsize-2{
+                            font-size: 20px;
+                            color:blue;
+                            text-transform: capitalize;
+                        }
+                            
+                        .so:hover {
+                            transform: background translate3d(180deg);
+                        }
+                        .card-content{
+                            margin: 5% 10%;
+                            /* margin-bottom: 0; */
+                        }
+                    </style>
                     <ul class="feature-list">
-
-                        <li>
-                            <div class="card feature-card">
-                                <style>
-                                    .feature-card {
-                                        width: 1100px;
-                                    }
-
-                                    section {
-                                        margin-top: 0px;
-                                    }
-                                    .so{
-                                        color: darkblue;
-                                        font-size: 24px;
-                                        padding: 3px;
-                                        border-radius: 10px;
-                                    }
-                                    .so:hover{
-                                        transform: background translate3d(180deg);
-                                    }
-                                </style>
-                                <figure class="card-banner img-holder" style="--width: 1602; --height: 903;">
-                                    <img src="images/blogs/featured-1.png" width="1602" height="903" loading="lazy" alt="Self-observation is the first step of inner unfolding" class="img-cover">
+                        <?php
+                       
+                        $cs = $db->populate_item_content($id);
+                        // print_r($cs);
+                        foreach ($cs as $cs) {
+                            $time = date('i', strtotime($cs["time"]));
+                            $publish = date('d M, Y', strtotime($cs["publish_date"]));
+                            echo " 
+                            <li>
+                                <div class='card feature-card'>
+                                <h3 class='headline headline-3 hd'>
+                                <a href='' class='card-title hover-2'>
+                                " . $cs["title"] . "
+                                </a>
+                            </h3>
+                                <figure class='card-banner img-holder' style='--width: 771px; --height: 258px;'>
+                                                    <img src='images/blogs/" . $cs["photopath"] . "' width='100%' height='100%' loading='lazy' alt='" . $cs["title"] . "' class='img-cover'>
                                 </figure>
 
-                                <div class="card-content">
+                                    <div class='card-content'>
 
-                                    <div class="card-wrapper">
-                                        <div class="card-tag">
-                                            <a href="#" class="span hover-2">#Travel</a>
+                                        <div class='card-wrapper'>
+                                            <div class='card-tag'>
+                                                <a href='' class='span hover-2 fontsize-2'>Tages : " . $cs["keywords"] . "</a>
 
-                                            <a href="#" class="span hover-2">#Lifestyle</a>
-                                        </div>
+                                               
+                                            </div>
 
-                                        <div class="wrapper">
-                                            <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+                                            <div class='wrapper'>
+                                                <ion-icon name='time-outline' aria-hidden='true' class='fontsize-2'></ion-icon>
 
-                                            <span class="span">3 mins read</span>
-                                        </div>
-                                    </div>
-
-                                    <h3 class="headline headline-3">
-                                        <a href="#" class="card-title hover-2">
-                                            Self-observation is the first step of inner unfolding
-                                        </a>
-                                    </h3>
-                                    <?php $con=nl2br("Cloud computing is the on-demand availability of computer system resources, especially data storage and computing power, without direct active management by the user. Large clouds often have functions distributed over multiple locations, each of which is a data center.
-                                        Cloud computing is possible because of a technology called virtualization. Virtualization allows for the creation of a simulated, digital-only computer that behaves as if it were a physical computer with its own hardware. The technical term for such a computer is virtual machine. When properly implemented, virtual machines on the same host machine are sandboxed from one another, so they do not interact with each other at all, and the files and applications from one virtual machine are not visible to the other virtual machines even though they are on the same physical machine.
-
-                                        Virtual machines also make more efficient use of the hardware hosting them. By running many virtual machines at once, one server can run many virtual and a data center becomes like a whole host of data centers, able to serve many organizations. Thus, cloud providers can offer the use of their servers to far more customers at once than they would be able to otherwise, and they can do so at a low cost.
-
-                                        Even if individual servers go down, cloud servers in general should be always online and always available. Cloud vendors generally back up their services on multiple machines and across multiple regions.
-
-                                        Users access cloud services either through a browser or through an app, connecting to the cloud over the Internet — that is, through many interconnected networks — regardless of what device they are using.");
-                                    echo  $con; 
-                                    ?>                                    
-                                        
-                                    <div class="card-wrapper">
-
-                                        <div class="profile-card">
-                                            <img src="images/blogs/author-1.png" width="48" height="48" loading="lazy" alt="Joseph" class="profile-banner">
-
-                                            <div>
-                                                <p class="card-title">Joseph</p>
-
-                                                <p class="card-subtitle">25 Nov 2022</p>
+                                                <span class='span fontsize-2'>" . $time . " mins read</span>
                                             </div>
                                         </div>
 
-                                        <a href="#" class="so btn">Comment</a>
-                                        <a href="#" class="so btn">Share</a>
-                                        <a href="#" class="so btn">Like</a>
+                                       
+                                        
+                                        <p class='card-text'>
+                                             &emsp;&nbsp;" . nl2br($cs["content"]) . "
+                                        </p>                                             
+                                        <div class='card-wrapper'>
+
+                                            <div class='profile-card'>
+                                                <img src='images/blogs/author-1.png' width='48' height='48' loading='lazy' alt='Joseph' class='profile-banner'>
+
+                                                <div>
+                                                    <p class='card-title'>" . $cs["publish_by"] . "</p>
+
+                                                    <p class='card-subtitle'>" .  $publish  . "</p>
+                                                </div>
+                                            </div>
+
+                                            <a href='#' class='so btn'>Comment</a>
+                                            <a href='#' class='so btn'>Share</a>
+                                            <a href='#' class='so btn'>Like</a>
+
+                                        </div>
 
                                     </div>
 
                                 </div>
+                            </li>
+                            ";
+                        }
+                        ?>
 
-                            </div>
-                        </li>
 
 
                     </ul>
@@ -342,7 +348,7 @@
 
                         <address class="footer-text address">
                             xt9develeopers <br>
-                            Gujarat, India 
+                            Gujarat, India
                         </address>
 
                     </div>
@@ -369,9 +375,9 @@
                                 <a href="#" class="footer-link hover-2">Canada</a>
                             </li>
 
-                           
 
-                          
+
+
 
                             <li>
                                 <a href="#" class="footer-link hover-2">Design</a>

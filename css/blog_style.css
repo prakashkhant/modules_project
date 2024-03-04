@@ -30,7 +30,7 @@
     /** Text colors */
     --text-white: hsla(0, 0%, 100%, 1);
     --text-alice-blue: rgb(0, 89, 212);
-    --text-columbia-blue: rgb(211, 211, 211);
+    --text-columbia-blue: rgb(0, 0, 0);
     --text-wild-blue-yonder: rgb(27, 45, 73);
     --text-carolina-blue: rgba(114, 210, 255, 0.801);
     --text-shadow-blue: rgb(55, 58, 232);

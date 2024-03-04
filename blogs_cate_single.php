@@ -1,6 +1,7 @@
 <?php include './database/db.php';
 $db = new DB();
 $db->session_check();
+$cat = $_GET["c"];
 ?>
 
 <!DOCTYPE html>
@@ -76,7 +77,7 @@ $db->session_check();
                 <ul class="navbar-list">
 
                     <li>
-                        <a href="blogs_cate_single.php" class="navbar-link hover-1" data-nav-toggler>Home</a>
+                        <a href="blogs_home.php" class="navbar-link hover-1" data-nav-toggler>Home</a>
                     </li>
 
                     <li>
@@ -206,7 +207,14 @@ $db->session_check();
                 <div class="container">
 
                     <h2 class="headline headline-2 section-title">
-                        <span class="span">Editor's picked</span>
+                        <span class="span">
+                            <?php
+                            $cn = $db->find_category_name($cat);
+                            foreach ($cn as $cn) {
+                                echo $cn["cat_name"] . " Blogs";
+                            }
+                            ?>
+                        </span>
                     </h2>
 
                     <p class="section-text">
@@ -214,264 +222,123 @@ $db->session_check();
                     </p>
 
                     <ul class="feature-list">
+                        <!-- -----------------------------------------   categoies posts lists ------------- -->
+                                <?php
+                                $cl = $db->fetch_items_list(13);
 
-                        <li>
-                            <div class="card feature-card">
 
-                                <figure class="card-banner img-holder" style="--width: 1602; --height: 903;">
-                                    <img src="images/blogs/featured-1.png" width="1602" height="903" loading="lazy" alt="Self-observation is the first step of inner unfolding" class="img-cover">
+                      
+
+                                foreach ($cl as $cl) {
+                                    $time = date('i', strtotime($cl['time']));
+                                    echo " 
+                                    <li>
+                                    <div class='card feature-card'>
+        
+                                        <figure class='card-banner img-holder' style='--width: 1602; --height: 903;'>
+                                            <img src='images/blogs/".$cl["photopath"]."' width='1602' height='903' loading='lazy' alt='Self-observation is the first step of inner unfolding' class='img-cover'>
+                                        </figure>
+        
+                                        <div class='card-content'>
+        
+                                            <div class='card-wrapper'>
+                                                <div class='card-tag'>
+                                                    <a href='#' class='span hover-2'> Tag  : ".$cl["keywords"]."</a>
+        
+                                                </div>
+        
+                                                <div class='wrapper'>
+                                                    <ion-icon name='time-outline' aria-hidden='true'></ion-icon>
+        
+                                                    <span class='span'>".$time." mins Read</span>
+                                                </div>
+                                            </div>
+        
+                                            <h3 class='headline headline-3'>
+                                                <a href='blogs_single.php?c=".$cl["category"]."&id=".$cl["id"]."' class='card-title hover-2'>
+                                                  ".$cl["title"]."
+                                                </a>
+                                            </h3>
+        
+                                            <div class='card-wrapper'>
+        
+                                                <div class='profile-card'>
+                                                    <img src='images/blogs/author-1.png' width='48' height='48' loading='lazy' alt='Joseph' class='profile-banner'>
+        
+                                                    <div>
+                                                        <p class='card-title'>".$cl["publish_by"]."</p>
+        
+                                                        <p class='card-subtitle'> ".$cl["publish_date"]."</p>
+                                                    </div>
+                                                </div>
+        
+                                                <a href='blogs_single.php?c=".$cl["category"]."&id=".$cl["id"]."' class='card-btn'>Read this -></a>
+        
+                                            </div>
+        
+                                        </div>
+        
+                                    </div>
+                                </li>
+                                    
+                                    ";
+                                }
+                             
+                                ?>
+                        <!-- <li>
+                            <div class='card feature-card'>
+
+                                <figure class='card-banner img-holder' style='--width: 1602; --height: 903;'>
+                                    <img src='images/blogs/featured-1.png' width='1602' height='903' loading='lazy' alt='Self-observation is the first step of inner unfolding' class='img-cover'>
                                 </figure>
 
-                                <div class="card-content">
+                                <div class='card-content'>
 
-                                    <div class="card-wrapper">
-                                        <div class="card-tag">
-                                            <a href="#" class="span hover-2">#Travel</a>
+                                    <div class='card-wrapper'>
+                                        <div class='card-tag'>
+                                            <a href='#' class='span hover-2'>#Travel</a>
 
-                                            <a href="#" class="span hover-2">#Lifestyle</a>
+                                            <a href='#' class='span hover-2'>#Lifestyle</a>
                                         </div>
 
-                                        <div class="wrapper">
-                                            <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+                                        <div class='wrapper'>
+                                            <ion-icon name='time-outline' aria-hidden='true'></ion-icon>
 
-                                            <span class="span">3 mins read</span>
+                                            <span class='span'>3 mins read</span>
                                         </div>
                                     </div>
 
-                                    <h3 class="headline headline-3">
-                                        <a href="#" class="card-title hover-2">
+                                    <h3 class='headline headline-3'>
+                                        <a href='#' class='card-title hover-2'>
                                             Self-observation is the first step of inner unfolding
                                         </a>
                                     </h3>
 
-                                    <div class="card-wrapper">
+                                    <div class='card-wrapper'>
 
-                                        <div class="profile-card">
-                                            <img src="images/blogs/author-1.png" width="48" height="48" loading="lazy" alt="Joseph" class="profile-banner">
+                                        <div class='profile-card'>
+                                            <img src='images/blogs/author-1.png' width='48' height='48' loading='lazy' alt='Joseph' class='profile-banner'>
 
                                             <div>
-                                                <p class="card-title">Joseph</p>
+                                                <p class='card-title'>Joseph</p>
 
-                                                <p class="card-subtitle">25 Nov 2022</p>
+                                                <p class='card-subtitle'>25 Nov 2022</p>
                                             </div>
                                         </div>
 
-                                        <a href="blogs_single.php" class="card-btn">Read this -></a>
+                                        <a href='blogs_single.php' class='card-btn'>Read this -></a>
 
                                     </div>
 
                                 </div>
 
                             </div>
-                        </li>
+                        </li> -->
 
-                        <li>
-                            <div class="card feature-card">
-
-                                <figure class="card-banner img-holder" style="--width: 1602; --height: 903;">
-                                    <img src="images/blogs/featured-2.png" width="1602" height="903" loading="lazy" alt="Self-observation is the first step of inner unfolding" class="img-cover">
-                                </figure>
-
-                                <div class="card-content">
-
-                                    <div class="card-wrapper">
-                                        <div class="card-tag">
-                                            <a href="#" class="span hover-2">#Design</a>
-
-                                            <a href="#" class="span hover-2">#Movie</a>
-                                        </div>
-
-                                        <div class="wrapper">
-                                            <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
-
-                                            <span class="span">6 mins read</span>
-                                        </div>
-                                    </div>
-
-                                    <h3 class="headline headline-3">
-                                        <a href="#" class="card-title hover-2">
-                                            Self-observation is the first step of inner unfolding
-                                        </a>
-                                    </h3>
-
-                                    <div class="card-wrapper">
-
-                                        <div class="profile-card">
-                                            <img src="images/blogs/author-1.png" width="48" height="48" loading="lazy" alt="Joseph" class="profile-banner">
-
-                                            <div>
-                                                <p class="card-title">Joseph</p>
-
-                                                <p class="card-subtitle">25 Nov 2022</p>
-                                            </div>
-                                        </div>
-
-                                        <a href="blogs_single.php" class="card-btn">Read this -></a>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-                        </li>
-
-                        <li>
-                            <div class="card feature-card">
-
-                                <figure class="card-banner img-holder" style="--width: 1602; --height: 903;">
-                                    <img src="images/blogs/featured-3.png" width="1602" height="903" loading="lazy" alt="Self-observation is the first step of inner unfolding" class="img-cover">
-                                </figure>
-
-                                <div class="card-content">
-
-                                    <div class="card-wrapper">
-                                        <div class="card-tag">
-                                            <a href="#" class="span hover-2">#Design</a>
-
-                                            <a href="#" class="span hover-2">#Movie</a>
-                                        </div>
-
-                                        <div class="wrapper">
-                                            <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
-
-                                            <span class="span">6 mins read</span>
-                                        </div>
-                                    </div>
-
-                                    <h3 class="headline headline-3">
-                                        <a href="#" class="card-title hover-2">
-                                            Self-observation is the first step of inner unfolding
-                                        </a>
-                                    </h3>
-
-                                    <div class="card-wrapper">
-
-                                        <div class="profile-card">
-                                            <img src="images/blogs/author-1.png" width="48" height="48" loading="lazy" alt="Joseph" class="profile-banner">
-
-                                            <div>
-                                                <p class="card-title">Joseph</p>
-
-                                                <p class="card-subtitle">25 Nov 2022</p>
-                                            </div>
-                                        </div>
-
-                                        <a href="blogs_single.php" class="card-btn">Read this -></a>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-                        </li>
-
-                        <li>
-                            <div class="card feature-card">
-
-                                <figure class="card-banner img-holder" style="--width: 1602; --height: 903;">
-                                    <img src="images/blogs/featured-4.png" width="1602" height="903" loading="lazy" alt="Self-observation is the first step of inner unfolding" class="img-cover">
-                                </figure>
-
-                                <div class="card-content">
-
-                                    <div class="card-wrapper">
-                                        <div class="card-tag">
-                                            <a href="#" class="span hover-2">#Design</a>
-
-                                            <a href="#" class="span hover-2">#Movie</a>
-                                        </div>
-
-                                        <div class="wrapper">
-                                            <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
-
-                                            <span class="span">6 mins read</span>
-                                        </div>
-                                    </div>
-
-                                    <h3 class="headline headline-3">
-                                        <a href="blogs_cate_single.php?id=0" class="card-title hover-2">
-                                            Self-observation is the first step of inner unfolding
-                                        </a>
-                                    </h3>
-
-                                    <div class="card-wrapper">
-
-                                        <div class="profile-card">
-                                            <img src="images/blogs/author-1.png" width="48" height="48" loading="lazy" alt="Joseph" class="profile-banner">
-
-                                            <div>
-                                                <p class="card-title">Joseph</p>
-
-                                                <p class="card-subtitle">25 Nov 2022</p>
-                                            </div>
-                                        </div>
-
-                                        <a href="blogs_single.php" class="card-btn">Read this -></a>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-                        </li>
-
-                        <li>
-                            <div class="card feature-card">
-
-                                <figure class="card-banner img-holder" style="--width: 1602; --height: 903;">
-                                    <img src="images/blogs/featured-5.png" width="1602" height="903" loading="lazy" alt="Self-observation is the first step of inner unfolding" class="img-cover">
-                                </figure>
-
-                                <div class="card-content">
-
-                                    <div class="card-wrapper">
-                                        <div class="card-tag">
-                                            <a href="#" class="span hover-2">#Design</a>
-
-                                            <a href="#" class="span hover-2">#Movie</a>
-                                        </div>
-
-                                        <div class="wrapper">
-                                            <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
-
-                                            <span class="span">6 mins read</span>
-                                        </div>
-                                    </div>
-
-                                    <h3 class="headline headline-3">
-                                        <a href="#" class="card-title hover-2">
-                                            Self-observation is the first step of inner unfolding
-                                        </a>
-                                    </h3>
-
-                                    <div class="card-wrapper">
-
-                                        <div class="profile-card">
-                                            <img src="images/blogs/author-1.png" width="48" height="48" loading="lazy" alt="Joseph" class="profile-banner">
-
-                                            <div>
-                                                <p class="card-title">Joseph</p>
-
-                                                <p class="card-subtitle">25 Nov 2022</p>
-                                            </div>
-                                        </div>
-
-                                        <a href="#" class="card-btn">Read more</a>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-                        </li>
+                        <!-- ----------------------------------------- end  categoies pots lists ------------- -->
 
                     </ul>
 
-                    <a href="#" class="btn btn-secondary">
-                        <span class="span">Show More Posts</span>
-
-                        <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
-                    </a>
 
                 </div>
 
