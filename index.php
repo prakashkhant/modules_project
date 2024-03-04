@@ -47,20 +47,23 @@ include 'layouts/index_top.php' ?>
         <div class="hotcards flex">
             <?php
             $ml = $db->fetch_modules_list();
+            $c = "index.php";
+            // link name for indivuale module $ln
             foreach ($ml as $ml) {
+                
                 echo "
-    <div class='hcard'>
-  <a href='entertainment_home.php'>
-      <img src='images/" . $ml["photo"] . "' alt='' width='400px' height='300px'>
-      <div class='hdetails'>
-          <div class='hdetail'>
-              <h4>" . $ml["module_name"] . "</h4>
-              <p>5 Articles</p>
-          </div>
-      </div>
-  </a>
-</div>
-    ";
+                    <div class='hcard'>
+                        <a href='check_module.php?mn=" . $ml["module_name"] . "'>
+                            <img src='images/" . $ml["photo"] . "' alt='' width='400px' height='300px'>
+                            <div class='hdetails'>
+                                <div class='hdetail'>
+                                    <h4>" . $ml["module_name"] . "</h4>
+                                    <p>5 Articles</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    ";
             }
             ?>
         </div>
@@ -78,7 +81,7 @@ include 'layouts/index_top.php' ?>
         <?php
         $bd = $db->fetch_random_items_by_module(2);
         $i = 1;
-       
+
         foreach ($bd as $bd) {
             $time = date('i', strtotime($bd["time"]));
             $publish = date('d M, Y', strtotime($bd["publish_date"]));
@@ -93,7 +96,7 @@ include 'layouts/index_top.php' ?>
                     <h5>#food</h5>
                     <h5 class='flex'>
                         <i class='fa-solid fa-clock'></i>
-                        <span>" . $time. "</span>mins rated
+                        <span>" . $time . "</span>mins rated
                     </h5>
                 </div>
       
@@ -123,7 +126,7 @@ include 'layouts/index_top.php' ?>
         ?>
 
 
-       
+
     </section>
 
     <!-- contact section -->
@@ -203,7 +206,7 @@ include 'layouts/index_top.php' ?>
     <div class='postlabel'>
         <a href=''>" . $l_name["cat_name"] . "</a>
     </div>
-    <a href='/'>
+    <a href='pro_single.php?id=" . $d["id"] . "&name=" . $l_name["cat_name"] . "&c=" . $d["category"] . "'>
         <h2> " . $d["title"] . "</h2>
     </a>
     <p>  " . nl2br($d["description"]) . "</p>
@@ -368,12 +371,12 @@ include 'layouts/index_top.php' ?>
                             break;
                         }
                         echo "<li>
-                        <a href='photo_single.php' class='insta-post img-holder' style='--width: 276; --height: 277;'>
-                            <img src='images/photo/".$d["photopath"]."' width='100px' height='100px' loading='lazy' alt='insta post' class='img-cover'>
+                        <a href='photo_single.php?c=" . $d["category"] . "' class='insta-post img-holder' style='--width: 276; --height: 277;'>
+                            <img src='images/photo/" . $d["photopath"] . "' width='100px' height='100px' loading='lazy' alt='insta post' class='img-cover'>
                         </a>
                     </li>";
                     } ?>
-                    
+
 
                 </ul>
 
