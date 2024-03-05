@@ -1,3 +1,9 @@
+<?php
+    session_start();
+    include './database/db.php';
+    $db = new DB();
+    
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,7 +19,7 @@
 </head>
 
 <body>
-<header id="header">
+    <header id="header">
         <nav class="container1 flex">
             <div class="logo flex">
                 <div class="logoimg">
@@ -26,11 +32,13 @@
             <div class="navlist flex">
                 <ul class="flex">
                     <li><a href="index.php" class="liactive">Home</a></li>
-                    <li><a href="">About Me</a></li>
+                    <!-- <li><a href="news_home.php">News </a></li> -->
                     <li><a href="language_home.php">Native Languages<i class="fa-solid fa-sort-down"></i></a></li>
                     <li><a href="blogs_home.php">Blogs<i class="fa-solid fa-sort-down"></i></a></li>
-                    <li><a href="">Entertaiments<i class="fa-solid fa-sort-down"></i></a></li>
+                    <!-- <li><a href="entertainment_home.php">Entertaiments<i class="fa-solid fa-sort-down"></i></a></li> -->
                     <li><a href="programming_home.php">Computer Languages</a></li>
+                    <li><a href="photo_home.php">Photos Gallery</a></li>
+                    <!-- <li><a href="about.php">About Me</a></li> -->
 
                 </ul>
             </div>
@@ -58,8 +66,10 @@
                     <input type="checkbox" name="" class="l toggle-checkbox" id="dark-mode-toggle">
                     <label for="dark-mode-toggle" class="toggle-label"></label>
                 </div>
-                <button><a href="login_regs.php">Join Me !</a></button>
+                <?php
+                    $db->login_dashboard();
+                ?>
+
             </div>
         </nav>
     </header>
-    <main id="main">

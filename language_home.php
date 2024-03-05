@@ -1,15 +1,20 @@
+<?php       include './database/db.php';
+                $db = new DB();
+                $db->session_check();
+                ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>NexusHub | languages</title>
+  <title>NexusHub </title>
 
   <link rel="stylesheet" type="text/css" href="css/language.css">
 
   <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-
+  <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
@@ -18,8 +23,8 @@
 <body>
   <!--start header section-->
   <header>
-    <a href="#" class="logo">
-      <img src="images/logo.png">
+    <a href="index.php" class="logo">
+      <img src="images/logo_name_2.png" > 
     </a>
     <ul class="navbar">
       <li> <a href="#home">Home</a></li>
@@ -28,9 +33,10 @@
 
     </ul>
     <div class="header-icons">
-      <a href="#"><i class='bx bxs-user'></i></a>
-      <a href="#"><i class='bx bx-heart'></i></a>
-      <a href="#"><i class='bx bx-cart'></i></a>
+    <?php 
+            $db->login_dashboard();
+            ?>
+      
       <div class="bx bx-menu" id="menu-icon"></div>
     </div>
   </header>
@@ -47,7 +53,7 @@
           <input type="email" placeholder="Write your email" required>
           <input type="submit" value="Let's Start" required class="button">
 
-        </form>
+</form>
       </div>
     </div>
 
@@ -105,8 +111,7 @@
     <div class="categories-content">
 
     <?php
-            include './database/db.php';
-            $db = new DB();
+           
             $cat_list = $db->fetch_category_list(3);
             foreach ($cat_list as $cl) {
               echo "

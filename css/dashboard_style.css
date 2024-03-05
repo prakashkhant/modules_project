@@ -58,7 +58,7 @@
       #091e76d8,
       #094d7b
     );
-    
+    scroll-behavior: smooth;
   }
   
   #sidebar-wrapper .sidebar-heading {
@@ -136,4 +136,9 @@
     #wrapper.toggled #sidebar-wrapper {
       margin-left: -15rem;
     }
+  }
+  .logout{
+    bottom: 10px;
+    top: auto;
+    left: 10px;
   }

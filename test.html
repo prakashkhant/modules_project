@@ -1,51 +1,68 @@
-<?php
-include './database/db.php';
-$db = new DB();
-$data = $db->populate_programming_lang_blogs();
-foreach ($data as $d) {
-  echo "
-<div class='blog-card'>
-
-<div class='blog-card-banner'>
-<img src='images/programming/" . $d["prog_title"] . "' alt='Building microservices with Dropwizard, MongoDB & Docker'
-width='250' class='blog-banner-img'>
-</div>
-
-<div class='blog-content-wrapper'>
-
-<button class='blog-topic text-tiny'>Java</button>
-
-<h3>
-<a href='#' class='h3'>
-" . $d["prog_title"] . "
-</a>
-</h3>
-
-<p class='blog-text'>
-" . $d["prog_content"] . "
-</p>
-
-<div class='wrapper-flex'>
-
-<div class='profile-wrapper'>
-<img src='images/programming/author.png' alt='Julia Walker' width='50'>
-</div>
-
-<div class='wrapper'>
-<a href='#' class='h4'>Julia Walker</a>
-
-<p class='text-sm'>
-<time datetime='2022-01-17'> " . $d["publish_date"] . "</time>
-<span class='separator'></span>
-<ion-icon name='time-outline'></ion-icon>
-<time datetime='PT3M'>" . date("i:s", strtotime($d["time"])) . "</time>
-</p>
-</div>
-
-</div>
-
-</div>
-
-</div>";
-}
-?>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Blog Post</title>
+    <style>
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding-top: 20px;
+        }
+        h1 {
+            color: blue;
+            text-align: center;
+        }
+        img {
+            display: block;
+            margin: 0 auto;
+            width: 400px;
+            height: 500px;
+        }
+        p {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .publisher-info {
+            float: left;
+            width: 50%;
+        }
+        .publisher-info img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .actions {
+            float: right;
+            width: 50%;
+            text-align: right;
+        }
+        .keywords {
+            font-size: 12px;
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <h1>Blog Title</h1>
+            <img src="https://via.placeholder.com/400x500" alt="Blog Image">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget purus eu nisi suscipit feugiat. Donec sed malesuada mi. Nullam eget tristique justo, vel accumsan massa. Nam dictum feugiat dui non aliquam.</p>
+            <div class="publisher-info">
+                <img src="https://via.placeholder.com/50" alt="Publisher Photo">
+                <span>Publisher Name</span><br>
+                <span>Publish Date</span>
+            </div>
+            <div class="actions">
+                <button>Download</button>
+                <button>Share</button>
+                <button>Like</button>
+            </div>
+            <div class="keywords">
+                <p>Keywords: lorem, ipsum, dolor, sit, amet</p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

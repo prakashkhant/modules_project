@@ -1,7 +1,3 @@
-<html>
-<head>
-</head>
-<body>
 
 <?php
 include 'database/db.php';
@@ -10,5 +6,8 @@ $id=$_GET["id"];
 
 $s=$db->delete_item($id);
 echo $s;
-// header("Location :dashbaord.php");
+
+    header('Location: ' . $_SERVER['HTTP_REFERER']);
+    exit;
+
 ?>

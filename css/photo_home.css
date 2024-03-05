@@ -65,7 +65,7 @@
     display: none;
  }
  section{
-    padding: 80px 18%;
+    padding: 50px 10%;
  }
  .home{
     position: relative;
@@ -133,25 +133,35 @@
 .category-box{
    background: var(--bg-color);
    border: 1px solid #f0eded;
-   padding: 50px 10px;
+   padding: 20px 40px;
    border-radius: 4px;
    transition: all 0.5s ease 0s;
    cursor: pointer;
 }
+.category-img {
+   width: 200px;
+   height: 240px;
+   background-color: red;
+   align-items: center;
+ 
+}
 .category-img img{
-   height: 285px;
-   width: 285px;
-   padding: 15px;
+   height: 100%;
+   width: 100%;
+   /* padding: 15px; */
    background: var(--bg-color);
    box-shadow: 5px 10px 30px rgb(85 85 85 / 20%);
    border-radius: 4px;
    margin-bottom: 15px;
    cursor: pointer;
+   align-self: center;
+   
 }
 .category-box h4{
    font-size: 24px;
    font-weight: 600;
-   margin-bottom: 8px;
+   margin-bottom: 5px;
+   word-wrap: none;
 }
 .category-box p{
    font-size: 15px;
@@ -171,7 +181,7 @@
 }
 .popular-content{
    display: grid;
-   grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+   grid-template-columns: repeat(auto-fit, minmax(300px, auto));
    grid-gap: 2rem;
    align-items: center;
    text-align: center;
@@ -242,7 +252,7 @@
    font-weight: 500;
    color: var(--bg-color);
    left: 15px;
-   bottom: 60px;
+   bottom: 80px;
    padding-left: 40px;
 }
 .col-content p{
@@ -250,7 +260,7 @@
    font-size: 15px;
    color: var(--bg-color);
    left: 15px;
-   bottom: 30px;
+   bottom: 50px;
    letter-spacing: 2px;
    padding-left: 40px;
 }
@@ -258,6 +268,29 @@
    filter: brightness(100%) hue-rotate(45deg);
    transform: scale(1.04);
    cursor: pointer;
+}
+
+.col-content .soical-content{
+   font-size: 20px;
+   padding: 5px;
+   margin-left: 30px;
+   border: 2px solid black;
+   border-radius: 5px ;
+   width: 240px;
+   align-items: center;
+}
+.soical-content a{
+   text-decoration: none;
+   color: red;
+   margin-right: 1.2rem;
+   box-shadow: #6e54fa;
+}
+.soical-content a:hover{
+   /* transform: rotate(180deg); */
+   transition: all 1s ease-out;
+  transform: translateY(4px);
+  
+  color: #1067cc;
 }
 .newsletter{
    display: flex;

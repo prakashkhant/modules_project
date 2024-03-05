@@ -34,10 +34,17 @@ header{
     padding: 23px 13%;
     transition: all .40s ease;
 }
+.logo{
+    height: 80px;
+    width: 180px;
+    /* box-shadow: -3.729px -3.729px 20px rgba(37, 28, 28, 0.5);  */
+    padding: 3px;
+}
 .logo img{
-    height: auto;
-    width: 100px;
+    height: 100%;
+    width: 100%;
     max-width: 100%;
+    
 }
 .navbar{
     display: flex;  

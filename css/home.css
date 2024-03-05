@@ -1302,3 +1302,20 @@ footer {
     color: #708ab0;
 }
 
+.insta-card .card-text {
+    color: var(--text-slate-gray);
+    font-weight: var(--weight-bold);
+    margin-block: 5px 30px;
+  }
+  
+  .insta-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  
+  .insta-post img{ border-radius: 10px; }
+  .aside-card {
+    padding: 25px;
+    /* border-radius: var(--radius-16); */
+  }

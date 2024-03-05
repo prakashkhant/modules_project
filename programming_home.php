@@ -1,3 +1,8 @@
+<?php
+include './database/db.php';
+$db = new DB();
+$db->session_check();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -77,7 +82,9 @@
             <ion-icon name="moon" class="moon"></ion-icon>
             <ion-icon name="sunny" class="sun"></ion-icon>
           </button>
-
+          <?php
+          $db->login_dashboard();
+          ?>
         </div>
 
         <div class="mobile-nav">
@@ -206,61 +213,64 @@
 
           <div class="blog-card-group">
             <?php
-            include './database/db.php';
-            $db = new DB();
 
-            $data = $db->populate_programming_lang_blogs();
+            $data = $db->fetch_items_by_module(4);
             // print_r($data);
+            $count = 0;
             foreach ($data as $d) {
+              $count += 1;
+              if ($count == 7) {
+                break;
+              }
               $lang_name = $db->find_category_name($d["category"]);
               foreach ($lang_name as $l_name) {
 
 
                 echo "
- 
-<div class='blog-card'>
+                  
+                  <div class='blog-card'>
 
-<div class='blog-card-banner'>
-<img src='images/programming/" . $d["photopath"] . "' alt='Building microservices with Dropwizard, MongoDB & Docker'
-width='250' class='blog-banner-img'>
-</div>
+                  <div class='blog-card-banner'>
+                  <img src='images/programming/" . $d["photopath"] . "' alt='Building microservices with Dropwizard, MongoDB & Docker'
+                  width='250' class='blog-banner-img'>
+                  </div>
 
-<div class='blog-content-wrapper'>
+                  <div class='blog-content-wrapper'>
 
-<button class='blog-topic text-tiny'>" . $l_name["cat_name"] . "</button>
+                  <button class='blog-topic text-tiny'>" . $l_name["cat_name"] . "</button>
 
-<h3>
-<a href='pro_single.php?id=" . $d["id"] . "&name=" . $l_name["cat_name"] . "&c=" . $d["category"] . "' class='h3'>
-" . $d["title"] . "
-</a>
-</h3>
+                  <h3>
+                  <a href='pro_single.php?id=" . $d["id"] . "&name=" . $l_name["cat_name"] . "&c=" . $d["category"] . "' class='h3'>
+                  " . $d["title"] . "
+                  </a>
+                  </h3>
 
-<p class='blog-text'>
-" . $d["description"] . "
-</p>
+                  <p class='blog-text'>
+                  " . $d["description"] . "
+                  </p>
 
-<div class='wrapper-flex'>
+                  <div class='wrapper-flex'>
 
-<div class='profile-wrapper'>
-<img src='images/programming/author.png' alt='Julia Walker' width='50'>
-</div>
+                  <div class='profile-wrapper'>
+                  <img src='images/programming/author.png' alt='Julia Walker' width='50'>
+                  </div>
 
-<div class='wrapper'>
-<a href='#' class='h4'>Julia Walker</a>
+                  <div class='wrapper'>
+                  <a href='#' class='h4'>Julia Walker</a>
 
-<p class='text-sm'>
-<time datetime='2022-01-17'> " . $d["publish_date"] . "</time>
-<span class='separator'></span>
-<ion-icon name='time-outline'></ion-icon>
-<time datetime='PT3M'>" . date("i:s", strtotime($d["time"])) . "</time>
-</p>
-</div>
+                  <p class='text-sm'>
+                  <time datetime='2022-01-17'> " . $d["publish_date"] . "</time>
+                  <span class='separator'></span>
+                  <ion-icon name='time-outline'></ion-icon>
+                  <time datetime='PT3M'>" . date("i:s", strtotime($d["time"])) . "</time>
+                  </p>
+                  </div>
 
-</div>
+                  </div>
 
-</div>
+                  </div>
 
-</div>";
+                  </div>";
               }
             }
             ?>
@@ -281,11 +291,11 @@ width='250' class='blog-banner-img'>
             <?php
 
             $cat_list = $db->fetch_category_list(4);
-           
+
             // print_r($data);
             foreach ($cat_list as $cl) {
-              $item_id=$db->fetch_items_list($cl["cat_id"]);
-              
+              $item_id = $db->fetch_items_list($cl["cat_id"]);
+
               foreach ($item_id as $ci) {
 
                 echo "
@@ -298,7 +308,7 @@ width='250' class='blog-banner-img'>
                 <p>" . $cl["cat_name"] . "</p>
               </a> 
                     ";
-                    break;
+                break;
               }
             } ?>
 

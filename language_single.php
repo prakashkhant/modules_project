@@ -1,3 +1,8 @@
+<?php       include './database/db.php';
+                $db = new DB();
+                $db->session_check();
+                ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,7 +14,7 @@
   <link rel="stylesheet" type="text/css" href="css/langsing.css">
 
   <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-
+  <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -22,20 +27,21 @@
   <!--start header section-->
 
   <header>
-    <a href="#" class="logo">
-      <img src="images/logo.png">
+    <a href="index.php" class="logo">
+      <img src="images/logo_name_2.png">
     </a>
     <ul class="navbar">
-      <li> <a href="#home">Home</a></li>
+      <li> <a href="language_home.php">Home</a></li>
       <li> <a href="#categories">Categories</a></li>
       <li> <a href="#languages">Languages</a></li>
       <li> <a href="#Refrence">Refrence</a></li>
 
     </ul>
     <div class="header-icons">
-      <a href="#"><i class='bx bxs-user'></i></a>
-      <a href="#"><i class='bx bx-heart'></i></a>
-      <a href="#"><i class='bx bx-cart'></i></a>
+    <?php 
+            $db->login_dashboard();
+            ?>
+      
       <div class="bx bx-menu" id="menu-icon"></div>
     </div>
   </header>
@@ -71,9 +77,7 @@
 
     <div class="categories-content">
     <?php
-                 include './database/db.php';
-                $db = new DB();
-                
+            
                 $cid=$_GET["c"];
                 $ldata = $db->fetch_items_list($cid);
                
@@ -82,7 +86,7 @@
                     <div class='box'>
         <iframe src='".$ld["videopath"]."' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' allowfullscreen></iframe>
         <a href='".$ld["test_link"]."' target='_blank' class='btn btn-primary'>Test</a>
-          
+          </div>
           ";} ?>
        
         <!-- <iframe  class="box" src="https://www.youtube.com/embed/ZIw6qG4BDZg?si=dLTr7QDdqiZoI7Ck" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
@@ -109,7 +113,9 @@
      
     </div>
 
-    <div class="container-box">
+    <div class="
+    
+    ontainer-box">
     
         <img src="images/language/book-english-usage.jpg">
      
