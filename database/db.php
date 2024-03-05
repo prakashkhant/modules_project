@@ -258,12 +258,14 @@ class DB
 
 
             if (mysqli_query($this->conn, $sql)) {
-                echo "successfull";
-                header("Location: dashboard.php");
+                $s= "successfull";
+                
+                return true;
 
                 exit();
             } else {
                 echo "error detected";
+                return false;
             }
         }
     }

@@ -1,11 +1,11 @@
 <?php
 session_start();
-if(empty($_SESSION['id']) || empty($_SESSION['username'])){
-    header("Location: index.php");
-}
-else if (!isset($_SESSION['id']) && !isset($_SESSION['username'])) {
-    header("Location: index.php");
-}
+// if(empty($_SESSION['id']) || empty($_SESSION['username'])){
+//     header("Location: index.php");
+// }
+// else if (!isset($_SESSION['id']) && !isset($_SESSION['username'])) {
+//     header("Location: index.php");
+// }
 $uname= $_SESSION['username'];
 
 ?>

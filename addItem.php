@@ -146,7 +146,7 @@ if (isset($_GET['mid'])) {
             <div class="row mb-3 publish-details">
                 <label for="tbPublish" class="col-sm-2 col-form-label ">Publish name : </label>
                 <div class="col-sm-4">
-                    <input type="text" class="form-control " id="tbePublish" name="tbPublishBy" value="<?php echo $uname; ?> " disabled >
+                    <input type="text" class="form-control " id="tbePublishBy" name="tbPublishBy" text="<?php echo $uname; ?>" value="<?php echo $uname; ?>"  >
 
                 </div>
 
@@ -266,7 +266,11 @@ if(isset($_POST["submit"])){
     
 //    echo " <script>alert('$module_name');</script>";
 $data=$db->add_item();
-print_r($data);
+if($data){
+    echo "<script type='text/JavaScript'>alert('Success');window.location = 'dashboard.php';</script>";
+}else{
+    header("Location: /addItem.php?error=not_succcss");
+}
 }
 
 ?>
