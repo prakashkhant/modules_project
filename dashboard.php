@@ -5,8 +5,8 @@ include './layouts/top.php';
 
 <div class="container-fluid px-4">
     <div class="row g-3 my-2">
-        <div class="col-md-3">
-            <div class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
+        <div class="col-md-3 ">
+            <div class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center sub-rect">
                 <div>
                     <h3 class="fs-2">
                         <?php 
@@ -25,8 +25,8 @@ include './layouts/top.php';
             </div>
         </div>
 
-        <div class="col-md-3">
-            <div class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
+        <div class="col-md-3 ">
+            <div class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center sub-rect">
                 <div>
                     <h3 class="fs-2">
                         <?php
@@ -56,12 +56,12 @@ include './layouts/top.php';
         </div> -->
     </div>
 
-    <div class="row my-5">
-        <h3 class="fs-4 mb-3">Recent Items</h3>
-        <div class="col">
-            <table class="table bg-white rounded shadow-sm  table-hover">
+    <div class="row my-5 ">
+        <h3 class=" mb-3 table-heading"> <i class="fab fa-staylinked"></i> Recent Items : </h3>
+        <div class="col ">
+            <table class="table  shadow-sm  table-hover">
                 <thead>
-                    <tr>
+                    <tr class="heading-row">
                         <th scope="col" width="50">#id</th>
                         <th scope="col">Title</th>
                         <th scope="col">Module</th>
@@ -80,17 +80,18 @@ include './layouts/top.php';
                
                 foreach ($items as $item) { 
                     echo "
-                    <tr>
+                    <tr class='data-row'>
                         <th scope='row' style='color:red;'>".$item["id"]."</th>                       
                         <td  style='color:green;'>".$item["title"]."</td>
                         <td  style='color:blue;'>".$item["module_id"]."</td>
                         <td  style='color:blue;'>".$item["category"]."</td>
                         <td>".$item["publish_date"]."</td>
                         <td>".$item["publish_by"]."</td>
-                        <td>Update/<a href='delete-item.php?id=".$item["id"]."'>delete</td>
+                        <td><a class='btn btn-success' href=''>Update </a>
+                        <a class='btn btn-primary' href='delete-item.php?id=".$item["id"]."'>Delete </a></td>
                         <td>
                             <a href='#'> <i class='fas fa-eye'></i>
-                             </a>
+                            
                         </td>
                     </tr> ";
                      } ?>
