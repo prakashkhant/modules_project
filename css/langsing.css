@@ -34,10 +34,17 @@ header{
     padding: 23px 13%;
     transition: all .40s ease;
 }
+.logo{
+    height: 80px;
+    width: 180px;
+    /* box-shadow: -3.729px -3.729px 20px rgba(37, 28, 28, 0.5);  */
+    padding: 3px;
+}
 .logo img{
-    height: auto;
-    width: 100px;
+    height: 100%;
+    width: 100%;
     max-width: 100%;
+    
 }
 .navbar{
     display: flex;  
@@ -206,10 +213,11 @@ header.sticky{
 .box{
     
     padding: 2px;
-    /* box-shadow: -2.729px -2.729px 3px rgb(255 255 255 / 15%); */
+    /* box-shadow: -2.229px -2.229px 1px rgb(255 255 255 / 15%); */
     transition: all .40s ease;
     width: 400px;
     height: 300px;
+    margin-bottom: 50px;
 }
 .box iframe{
     width: 100%;

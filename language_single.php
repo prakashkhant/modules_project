@@ -27,11 +27,11 @@
   <!--start header section-->
 
   <header>
-    <a href="#" class="logo">
-      <img src="images/logo.png">
+    <a href="index.php" class="logo">
+      <img src="images/logo_name_2.png">
     </a>
     <ul class="navbar">
-      <li> <a href="#home">Home</a></li>
+      <li> <a href="language_home.php">Home</a></li>
       <li> <a href="#categories">Categories</a></li>
       <li> <a href="#languages">Languages</a></li>
       <li> <a href="#Refrence">Refrence</a></li>
@@ -86,7 +86,7 @@
                     <div class='box'>
         <iframe src='".$ld["videopath"]."' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' allowfullscreen></iframe>
         <a href='".$ld["test_link"]."' target='_blank' class='btn btn-primary'>Test</a>
-          
+          </div>
           ";} ?>
        
         <!-- <iframe  class="box" src="https://www.youtube.com/embed/ZIw6qG4BDZg?si=dLTr7QDdqiZoI7Ck" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
@@ -113,7 +113,9 @@
      
     </div>
 
-    <div class="container-box">
+    <div class="
+    
+    ontainer-box">
     
         <img src="images/language/book-english-usage.jpg">
      

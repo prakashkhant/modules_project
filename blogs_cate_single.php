@@ -224,7 +224,7 @@ $cat = $_GET["c"];
                     <ul class="feature-list">
                         <!-- -----------------------------------------   categoies posts lists ------------- -->
                                 <?php
-                                $cl = $db->fetch_items_list(13);
+                                $cl = $db->fetch_items_list($cat);
 
 
                       

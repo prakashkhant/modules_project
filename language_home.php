@@ -9,7 +9,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>NexusHub | languages</title>
+  <title>NexusHub </title>
 
   <link rel="stylesheet" type="text/css" href="css/language.css">
 
@@ -24,7 +24,7 @@
   <!--start header section-->
   <header>
     <a href="index.php" class="logo">
-      <img src="images/logo.png" > 
+      <img src="images/logo_name_2.png" > 
     </a>
     <ul class="navbar">
       <li> <a href="#home">Home</a></li>
@@ -53,7 +53,7 @@
           <input type="email" placeholder="Write your email" required>
           <input type="submit" value="Let's Start" required class="button">
 
-        </form>
+</form>
       </div>
     </div>
 

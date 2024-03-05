@@ -1,11 +1,11 @@
 <?php
 session_start();
-// if(empty($_SESSION['id']) || empty($_SESSION['username'])){
-//     header("Location: index.php");
-// }
-// else if (!isset($_SESSION['id']) && !isset($_SESSION['username'])) {
-//     header("Location: index.php");
-// }
+if(empty($_SESSION['id']) || empty($_SESSION['username'])){
+    header("Location: index.php");
+}
+else if (!isset($_SESSION['id']) && !isset($_SESSION['username'])) {
+    header("Location: index.php");
+}
 $uname= $_SESSION['username'];
 ?>
     <!DOCTYPE html>
@@ -27,7 +27,7 @@ $uname= $_SESSION['username'];
 <div class="d-flex" id="wrapper">
     <!-- Sidebar -->
     <div class=" sidebar " id="sidebar-wrapper">
-        <div class="sidebar-heading  py-4 primary-text fs-4 fw-bold text-uppercase border-bottom"><img src="images/logo.png" alt="" srcset="" width="50px" height="50px">NEXUS HUB</div>
+    <a href="index.php"> <div class="sidebar-heading  py-4 primary-text fs-4 fw-bold text-uppercase border-bottom"><img src="images/logo.png" alt="" srcset="" width="50px" height="50px">NEXUS HUB</div></a>
         <div class="list-group list-group-flush my-3">
             <a href="dashboard.php" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
                 <i class="fas fa-tachometer-alt me-2"></i>Dashboard</a>
