@@ -146,7 +146,7 @@ if (isset($_GET['mid'])) {
             <div class="row mb-3 publish-details">
                 <label for="tbPublish" class="col-sm-2 col-form-label ">Publish name : </label>
                 <div class="col-sm-4">
-                    <input type="text" class="form-control " id="tbePublish" name="tbPublishBy" value="<?php echo $uname; ?>" >
+                    <input type="text" class="form-control " id="tbePublish" name="tbPublishBy" value="<?php echo $uname; ?> " disabled >
 
                 </div>
 

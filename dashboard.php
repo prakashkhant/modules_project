@@ -9,14 +9,13 @@ include './layouts/top.php';
             <div class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center sub-rect">
                 <div>
                     <h3 class="fs-2">
-                        <?php 
-                          include './database/db.php';
-                          $db = new DB();
-                            $count_no=$db->count_rows_table("modules") ;
-                            foreach($count_no as $cn)
-                            {
-                                echo $cn[0];
-                            }
+                        <?php
+                        include './database/db.php';
+                        $db = new DB();
+                        $count_no = $db->count_rows_table("modules");
+                        foreach ($count_no as $cn) {
+                            echo $cn[0];
+                        }
                         ?>
                     </h3>
                     <p class="fs-5">Modules</p>
@@ -30,12 +29,11 @@ include './layouts/top.php';
                 <div>
                     <h3 class="fs-2">
                         <?php
-                    $count_no=$db->count_rows_table("item") ;
-                            foreach($count_no as $cn)
-                            {
-                                echo $cn[0];
-                            }
-                            ?>
+                        $count_no = $db->count_rows_table("item");
+                        foreach ($count_no as $cn) {
+                            echo $cn[0];
+                        }
+                        ?>
                     </h3>
                     <p class="fs-5">Items</p>
                 </div>
@@ -43,7 +41,7 @@ include './layouts/top.php';
             </div>
         </div>
 
-        
+
 
         <!-- <div class="col-md-3">
             <div class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
@@ -59,7 +57,7 @@ include './layouts/top.php';
     <div class="row my-5 ">
         <h3 class=" mb-3 table-heading"> <i class="fab fa-staylinked"></i> Recent Items : </h3>
         <div class="col ">
-            <table class="table  shadow-sm  table-hover">
+            <table class="table  shadow-sm  table-hover rounded">
                 <thead>
                     <tr class="heading-row">
                         <th scope="col" width="50">#id</th>
@@ -73,30 +71,37 @@ include './layouts/top.php';
                     </tr>
                 </thead>
                 <tbody>
-                <?php
-               
-                
-                $items = $db->fetch_all_user_items($uname);
-               
-                foreach ($items as $item) { 
-                    echo "
-                    <tr class='data-row'>
-                        <th scope='row' style='color:red;'>".$item["id"]."</th>                       
-                        <td  style='color:green;'>".$item["title"]."</td>
-                        <td  style='color:blue;'>".$item["module_id"]."</td>
-                        <td  style='color:blue;'>".$item["category"]."</td>
-                        <td>".$item["publish_date"]."</td>
-                        <td>".$item["publish_by"]."</td>
-                        <td><a class='btn btn-success' href=''>Update </a>
-                        <a class='btn btn-primary' href='delete-item.php?id=".$item["id"]."'>Delete </a></td>
-                        <td>
-                            <a href='#'> <i class='fas fa-eye'></i>
-                            
-                        </td>
-                    </tr> ";
-                     } ?>
-                   
-                    
+
+                    <?php
+                    $items = $db->fetch_all_user_items($uname);
+
+                    foreach ($items as $item) {
+                        $cname = $db->find_category_name($item["category"]);
+                        $mname = $db->find_module_name_byId($item["module_id"]);
+                        foreach ($cname as $cname) {
+                            foreach ($mname as $mname) {
+                              echo "
+                            <tr>
+                                <th scope='row' style='color:red;'>" . $item["id"] . "</th>                       
+                                <td  style='color:green;'>" . $item["title"] . "</td>
+                                <td  style='color:blue;'>" . $mname["module_name"] . "</td>
+                                <td  style='color:blue;'>" . $cname["cat_name"] . "</td>
+                                <td>" . $item["publish_date"] . "</td>
+                                <td>" . $item["publish_by"] . "</td>
+                                <td><a class='btn btn-success' href=''>Update </a>
+                                <a class='btn btn-primary' href='delete-item.php?id=" . $item["id"] . "'>Delete </a></td>
+                                <td>
+                                    <a href='#'> <i class='fas fa-eye'></i>
+                                    </a>
+                                </td>
+                            </tr> ";
+                                break;
+                            }
+                            break;
+                        }
+                    }
+                    ?>
+
                 </tbody>
             </table>
         </div>

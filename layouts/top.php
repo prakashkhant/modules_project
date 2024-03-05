@@ -7,6 +7,7 @@ else if (!isset($_SESSION['id']) && !isset($_SESSION['username'])) {
     header("Location: index.php");
 }
 $uname= $_SESSION['username'];
+
 ?>
     <!DOCTYPE html>
     <html lang="en">

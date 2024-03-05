@@ -5,8 +5,10 @@ session_start();
 // }
 // else if (!isset($_SESSION['id']) && !isset($_SESSION['username'])) {
 //     header("Location: index.php");
+// }else{
+//     header("Location: welcome.php");
 // }
-
+$uname=$_SESSION["username"];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -27,11 +29,13 @@ session_start();
     <div class="d-flex" id="wrapper">
         <!-- Sidebar -->
         <div class=" sidebar " id="sidebar-wrapper">
+          <a href="index.php">  
             <div class="sidebar-heading  py-4 primary-text fs-4 fw-bold text-uppercase border-bottom"><img src="images/logo.png" alt="" srcset="" width="50px" height="50px">NEXUS HUB</div>
-            <div class="list-group list-group-flush my-3">
+            </a>
+          <div class="list-group list-group-flush my-3">
                 <a href="admin_dashboard.php" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
                     <i class="fas fa-tachometer-alt me-2"></i>Dashboard</a>
-                <a href="admintab.php" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i class="fas fa-users-cog me-2"></i>Admins</a>
+                <!-- <a href="admintab.php" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i class="fas fa-users-cog me-2"></i>Admins</a> -->
                 <a href="#" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i class="fas fa-users me-2"></i>Users</a>
                 <a href="additem.php" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i class="fas fa-edit me-2"></i>Add Itmes</a>
                 <!-- <a href="addModule.php" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i class="fas fa-sitemap me-2"></i>Add Module</a> -->
@@ -167,22 +171,33 @@ session_start();
 
                                 $items = $db->fetch_all_items();
 
-                                foreach ($items as $item) {
-                                    echo "
-                    <tr>
-                        <th scope='row' style='color:red;'>" . $item["id"] . "</th>                       
-                        <td  style='color:green;'>" . $item["title"] . "</td>
-                        <td  style='color:blue;'>" . $item["module_id"] . "</td>
-                        <td  style='color:blue;'>" . $item["category"] . "</td>
-                        <td>" . $item["publish_date"] . "</td>
-                        <td>" . $item["publish_by"] . "</td>
-                        <td>Update/<a href='delete-item.php?id=" . $item["id"] . "'>delete</td>
-                        <td>
-                            <a href='#'> <i class='fas fa-eye'></i>
-                             </a>
-                        </td>
-                    </tr> ";
-                                } ?>
+                                    foreach ($items as $item) 
+                                    {
+                                        $cname = $db->find_category_name($item["category"]);
+                                        $mname = $db->find_module_name_byId($item["module_id"]);
+                                        foreach ($cname as $cname) {
+                                            foreach ($mname as $mname) {
+                                                echo "
+                                            <tr>
+                                                <th scope='row' style='color:red;'>" . $item["id"] . "</th>                       
+                                                <td  style='color:green;'>" . $item["title"] . "</td>
+                                                <td  style='color:blue;'>" . $mname["module_name"] . "</td>
+                                                <td  style='color:blue;'>" . $cname["cat_name"] . "</td>
+                                                <td>" . $item["publish_date"] . "</td>
+                                                <td>" . $item["publish_by"] . "</td>
+                                                <td><a class='btn btn-success' href=''>Update </a>
+                                                <a class='btn btn-primary' href='delete-item.php?id=" . $item["id"] . "'>Delete </a></td>
+                                                <td>
+                                                    <a href='#'> <i class='fas fa-eye'></i>
+                                                    </a>
+                                                </td>
+                                            </tr> ";
+                                                break;
+                                            }
+                                            break;
+                                        }
+                                    } 
+                                ?>
 
 
                             </tbody>

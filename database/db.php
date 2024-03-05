@@ -22,7 +22,10 @@ class DB
 
         if (empty($_SESSION["username"]) || $_SESSION["username"] == '') {
             echo " <button class='btn btn-primary'><a href='login_regs.php'>Join Me !</a></button>";
-        } else {
+        } else if ($_SESSION["username"]=="admin"){
+            echo " <button class='btn btn-primary'><a href='admin_dashboard.php'>" . $_SESSION["username"] . "!</a> </button>";
+        }
+        else {
 
             echo " <button class='btn btn-primary'><a href='dashboard.php'>" . $_SESSION["username"] . "!</a> </button>";
         }
@@ -76,6 +79,14 @@ class DB
     {
         if ($this->connect_DB()) {
             $query = "SELECT * FROM `category` WHERE `cat_id`= " . $cid;
+
+            return $this->fetchData($query);
+        }
+    }
+    function find_module_name_byId($mid)
+    {
+        if ($this->connect_DB()) {
+            $query = "SELECT * FROM `modules` WHERE `mid`= " . $mid;
 
             return $this->fetchData($query);
         }
@@ -147,7 +158,7 @@ class DB
                 $uname = validate($_POST['uname']);
                 $pass = validate($_POST['pass']);
                 if($uname=="admin" && $pass=="xt9"){
-                    $_SESSION['username'] ="Admin";
+                    $_SESSION['username'] ="admin";
                         // $_SESSION['name'] = $row['name'];
                         $_SESSION['id'] = 0;
 

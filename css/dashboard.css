@@ -114,7 +114,7 @@
     font-weight: bold;
     border: none;
   }
- 
+
   .page-header{
     background: rgba(255, 255, 0, 0.492);
     padding: 15px 30px;
@@ -145,13 +145,15 @@
     border: 5px solid rgb(210, 196, 2);
     border-radius: 20px;
   }
+
   .col .table{
-    background: #0569ab;
-    border: 2px solid black;
+    background: #ffcc65eb;
+    /* border: 5px solid black; */
     border-radius: 20px !important;
   }
   .heading-row{
     background: #d8d8d8;
+  
   }
   .table-heading{
     /* border: 5px solid red; */
