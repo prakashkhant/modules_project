@@ -24,8 +24,8 @@ if (isset($_GET['id'])) {
     exit;
 }
 foreach($item as $item){
-    $module_name = $item['module-name'];
-    $cat_name = $item['cat-name'];
+    $module_name = $item['module_id'];
+    $cat_name = $item['category'];
     $title = $item['tbTitle'];
     $description = $item['tdDescription'];
     $contentArea = $item['tdContentArea'];

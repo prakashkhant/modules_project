@@ -8,7 +8,7 @@ session_start();
 // }else{
 //     header("Location: welcome.php");
 // }
-$uname=$_SESSION["username"];
+$uname = $_SESSION["username"];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -29,18 +29,18 @@ $uname=$_SESSION["username"];
     <div class="d-flex" id="wrapper">
         <!-- Sidebar -->
         <div class=" sidebar " id="sidebar-wrapper">
-          <a href="index.php">  
-            <div class="sidebar-heading  py-4 primary-text fs-4 fw-bold text-uppercase border-bottom"><img src="images/logo.png" alt="" srcset="" width="50px" height="50px">NEXUS HUB</div>
+            <a href="index.php">
+                <div class="sidebar-heading  py-4 primary-text fs-4 fw-bold text-uppercase border-bottom"><img src="images/logo.png" alt="" srcset="" width="50px" height="50px">NEXUS HUB</div>
             </a>
-          <div class="list-group list-group-flush my-3">
+            <div class="list-group list-group-flush my-3">
                 <a href="admin_dashboard.php" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
                     <i class="fas fa-tachometer-alt me-2"></i>Dashboard</a>
                 <!-- <a href="admintab.php" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i class="fas fa-users-cog me-2"></i>Admins</a> -->
                 <a href="#" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i class="fas fa-users me-2"></i>Users</a>
-                <a href="additem.php" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i class="fas fa-edit me-2"></i>Add Itmes</a>
+                <a href="add_item_admin.php" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i class="fas fa-edit me-2"></i>Add Itmes</a>
                 <!-- <a href="addModule.php" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i class="fas fa-sitemap me-2"></i>Add Module</a> -->
                 <!-- <a href="#" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i class="fas fa-gift me-2"></i>Comments/Likes</a> -->
-                <a href="#" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i class="fas fa-comment-dots me-2"></i>Comments/Likes</a>
+                <!-- <a href="#" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i class="fas fa-comment-dots me-2"></i>Comments/Likes</a> -->
                 <!-- <a href="#" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
                         class="fas fa-map-marker-alt me-2"></i>Outlet</a>      -->
                 <a href="logout.php" class="list-group-item list-group-item-action bg-transparent text-danger fw-bold"><i class="fas fa-power-off me-2"></i>Logout</a>
@@ -139,14 +139,14 @@ $uname=$_SESSION["username"];
                     </div>
 
                     <!-- <div class="col-md-3">
-            <div class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
-                <div>
-                    <h3 class="fs-2">3</h3>
-                    <p class="fs-5">Admins</p>
-                </div>
-                <i class="fas fa-user-tie fs-1 primary-text border rounded-full secondary-bg p-3"></i>
-            </div>
-        </div> -->
+                                    <div class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
+                            <div>
+                                <h3 class="fs-2">3</h3>
+                                <p class="fs-5">Admins</p>
+                            </div>
+                            <i class="fas fa-user-tie fs-1 primary-text border rounded-full secondary-bg p-3"></i>
+                        </div>
+                    </div> -->
                 </div>
 
                 <div class="row my-5">
@@ -171,13 +171,12 @@ $uname=$_SESSION["username"];
 
                                 $items = $db->fetch_all_items();
 
-                                    foreach ($items as $item) 
-                                    {
-                                        $cname = $db->find_category_name($item["category"]);
-                                        $mname = $db->find_module_name_byId($item["module_id"]);
-                                        foreach ($cname as $cname) {
-                                            foreach ($mname as $mname) {
-                                                echo "
+                                foreach ($items as $item) {
+                                    $cname = $db->find_category_name($item["category"]);
+                                    $mname = $db->find_module_name_byId($item["module_id"]);
+                                    foreach ($cname as $cname) {
+                                        foreach ($mname as $mname) {
+                                            echo "
                                             <tr>
                                                 <th scope='row' style='color:red;'>" . $item["id"] . "</th>                       
                                                 <td  style='color:green;'>" . $item["title"] . "</td>
@@ -192,11 +191,11 @@ $uname=$_SESSION["username"];
                                                     </a>
                                                 </td>
                                             </tr> ";
-                                                break;
-                                            }
                                             break;
                                         }
-                                    } 
+                                        break;
+                                    }
+                                }
                                 ?>
 
 

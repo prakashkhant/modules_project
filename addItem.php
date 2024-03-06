@@ -186,7 +186,7 @@ if (isset($_GET['mid'])) {
             </div>
             <div class="row mb-3 timebox">
                 <label for="time-tb" class="col-sm-2 col-form-label">Time Duration </label>
-                <div class="col-sm-8">
+                <div class="col-sm-8 mt-2">
                     <!-- <input type="time" class="form-control " id="timeDuration" name="tbTimeDuration"  > -->
                     <label for="hours"> Hours:</label>
                     <select id="hours" name="hours" onchange="updateDuration()" >

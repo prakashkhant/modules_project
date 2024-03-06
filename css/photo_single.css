@@ -30,9 +30,10 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: transparent;
+    /* background: transparent; */
     padding: 30px 18%;
     transition: ease .40s;
+    background: #95d5e9b0;
  }
 
  .logo{
@@ -43,9 +44,10 @@
  }
  .navbar{
     display: flex;
+    
  }
  .navbar a{
-    color: var(--bg-color);
+    color: black;
     font-size: var(--p-font);
     font-weight: 500;
     padding: 10px 22px;
