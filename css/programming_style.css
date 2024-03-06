@@ -322,6 +322,7 @@ header .btn-group {
   display: flex;
   align-items: center;
   gap: 15px;
+  /* padding-top: 20px; */
 }
 
 .theme-btn-mobile,
@@ -925,6 +926,7 @@ footer .wrapper {
     align-items: center;
     gap: 10px;
     border-radius: 100px;
+    margin-top: 10px;
   }
 
   .theme-btn-desktop.light {

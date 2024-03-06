@@ -31,10 +31,11 @@ class DB
             echo " <button class='btn1 btn-primary1'><a href='dashboard.php'>" . $_SESSION["username"] . "!</a> </button>";
         }
         echo "<style>.btn1 {
-            min-width: 10rem;
+            min-width: 6rem;
             border-radius: 100px;
             font-size:20px;
             text-decoration:none;
+            background:transparent;
           }
           
           .btn-primary1 {
@@ -45,7 +46,12 @@ class DB
           .btn-primary1:hover {
             background:  hsl(211, 25%, 84%);
             color: hsl(214, 32%, 91%);
-          }</style>";
+          }
+         
+        
+        
+        
+          </style>";
     }
     function connect_DB()
     {

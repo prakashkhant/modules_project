@@ -25,7 +25,7 @@
                 <div class="logoimg">
                     <img src="images/logo.png" alt="" srcset="">
                 </div>
-                <a href="/">
+                <a href="">
                     <h1 class="webname">NexusHub</h1>
                 </a>
             </div>
