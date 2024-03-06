@@ -293,9 +293,9 @@ $cid = $_GET["c"];
                                                 </div>
                                             </div>
 
-                                            <button onclick='downloadPDF()' class='so btn'>Download PDF</button>
+                                          <!--  <button onclick='downloadPDF()' class='so btn'>Download PDF</button>
                                           
-                                            <a href='#' class='so btn'>Like</a>
+                                            <a href='#' class='so btn'>Like</a> -->
 
                                         </div>
 
@@ -314,52 +314,7 @@ $cid = $_GET["c"];
 
             </section>
 
-            <?php
-                        // Retrieve blog content (you can get this from a database or any other source)
-                        $blogTitle = "Sample Blog Title";
-                        $readingTime = "5 minutes";
-                        $imageUrl = "https://via.placeholder.com/400x300";
-                        $blogContent = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget purus eu nisi suscipit feugiat. Donec sed malesuada mi. Nullam eget tristique justo, vel accumsan massa. Nam dictum feugiat dui non aliquam.";
-                        $publisherName = "John Doe";
-                        $publishDate = "March 4, 2024";
-
-                        // Include the Dompdf library
-                        require_once 'dompdf/autoload.inc.php';
-
-                        // Use the Dompdf namespace
-                        use Dompdf\Dompdf;
-                        use Dompdf\Options;
-
-                        // Initialize Dompdf options
-                        $options = new Options();
-                        $options->set('isHtml5ParserEnabled', true);
-                        $options->set('isRemoteEnabled', true);
-
-                        // Instantiate Dompdf
-                        $dompdf = new Dompdf($options);
-
-                        // HTML content for the PDF
-                                            $html = "
-                                    <h1>$blogTitle</h1>
-                                    <p>Reading Time: $readingTime</p>
-                                    <img src='$imageUrl' alt='Blog Image'>
-                                    <p>$blogContent</p>
-                                    <p>Published by: $publisherName</p>
-                                    <p>Published on: $publishDate</p>
-                                ";
-
-                        // Load HTML content into Dompdf
-                        $dompdf->loadHtml($html);
-
-                        // Set paper size and orientation
-                        $dompdf->setPaper('A4', 'portrait');
-
-                        // Render the HTML as PDF
-                        $dompdf->render();
-
-                        // Output PDF as a download
-                        $dompdf->stream('blog.pdf', array('Attachment' => 0));
-            ?>
+           
 
 
         </article>

@@ -235,7 +235,7 @@ include 'layouts/index_top.php' ?>
             </div>
         </div>
         <div class="postslider">
-            <div class="popularposts">
+            <!-- <div class="popularposts">
                 <div class="poptitle">
                     <h3>Popular Posts</h3>
                 </div>
@@ -357,7 +357,7 @@ include 'layouts/index_top.php' ?>
                 </div>
 
 
-            </div>
+            </div> -->
             <div class=" aside-card insta-card popularposts">
                 <div class="poptitle">
                     <h3>Photos Gallery</h3>
@@ -368,8 +368,8 @@ include 'layouts/index_top.php' ?>
                     // print_r($data);
                     $count = 0;
                     foreach ($data as $d) {
-                        $count += 1;
-                        if ($count == 13) {
+                        
+                        if ($count > 30) {
                             break;
                         }
                         echo "<li>
@@ -377,6 +377,7 @@ include 'layouts/index_top.php' ?>
                             <img src='images/photo/" . $d["photopath"] . "' width='100px' height='100px' loading='lazy' alt='insta post' class='img-cover'>
                         </a>
                     </li>";
+                    $count += 1;
                     } ?>
 
 

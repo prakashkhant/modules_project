@@ -43,8 +43,8 @@ $db->session_check();
       <nav class="navbar">
 
         <a href="index.php">
-          <img src="images/logo_name.png" alt="website's logo" width="250" height="100" class="logo-light">
-          <img src="images/logo_name.png" alt="website's logo" width="250" height="100" class="logo-dark">
+          <img src="images/logo_name.png" alt="website's logo" width="200" height="50" class="logo-light">
+          <img src="images/logo_name.png" alt="website's logo" width="200" height="50" class="logo-dark">
         </a>
 
         <div class="btn-group">
@@ -173,10 +173,10 @@ $db->session_check();
             and other popular languages.
           </p>
 
-          <div class="btn-group">
-            <a href="#contact" class="btn btn-primary">About us</a>
-            <!-- <a href="#" class="btn btn-secondary">About Me</a> -->
-          </div>
+          <!-- <div class="btn-group">
+            <a href="about.php" class="btn btn-primary">About us</a>
+             <a href="#" class="btn btn-secondary">About Me</a>
+          </div> -->
 
         </div>
 

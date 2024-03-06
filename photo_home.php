@@ -80,7 +80,7 @@ $db->session_check();
 		<div class="home-text">
 			<h1>Fuel Mind <br> Photos</h1>
 			<p>Enthusiastically extend extensive Users service bofore <br> best breed convergence completely.</p>
-			<a href="#" class="home-btn">Let's go now</a>
+			<!-- <a href="#" class="home-btn">Let's go now</a> -->
 
 		</div>
 	</section>

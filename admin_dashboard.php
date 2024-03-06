@@ -185,7 +185,7 @@ $uname=$_SESSION["username"];
                                                 <td  style='color:blue;'>" . $cname["cat_name"] . "</td>
                                                 <td>" . $item["publish_date"] . "</td>
                                                 <td>" . $item["publish_by"] . "</td>
-                                                <td><a class='btn btn-success' href=''>Update </a>
+                                                <td><a class='btn btn-success' href='updateItem.php'>Update </a>
                                                 <a class='btn btn-primary' href='delete-item.php?id=" . $item["id"] . "'>Delete </a></td>
                                                 <td>
                                                     <a href='#'> <i class='fas fa-eye'></i>

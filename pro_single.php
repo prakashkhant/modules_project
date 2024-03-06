@@ -199,8 +199,8 @@
                        </p>
                         </div>
                     </div>
-                    <a href='pro_single.php?id=".($id +1 )."&c=".$ld["category"]."' class='btn load-more'>Next topic ►
-                    </a>
+                    
+                    
                 </div>     ";       }    
                 //next button not working correctly                    
 ?>

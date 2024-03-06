@@ -1,7 +1,7 @@
-<?php       include './database/db.php';
-                $db = new DB();
-                $db->session_check();
-                ?>
+<?php include './database/db.php';
+$db = new DB();
+$db->session_check();
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -24,7 +24,7 @@
   <!--start header section-->
   <header>
     <a href="index.php" class="logo">
-      <img src="images/logo_name_2.png" > 
+      <img src="images/logo_name_2.png">
     </a>
     <ul class="navbar">
       <li> <a href="#home">Home</a></li>
@@ -33,10 +33,10 @@
 
     </ul>
     <div class="header-icons">
-    <?php 
-            $db->login_dashboard();
-            ?>
-      
+      <?php
+      $db->login_dashboard();
+      ?>
+
       <div class="bx bx-menu" id="menu-icon"></div>
     </div>
   </header>
@@ -49,11 +49,7 @@
       <h1>Accesible for Good Knowledge</h1>
       <p>Speak the World: Your Journey to Language Mastery Starts Here!</p>
       <div class="latter">
-        <form method="" action="#">
-          <input type="email" placeholder="Write your email" required>
-          <input type="submit" value="Let's Start" required class="button">
-
-</form>
+        
       </div>
     </div>
 
@@ -64,39 +60,7 @@
 
   <!--start container section-->
 
-  <!-- <section class="container">
-    <div class="container-box">
-      <div class="container-img">
-        <img src="images/language/lang3.jpeg">
-      </div>
-      <div class="container-text">
-        <h4>5k</h4>
-        <p>Online Cources</p>
-      </div>
-    </div>
 
-    <div class="container-box">
-      <div class="container-img">
-        <img src="images/language/lang4.png">
-      </div>
-      <div class="container-text">
-        <h4>5k</h4>
-        <p>Online Cources</p>
-      </div>
-    </div>
-
-
-
-    <div class="container-box">
-      <div class="container-img">
-        <img src="images/language/lang7.png">
-      </div>
-      <div class="container-text">
-        <h4>5k</h4>
-        <p>Online Cources</p>
-      </div>
-    </div>
-  </section> -->
 
   <!--start categories section-->
 
@@ -110,19 +74,20 @@
 
     <div class="categories-content">
 
-    <?php
-           
-            $cat_list = $db->fetch_category_list(3);
-            foreach ($cat_list as $cl) {
-              echo "
-              <a href='language_single.php?c=".$cl["cat_id"]."&cn=".$cl["cat_name"]."'>
+      <?php
+
+      $cat_list = $db->fetch_category_list(3);
+      foreach ($cat_list as $cl) {
+        echo "
+              <a href='language_single.php?c=" . $cl["cat_id"] . "&cn=" . $cl["cat_name"] . "'>
   <div class='box'>
-    <img src='images/language/".$cl["cat_photo"]."'>
-    <h3>".$cl["cat_name"]."</h3>
+    <img src='images/language/" . $cl["cat_photo"] . "'>
+    <h3>" . $cl["cat_name"] . "</h3>
 
   </div>
 </a>
-       " ; } ?>
+       ";
+      } ?>
 
       <!-- <a href="language_single.php">
         <div class="box">

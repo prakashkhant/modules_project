@@ -21,14 +21,31 @@ class DB
     {
 
         if (empty($_SESSION["username"]) || $_SESSION["username"] == '') {
-            echo " <button class='btn btn-primary'><a href='login_regs.php'>Join Me !</a></button>";
+            echo " <button class='btn1 btn-primary1'><a href='login_regs.php'>Join Me !</a></button>";
+           
         } else if ($_SESSION["username"]=="admin"){
-            echo " <button class='btn btn-primary'><a href='admin_dashboard.php'>" . $_SESSION["username"] . "!</a> </button>";
+            echo " <button class='btn1 btn-primary1'><a href='admin_dashboard.php'>" . $_SESSION["username"] . "!</a> </button>";
         }
         else {
 
-            echo " <button class='btn btn-primary'><a href='dashboard.php'>" . $_SESSION["username"] . "!</a> </button>";
+            echo " <button class='btn1 btn-primary1'><a href='dashboard.php'>" . $_SESSION["username"] . "!</a> </button>";
         }
+        echo "<style>.btn1 {
+            min-width: 10rem;
+            border-radius: 100px;
+            font-size:20px;
+            text-decoration:none;
+          }
+          
+          .btn-primary1 {
+            background:  hsl(229, 76%, 66%);
+            color:  hsl(0, 0%, 100%);;
+            padding: 0.6875rem 1.1875rem;
+          }
+          .btn-primary1:hover {
+            background:  hsl(211, 25%, 84%);
+            color: hsl(214, 32%, 91%);
+          }</style>";
     }
     function connect_DB()
     {
