@@ -43,8 +43,8 @@
             <nav class="navbar">
 
                 <a href="index.php">
-                    <img src="images/logo_name.png" alt="website's logo" width="250" height="100" class="logo-light">
-                    <img src="images/logo_name.png" alt="website's logo" width="250" height="100" class="logo-dark">
+                    <img src="images/logo_name.png" alt="website's logo" width="250" height="80" class="logo-light">
+                    <img src="images/logo_name.png" alt="website's logo" width="250" height="80" class="logo-dark">
                 </a>
 
                 <div class="btn-group">
@@ -69,12 +69,9 @@
                         </li>
 
                         <li>
-                            <a href="#" class="nav-link">About Me</a>
+                            <a href="about.php" class="nav-link">About Me</a>
                         </li>
 
-                        <li>
-                            <a href="#" class="nav-link">Contact</a>
-                        </li>
 
                     </ul>
 

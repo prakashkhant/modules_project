@@ -103,12 +103,12 @@ $db->session_check();
               </li>
 
               <li class="nav-item">
-                <a href="#" class="nav-link">About Me</a>
+                <a href="about.php" class="nav-link">About Me</a>
               </li>
 
-              <li class="nav-item">
+              <!-- <li class="nav-item">
                 <a href="#" class="nav-link">Contact</a>
-              </li>
+              </li> -->
             </ul>
 
           </div>
