@@ -43,7 +43,7 @@
                 </ul>
             </div>
             <div class="searchdarksub flex">
-                <div class="searchbar">
+                <!-- <div class="searchbar">
                     <i class="fa-solid fa-magnifying-glass"></i>
                     <div class="searchclick">
                         <form action="#">
@@ -61,7 +61,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <div class="toggle-switch">
                     <input type="checkbox" name="" class="l toggle-checkbox" id="dark-mode-toggle">
                     <label for="dark-mode-toggle" class="toggle-label"></label>

@@ -35,10 +35,8 @@ class DB
             border-radius: 100px;
             font-size:20px;
             text-decoration:none;
-            background:transparent;
-          }
-          
-          .btn-primary1 {
+            background:white;
+         
             background:  hsl(229, 76%, 66%);
             color:  hsl(0, 0%, 100%);;
             padding: 0.6875rem 1.1875rem;
