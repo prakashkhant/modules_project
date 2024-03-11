@@ -29,7 +29,7 @@ include './layouts/top.php';
                 <div>
                     <h3 class="fs-2">
                         <?php
-                        $count_no = $db->count_rows_table("item");
+                        $count_no = $db->count__user_items($uname);
                         foreach ($count_no as $cn) {
                             echo $cn[0];
                         }

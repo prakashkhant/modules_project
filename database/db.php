@@ -160,6 +160,13 @@ class DB
             return $this->fetchData($query);
         }
     }
+    function count__user_items($uname)
+    {
+        if ($this->connect_DB()) {
+            $query = "SELECT count(*) FROM `item` WHERE `publish_by`='$uname'";
+            return $this->fetchData($query);
+        }
+    }
     // login function
     function login_user()
     {

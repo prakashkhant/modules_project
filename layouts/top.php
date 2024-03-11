@@ -1,11 +1,11 @@
 <?php
 session_start();
-// if(empty($_SESSION['id']) || empty($_SESSION['username'])){
-//     header("Location: index.php");
-// }
-// else if (!isset($_SESSION['id']) && !isset($_SESSION['username'])) {
-//     header("Location: index.php");
-// }
+if(empty($_SESSION['id']) || empty($_SESSION['username'])){
+    header("Location: index.php");
+}
+else if (!isset($_SESSION['id']) && !isset($_SESSION['username'])) {
+    header("Location: index.php");
+}
 $uname= $_SESSION['username'];
 
 ?>
@@ -70,8 +70,8 @@ $uname= $_SESSION['username'];
                             </a>
 
                             <ul class="dropdown-menu " aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#">Profile</a></li>
-                                <li><a class="dropdown-item" href="#">Settings</a></li>
+                                <li><a class="dropdown-item" href="user_profile.php">Profile Changes</a></li>
+                                <!-- <li><a class="dropdown-item" href="#">Settings</a></li> -->
                                 <li><a class="dropdown-item" href="logout.php">Logout</a></li>
                             </ul>
                     </div>

@@ -293,9 +293,9 @@ $cid = $_GET["c"];
                                                 </div>
                                             </div>
 
-                                          <!--  <button onclick='downloadPDF()' class='so btn'>Download PDF</button>
+                                            <button onclick='downloadPDF()' class='so btn'>Download PDF</button>
                                           
-                                            <a href='#' class='so btn'>Like</a> -->
+                                            <a href='#' class='so btn'>Like</a> 
 
                                         </div>
 
