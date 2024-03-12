@@ -200,33 +200,33 @@ include 'layouts/index_top.php' ?>
                     foreach ($lang_name as $l_name) {
                         echo "
         
-<div class='post flex'>
-<a href='pro_single.php?id=" . $d["id"] . "&name=" . $l_name["cat_name"] . "&c=" . $d["category"] . "'>
-    <img src='images/programming/" . $d["photopath"] . "' alt=''>
-</a>
-<div class='postdetails'>
-    <div class='postlabel'>
-        <a href=''>" . $l_name["cat_name"] . "</a>
-    </div>
-    <a href='pro_single.php?id=" . $d["id"] . "&name=" . $l_name["cat_name"] . "&c=" . $d["category"] . "'>
-        <h2> " . $d["title"] . "</h2>
-    </a>
-    <p>  " . nl2br($d["description"]) . "</p>
-    <div class='posttimeteg flex'>
-        <div class='flex'>
-            <h5><span>Tegs  :</span> ".$d["keywords"]."</h5>
-       
-        </div>
-        <div class='tegtime'>
-            <h5 class='flex'>
-                <i class='fa-regular fa-clock'></i>
-                <span>".$time."</span>mins read
-            </h5>
-        </div>
-    </div>
-</div>
-</div>
-";
+            <div class='post flex'>
+            <a href='pro_single.php?id=" . $d["id"] . "&name=" . $l_name["cat_name"] . "&c=" . $d["category"] . "'>
+                <img src='images/programming/" . $d["photopath"] . "' alt=''>
+            </a>
+            <div class='postdetails'>
+                <div class='postlabel'>
+                    <a href=''>" . $l_name["cat_name"] . "</a>
+                </div>
+                <a href='pro_single.php?id=" . $d["id"] . "&name=" . $l_name["cat_name"] . "&c=" . $d["category"] . "'>
+                    <h2> " . $d["title"] . "</h2>
+                </a>
+                <p>  " . nl2br($d["description"]) . "</p>
+                <div class='posttimeteg flex'>
+                    <div class='flex'>
+                        <h5><span>Tegs  :</span> ".$d["keywords"]."</h5>
+                
+                    </div>
+                    <div class='tegtime'>
+                        <h5 class='flex'>
+                            <i class='fa-regular fa-clock'></i>
+                            <span>".$time."</span>mins read
+                        </h5>
+                    </div>
+                </div>
+            </div>
+            </div>
+            ";
                     }
                 }
                 ?>
@@ -235,7 +235,7 @@ include 'layouts/index_top.php' ?>
             </div>
         </div>
         <div class="postslider">
-            <!-- <div class="popularposts">
+             <div class="popularposts">
                 <div class="poptitle">
                     <h3>Popular Posts</h3>
                 </div>
@@ -357,7 +357,7 @@ include 'layouts/index_top.php' ?>
                 </div>
 
 
-            </div> -->
+            </div> 
             <div class=" aside-card insta-card popularposts">
                 <div class="poptitle">
                     <h3>Photos Gallery</h3>
@@ -369,7 +369,7 @@ include 'layouts/index_top.php' ?>
                     $count = 0;
                     foreach ($data as $d) {
                         
-                        if ($count > 30) {
+                        if ($count > 10) {
                             break;
                         }
                         echo "<li>

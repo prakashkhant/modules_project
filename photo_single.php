@@ -125,10 +125,16 @@ $cid = $_GET["c"];
   <img src='images/photo/" . $pi["photopath"] . "'>
   <h5>" . ucfirst($pi["title"]) . "</h5>
   <p>" . ucfirst($pi["publish_by"]) . "</p>
-  
+  <div class='soical-content'>
+  <a href=''><i class='bx bx-heart'></i></a>
+  <a href=''><i class='bx bx-down-arrow-alt' ></i></a>
+ 
+
+  </div>
 </div>
             ";
             } ?>
+            <a href=''><i class='bx bx-heart'></i></a>
         </div>
     </section>
     <section id="contact">
