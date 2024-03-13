@@ -121,6 +121,14 @@ class DB
             return $this->fetchData($query);
         }
     }
+    function count_items_list_category($cid)
+    {
+        if ($this->connect_DB()) {
+            $query = "SELECT count(*) FROM `item` WHERE `category`= " . $cid;
+
+            return $this->fetchData($query);
+        }
+    }
 
     function fetch_category_list($id)
     {

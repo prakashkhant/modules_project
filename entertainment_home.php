@@ -1,7 +1,7 @@
-<?php       include './database/db.php';
-                $db = new DB();
-                $db->session_check();
-                ?>
+<?php include './database/db.php';
+$db = new DB();
+$db->session_check();
+?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
@@ -10,18 +10,15 @@
     <title>Nexus hub | Entertainments</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/entertainment_home.css">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <!-- Owl Carousel css-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" />
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
     <!-- Owl Carousel css-->
 
 
     <!-- jquery css-->
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js"
-        integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
     <!-- jquery css-->
 
 </head>
@@ -42,17 +39,17 @@
                                 <li><a href="product.html">Movies</a></li>
                                 <li><a href="index.html">Tv Shows</a></li>
                                 <li><a href="contact.html">Video</a></li>
-                                
+
                             </ul>
                         </nav>
                         <span class="fa fa-bars" onclick="menutoggle()"></span>
 
                         <div class="subscribe flex">
-                            
-                           <!-- DASHBOARD -->
-                            <?php 
-            $db->login_dashboard();
-            ?>
+
+                            <!-- DASHBOARD -->
+                            <?php
+                            $db->login_dashboard();
+                            ?>
                         </div>
                     </div>
                 </div>
@@ -101,325 +98,64 @@
             }
         }
 
-        window.addEventListener("scroll", function () {
+        window.addEventListener("scroll", function() {
             var header = document.querySelector("header");
             header.classList.toggle("sticky", window.scrollY > 50);
         })
     </script>
 
 
-
     <section class="popular mtop">
         <div class="container ">
             <div class="heading flex1">
                 <h2>Most Popular</h2>
-                <button>MORE VIDEO</button>
-            </div>
 
+            </div>
+            <?php
+            $bm = $db->fetch_items_by_module(1);
+            // print_r($bm);
+            ?>
             <div class="owl-carousel owl-theme">
-                <div class="item">
-                    <div class="box">
-                        <div class="imgBox">
-                            <img src="images/entertaintment/p1.jpg" alt="">
-                            <div class="icon">
-                                <i class="far fa-heart"></i>
-                                <i class="fas fa-share-alt"></i>
-                                <i class="fas fa-plus"></i>
+                <!-- item php coede -->
+                <?php
+                $i = 0;
+                foreach ($bm as $bm) {
+                    if ($i == 11) {
+                        break;
+                    }
+                    echo "
+                            <div class='item'>
+                            <div class='box'>
+                                <div class='imgBox'>
+                                    <img src='images/entertaintment/" . $bm["photopath"] . "' alt=''>
+                                    <div class='icon'>
+                                        <i class='far fa-heart'></i>
+                                        <i class='fas fa-share-alt'></i>
+                                        <i class='fas fa-plus'></i>
+                                    </div>
+                                </div>
+        
+                                <div class='content'>
+                                    <i id='palybtn' class='fas fa-play'></i>
+                                </div>
+                                <div class='text'>
+                                    <h3>" . $bm["title"] . "</h3>
+                                    <div class='time flex'>
+                                        <span>" . $bm["time"] . " </span>
+                                        <i class='fas fa-circle'></i>
+                                        <a>" . $bm["keywords"] . " </a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-
-                        <div class="content">
-                            <i id="palybtn" class="fas fa-play"></i>
-                        </div>
-                        <div class="text">
-                            <h3>My Generation</h3>
-                            <div class="time flex">
-                                <span>1hrs 50mins</span>
-                                <i class="fas fa-circle"></i>
-                                <a>Action</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="box">
-                        <div class="imgBox">
-                            <img src="images/entertaintment/p2.jpg" alt="">
-                            <div class="icon">
-                                <i class="far fa-heart"></i>
-                                <i class="fas fa-share-alt"></i>
-                                <i class="fas fa-plus"></i>
-                            </div>
-                        </div>
-
-                        <div class="content">
-                            <i id="palybtn" class="fas fa-play"></i>
-                        </div>
-                        <div class="text">
-                            <h3>Machine War</h3>
-                            <div class="time flex">
-                                <span>1hrs 50mins</span>
-                                <i class="fas fa-circle"></i>
-                                <a>Action</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="box">
-                        <div class="imgBox">
-                            <img src="images/entertaintment//p3.jpg" alt="">
-                            <div class="icon">
-                                <i class="far fa-heart"></i>
-                                <i class="fas fa-share-alt"></i>
-                                <i class="fas fa-plus"></i>
-                            </div>
-                        </div>
-
-                        <div class="content">
-                            <i id="palybtn" class="fas fa-play"></i>
-                        </div>
-                        <div class="text">
-                            <h3>Fight for Life</h3>
-                            <div class="time flex">
-                                <span>1hrs 50mins</span>
-                                <i class="fas fa-circle"></i>
-                                <a>Action</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="box">
-                        <div class="imgBox">
-                            <img src="images/entertaintment/p4.jpg" alt="">
-                            <div class="icon">
-                                <i class="far fa-heart"></i>
-                                <i class="fas fa-share-alt"></i>
-                                <i class="fas fa-plus"></i>
-                            </div>
-                        </div>
-
-                        <div class="content">
-                            <i id="palybtn" class="fas fa-play"></i>
-                        </div>
-                        <div class="text">
-                            <h3>The Warrior Life</h3>
-                            <div class="time flex">
-                                <span>1hrs 50mins</span>
-                                <i class="fas fa-circle"></i>
-                                <a>Action</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="box">
-                        <div class="imgBox">
-                            <img src="images/entertaintment//p5.jpg" alt="">
-                            <div class="icon">
-                                <i class="far fa-heart"></i>
-                                <i class="fas fa-share-alt"></i>
-                                <i class="fas fa-plus"></i>
-                            </div>
-                        </div>
-
-                        <div class="content">
-                            <i id="palybtn" class="fas fa-play"></i>
-                        </div>
-                        <div class="text">
-                            <h3>Skull Of Myths </h3>
-                            <div class="time flex">
-                                <span>1hrs 50mins</span>
-                                <i class="fas fa-circle"></i>
-                                <a>Action</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="box">
-                        <div class="imgBox">
-                            <img src="images/entertaintment//p6.jpg" alt="">
-                            <div class="icon">
-                                <i class="far fa-heart"></i>
-                                <i class="fas fa-share-alt"></i>
-                                <i class="fas fa-plus"></i>
-                            </div>
-                        </div>
-
-                        <div class="content">
-                            <i id="palybtn" class="fas fa-play"></i>
-                        </div>
-                        <div class="text">
-                            <h3>The Jin's Friend</h3>
-                            <div class="time flex">
-                                <span>1hrs 50mins</span>
-                                <i class="fas fa-circle"></i>
-                                <a>Action</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="box">
-                        <div class="imgBox">
-                            <img src="images/entertaintment//p7.jpg" alt="">
-                            <div class="icon">
-                                <i class="far fa-heart"></i>
-                                <i class="fas fa-share-alt"></i>
-                                <i class="fas fa-plus"></i>
-                            </div>
-                        </div>
-
-                        <div class="content">
-                            <i id="palybtn" class="fas fa-play"></i>
-                        </div>
-                        <div class="text">
-                            <h3>Common Man's Idea</h3>
-                            <div class="time flex">
-                                <span>1hrs 50mins</span>
-                                <i class="fas fa-circle"></i>
-                                <a>Action</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                            
+                            ";
+                }
+                ?>
             </div>
-        </div>
     </section>
 
-    <section class="popular mtop">
-        <div class="container ">
-            <div class="heading flex1">
-                <h2>Most Viewed</h2>
-                <button>MORE VIDEO</button>
-            </div>
 
-            <div class="owl-carousel owl-theme">
-                <div class="item">
-                    <div class="box">
-                        <div class="imgBox">
-                            <img src="images/entertaintment//p7.jpg" alt="">
-                            <div class="icon">
-                                <i class="far fa-heart"></i>
-                                <i class="fas fa-share-alt"></i>
-                                <i class="fas fa-plus"></i>
-                            </div>
-                        </div>
-
-                        <div class="content">
-                            <i id="palybtn" class="fas fa-play"></i>
-                        </div>
-                        <div class="text">
-                            <h3>My Generation</h3>
-                            <div class="time flex">
-                                <span>1hrs 50mins</span>
-                                <i class="fas fa-circle"></i>
-                                <a>Action</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="box">
-                        <div class="imgBox">
-                            <img src="images/entertaintment//p6.jpg" alt="">
-                            <div class="icon">
-                                <i class="far fa-heart"></i>
-                                <i class="fas fa-share-alt"></i>
-                                <i class="fas fa-plus"></i>
-                            </div>
-                        </div>
-
-                        <div class="content">
-                            <i id="palybtn" class="fas fa-play"></i>
-                        </div>
-                        <div class="text">
-                            <h3>Machine War</h3>
-                            <div class="time flex">
-                                <span>1hrs 50mins</span>
-                                <i class="fas fa-circle"></i>
-                                <a>Action</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="box">
-                        <div class="imgBox">
-                            <img src="images/entertaintment//p5.jpg" alt="">
-                            <div class="icon">
-                                <i class="far fa-heart"></i>
-                                <i class="fas fa-share-alt"></i>
-                                <i class="fas fa-plus"></i>
-                            </div>
-                        </div>
-
-                        <div class="content">
-                            <i id="palybtn" class="fas fa-play"></i>
-                        </div>
-                        <div class="text">
-                            <h3>Fight for Life</h3>
-                            <div class="time flex">
-                                <span>1hrs 50mins</span>
-                                <i class="fas fa-circle"></i>
-                                <a>Action</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="box">
-                        <div class="imgBox">
-                            <img src="images/entertaintment//p4.jpg" alt="">
-                            <div class="icon">
-                                <i class="far fa-heart"></i>
-                                <i class="fas fa-share-alt"></i>
-                                <i class="fas fa-plus"></i>
-                            </div>
-                        </div>
-
-                        <div class="content">
-                            <i id="palybtn" class="fas fa-play"></i>
-                        </div>
-                        <div class="text">
-                            <h3>The Warrior Life</h3>
-                            <div class="time flex">
-                                <span>1hrs 50mins</span>
-                                <i class="fas fa-circle"></i>
-                                <a>Action</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="box">
-                        <div class="imgBox">
-                            <img src="images/entertaintment//p3.jpg" alt="">
-                            <div class="icon">
-                                <i class="far fa-heart"></i>
-                                <i class="fas fa-share-alt"></i>
-                                <i class="fas fa-plus"></i>
-                            </div>
-                        </div>
-
-                        <div class="content">
-                            <i id="palybtn" class="fas fa-play"></i>
-                        </div>
-                        <div class="text">
-                            <h3>Skull Of Myths </h3>
-                            <div class="time flex">
-                                <span>1hrs 50mins</span>
-                                <i class="fas fa-circle"></i>
-                                <a>Action</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
 
     <!-- Owl Carousel -->
@@ -635,139 +371,74 @@
     </script>
 
 
+    <?php
+    $cd = $db->fetch_category_list(1);
 
-    <section class="popular mtop">
-        <div class="container ">
-            <div class="heading flex1">
-                <h2>Powerful Crime Thrillers</h2>
-                <button>MORE VIDEO</button>
-            </div>
 
-            <div class="owl-carousel owl-theme">
-                <div class="item">
-                    <div class="box">
-                        <div class="imgBox">
-                            <img src="images/entertaintment//p7.jpg" alt="">
-                            <div class="icon">
-                                <i class="far fa-heart"></i>
-                                <i class="fas fa-share-alt"></i>
-                                <i class="fas fa-plus"></i>
-                            </div>
-                        </div>
-
-                        <div class="content">
-                            <i id="palybtn" class="fas fa-play"></i>
-                        </div>
-                        <div class="text">
-                            <h3>My Generation</h3>
-                            <div class="time flex">
-                                <span>1hrs 50mins</span>
-                                <i class="fas fa-circle"></i>
-                                <a>Action</a>
-                            </div>
-                        </div>
-                    </div>
+    foreach ($cd as $cd) {
+        $cc = $db->fetch_items_list($cd["cat_id"]);
+        $con = $db->count_items_list_category($cd["cat_id"]);
+        foreach ($con as $con) {
+            $cou = $con[0];
+            break;
+        }
+        if ($cou <= 2) {
+            break;
+        }else{
+    ?>
+        <section class="popular mtop">
+            <div class="container ">
+                <div class="heading flex1">
+                    <h2><?php echo $cd["cat_name"] ?></h2>
+                    <button>MORE VIDEO</button>
                 </div>
-                <div class="item">
-                    <div class="box">
-                        <div class="imgBox">
-                            <img src="images/entertaintment//p6.jpg" alt="">
-                            <div class="icon">
-                                <i class="far fa-heart"></i>
-                                <i class="fas fa-share-alt"></i>
-                                <i class="fas fa-plus"></i>
-                            </div>
-                        </div>
 
-                        <div class="content">
-                            <i id="palybtn" class="fas fa-play"></i>
-                        </div>
-                        <div class="text">
-                            <h3>Machine War</h3>
-                            <div class="time flex">
-                                <span>1hrs 50mins</span>
-                                <i class="fas fa-circle"></i>
-                                <a>Action</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="box">
-                        <div class="imgBox">
-                            <img src="images/entertaintment//p5.jpg" alt="">
-                            <div class="icon">
-                                <i class="far fa-heart"></i>
-                                <i class="fas fa-share-alt"></i>
-                                <i class="fas fa-plus"></i>
-                            </div>
-                        </div>
+                <div class="owl-carousel owl-theme">
 
-                        <div class="content">
-                            <i id="palybtn" class="fas fa-play"></i>
-                        </div>
-                        <div class="text">
-                            <h3>Fight for Life</h3>
-                            <div class="time flex">
-                                <span>1hrs 50mins</span>
-                                <i class="fas fa-circle"></i>
-                                <a>Action</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="box">
-                        <div class="imgBox">
-                            <img src="images/entertaintment//p4.jpg" alt="">
-                            <div class="icon">
-                                <i class="far fa-heart"></i>
-                                <i class="fas fa-share-alt"></i>
-                                <i class="fas fa-plus"></i>
-                            </div>
-                        </div>
+                    <?php
+                   
+                   
+                        foreach ($cc as $cc) {
 
-                        <div class="content">
-                            <i id="palybtn" class="fas fa-play"></i>
-                        </div>
-                        <div class="text">
-                            <h3>The Warrior Life</h3>
-                            <div class="time flex">
-                                <span>1hrs 50mins</span>
-                                <i class="fas fa-circle"></i>
-                                <a>Action</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="box">
-                        <div class="imgBox">
-                            <img src="images/entertaintment//p3.jpg" alt="">
-                            <div class="icon">
-                                <i class="far fa-heart"></i>
-                                <i class="fas fa-share-alt"></i>
-                                <i class="fas fa-plus"></i>
-                            </div>
-                        </div>
 
-                        <div class="content">
-                            <i id="palybtn" class="fas fa-play"></i>
-                        </div>
-                        <div class="text">
-                            <h3>Skull Of Myths </h3>
-                            <div class="time flex">
-                                <span>1hrs 50mins</span>
-                                <i class="fas fa-circle"></i>
-                                <a>Action</a>
+
+                            echo "
+                           
+                            <div class='item'>
+                            <div class='box'>
+                                <div class='imgBox'>
+                                    <img src='images/entertaintment/" . $cc["photopath"] . "' alt=''>
+                                    <div class='icon'>
+                                        <i class='far fa-heart'></i>
+                                        <i class='fas fa-share-alt'></i>
+                                        <i class='fas fa-plus'></i>
+                                    </div>
+                                </div>
+        
+                                <div class='content'>
+                                    <i id='palybtn' class='fas fa-play'></i>
+                                </div>
+                                <div class='text'>
+                                    <h3>" . $cc["title"] . "</h3>
+                                    <div class='time flex'>
+                                        <span>" . $cc["time"] . " </span>
+                                        <i class='fas fa-circle'></i>
+                                        <a>" . $cc["keywords"] . " </a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                            ";
+                        }
+                    }
+                    ?>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    <?php
 
+    }
+    ?>
 
     <!-- paxi mate ko lai aata hai-->
     <script>
@@ -854,8 +525,7 @@
                 </div>
             </div>
         </div>
-        <p class="legal">Copyright (c) 2021 Copyright Holder All Rights Reserved | This template is made By <i
-                class="fas fa-heart"></i> Dot Studio</p>
+        <p class="legal">Copyright (c) 2021 Copyright Holder All Rights Reserved | This template is made By <i class="fas fa-heart"></i> Dot Studio</p>
     </footer>
 </body>
 
