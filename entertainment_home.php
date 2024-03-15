@@ -15,6 +15,7 @@ $db->session_check();
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
     <!-- Owl Carousel css-->
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
 
 
     <!-- jquery css-->
