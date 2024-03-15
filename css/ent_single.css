@@ -1,0 +1,38 @@
+body {
+    transition: background-color 0.5s, color 0.5s;
+  }
+  
+  .light-mode {
+    background-color: white;
+    color: black;
+  }
+  
+  .dark-mode {
+    background-color: #1a1a1a;
+    color: white;
+  }
+  
+  .btn {
+    font-size: 1rem;
+  }
+  
+  .btn i {
+    font-size: 1.2rem;
+  }
+  
+  img {
+    max-width: 100%;
+  }
+  
+  .embed-responsive-item {
+    border-radius: 8px;
+  }
+  
+  .text-primary {
+    color: #007bff !important;
+  }
+  
+  .text-muted {
+    color: #6c757d !important;
+  }
+  

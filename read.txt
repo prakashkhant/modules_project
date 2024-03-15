@@ -1,1 +1,24 @@
-lejfljlkjlk
+                <div class='item'>
+                    <div class='box'>
+                        <div class='imgBox'>
+                            <img src='images/entertaintment/p1.jpg' alt=''>
+                            <div class='icon'>
+                                <i class='far fa-heart'></i>
+                                <i class='fas fa-share-alt'></i>
+                                <i class='fas fa-plus'></i>
+                            </div>
+                        </div>
+
+                        <div class='content'>
+                            <i id='palybtn' class='fas fa-play'></i>
+                        </div>
+                        <div class='text'>
+                            <h3>My Generation</h3>
+                            <div class='time flex'>
+                                <span>1hrs 50mins</span>
+                                <i class='fas fa-circle'></i>
+                                <a>Action</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>

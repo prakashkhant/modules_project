@@ -110,7 +110,7 @@ $db->session_check();
         <div class="container ">
             <div class="heading flex1">
                 <h2>Most Popular</h2>
-
+                <!-- <button><a href="entertainment_category.php">More List</a></button> -->
             </div>
             <?php
             $bm = $db->fetch_items_by_module(1);
@@ -125,10 +125,13 @@ $db->session_check();
                         break;
                     }
                     echo "
-                            <div class='item'>
+                        
+                        <div class='item'>
+                       
                             <div class='box'>
+                            
                                 <div class='imgBox'>
-                                    <img src='images/entertaintment/" . $bm["photopath"] . "' alt=''>
+                                   <a href='ent_single.php?c=".$bm["category"]."&id=".$bm["id"]."'>  <img src='images/entertaintment/" . $bm["photopath"] . "' alt=''></a>
                                     <div class='icon'>
                                         <i class='far fa-heart'></i>
                                         <i class='fas fa-share-alt'></i>
@@ -147,9 +150,11 @@ $db->session_check();
                                         <a>" . $bm["keywords"] . " </a>
                                     </div>
                                 </div>
+                                
                             </div>
-                        </div>
                             
+                        </div>
+                           
                             ";
                 }
                 ?>
@@ -391,7 +396,7 @@ $db->session_check();
             <div class="container ">
                 <div class="heading flex1">
                     <h2><?php echo $cd["cat_name"] ?></h2>
-                    <button>MORE VIDEO</button>
+                    <button><a href="entertainment_category.php?c=<?php echo $cd["cat_id"];?>">More List</a></button>
                 </div>
 
                 <div class="owl-carousel owl-theme">
@@ -408,7 +413,9 @@ $db->session_check();
                             <div class='item'>
                             <div class='box'>
                                 <div class='imgBox'>
-                                    <img src='images/entertaintment/" . $cc["photopath"] . "' alt=''>
+                                <a href='ent_single.php?c=".$bm["category"]."&id=".$cc["id"]."'> 
+                                <img src='images/entertaintment/" . $cc["photopath"] . "' alt=''>
+                                </a>
                                     <div class='icon'>
                                         <i class='far fa-heart'></i>
                                         <i class='fas fa-share-alt'></i>
@@ -424,7 +431,7 @@ $db->session_check();
                                     <div class='time flex'>
                                         <span>" . $cc["time"] . " </span>
                                         <i class='fas fa-circle'></i>
-                                        <a>" . $cc["keywords"] . " </a>
+                                        <a>" . $cd["cat_name"] . " </a>
                                     </div>
                                 </div>
                             </div>

@@ -1,0 +1,284 @@
+ <?php       include './database/db.php';
+                $db = new DB();
+                $db->session_check();
+                $c=$_GET["c"];
+                ?> 
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Nexus hub | Entertainments</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/entertainment_single.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <!-- Owl Carousel css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <!-- Owl Carousel css-->
+
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+
+    <!-- jquery css-->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+        integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <!-- jquery css-->
+
+</head>
+
+<body>
+    <section class="home">
+        <div class="headerbg ">
+            <header>
+                <!-- <div class="container "> -->
+                    <div class="navbar flex1">
+                        <div class="logo">
+                           <a href="index.php"> <img src="images/entertaintment/logo.png" alt=""></a>
+                        </div>
+
+                        <nav>
+                            <ul id="menuitem">
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="product.html">Movies</a></li>
+                                <li><a href="index.html">Tv Shows</a></li>
+                                <li><a href="contact.html">Video</a></li>
+                               
+                            </ul>
+                        </nav>
+                        <span class="fa fa-bars" onclick="menutoggle()"></span>
+
+                        <div class="subscribe flex">
+                            <i class="fas fa-search"></i>
+                            <i id="palybtn" class="fas fa-user"></i>
+
+                        </div>
+                    <!-- </div> -->
+                </div>
+            </header>
+
+        </div>
+    </section>
+
+
+    <script>
+        var menuitem = document.getElementById("menuitem");
+        menuitem.style.maxHeight = "0px";
+
+        function menutoggle() {
+            if (menuitem.style.maxHeight == '0px') {
+                menuitem.style.maxHeight = "200px"
+            } else {
+                menuitem.style.maxHeight = "0px"
+            }
+        }
+
+        window.addEventListener("scroll", function () {
+            var header = document.querySelector("header");
+            header.classList.toggle("sticky", window.scrollY > 50);
+        })
+    </script>
+<style>
+    
+
+    .owl-carousel-1 {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(auto-fill, minmax(auto, 1fr));
+        grid-row-gap: 25px;
+        grid-column-gap: 25px;
+    }
+
+    /* Responsive styles for 411px screen */
+    @media screen and (max-width: 411px) {
+        .owl-carousel-1 {
+            grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+        }
+    }
+
+    /* Responsive styles for 768px screen */
+    @media screen and (min-width: 412px) and (max-width: 768px) {
+        .owl-carousel-1 {
+            grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+        }
+    }
+
+    /* Responsive styles for 1000px screen */
+    @media screen and (min-width: 769px) and (max-width: 1000px) {
+        .owl-carousel-1 {
+            grid-template-columns: repeat(auto-fill, minmax(33.33%, 1fr));
+        }
+    }
+
+
+</style>
+
+
+    <section class="popular mtop">
+        <div class="container ">
+            <div class="heading flex1">
+                <h2>
+                    <?php
+                        
+                        $cname=$db->find_category_name($c);
+                        foreach($cname as $cn){
+                            $c_name= $cn["cat_name"];
+                            echo $c_name;
+                        }
+
+                ?>
+                </h2>
+              
+            </div>
+
+            <div class="owl-carousel-1 owl-theme">
+                <?php 
+                    $cl=$db->fetch_items_list($c);
+                    foreach($cl as $cl ){
+                            echo "
+                        <div class='item'>
+                            <div class='box'>
+                                <div class='imgBox'>
+                                <a href='ent_single.php?id=". $cl["id"] ."&c=". $cl["category"] ."'> 
+                                <img src='images/entertaintment/" . $cl["photopath"] . "' alt=''>
+                                </a>
+                                    <div class='icon'>
+                                        <i class='far fa-heart'></i>
+                                        <i class='fas fa-share-alt'></i>
+                                        <i class='fas fa-plus'></i>
+                                    </div>
+                                </div>
+        
+                                <div class='content'>
+                                    <i id='palybtn' class='fas fa-play'></i>
+                                </div>
+                                <div class='text'>
+                                    <h3>" . $cl["title"] . "</h3>
+                                    <div class='time flex'>
+                                        <span>" . $cl["time"] . " </span>
+                                        <i class='fas fa-circle'></i>
+                                        <a>" . $c_name . " </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                            ";
+                        }
+                    
+                ?>
+                
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Owl Carousel -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"></script>
+    <!-- Owl Carousel -->
+
+    <!-- <script>
+        $('.owl-carousel').owlCarousel({
+            items: 4,
+    navigation: false,
+    navigationText: ["", ""],
+    
+            responsive: {
+                411: {
+                    items: 1
+                },
+                768: {
+                    items: 2
+                },
+                1000: {
+                    items: 4
+                }
+            }
+        })
+    </script> -->
+
+    <!-- <script>
+        $('.owl-carousel2').owlCarousel({
+            loop: true,
+            margin: 20,
+            dots: true,
+            items: 1
+        })
+    </script> -->
+
+
+
+
+    <!-- paxi mate ko lai aata hai-->
+
+
+
+    <footer>
+        <div class="container mtop">
+            <div class="box">
+                <div class="logo">
+                    <img src="images/entertaintment//logo.png">
+                </div>
+                <p> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+                    est laborum.</p>
+                <div class="icon">
+                    <i class="fab fa-facebook-square"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-twitter-square"></i>
+                    <i class="fab fa-youtube-square"></i>
+                </div>
+            </div>
+
+            <div class="box">
+                <h2>Explore</h2>
+                <div class="flex">
+                    <ul>
+                        <li>Home</li>
+                        <li>Tv Shows</li>
+                        <li>Actors</li>
+                        <li>Celebrity</li>
+                    </ul>
+                    <ul class="ul">
+                        <li>Movie</li>
+                        <li>Video</li>
+                        <li>Basketball</li>
+                        <li>Coress</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="box ">
+                <h2>Company</h2>
+                <div class="flex">
+                    <ul>
+                        <li>Company</li>
+                        <li>Terms of Use</li>
+                        <li>Contact us</li>
+                        <li>Our Team</li>
+                    </ul>
+                    <ul class="ul">
+                        <li>Privacy Policy</li>
+                        <li>Helps Center</li>
+                        <li>Subscribe</li>
+                        <li>FAQ</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="box">
+                <h2>Download App</h2>
+                <p> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+                    est laborum.</p>
+                <div class="img flex1">
+                    <img src="images/entertaintment//app1.png" alt="">
+                    <img src="images/entertaintment//app2.png" alt="">
+                </div>
+            </div>
+        </div>
+        <p class="legal">Copyright (c) 2021 Copyright Holder All Rights Reserved | This template is made By <i
+                class="fas fa-heart"></i> Dot Studio</p>
+    </footer>
+</body>
+
+</html>

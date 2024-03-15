@@ -284,13 +284,14 @@ h1 {
 .popular .box {
   position: relative;
   background: #221F1F;
-  width: 100%;
+  width: 300px;
   cursor: pointer;
 }
 
 .popular .box .imgBox {
   position: relative;
-  height: 200px;
+  height: 290px;
+  width: 290px;
   overflow: hidden;
 }
 
