@@ -33,9 +33,9 @@
                 <ul class="flex">
                     <li><a href="index.php" class="liactive">Home</a></li>
                     <!-- <li><a href="news_home.php">News </a></li> -->
-                    <li><a href="language_home.php">Native Languages<i class="fa-solid fa-sort-down"></i></a></li>
-                    <li><a href="blogs_home.php">Blogs<i class="fa-solid fa-sort-down"></i></a></li>
-                    <li><a href="entertainment_home.php">Entertaiments<i class="fa-solid fa-sort-down"></i></a></li>
+                    <li><a href="language_home.php">Native Languages</a></li>
+                    <li><a href="blogs_home.php">Blogs</a></li>
+                    <li><a href="entertainment_home.php">Entertaiments</a></li>
                     <li><a href="programming_home.php">Computer Languages</a></li>
                     <li><a href="photo_home.php">Photos Gallery</a></li>
                     <!-- <li><a href="about.php">About Me</a></li> -->

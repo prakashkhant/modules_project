@@ -235,130 +235,7 @@ include 'layouts/index_top.php' ?>
             </div>
         </div>
         <div class="postslider">
-             <div class="popularposts">
-                <div class="poptitle">
-                    <h3>Popular Posts</h3>
-                </div>
-                <div class="populposts">
-                    <div class="popupost flex">
-                        <img src="images/work-freelancer.png" alt="">
-                        <div class="popupostde">
-                            <a href="/">
-                                <h4>Helpful Tips for working from home as a freelancer</h4>
-                            </a>
-                            <div class="poputime flex">
-                                <h5><span>5</span>mins read</h5>
-                                <p>-</p>
-                                <h5>03 sep 2023</h5>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="popupost flex">
-                        <img src="images/work-freelancer.png" alt="">
-                        <div class="popupostde">
-                            <a href="/">
-                                <h4>Helpful Tips for working from home as a freelancer</h4>
-                            </a>
-                            <div class="poputime flex">
-                                <h5><span>5</span>mins read</h5>
-                                <p>-</p>
-                                <h5>03 sep 2023</h5>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="popupost flex">
-                        <img src="images/work-freelancer.png" alt="">
-                        <div class="popupostde">
-                            <a href="/">
-                                <h4>Helpful Tips for working from home as a freelancer</h4>
-                            </a>
-                            <div class="poputime flex">
-                                <h5><span>5</span>mins read</h5>
-                                <p>-</p>
-                                <h5>03 sep 2023</h5>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="popupost flex">
-                        <img src="images/work-freelancer.png" alt="">
-                        <div class="popupostde">
-                            <a href="/">
-                                <h4>Helpful Tips for working from home as a freelancer</h4>
-                            </a>
-                            <div class="poputime flex">
-                                <h5><span>5</span>mins read</h5>
-                                <p>-</p>
-                                <h5>03 sep 2023</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="popupost flex">
-                        <img src="images/work-freelancer.png" alt="">
-                        <div class="popupostde">
-                            <a href="/">
-                                <h4>Helpful Tips for working from home as a freelancer</h4>
-                            </a>
-                            <div class="poputime flex">
-                                <h5><span>5</span>mins read</h5>
-                                <p>-</p>
-                                <h5>03 sep 2023</h5>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="popularposts">
-                <div class="poptitle">
-                    <h3>Last Comments</h3>
-                </div>
-                <div class="comment">
-                    <p><span>"</span>
-                        share your comments and ask your queries to us and also share your feedback to our
-                        website
-                    </p>
-                    <div class="authorcomment flex">
-                        <img src="images/author.png" alt="">
-                        <div class="authortimename">
-                            <h5>coder</h5>
-                            <span>03 Sep 2023</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="comment">
-                    <p><span>"</span>
-                        share your comments and ask your queries to us and also share your feedback to our
-                        website
-                    </p>
-                    <div class="authorcomment flex">
-                        <img src="images/author.png" alt="">
-                        <div class="authortimename">
-                            <h5>coder</h5>
-                            <span>03 Sep 2023</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="comment">
-                    <p><span>"</span>
-                        share your comments and ask your queries to us and also share your feedback to our
-                        website
-                    </p>
-                    <div class="authorcomment flex">
-                        <img src="images/author.png" alt="">
-                        <div class="authortimename">
-                            <h5>coder</h5>
-                            <span>03 Sep 2023</span>
-                        </div>
-                    </div>
-                </div>
-
-
-            </div> 
-            <div class=" aside-card insta-card popularposts">
+        <div class=" aside-card insta-card popularposts">
                 <div class="poptitle">
                     <h3>Photos Gallery</h3>
                 </div>
@@ -375,6 +252,55 @@ include 'layouts/index_top.php' ?>
                         echo "<li>
                         <a href='photo_single.php?c=" . $d["category"] . "' class='insta-post img-holder' style='--width: 276; --height: 277;'>
                             <img src='images/photo/" . $d["photopath"] . "' width='100px' height='100px' loading='lazy' alt='insta post' class='img-cover'>
+                        </a>
+                    </li>";
+                    $count += 1;
+                    } ?>
+
+
+                </ul>
+
+            </div>
+            <style>
+    
+    .insta-card1 .card-text {
+    color: var(--text-slate-gray);
+    font-weight: var(--weight-bold);
+    margin-block: 5px 30px;
+  }
+  
+  .insta-list1 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .insta-post1 img{ border-radius: 10px; }
+  .aside-card {
+    padding: 25px;
+    /* border-radius: var(--radius-16); */
+  }
+            </style>
+            <div class=" aside-card insta-card1 popularposts">
+                <div class="poptitle">
+                    <h3>Latetst Movies</h3>
+                </div>
+
+                <ul class="insta-list1">
+                    <?php $data = $db->fetch_random_items_by_module(1);
+                    // print_r($data);
+                    $count = 0;
+                    foreach ($data as $d) {
+                        
+                        if ($count >= 10) {
+                            break;
+                        }
+                        echo "<li>
+                        <a href='ent_single.php?id=".$d["id"]."&c=" . $d["category"] . "' class='insta-post1 img-holder' style='--width: 276; --height: 277;'>
+                            <img src='images/entertaintment/" . $d["photopath"] . "' width='200px' height='200px' loading='lazy' alt='insta post1' class='img-cover'>
+                            <h3 > " . $d["title"] . "</h3>
                         </a>
                     </li>";
                     $count += 1;
