@@ -125,9 +125,10 @@ header nav {
 .navlist ul li a,
 .navlist ul li {
     font-size: 16px;
-    color: #94a0c9;
+    color: #030818;
     cursor: pointer;
     display: flex;
+    font-weight: 600;
 }
 
 .navlist ul li .liactive {
@@ -1010,6 +1011,7 @@ header nav {
     padding: 25px 25px 0;
     margin-bottom: 30px;
 }
+
 
 .poptitle h3 {
     position: relative;

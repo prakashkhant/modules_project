@@ -24,7 +24,7 @@ $db->session_check();
   <!--start header section-->
   <header>
     <a href="index.php" class="logo">
-      <img src="images/logo_name_2.png">
+      <img src="images/logo_name.png">
     </a>
     <ul class="navbar">
       <li> <a href="#home">Home</a></li>

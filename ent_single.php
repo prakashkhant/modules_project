@@ -10,7 +10,8 @@ $id = $_GET["id"];
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movie Detail Page</title>
+    <title>Nexus hub | Movie Details</title>
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="css/ent_single.css">
     <style>
@@ -44,7 +45,7 @@ $id = $_GET["id"];
         }
 
         .movie-poster {
-            width: 200px;
+            width: 250px;
             height: auto;
         }
 
@@ -61,7 +62,7 @@ $id = $_GET["id"];
 
     <nav class="navbar navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="index.php">
                 <img src="images/logo_name.png" alt="Hoster Bro Logo">
             </a>
             <ul class="navbar-nav">
@@ -117,9 +118,9 @@ $id = $_GET["id"];
                         <p class='text-muted'>Description :".$pm["description"]."</p>
                         <p class='text-muted'>Tages :".$pm["keywords"]."</p>
                         <hr>
-                        <h3>Link for Dowload :</h3>
-                        <div class='link embed-responsive embed-responsive-16by9 '>
-                           <a href=".$pm["videopath"]." class='btn btn-primary fs-1'>link </a>
+                        
+                        <div class='link embed-responsive embed-responsive-16by9 flex-wrap '>
+                           <h3>Link for Dowload :</h3><a href=".$pm["videopath"]." class='btn btn-primary justify-content-end fs-1'>link </a>
                             
                         </div>
                     </div> 
