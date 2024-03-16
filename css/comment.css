@@ -1,0 +1,152 @@
+.comments-container{
+    width: 35%;
+    height: 90vh;
+    margin: 2% 30%;
+    background: rgba(114, 210, 255, 0.95);
+    box-shadow: 10px 10px 5px #000000;
+    border-radius: 10px;
+    position: absolute;
+    z-index: 11;
+    top:5%;
+}
+.co{
+    position: sticky;
+}
+article{
+    position: relative;
+}
+
+.comments-list{
+    width: 100%;
+    height: 85%;
+    padding: 3%;
+    overflow-y: scroll;
+}
+
+.comments-list::-webkit-scrollbar{
+    width: 5px;
+}
+
+.comments-list::-webkit-scrollbar-track{
+    background: none;
+}
+
+.comments-list::-webkit-scrollbar-thumb{
+    background: none;
+}
+
+.comments-list::-webkit-scrollbar-thumb:hover{
+    background: none;
+}
+
+.comments-list::-webkit-scrollbar-button{
+    display: none;
+}
+
+.cross{
+    float: right;
+    font-size: 20px;
+    margin: 0% 0% 2% 0%;
+    cursor: pointer;
+    transition-property: transform;
+    transition-duration: 0.1s;
+    transition-timing-function: ease-in;
+}
+
+.cross:hover{
+    transform: scale(1.25);
+}
+
+.row{
+    width: 95%;
+    height: auto;
+    display: flex;
+    box-shadow: 0px 0px 2px #000000;
+    background: #fff;
+    border-radius: 10px;
+    padding: 1% 0%;
+    margin: 2%;
+}
+
+.col-md-1{
+    width: 10%;
+}
+
+.col-md-8{
+    width: 80%;
+}
+
+.col-md-9{
+    width: 90%;
+}
+
+.col-md-1, .col-md-8, .col-md-9{
+    height: 100%;
+}
+
+.commentor-pic{
+    width: 70%;
+    height: 50%;
+    margin-top: 30%;
+    margin-left: 5%;
+    border-radius: 50px;
+}
+
+.commentor-name, .comment-time{
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.commentor-name{
+    margin: 1% 0% 0% 0%;
+}
+
+.comment-time{
+    margin: 50% 30%;
+}
+
+.comment{
+    font-size: 15px;
+    margin: 0;
+}
+
+.comment-box{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    border: none;
+}
+
+.comment-input{
+    width: 90%;
+    height: 40px;
+    border-radius: 50px;
+    border: none;
+    font-size: 15px;
+    padding-left: 5%;
+    margin: 5% 5%;
+    background: hsla(0, 0%, 100%, 1);
+}
+
+.comment-send{
+    width: 80%;
+    height: 45%;
+    border: none;
+    border-radius: 50px;
+    background: rgb(82, 147, 252);
+    color: #fff;
+    margin: 45% 0%;
+    cursor: pointer;
+    transition-property: transform;
+    transition-duration: 0.1s;
+    transition-timing-function: ease-in;
+}
+
+.comment-send:hover{
+    transform: scale(1.25);
+}
+
+.no-comments{
+    width: 100%;
+    text-align: center;
+}

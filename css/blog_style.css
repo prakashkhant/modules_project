@@ -633,7 +633,8 @@
   /*-----------------------------------*\
     #FEATURED
   \*-----------------------------------*/
-  
+
+
   .feature-bg { display: none; }
   
   .feature-list {
@@ -1379,12 +1380,10 @@
     /*-----------------------------------*\
     Like button
   \*-----------------------------------*/
-  .likeBtn{
-    margin-left: 10px;
-    margin-right: 10px;
-    font-size: 30px;
+  .likeBtn, .commentBtn{
+    
+    font-size: 20px;
     cursor: pointer;
-    color: #DF1278;
     background: none;
     border: none;
     transition-property: transform;
@@ -1392,10 +1391,21 @@
     transition-timing-function: ease-in;
   }
 
+  .likeBtn{
+    color: #DF1278;
+  }
+
+  .commentBtn{
+    color: hsla(216, 33%, 20%, 1);
+  }
+
   .likeBtn:hover{
     transform: scale(1.5);
   }
 
+  .commentBtn:hover{
+    transform: scale(1.5);
+  }
   .likes{
     margin: 0px 10px 0px 0px;
     font-size: medium;

@@ -39,6 +39,7 @@ $db->connect_DB();
     - custom css link
   -->
     <link rel="stylesheet" href="css/blog_style.css">
+    <link rel="stylesheet" href="css/comment.css">
 
     <!-- 
     - preload images/blogs
@@ -50,7 +51,6 @@ $db->connect_DB();
 </head>
 
 <body id="top">
-
     <!-- 
     - #HEADER
   -->
@@ -163,7 +163,6 @@ $db->connect_DB();
 
         </div>
     </header>
-
 
 
 
@@ -281,8 +280,9 @@ $db->connect_DB();
             <!-- 
         - #FEATURED POST
       -->
-
-            <section class="section feature" aria-label="feature" id="featured">
+      <div class="comments-container co">
+            </div>
+      <section class="section feature" aria-label="feature" id="featured">
                 <div class="container" id="itemContainer">
 
                     <h2 class="headline headline-2 section-title">
@@ -292,8 +292,9 @@ $db->connect_DB();
                     <p class="section-text">
                         Featured and highly rated articles
                     </p>
-
+                
                     <ul class="feature-list" id="itemlist">
+                        
                         <?php
                         $res = $db->fetch_items_by_module(2);
                         $i = 0;
@@ -330,9 +331,25 @@ $db->connect_DB();
                                                     }
                                                     $sql = mysqli_query($db->conn, "SELECT flc_id FROM review WHERE item_id = $itemid AND liked = 1");
                                                     $likes = mysqli_num_rows($sql); ?>
-                                                    <h6 class="likes"><?php echo $likes ?></h6>
+                                                    <p class="likes"><?php echo $likes ?></p>
+                                                    <button type="button" class="commentBtn" onclick="commentShow(<?php echo $itemid ?>)"><i class="fa-solid fa-comment-dots"></i></button>
+                                                    <?php 
+                                                    $sql2 = mysqli_query($db->conn, "SELECT comment FROM review WHERE item_id = $itemid AND comment IS NOT NULL");
+                                                    $cmt = 0;
+                                                    $cmtStr = [];
+                                                    $cmtArr = [];
+                                                    while($rs = mysqli_fetch_array($sql2)){
+                                                        $cmtStr = explode(",", $rs["comment"]);
+                                                        foreach($cmtStr as $a){
+                                                            array_push($cmtArr, $a);
+                                                        }
+                                                    }
+                                                    foreach($cmtArr as $rs){
+                                                        $cmt+=1;
+                                                    }
+                                                    ?>
+                                                    <p class="comments"><?php echo $cmt ?></p>
                                                     <?php
-
                                                     $tags = [];
                                                     $tags = explode(",", $r["keywords"]);
 
@@ -392,7 +409,6 @@ $db->connect_DB();
 
 
                 </div>
-
                 <img src="images/blogs/shadow-3.svg" width="500" height="1500" loading="lazy" alt="" class="feature-bg">
 
             </section>
@@ -791,6 +807,7 @@ $db->connect_DB();
 
 </body>
 <script>
+    $(".comments-container").hide();
     function likePost(item, user) {
         console.log("Item : " + item + "\nUser :" + user);
         $.ajax({
@@ -821,6 +838,45 @@ $db->connect_DB();
             }
         });
     }
+
+    function commentPost(item){
+        comment = $("#comment"+item).val();
+        console.log("Comment : "+comment);
+        $.ajax({
+            url: "review.php",
+            type: "POST",
+            data: {
+                "review": "comment",
+                "item": item,
+                "comment": comment
+            },
+            success: (resp) => {
+                console.log(resp);
+                commentShow(item);
+            }
+        });
+    }
+
+    function commentShow(item){
+        console.log(item);
+        $.ajax({
+            url: "review.php",
+            type: "GET",
+            data: {
+                "review": "comments",
+                "item": item
+            },
+            success: (resp) => {
+                $(".comments-container").html(resp);
+                $(".comments-container").show();
+            }
+        });
+    }
+
+    function hideComments(){
+        window.location.reload();
+    }
+
 </script>
 
 </html>
