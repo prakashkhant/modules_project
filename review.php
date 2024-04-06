@@ -9,13 +9,21 @@
         $itemid = $_POST["item"];
         $uid = $_POST["user"];
         
-        $res = mysqli_query($db->conn, "INSERT INTO review(comment, liked, item_id, uid) VALUES(NULL, 1, $itemid, $uid)");
+        if(mysqli_fetch_array(mysqli_query($db->conn, "SELECT COUNT(flc_id) FROM review WHERE item_id = $itemid AND uid = $uid"))[0] > 0){
+            echo "Relike item : ".$itemid;
+            mysqli_query($db->conn, "UPDATE review SET liked = 1 WHERE item_id = $itemid AND uid = $uid");
+        }
+        else{
+            echo "Like item : ".$itemid;
+            mysqli_query($db->conn, "INSERT INTO review(comment, liked, item_id, uid) VALUES(NULL, 1, $itemid, $uid)");
+        }
+        
     }
 
     if(isset($_POST["review"]) && $_POST["review"] == "unlike"){
         $itemid = $_POST["item"];
         $uid = $_POST["user"];
-
+        echo "Unike item : ".$itemid;
         $res = mysqli_query($db->conn, "UPDATE review SET liked = 0 WHERE item_id = $itemid AND uid = $uid");
     }
     

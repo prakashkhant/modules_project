@@ -482,4 +482,21 @@
    height: 85vh;
    transition: .2s;
 }
+
 }
+
+.likeBtn{
+   color: #DF1278;
+   margin: 0% 5%;
+   font-size: 20px;
+   cursor: pointer;
+   background: none;
+   border: none;
+   transition-property: transform;
+   transition-duration: 0.1s;
+   transition-timing-function: ease-in;
+ }
+
+ .likeBtn:hover{
+   transform: scale(1.5);
+ }

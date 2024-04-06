@@ -112,7 +112,7 @@ $cid = $_GET["c"];
             </h2>
         </div>
 
-        <div class="collection-content">
+        <div class="collection-content" id="item-list">
             <?php
             $p_images = $db->fetch_items_list($cid);
 
