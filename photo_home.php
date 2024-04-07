@@ -10,7 +10,7 @@ $db->session_check();
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Nexushub | Photo Gallery </title>
 	<link rel="stylesheet" type="text/css" href="css/photo_home.css">
-
+	<script src="https://kit.fontawesome.com/e6a8e37cff.js" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
   <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -125,29 +125,48 @@ $db->session_check();
 			<h2>Our Best <br>Collection</h2>
 		</div>
 
-		<div class="hots-content">
+		<div class="hots-content" id="item-list">
 			<?php
+			$uid = 0;
+			if (isset($_SESSION["id"])) {
+				$uid = $_SESSION["id"];
+			}
 			$p_images = $db->fetch_random_items_by_module(5);
 
 			// print_r($data);
 			$count = 0;
 			foreach ($p_images as $pi) {
+				$itemid = $pi["id"];
+			
 				$count += 1;
-				echo "
-              <div class='col-content'>
-							<a href='photo_single.php?c=".$pi["category"]."'>
-								<img src='images/photo/" . $pi["photopath"] . "'>
-							</a>
-							<h5>".ucfirst($pi["title"])."</h5>
-							<p>".ucfirst($pi["publish_by"])."</p>
-							<div class='soical-content'>
-							<a href=''><i class='bx bx-heart'></i></a>
-							<a href=''><i class='bx bx-down-arrow-alt' ></i></a>		  
-							</div>
- 							</div>
-            ";
-			} ?>
+				$output = "";
+				$output .= "
+				<div class='col-content' id='item".$pi["id"]."'>
+					<a href='photo_single.php?c=".$pi["category"]."'>
+						<img src='images/photo/" . $pi["photopath"] . "'>
+					</a>
+					<h5>".ucfirst($pi["title"])."</h5>
+					<p>".ucfirst($pi["publish_by"])."</p>
+					<div class='soical-content'>";
+					$sql = mysqli_query($db->conn, "SELECT flc_id FROM review WHERE item_id = $itemid AND uid = $uid AND liked = 1");
+					if (mysqli_num_rows($sql) > 0) {
+				$output .= "<button class='likeBtn' id='like".$itemid."' onclick='unlikePost(".$itemid.", ".$uid.")'>
+							<i class='fa-solid fa-heart'></i>
+						</button>";
+					} else {
+				$output .= "<button class='likeBtn' id='like".$itemid."' onclick='likePost(".$itemid.", ".$uid.")'>
+							<i class='fa-regular fa-heart'></i>
+						</button>";
+					}
+					$sql2 = mysqli_query($db->conn, "SELECT flc_id FROM review WHERE item_id = $itemid AND liked = 1");
+					$likes = mysqli_num_rows($sql2);
+					
+					$output .= "<span class='likes'>".$likes."</span><a href=''><i class='bx bx-down-arrow-alt' ></i></a>		  
+					</div>
+				</div>";
 
+				echo $output;
+			} ?>
 		</div>
 
 	</section>

@@ -273,7 +273,7 @@
 .col-content .soical-content{
    font-size: 20px;
    padding: 5px;
-   margin-left: 30px;
+   margin-left: 0px;
    border: 2px solid black;
    border-radius: 5px ;
    width: 240px;
@@ -482,4 +482,26 @@
    height: 85vh;
    transition: .2s;
 }
+
 }
+
+.likeBtn{
+   color: #DF1278;
+   margin: 0% 3%;
+   font-size: 20px;
+   cursor: pointer;
+   background: none;
+   border: none;
+   transition-property: transform;
+   transition-duration: 0.1s;
+   transition-timing-function: ease-in;
+ }
+
+ .likeBtn:hover{
+   transform: scale(1.5);
+ }
+
+ .likes{
+   font-weight: bold;
+   margin: 0% 5% 0% 0%;
+ }
