@@ -180,7 +180,7 @@ $cid = $_GET["c"];
       -->
 
             <section class="section feature" aria-label="feature" id="featured">
-                <div class="container">
+                <div class="container" id="printableArea">
                     <style>
                         .card {
                             display: block;
@@ -240,7 +240,7 @@ $cid = $_GET["c"];
                             /* margin-bottom: 0; */
                         }
                     </style>
-                    <ul class="feature-list">
+                    <ul class="feature-list" >
                         <?php
 
                         $cs = $db->populate_item_content($id);
@@ -249,7 +249,7 @@ $cid = $_GET["c"];
                             $time = date('i', strtotime($cs["time"]));
                             $publish = date('d M, Y', strtotime($cs["publish_date"]));
                             echo " 
-                            <li>
+                            <li >
                                 <div class='card feature-card'>
                                 <h3 class='headline headline-3 hd'>
                                 <a href='' class='card-title hover-2 ' >
@@ -293,7 +293,7 @@ $cid = $_GET["c"];
                                                 </div>
                                             </div>
 
-                                            <button onclick='downloadPDF()' class='so btn'>Download PDF</button>
+                                            <button id='generatePDF' onclick='printDiv()' class='so btn'>Download PDF</button>
                                           
                                             <a href='#' class='so btn'>Like</a> 
 
@@ -305,16 +305,18 @@ $cid = $_GET["c"];
                             </li>
                             ";
                         }
-                        
+
                         ?>
                     </ul>
+                </div>
+                    <div id=”editor”></div>
                 </div>
 
                 <img src="images/blogs/shadow-3.svg" width="500" height="1500" loading="lazy" alt="" class="feature-bg">
 
             </section>
 
-           
+
 
 
         </article>
@@ -441,8 +443,23 @@ $cid = $_GET["c"];
     <!-- 
     - custom js link
   -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js"></script>
+ <script>
+    function printDiv() {
+     var printContents = document.getElementById('printableArea').innerHTML;
+     var originalContents = document.body.innerHTML;
+
+     document.body.innerHTML = printContents;
+
+     window.print();
+
+     document.body.innerHTML = originalContents;
+}
+ </script>
     <!-- <script src="js/blog_script.js"></script> -->
-    <script src="js/blog_srcipt.js"></script>
+    <script src="js/blog_single.js"></script>
     <!-- 
     - ionicon link
   -->

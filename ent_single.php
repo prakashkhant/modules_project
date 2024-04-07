@@ -100,7 +100,7 @@ $id = $_GET["id"];
 
             ?>
              <!-- <img src="images/entertaintment/" alt=""> -->
-            <div class="col-md-8">
+            <div class="col-md-8 mb-5">
                 <?php 
                
                     foreach($pm as $pm){
@@ -119,9 +119,9 @@ $id = $_GET["id"];
                         <p class='text-muted'>Tages :".$pm["keywords"]."</p>
                         <hr>
                         
-                        <div class='link embed-responsive embed-responsive-16by9 flex-wrap '>
-                           <h3>Link for Dowload :</h3><a href=".$pm["videopath"]." class='btn btn-primary justify-content-end fs-1'>link </a>
-                            
+                        <div class='link embed-responsive  embed-responsive-16by9 flex-wrap '>
+                           <h3>Link for Dowload :    <a href=".$pm["videopath"]." class='btn btn-primary flex justify-content-end fs-3'>link </a>
+                            </h3>
                         </div>
                     </div> 
                         ";

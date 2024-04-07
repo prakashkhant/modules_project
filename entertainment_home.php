@@ -59,22 +59,28 @@ $db->session_check();
             <div class="home_content mtop">
                 <div class="container">
                     <div class="left">
-                        <h1>REBUNEKA THE DOLL</h1>
+                        <h1>Great Extravaganza</h1>
 
                         <div class="time flex">
-                            <label>R</label>
+                            
                             <i class="fas fa-circle"></i>
-                            <span>1hrs 50mins</span>
+                            <span></span>
                             <i class="fas fa-circle"></i>
-                            <p>2021</p>
+                            <p></p>
                             <i class="fas fa-circle"></i>
-                            <button>Action</button>
+                            
                         </div>
 
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat.
-                        </p>
+                        <pre style="font-size: 20px; ">Welcome to Nehus hub Entertainments, your one-stop destination for all things entertainment! 
+
+Explore our wide range of categories, including movies, dramas, and web series, each offering a unique and immersive experience.
+
+Whether you're in the mood for a thrilling movie, a captivating drama, or an exciting web series, we have something for everyone.
+
+Let the entertainment begin!
+
+[Movies] [Dramas] [Web Series]
+                        </pre>
                         
                     </div>
                 </div>
@@ -302,8 +308,7 @@ $db->session_check();
                 <div class="logo">
                     <img src="images/entertaintment//logo.png">
                 </div>
-                <p> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-                    est laborum.</p>
+                <p> Entertainment Hub: Your Gateway to Endless Fun!</p>
                 <div class="icon">
                     <i class="fab fa-facebook-square"></i>
                     <i class="fab fa-instagram"></i>
@@ -313,45 +318,22 @@ $db->session_check();
             </div>
 
             <div class="box">
-                <h2>Explore</h2>
-                <div class="flex">
-                    <ul>
-                        <li>Home</li>
-                        <li>Tv Shows</li>
-                        <li>Actors</li>
-                        <li>Celebrity</li>
-                    </ul>
-                    <ul class="ul">
-                        <li>Movie</li>
-                        <li>Video</li>
-                        <li>Basketball</li>
-                        <li>Coress</li>
-                    </ul>
-                </div>
+                
             </div>
 
             <div class="box ">
-                <h2>Company</h2>
-                <div class="flex">
-                    <ul>
-                        <li>Company</li>
-                        <li>Terms of Use</li>
-                        <li>Contact us</li>
-                        <li>Our Team</li>
-                    </ul>
-                    <ul class="ul">
-                        <li>Privacy Policy</li>
-                        <li>Helps Center</li>
-                        <li>Subscribe</li>
-                        <li>FAQ</li>
-                    </ul>
-                </div>
+                
             </div>
 
             <div class="box">
-                <h2>Download App</h2>
-                <p> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-                    est laborum.</p>
+                <h2>Creaters : </h2>
+                <p><ul>
+                        <li>Prakash S Khant </li>
+                        <li>Shehnaz S Saiyed</li>
+                        <li>Jenish K Patel</li>
+                        
+                    </ul>
+                    </p>
                 <div class="img flex1">
                     <img src="images/entertaintment//app1.png" alt="">
                     <img src="images/entertaintment//app2.png" alt="">
