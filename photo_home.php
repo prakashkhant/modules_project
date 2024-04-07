@@ -141,7 +141,7 @@ $db->session_check();
 				$count += 1;
 				$output = "";
 				$output .= "
-				<div class='col-content'>
+				<div class='col-content' id='item".$pi["id"]."'>
 					<a href='photo_single.php?c=".$pi["category"]."'>
 						<img src='images/photo/" . $pi["photopath"] . "'>
 					</a>
@@ -158,7 +158,10 @@ $db->session_check();
 							<i class='fa-regular fa-heart'></i>
 						</button>";
 					}
-				$output .= "<a href=''><i class='bx bx-down-arrow-alt' ></i></a>		  
+					$sql2 = mysqli_query($db->conn, "SELECT flc_id FROM review WHERE item_id = $itemid AND liked = 1");
+					$likes = mysqli_num_rows($sql2);
+					
+					$output .= "<span class='likes'>".$likes."</span><a href=''><i class='bx bx-down-arrow-alt' ></i></a>		  
 					</div>
 				</div>";
 

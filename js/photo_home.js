@@ -28,7 +28,7 @@ function likePost(item, user) {
         },
         success: (resp) => {
             console.log(resp);
-            $("#like"+item).load(location.href + " #like"+item);
+            $("#item"+item).load(location.href + " #item"+item);
         }
     });
 }
@@ -47,7 +47,8 @@ function unlikePost(item, user) {
             let likeBtn = document.createElement("button");
             likeBtn.setAttribute("class", "likeBtn");
             likeBtn.setAttribute("id", "like"+item);
-            $("#like"+item).load(location.href + " #like"+item);
+            
+            $("#item"+item).load(location.href + " #item"+item);
         }
     });
 }

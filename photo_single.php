@@ -12,6 +12,7 @@ $cid = $_GET["c"];
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Nexushub | Photo Gallery</title>
     <link rel="stylesheet" type="text/css" href="css/photo_single.css">
+	<script src="https://kit.fontawesome.com/e6a8e37cff.js" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
@@ -114,19 +115,37 @@ $cid = $_GET["c"];
 
         <div class="collection-content" id="item-list">
             <?php
+            $uid = 0;
+			if (isset($_SESSION["id"])) {
+				$uid = $_SESSION["id"];
+			}
             $p_images = $db->fetch_items_list($cid);
 
             // print_r($data);
             $count = 0;
             foreach ($p_images as $pi) {
                 $count += 1;
+                $itemid = $pi["id"];
                 echo "
-              <div class='col-content'>
+              <div class='col-content' id='item".$pi["id"]."'>
   <img src='images/photo/" . $pi["photopath"] . "'>
   <h5>" . ucfirst($pi["title"]) . "</h5>
   <p>" . ucfirst($pi["publish_by"]) . "</p>
-  <div class='soical-content'>
-  <a href=''><i class='bx bx-heart'></i></a>
+  <div class='soical-content'>";
+  $sql = mysqli_query($db->conn, "SELECT flc_id FROM review WHERE item_id = $itemid AND uid = $uid AND liked = 1");
+					if (mysqli_num_rows($sql) > 0) {
+				echo "<button class='likeBtn' id='like".$itemid."' onclick='unlikePost(".$itemid.", ".$uid.")'>
+							<i class='fa-solid fa-heart'></i>
+						</button>";
+					} else {
+				echo "<button class='likeBtn' id='like".$itemid."' onclick='likePost(".$itemid.", ".$uid.")'>
+							<i class='fa-regular fa-heart'></i>
+						</button>";
+					}
+					$sql2 = mysqli_query($db->conn, "SELECT flc_id FROM review WHERE item_id = $itemid AND liked = 1");
+					$likes = mysqli_num_rows($sql2);
+					
+  echo "<span class='likes'>".$likes."</span>
   <a href=''><i class='bx bx-down-arrow-alt' ></i></a>
  
 
