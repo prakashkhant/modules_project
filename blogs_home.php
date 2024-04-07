@@ -89,16 +89,13 @@ $db->connect_DB();
                     </li>
 
                     <li>
-                        <a href="#featured" class="navbar-link hover-1" data-nav-toggler>Featured Post</a>
-                    </li>
-
-                    <li>
                         <a href="#recent" class="navbar-link hover-1" data-nav-toggler>Recent Post</a>
                     </li>
-
                     <li>
-                        <a href="#" class="navbar-link hover-1" data-nav-toggler>Contact</a>
+                        <a href="#featured" class="navbar-link hover-1" data-nav-toggler>Popular Post</a>
                     </li>
+
+
 
                 </ul>
 
@@ -249,14 +246,14 @@ $db->connect_DB();
                                         <a href='blogs_cate_single.php?c=" . $cd["cat_id"] . "' class='slider-card'>
                                     
                                             <figure class='slider-banner img-holder' style='--width: 507; --height: 618;'>
-                                                <img src='images/".$cd["cat_photo"]."' width='507' height='618' loading='lazy'
+                                                <img src='images/" . $cd["cat_photo"] . "' width='507' height='618' loading='lazy'
                                                     alt='Sport' class='img-cover'>
                                             </figure>
                                     
                                             <div class='slider-content'>
                                                 <span class='slider-title'>" . $cd["cat_name"] . "</span>
                                     
-                                                <p class='slider-subtitle'>38 Articles</p>
+                                                <p class='slider-subtitle'>5 Articles</p>
                                             </div>
                                     
                                         </a>
@@ -280,9 +277,8 @@ $db->connect_DB();
             <!-- 
         - #FEATURED POST
       -->
-      <div class="comments-container co">
-            </div>
-      <section class="section feature" aria-label="feature" id="featured">
+           
+            <section class="section feature" aria-label="feature" id="featured">
                 <div class="container" id="itemContainer">
 
                     <h2 class="headline headline-2 section-title">
@@ -292,9 +288,9 @@ $db->connect_DB();
                     <p class="section-text">
                         Featured and highly rated articles
                     </p>
-                
+
                     <ul class="feature-list" id="itemlist">
-                        
+
                         <?php
                         $res = $db->fetch_items_by_module(2);
                         $i = 0;
@@ -333,19 +329,19 @@ $db->connect_DB();
                                                     $likes = mysqli_num_rows($sql); ?>
                                                     <p class="likes"><?php echo $likes ?></p>
                                                     <button type="button" class="commentBtn" onclick="commentShow(<?php echo $itemid ?>)"><i class="fa-solid fa-comment-dots"></i></button>
-                                                    <?php 
+                                                    <?php
                                                     $sql2 = mysqli_query($db->conn, "SELECT comment FROM review WHERE item_id = $itemid AND comment IS NOT NULL");
                                                     $cmt = 0;
                                                     $cmtStr = [];
                                                     $cmtArr = [];
-                                                    while($rs = mysqli_fetch_array($sql2)){
+                                                    while ($rs = mysqli_fetch_array($sql2)) {
                                                         $cmtStr = explode(",", $rs["comment"]);
-                                                        foreach($cmtStr as $a){
+                                                        foreach ($cmtStr as $a) {
                                                             array_push($cmtArr, $a);
                                                         }
                                                     }
-                                                    foreach($cmtArr as $rs){
-                                                        $cmt+=1;
+                                                    foreach ($cmtArr as $rs) {
+                                                        $cmt += 1;
                                                     }
                                                     ?>
                                                     <p class="comments"><?php echo $cmt ?></p>
@@ -368,19 +364,19 @@ $db->connect_DB();
                                             </div>
 
                                             <h3 class="headline headline-3">
-                                            <?php
+                                                <?php
                                                 echo "
-                                                <a href='blogs_single.php?c=".$r["category"]."&id=".$r["id"]."' class='card-title hover-2'>
+                                                <a href='blogs_single.php?c=" . $r["category"] . "&id=" . $r["id"] . "' class='card-title hover-2'>
                                                     
-                                                      ".$r["title"]." 
-                                                </a>" ;?>
+                                                      " . $r["title"] . " 
+                                                </a>"; ?>
                                             </h3>
 
                                             <div class="card-wrapper">
 
                                                 <div class="profile-card">
                                                     <img src="images/blogs/author-1.png" width="48" height="48" loading="lazy" alt="Joseph" class="profile-banner">
-                                                   
+
                                                     <div>
                                                         <p class="card-title"><?php echo $r["publish_by"] ?></p>
                                                         <?php $publish = date('d M, Y', strtotime($r["publish_date"])) ?>
@@ -389,7 +385,7 @@ $db->connect_DB();
                                                 </div>
                                                 <?php
                                                 echo "
-                                                <a href='blogs_single.php?c=".$r["category"]."&id=".$r["id"]."' class='card-btn'>Read this -></a>
+                                                <a href='blogs_single.php?c=" . $r["category"] . "&id=" . $r["id"] . "' class='card-btn'>Read this -></a>
                                                        "; ?>
                                             </div>
 
@@ -456,24 +452,24 @@ $db->connect_DB();
                                         <div class='recent-post-card'>
 
                                             <figure class='card-banner img-holder' style='--width: 271; --height: 258;'>
-                                                <img src='images/blogs/<?php echo $d["photopath"];?>' width='271' height='258' loading='lazy' alt='Helpful Tips for Working from Home as a Freelancer' class='img-cover'>
+                                                <img src='images/blogs/<?php echo $d["photopath"]; ?>' width='271' height='258' loading='lazy' alt='Helpful Tips for Working from Home as a Freelancer' class='img-cover'>
                                             </figure>
 
                                             <div class='card-content'>
 
-                                                <a href='#' class='card-badge'><?php echo $cn["cat_name"];?></a>
+                                                <a href='#' class='card-badge'><?php echo $cn["cat_name"]; ?></a>
 
                                                 <h3 class='headline headline-3 card-title'>
-                                                 <?php  echo " <a href='blogs_single.php?c=".$d["category"]."&id=".$d["id"]."'  class='link hover-2'>"; ?><?php echo $d["title"];?> </a>
+                                                    <?php echo " <a href='blogs_single.php?c=" . $d["category"] . "&id=" . $d["id"] . "'  class='link hover-2'>"; ?><?php echo $d["title"]; ?> </a>
                                                 </h3>
 
                                                 <p class='card-text'>
-                                                <?php echo $d["description"];?>
+                                                    <?php echo $d["description"]; ?>
                                                 </p>
 
                                                 <div class='card-wrapper'>
                                                     <div class='card-tag'>
-                                                        <a href='' class='span hover-2'>Tags  : <?php echo $d["keywords"];?></a>
+                                                        <a href='' class='span hover-2'>Tags : <?php echo $d["keywords"]; ?></a>
 
                                                         <!-- <a href='#' class='span hover-2'># Lifestyle</a> -->
                                                     </div>
@@ -481,10 +477,10 @@ $db->connect_DB();
                                                     <div class='wrapper'>
                                                         <!--  -->
 
-                                                        <!-- <span class='span'> <b> <?php echo $d["time"] ; ?> </b> mins Read</span> -->
+                                                        <!-- <span class='span'> <b> <?php echo $d["time"]; ?> </b> mins Read</span> -->
                                                         <?php $time = date('i', strtotime($d["time"])) ?>
-                                                    <span class="span"><i class="fa-regular fa-clock"></i>&nbsp;&nbsp;<?php echo $time ?> mins
-                                                        read</span>
+                                                        <span class="span"><i class="fa-regular fa-clock"></i>&nbsp;&nbsp;<?php echo $time ?> mins
+                                                            read</span>
                                                     </div>
                                                 </div>
 
@@ -499,7 +495,7 @@ $db->connect_DB();
 
                     </div>
 
-                    <div class="post-aside grid-list">
+                    <!-- <div class="post-aside grid-list">
 
 
                         <div class="card aside-card">
@@ -656,7 +652,7 @@ $db->connect_DB();
 
                         </div>
 
-                    </div>
+                    </div> -->
 
                 </div>
             </section>
@@ -808,6 +804,7 @@ $db->connect_DB();
 </body>
 <script>
     $(".comments-container").hide();
+
     function likePost(item, user) {
         console.log("Item : " + item + "\nUser :" + user);
         $.ajax({
@@ -839,9 +836,9 @@ $db->connect_DB();
         });
     }
 
-    function commentPost(item){
-        comment = $("#comment"+item).val();
-        console.log("Comment : "+comment);
+    function commentPost(item) {
+        comment = $("#comment" + item).val();
+        console.log("Comment : " + comment);
         $.ajax({
             url: "review.php",
             type: "POST",
@@ -857,7 +854,7 @@ $db->connect_DB();
         });
     }
 
-    function commentShow(item){
+    function commentShow(item) {
         console.log(item);
         $.ajax({
             url: "review.php",
@@ -873,10 +870,9 @@ $db->connect_DB();
         });
     }
 
-    function hideComments(){
+    function hideComments() {
         window.location.reload();
     }
-
 </script>
 
 </html>

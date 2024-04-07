@@ -75,11 +75,7 @@ $db->session_check();
                             labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
                             laboris nisi ut aliquip ex ea commodo consequat.
                         </p>
-                        <div class="button flex">
-                            <button class="btn">PLAY NOW</button>
-                            <i id="palybtn" class="fas fa-play"></i>
-                            <p>WATCH TRAILER</p>
-                        </div>
+                        
                     </div>
                 </div>
             </div>
@@ -194,178 +190,7 @@ $db->session_check();
 
 
 
-    <section class="new_realase top">
-        <div class="container">
-            <div class="owl-carousel owl-carousel2 owl-theme">
-                <div class="items">
-                    <div class="left">
-                        <div class="img">
-                            <img src="images/entertaintment//p4.jpg" alt="">
-                        </div>
-                        <div class="heading">
-                            <h2> <span></span> NEW REALEASE</h2>
-                            <h1>THE WARRIOR LIFE</h1>
-                        </div>
-                        <div class="time flex">
-                            <label>R</label>
-                            <i class="fas fa-circle"></i>
-                            <span>1hrs 50mins</span>
-                            <i class="fas fa-circle"></i>
-                            <a class="flex1"><img src="https://img.icons8.com/color/95/000000/imdb.png" /> 8.5</a>
-                            <i class="fas fa-circle"></i>
-                            <p>2021</p>
-                            <i class="fas fa-circle"></i>
-                            <button>Action</button>
-                        </div>
-
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat.
-                        </p>
-
-                        <div class="button flex">
-                            <button class="btn">PLAY NOW</button>
-                            <i id="palybtn" class="fas fa-play"></i>
-                            <p>WATCH TRAILER</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="items">
-                    <div class="left">
-                        <div class="img">
-                            <img src="images/entertaintment//p5.jpg" alt="">
-                        </div>
-                        <div class="heading">
-                            <h2> <span></span> NEW REALEASE</h2>
-                            <h1>THE HORSE LADY </h1>
-                        </div>
-                        <div class="time flex">
-                            <label>R</label>
-                            <i class="fas fa-circle"></i>
-                            <span>1hrs 50mins</span>
-                            <i class="fas fa-circle"></i>
-                            <a class="flex1"><img src="https://img.icons8.com/color/95/000000/imdb.png" /> 8.5</a>
-                            <i class="fas fa-circle"></i>
-                            <i class="fas fa-circle"></i>
-                            <p>2021</p>
-                            <i class="fas fa-circle"></i>
-                            <button>Action</button>
-                        </div>
-
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat.
-                        </p>
-
-                        <div class="button flex">
-                            <button class="btn">PLAY NOW</button>
-                            <i id="palybtn" class="fas fa-play"></i>
-                            <p>WATCH TRAILER</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="items">
-                    <div class="left">
-                        <div class="img">
-                            <img src="images/entertaintment//p6.jpg" alt="">
-                        </div>
-                        <div class="heading">
-                            <h2> <span></span> NEW REALEASE</h2>
-                            <h1>ship of full moon </h1>
-                        </div>
-                        <div class="time flex">
-                            <label>R</label>
-                            <i class="fas fa-circle"></i>
-                            <span>1hrs 50mins</span>
-                            <i class="fas fa-circle"></i>
-                            <a class="flex1"><img src="https://img.icons8.com/color/95/000000/imdb.png" /> 8.5</a>
-                            <i class="fas fa-circle"></i>
-                            <p>2021</p>
-                            <i class="fas fa-circle"></i>
-                            <button>Action</button>
-                        </div>
-
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat.
-                        </p>
-
-                        <div class="button flex">
-                            <button class="btn">PLAY NOW</button>
-                            <i id="palybtn" class="fas fa-play"></i>
-                            <p>WATCH TRAILER</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="items">
-                    <div class="left">
-                        <div class="img">
-                            <img src="images/entertaintment//p7.jpg" alt="">
-                        </div>
-                        <div class="heading">
-                            <h2> <span></span> NEW REALEASE</h2>
-                            <h1>THE WARRIOR LIFE</h1>
-                        </div>
-                        <div class="time flex">
-                            <label>R</label>
-                            <i class="fas fa-circle"></i>
-                            <span>1hrs 50mins</span>
-                            <i class="fas fa-circle"></i>
-                            <a class="flex"><img src="https://img.icons8.com/color/95/000000/imdb.png" /> 8.5</a>
-                            <i class="fas fa-circle"></i>
-                            <p>2021</p>
-                            <i class="fas fa-circle"></i>
-                            <button>Action</button>
-                        </div>
-
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat.
-                        </p>
-
-                        <div class="button flex">
-                            <button class="btn">PLAY NOW</button>
-                            <i id="palybtn" class="fas fa-play"></i>
-                            <p>WATCH TRAILER</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="items">
-                    <div class="left">
-                        <div class="img">
-                            <img src="images/entertaintment//p2.jpg" alt="">
-                        </div>
-                        <div class="heading">
-                            <h2> <span></span> NEW REALEASE</h2>
-                            <h1>THE WARRIOR LIFE</h1>
-                        </div>
-                        <div class="time flex">
-                            <label>R</label>
-                            <i class="fas fa-circle"></i>
-                            <span>1hrs 50mins</span>
-                            <i class="fas fa-circle"></i>
-                            <a class="flex1"><img src="https://img.icons8.com/color/95/000000/imdb.png" /> 8.5</a>
-                            <i class="fas fa-circle"></i>
-                            <p>2021</p>
-                            <i class="fas fa-circle"></i>
-                            <button>Action</button>
-                        </div>
-
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat.
-                        </p>
-
-                        <div class="button flex">
-                            <button class="btn">PLAY NOW</button>
-                            <i id="palybtn" class="fas fa-play"></i>
-                            <p>WATCH TRAILER</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+  
 
     <script>
         $('.owl-carousel2').owlCarousel({
@@ -533,7 +358,7 @@ $db->session_check();
                 </div>
             </div>
         </div>
-        <p class="legal">Copyright (c) 2021 Copyright Holder All Rights Reserved | This template is made By <i class="fas fa-heart"></i> Dot Studio</p>
+        <p class="legal">Copyright (c) 2024 Copyright Holder All Rights Reserved | This module is made By <i class="fas fa-heart"></i> xt9developers</p>
     </footer>
 </body>
 

@@ -165,12 +165,11 @@ include 'layouts/index_top.php' ?>
         $pl = $db->fetch_category_list(3);
 
         foreach ($pl as $pl) {
-            $item_id = $db->fetch_items_list($pl["cat_id"]);
-            foreach ($item_id as $ci) {
-
-                echo "<a href='pro_single.php?id=" . $ci["id"] . "&c=" . $pl["cat_id"] . "'><img src='images/language/" . $pl["cat_photo"] . "' alt=''>" . $pl["cat_name"] . "</a>";
-                break;
-            }
+            
+               echo  "";
+                echo "<a href='language_single.php?c=". $pl["cat_id"] . "&cn=" . $pl["cat_name"] . "'><img src='images/language/" . $pl["cat_photo"] . "' alt=''>" . $pl["cat_name"] . "</a>";
+               
+            
         }
         ?>
     </div>
@@ -190,7 +189,7 @@ include 'layouts/index_top.php' ?>
                 // print_r($data);
                 $count = 0;
                 foreach ($data as $d) {
-                    $time = date('h i s', strtotime($d["time"]));
+                    $time = date(' i: s', strtotime($d["time"]));
                     $publish = date('d M, Y', strtotime($d["publish_date"]));
                     $count += 1;
                     if ($count == 7) {
@@ -299,8 +298,8 @@ include 'layouts/index_top.php' ?>
                         }
                         echo "<li>
                         <a href='ent_single.php?id=".$d["id"]."&c=" . $d["category"] . "' class='insta-post1 img-holder' style='--width: 276; --height: 277;'>
-                            <img src='images/entertaintment/" . $d["photopath"] . "' width='200px' height='200px' loading='lazy' alt='insta post1' class='img-cover'>
-                            <h3 > " . $d["title"] . "</h3>
+                            <img src='images/entertaintment/" . $d["photopath"] . "' width='200px' height='250px' loading='lazy' alt='insta post1' class='img-cover'>
+                            <h4 > " . $d["title"] . "</h4>
                         </a>
                     </li>";
                     $count += 1;

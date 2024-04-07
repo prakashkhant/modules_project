@@ -24,12 +24,12 @@ $db->session_check();
   <!--start header section-->
   <header>
     <a href="index.php" class="logo">
-      <img src="images/logo_name.png">
+      <img src="images/logo_name_2.png">
     </a>
     <ul class="navbar">
       <li> <a href="#home">Home</a></li>
       <li> <a href="#categories">Categories</a></li>
-      <li> <a href="#languages">Languages</a></li>
+      <!-- <li> <a href="#languages">Languages</a></li> -->
 
     </ul>
     <div class="header-icons">

@@ -69,12 +69,10 @@ $db->session_check();
             </li>
 
             <li>
-              <a href="#" class="nav-link">About Me</a>
+              <a href="about.php" class="nav-link">About Me</a>
             </li>
 
-            <li>
-              <a href="#" class="nav-link">Contact</a>
-            </li>
+
 
           </ul>
 
@@ -256,7 +254,7 @@ $db->session_check();
                   </div>
 
                   <div class='wrapper'>
-                  <a href='#' class='h4'>Julia Walker</a>
+                  <a href='#' class='h4'> " . $d["publish_by"] . "</a>
 
                   <p class='text-sm'>
                   <time datetime='2022-01-17'> " . $d["publish_date"] . "</time>
@@ -322,80 +320,11 @@ $db->session_check();
 
           </div>
 
-          <div class="tags">
+         
 
-            <h2 class="h2">Tags</h2>
 
-            <div class="wrapper">
 
-              <button class="hashtag">#java</button>
-              <button class="hashtag">#object</button>
-              <button class="hashtag">#class</button>
-              <button class="hashtag">#mobility</button>
-              <button class="hashtag">#inclusion</button>
-              <button class="hashtag">#webperf</button>
-              <button class="hashtag">#optimize</button>
-              <button class="hashtag">#performance</button>
 
-            </div>
-
-          </div>
-
-          <div class="contact">
-
-            <h2 class="h2">Let's Talk</h2>
-
-            <div class="wrapper">
-
-              <p>
-                Do you have doubt say on social-link?
-              </p>
-
-              <ul class="social-link">
-
-                <li>
-                  <a href="#" class="icon-box discord">
-                    <ion-icon name="logo-discord"></ion-icon>
-                  </a>
-                </li>
-
-                <li>
-                  <a href="#" class="icon-box twitter">
-                    <ion-icon name="logo-twitter"></ion-icon>
-                  </a>
-                </li>
-
-                <li>
-                  <a href="#" class="icon-box facebook">
-                    <ion-icon name="logo-facebook"></ion-icon>
-                  </a>
-                </li>
-
-              </ul>
-
-            </div>
-
-          </div>
-
-          <div class="newsletter">
-
-            <h2 class="h2">Newsletter</h2>
-
-            <div class="wrapper">
-
-              <p>
-                Subscribe to our newsletter to be among the first to keep up with the latest updates.
-              </p>
-
-              <form action="#">
-                <input type="email" name="email" placeholder="Email Address" required>
-
-                <button type="submit" class="btn btn-primary">Subscribe</button>
-              </form>
-
-            </div>
-
-          </div>
 
         </div>
 

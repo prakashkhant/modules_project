@@ -11,7 +11,8 @@ body {
     font-family: 'Noto Sans', sans-serif;
     scroll-behavior: smooth;
     transition: 0.3 all;
-    /* background: rgba(171, 255, 255, 0.486)  */
+    /* background: rgba(171, 255, 255, 0.486) ; */
+    background: url('../images/svg/shadow-blue.svg') no-repeat 100% 0;
 }
 
 body::after,
@@ -125,7 +126,7 @@ header nav {
 .navlist ul li a,
 .navlist ul li {
     font-size: 16px;
-    color: #030818;
+    color: #9cdceb;
     cursor: pointer;
     display: flex;
     font-weight: 600;
@@ -140,6 +141,10 @@ header nav {
     font-size: 15px;
     margin-left: 6px;
 
+}
+.navlist ul li a:hover{
+    color: #1cc2e7;
+    transform: translateY(-1px);
 }
 
 .searchdarksub {
@@ -1119,7 +1124,9 @@ header nav {
 /* footer start */
 footer {
     height: auto;
-    padding: 10px 10px 0px 10px;
+    
+    margin:0 50px 0 50px ;
+    padding: 10px 10px 10px 10px;
     border: 1px solid #c2d4ee;
     background-color: #e8edf5;
     border-radius: 40px;

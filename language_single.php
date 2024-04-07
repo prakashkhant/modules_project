@@ -33,7 +33,7 @@
     <ul class="navbar">
       <li> <a href="language_home.php">Home</a></li>
       <li> <a href="#categories">Categories</a></li>
-      <li> <a href="#languages">Languages</a></li>
+      <!-- <li> <a href="#languages">Languages</a></li> -->
       <li> <a href="#Refrence">Refrence</a></li>
 
     </ul>
@@ -244,7 +244,7 @@
 
    <!--start cta section-->
 
-   <section class="cta">
+   <section class="cta" id="refernce">
     <div class="center-text">
      
       <h2>Top 4 Universities </h2>
