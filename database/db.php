@@ -16,21 +16,26 @@ class DB
             die();
         }
     }
+  
     // login button :checking session for dashboard redirect
     function login_dashboard()
     {
 
         if (empty($_SESSION["username"]) || $_SESSION["username"] == '') {
-            echo " <button class='btn1 btn-primary1'><a href='login_regs.php'>Join Me !</a></button>";
+            echo " <button class='btn1 btn-primary1'><a href='login_regs.php'>Join Me !</a></button> 
+            <h3 class='btn' id='count'></h3>";
            
         } else if ($_SESSION["username"]=="admin"){
-            echo " <button class='btn1 btn-primary1'><a href='admin_dashboard.php'>" . $_SESSION["username"] . "!</a> </button>";
+            echo " <button class='btn1 btn-primary1'><a href='admin_dashboard.php'>" . $_SESSION["username"] . "!</a> </button>
+            <h3 class='btn' id='count'></h3>";
         }
         else {
 
-            echo " <button class='btn1 btn-primary1'><a href='dashboard.php'>" . $_SESSION["username"] . "!</a> </button>";
+            echo " <button class='btn1 btn-primary1'><a href='dashboard.php'>" . $_SESSION["username"] . "!</a> </button>
+            <h3 class='btn' id='count'></h3>";
         }
-        echo "<style>.btn1 {
+        echo "<style>
+        .btn1 {
             min-width: 6rem;
             border-radius: 100px;
             font-size:20px;

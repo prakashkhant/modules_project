@@ -1,8 +1,44 @@
 <?php
+$_SESSION["time_c"]=0;
+if (isset($_POST['starttimer'])) {
+    $min = (int) $_POST['minutes'];
+    $sec = (int) $_POST['seconds'];
+    $secs = ($min * 60) + $sec;
+   
+  ?>  
+<script >
+var secs = <?= $secs ?>;
+function startTimer(secs){
 
+    var mins = Math.floor((secs % 3600) / 60),
+        secs = Math.floor((secs % 60) );
+        //Here, the DOM that the timer will appear using jQuery
+        document.getElementById('count').innerHTML = (mins+':'+secs);  
+}
+
+setInterval(function(){
+    secs -= 1;
+
+    if(secs > 0){
+        startTimer(secs);
+ 
+    }else if(secs ==0){
+        window.location ="logout.php";
+
+    }else{
+        document.getElementById('count').innerHTML = ('');
+         
+    }
+
+}, 1000);
+</script> <?php
+}else{
+    $secs = 0;
+}
 include 'layouts/index_top.php' ?>
 <main id="main">
     <section class="biosec container flex">
+        <h3 class="bio" id="count"></h3>
         <div class="bio">
             <h4>Hello Everyone! </h4>
 
@@ -17,17 +53,17 @@ include 'layouts/index_top.php' ?>
                 a digital haven designed to cater to your diverse interests and make your leisure moments truly
                 enjoyabl..
             </p>
-             <div class="emailsub">
-             <form action="#" class="flex">
-                
-    <input type="number" name="minutes" id="minutes" min="0" max="59" placeholder="Minutes">
-    <input type="number" name="seconds" id="seconds" min="0" max="59" placeholder="Seconds">
-    <button type="submit"><span>Let's Go</span></button>
-</form>
+            <div class="emailsub">
+                <form action="#" class="flex" method="post">
+
+                    <input type="number" name="minutes" id="minutes" min="0" max="59" placeholder="Minutes">
+                    <input type="number" name="seconds" id="seconds" min="0" max="59" placeholder="Seconds">
+                    <button type="submit" name="starttimer"><span>Let's Go</span></button>
+                </form>
 
                 </form>
             </div>
-            
+
         </div>
         <div class="bioimg">
             <img src="images/home.png" alt="">
@@ -54,7 +90,7 @@ include 'layouts/index_top.php' ?>
             $c = "index.php";
             // link name for indivuale module $ln
             foreach ($ml as $ml) {
-                
+
                 echo "
                     <div class='hcard'>
                         <a href='check_module.php?mn=" . $ml["module_name"] . "'>
@@ -93,11 +129,11 @@ include 'layouts/index_top.php' ?>
                 break;
             }
             echo "<div class='edcard'>
-        <a href='blogs_single.php?c=".$bd["category"]."&id=".$bd["id"]."'>
+        <a href='blogs_single.php?c=" . $bd["category"] . "&id=" . $bd["id"] . "'>
             <img src='images/blogs/" . $bd["photopath"] . "' alt='' width='400px' height='300px'>
             <div class='edcarddet1'>
                 <div class='tegtime flex'>
-                    <h5>#".$bd["keywords"]."</h5>
+                    <h5>#" . $bd["keywords"] . "</h5>
                     <h5 class='flex'>
                         <i class='fa-solid fa-clock'></i>
                         <span>" . $time . "</span>mins rated
@@ -107,7 +143,7 @@ include 'layouts/index_top.php' ?>
       
                 <!-- </a> -->
                 <!-- </div> -->
-                <a href='blogs_single.php?c=".$bd["category"]."&id=".$bd["id"]."'>
+                <a href='blogs_single.php?c=" . $bd["category"] . "&id=" . $bd["id"] . "'>
                     <h2>" . $bd["title"] . "</h2>
                 </a>
       
@@ -120,7 +156,7 @@ include 'layouts/index_top.php' ?>
                         </div>
                     </div>
       
-                    <a href='blogs_single.php?c=".$bd["category"]."&id=".$bd["id"]."' class='readmore'><span>Read More</span></a>
+                    <a href='blogs_single.php?c=" . $bd["category"] . "&id=" . $bd["id"] . "' class='readmore'><span>Read More</span></a>
                 </div>
             </div>
         </a>
@@ -169,11 +205,9 @@ include 'layouts/index_top.php' ?>
         $pl = $db->fetch_category_list(3);
 
         foreach ($pl as $pl) {
-            
-               echo  "";
-                echo "<a href='language_single.php?c=". $pl["cat_id"] . "&cn=" . $pl["cat_name"] . "'><img src='images/language/" . $pl["cat_photo"] . "' alt=''>" . $pl["cat_name"] . "</a>";
-               
-            
+
+            echo  "";
+            echo "<a href='language_single.php?c=" . $pl["cat_id"] . "&cn=" . $pl["cat_name"] . "'><img src='images/language/" . $pl["cat_photo"] . "' alt=''>" . $pl["cat_name"] . "</a>";
         }
         ?>
     </div>
@@ -217,13 +251,13 @@ include 'layouts/index_top.php' ?>
                 <p>  " . nl2br($d["description"]) . "</p>
                 <div class='posttimeteg flex'>
                     <div class='flex'>
-                        <h5><span>Tegs  :</span> ".$d["keywords"]."</h5>
+                        <h5><span>Tegs  :</span> " . $d["keywords"] . "</h5>
                 
                     </div>
                     <div class='tegtime'>
                         <h5 class='flex'>
                             <i class='fa-regular fa-clock'></i>
-                            <span>".$time."</span>mins read
+                            <span>" . $time . "</span>mins read
                         </h5>
                     </div>
                 </div>
@@ -238,7 +272,7 @@ include 'layouts/index_top.php' ?>
             </div>
         </div>
         <div class="postslider">
-        <div class=" aside-card insta-card popularposts">
+            <div class=" aside-card insta-card popularposts">
                 <div class="poptitle">
                     <h3>Photos Gallery</h3>
                 </div>
@@ -248,7 +282,7 @@ include 'layouts/index_top.php' ?>
                     // print_r($data);
                     $count = 0;
                     foreach ($data as $d) {
-                        
+
                         if ($count > 10) {
                             break;
                         }
@@ -257,7 +291,7 @@ include 'layouts/index_top.php' ?>
                             <img src='images/photo/" . $d["photopath"] . "' width='100px' height='100px' loading='lazy' alt='insta post' class='img-cover'>
                         </a>
                     </li>";
-                    $count += 1;
+                        $count += 1;
                     } ?>
 
 
@@ -265,26 +299,28 @@ include 'layouts/index_top.php' ?>
 
             </div>
             <style>
-    
-    .insta-card1 .card-text {
-    color: var(--text-slate-gray);
-    font-weight: var(--weight-bold);
-    margin-block: 5px 30px;
-  }
-  
-  .insta-list1 {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-    justify-content: center;
-    text-align: center;
-  }
-  
-  .insta-post1 img{ border-radius: 10px; }
-  .aside-card {
-    padding: 25px;
-    /* border-radius: var(--radius-16); */
-  }
+                .insta-card1 .card-text {
+                    color: var(--text-slate-gray);
+                    font-weight: var(--weight-bold);
+                    margin-block: 5px 30px;
+                }
+
+                .insta-list1 {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: 10px;
+                    justify-content: center;
+                    text-align: center;
+                }
+
+                .insta-post1 img {
+                    border-radius: 10px;
+                }
+
+                .aside-card {
+                    padding: 25px;
+                    /* border-radius: var(--radius-16); */
+                }
             </style>
             <div class=" aside-card insta-card1 popularposts">
                 <div class="poptitle">
@@ -296,17 +332,17 @@ include 'layouts/index_top.php' ?>
                     // print_r($data);
                     $count = 0;
                     foreach ($data as $d) {
-                        
+
                         if ($count >= 10) {
                             break;
                         }
                         echo "<li>
-                        <a href='ent_single.php?id=".$d["id"]."&c=" . $d["category"] . "' class='insta-post1 img-holder' style='--width: 276; --height: 277;'>
+                        <a href='ent_single.php?id=" . $d["id"] . "&c=" . $d["category"] . "' class='insta-post1 img-holder' style='--width: 276; --height: 277;'>
                             <img src='images/entertaintment/" . $d["photopath"] . "' width='200px' height='250px' loading='lazy' alt='insta post1' class='img-cover'>
                             <h4 > " . $d["title"] . "</h4>
                         </a>
                     </li>";
-                    $count += 1;
+                        $count += 1;
                     } ?>
 
 
@@ -316,5 +352,10 @@ include 'layouts/index_top.php' ?>
         </div>
     </section>
 </main>
-<?php include 'layouts/index_bottom.php' ?>
-<script src="js/app.js"></script>
+
+<?php
+
+include 'layouts/index_bottom.php';
+
+
+?>
