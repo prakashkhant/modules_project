@@ -20,7 +20,7 @@ body::before {
     width: 500px;
     content: '';
     z-index: 1;
-    position: absolute;
+    /* position: absolute; */
 }
 
 body::after {
@@ -29,7 +29,17 @@ body::after {
     left: 0;
     top: 0;
 }
-
+.without_ampm::-webkit-datetime-edit-ampm-field {
+    display: none;
+  }
+  input[type=time]::-webkit-clear-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    -ms-appearance:none;
+    appearance: none;
+    margin: -10px; 
+  }
 .container1 {
     max-width: 1400px;
     margin: auto;

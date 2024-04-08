@@ -82,13 +82,13 @@ if (isset($_GET['mid'])) {
     
 </style>
 <div class="row container-fluid ms-5  ">
-    <div class="col-3 image-box">
-        <div class="add-img  flex" style="width: 350px;">
+<div class="col-2 image-box ">
+        <div class="add-img  flex" style="width: 300px;">
             <img src="images/add-item.png" alt="" srcset="" width="100%" height="100%">
         </div>
     </div>
-    <div class="col-12  form-box  flex pd-4" style="width: 700px;padding: bottem 10px;">
-        <form class=" ms-2 mb-5" action="#" method="post">
+    <div class="col-9  form-box  flex pd-4 " style="width: 700px;padding: bottem 10px;margin: right 10px;">
+        <form class="  mb-5 fw-bolder" action="#" method="post">
             <div class="row mb-3">
 
                 <div class="col-sm-5">
@@ -116,7 +116,7 @@ if (isset($_GET['mid'])) {
 
                         foreach ($cat_list as $cl) {
 
-                            echo "<option value=" . $cl["mid"] . ">" . $cl["cat_name"] . "</option>";
+                            echo "<option value=" . $cl["cat_id"] . ">" . $cl["cat_name"] . "</option>";
                         }
                         ?>
                     </select>
@@ -125,26 +125,26 @@ if (isset($_GET['mid'])) {
             </div>
 
             <div class="row mb-3 title">
-                <label for="title" class="col-sm-2 col-form-label ">Title </label>
+                <label for="title" class="col-sm-3 col-form-label ">Title </label>
                 <div class="col-sm-8">
                     <input type="text" class="form-control mt-2" width="20" id="tbTitle" name="tbTitle">
                 </div>
             </div>
 
             <div class="row mb-3 description">
-                <label for="Description" class="col-sm-2 col-form-label ">Description</label>
+                <label for="Description" class="col-sm-3 col-form-label ">Description</label>
                 <div class="col-sm-8">
                     <textarea type="text" class="form-control mt-2" name="tdDescription" id="tdDescription" cols="40" rows="3"></textarea>
                 </div>
             </div>
             <div class="row mb-3 contentArea">
-                <label for="contentArea" class="col-sm-2 col-form-label ">Content </label>
+                <label for="contentArea" class="col-sm-3 col-form-label ">Content </label>
                 <div class="col-sm-9">
                     <textarea type="text" class="form-control mt-2" name="tdContentArea" id="tdContentArea" cols="40" rows="7"></textarea>
                 </div>
             </div>
             <div class="row mb-3 publish-details">
-                <label for="tbPublish" class="col-sm-2 col-form-label ">Publish name : </label>
+                <label for="tbPublish" class="col-sm-3 col-form-label ">Publish name : </label>
                 <div class="col-sm-4">
                     <input type="text" class="form-control " id="tbePublishBy" name="tbPublishBy" text="<?php echo $uname; ?>" value="<?php echo $uname; ?>"  >
 
@@ -157,35 +157,35 @@ if (isset($_GET['mid'])) {
                 </div> -->
             </div>
             <div class="row mb-3 media-box">
-                <label for="filePhoto" class="col-sm-2 col-form-label ">Photo </label>
+                <label for="filePhoto" class="col-sm-3 col-form-label ">Photo </label>
                 <div class="col-sm-6">
                     <input type="file" class="form-control " id="filePhoto" name="photopath">
 
                 </div>
             </div>
             <div class="row mb-3 media-box">
-                <label for="video-link" class="col-sm-2 col-form-label">Video link </label>
+                <label for="video-link" class="col-sm-3 col-form-label">Video link </label>
                 <div class="col-sm-8">
                     <input type="text" class="form-control " id="video-link" name="tbvideopath">
 
                 </div>
             </div>
             <div class="row mb-3 test-link">
-                <label for="test-link" class="col-sm-2 col-form-label">Test link </label>
+                <label for="test-link" class="col-sm-3 col-form-label">Test link </label>
                 <div class="col-sm-8">
                     <input type="text" class="form-control " id="test-link" name="tbTestLink">
 
                 </div>
             </div>
             <div class="row mb-3 keywords">
-                <label for="keywords" class="col-sm-2 col-form-label">Tags </label>
+                <label for="keywords" class="col-sm-3 col-form-label">Tags </label>
                 <div class="col-sm-3">
                     <textarea type="text" class="form-control " id="keywords" cols="20" name="tbKeywords"> </textarea>
 
                 </div>
             </div>
             <div class="row mb-3 timebox">
-                <label for="time-tb" class="col-sm-2 col-form-label">Time Duration </label>
+                <label for="time-tb" class="col-sm-3 col-form-label">Time Duration </label>
                 <div class="col-sm-8 mt-2">
                     <!-- <input type="time" class="form-control " id="timeDuration" name="tbTimeDuration"  > -->
                     <label for="hours"> Hours:</label>

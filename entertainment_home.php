@@ -25,22 +25,24 @@ $db->session_check();
 </head>
 
 <body>
-    <section class="home">
+    <section class="home" id="home">
         <div class="headerbg ">
             <header>
                 <div class="container ">
                     <div class="navbar flex1">
                         <div class="logo">
+                         <a href="index.php">
                             <img src="images/entertaintment/logo.png" alt="">
+                         </a>   
                         </div>
 
                         <nav>
                             <ul id="menuitem">
-                                <li><a href="index.html">Home</a></li>
-                                <li><a href="product.html">Movies</a></li>
-                                <li><a href="index.html">Tv Shows</a></li>
-                                <li><a href="contact.html">Video</a></li>
-
+                                <li><a href="#home">Home</a></li>
+                                <li><a href="#popular">Popular</a></li>
+                                <li><a href="#Bollywood">Bollywood</a></li>
+                                <li><a href="#Hollywood">Hollywood</a></li>
+                                <li><a href="#Drama">Drama</a></li>
                             </ul>
                         </nav>
                         <span class="fa fa-bars" onclick="menutoggle()"></span>
@@ -108,7 +110,7 @@ Let the entertainment begin!
     </script>
 
 
-    <section class="popular mtop">
+    <section class="popular mtop" id="popular">
         <div class="container ">
             <div class="heading flex1">
                 <h2>Most Popular</h2>
@@ -223,7 +225,7 @@ Let the entertainment begin!
             break;
         }else{
     ?>
-        <section class="popular mtop">
+        <section class="popular mtop" id="<?php echo $cd["cat_name"] ?>">
             <div class="container ">
                 <div class="heading flex1">
                     <h2><?php echo $cd["cat_name"] ?></h2>

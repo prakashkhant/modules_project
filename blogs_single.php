@@ -295,7 +295,7 @@ $cid = $_GET["c"];
 
                                             <button id='generatePDF' onclick='printDiv()' class='so btn'>Download PDF</button>
                                           
-                                            <a href='#' class='so btn'>Like</a> 
+                                           
 
                                         </div>
 

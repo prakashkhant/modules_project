@@ -17,13 +17,17 @@ include 'layouts/index_top.php' ?>
                 a digital haven designed to cater to your diverse interests and make your leisure moments truly
                 enjoyabl..
             </p>
-            <!-- <div class="emailsub">
-                <form action="#" class="flex">
-                    <input type="email" name="email" id="email" placeholder="Enter your free time ">
-                    <button type="submit"><span>Let's Go </span></button>
-                </form>
-            </div> -->
+             <div class="emailsub">
+             <form action="#" class="flex">
+                
+    <input type="number" name="minutes" id="minutes" min="0" max="59" placeholder="Minutes">
+    <input type="number" name="seconds" id="seconds" min="0" max="59" placeholder="Seconds">
+    <button type="submit"><span>Let's Go</span></button>
+</form>
 
+                </form>
+            </div>
+            
         </div>
         <div class="bioimg">
             <img src="images/home.png" alt="">

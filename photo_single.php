@@ -63,14 +63,20 @@ $cid = $_GET["c"];
     min-width: 100%;
     min-height: 100%;
     z-index: -1;
+    opacity: 70%;
   }
-
+  .collection h2{
+    margin: 100px;
+  }
+body{
+    background: url(images/photo/nature4.jpg);
+}
 </style>
 
 <body>
-<video autoplay muted loop id="myVideo">
+<!-- <video autoplay muted loop id="myVideo">
   <source src="images/bg_live_2.mp4" type="video/mp4">
-</video>
+</video> -->
     <!-- header -->
     
     <header>
@@ -97,19 +103,18 @@ $cid = $_GET["c"];
     <!-- hots section -->
     <section class="collection" id="collection">
         <div class="title">
-            <br><br>
-            <hr><br><br>
+           
             <h2>
+                <span>
                 <?php
                 $cname = $db->find_category_name($cid);
                 foreach ($cname as $cn) {
                     echo ucfirst($cn["cat_name"]);
                 }
                 ?>
-
                 Collection
-                <br><br>
-                <hr><br>
+                </span>
+                
             </h2>
         </div>
 
@@ -153,7 +158,7 @@ $cid = $_GET["c"];
 </div>
             ";
             } ?>
-            <a href=''><i class='bx bx-heart'></i></a>
+           
         </div>
     </section>
     <section id="contact">
