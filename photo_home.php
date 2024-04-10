@@ -161,7 +161,9 @@ $db->session_check();
 					$sql2 = mysqli_query($db->conn, "SELECT flc_id FROM review WHERE item_id = $itemid AND liked = 1");
 					$likes = mysqli_num_rows($sql2);
 					
-					$output .= "<span class='likes'>".$likes."</span><a href=''><i class='bx bx-down-arrow-alt' ></i></a>		  
+					$output .= "<span class='likes'>".$likes."</span>
+				
+					<button class='download-btn likeBtn' data-url='images/photo/" . $pi["photopath"] . "'><i class='bx bx-down-arrow-alt'></i></button>	  
 					</div>
 				</div>";
 
@@ -170,6 +172,25 @@ $db->session_check();
 		</div>
 
 	</section>
+	<script>
+		
+            document.querySelectorAll('.download-btn').forEach(button => {
+                button.addEventListener('click', function() {
+                    const url = this.getAttribute('data-url');
+                    downloadImage(url);
+                });
+            });
+
+            function downloadImage(url) {
+                const link = document.createElement('a');
+                link.href = url;
+                link.download = url.split('/').pop(); // Use the image's filename as the download filename
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            }
+      
+	</script>
 	<!-- Newsletter -->
 	<section class="newsletter">
 		<div class="news-text">
