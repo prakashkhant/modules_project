@@ -36,7 +36,7 @@ $uname = $_SESSION["username"];
                 <a href="admin_dashboard.php" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
                     <i class="fas fa-tachometer-alt me-2"></i>Dashboard</a>
                 <!-- <a href="admintab.php" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i class="fas fa-users-cog me-2"></i>Admins</a> -->
-                <a href="#" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i class="fas fa-users me-2"></i>Users</a>
+                <a href="users.php" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i class="fas fa-users me-2"></i>Users</a>
                 <a href="add_item_admin.php" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i class="fas fa-edit me-2"></i>Add Itmes</a>
                 <!-- <a href="addModule.php" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i class="fas fa-sitemap me-2"></i>Add Module</a> -->
                 <!-- <a href="#" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i class="fas fa-gift me-2"></i>Comments/Likes</a> -->
@@ -162,7 +162,7 @@ $uname = $_SESSION["username"];
                                     <th scope="col">Publish Date</th>
                                     <th scope="col">Publish By</th>
                                     <th scope="col">Actions</th>
-                                    <th scope="col">view</th>
+                                   
                                 </tr>
                             </thead>
                             <tbody>
@@ -184,12 +184,9 @@ $uname = $_SESSION["username"];
                                                 <td  style='color:blue;'>" . $cname["cat_name"] . "</td>
                                                 <td>" . $item["publish_date"] . "</td>
                                                 <td>" . $item["publish_by"] . "</td>
-                                                <td><a class='btn btn-success' href='updateItem.php'>Update </a>
-                                                <a class='btn btn-primary' href='delete-item.php?id=" . $item["id"] . "'>Delete </a></td>
                                                 <td>
-                                                    <a href='#'> <i class='fas fa-eye'></i>
-                                                    </a>
-                                                </td>
+                                                <a class='btn btn-primary' href='delete-item.php?id=" . $item["id"] . "'>Delete </a></td>
+                                                
                                             </tr> ";
                                             break;
                                         }

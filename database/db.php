@@ -126,6 +126,16 @@ class DB
             return $this->fetchData($query);
         }
     }
+
+    // user list for admin----------
+    function fetch_all_user(){
+        if ($this->connect_DB()) {
+            $query = "SELECT * FROM `userdetails` ";
+
+            return $this->fetchData($query);
+        }
+    }
+    
     function count_items_list_category($cid)
     {
         if ($this->connect_DB()) {
@@ -324,7 +334,18 @@ class DB
             }
         }
     }
-   
+    function delete_user($id){
+        if ($this->connect_DB()) {
+            $sql = "DELETE FROM `userdetails` WHERE uid=" . $id;
+            // return $sql;
+            if (mysqli_query($this->conn, $sql)) {
+                echo "Record deleted successfully";
+                header("Location: dashboard.php");
+            } else {
+                echo "Error deleting record: " . mysqli_error($this->conn);
+            }
+        }
+    }
     //review table : like comment : 
     function review_lcs(){
         if ($this->connect_DB()) {
