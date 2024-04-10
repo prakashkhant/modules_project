@@ -37,7 +37,7 @@ $db = new DB();
                     <li><a href="language_home.php">Languages</a></li>
                     <li><a href="blogs_home.php">Blogs</a></li>
                     <li><a href="entertainment_home.php">Entertaiments</a></li>
-                    <li><a href="programming_home.php">Coading</a></li>
+                    <li><a href="programming_home.php">Coding</a></li>
                     <li><a href="photo_home.php">Gallery</a></li>
                     <li><a href="about.php">About Me</a></li>
 
