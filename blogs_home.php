@@ -350,7 +350,7 @@ $db->connect_DB();
                                                     $tags = explode(",", $r["keywords"]);
 
                                                     foreach ($tags as $key) { ?>
-                                                        <a href="#" class="span hover-2">&#x23;<?php echo nl2br($key) ?></a>
+                                                        <a href="#" class="span hover-2"><?php echo nl2br($key) ?></a>
                                                     <?php
                                                     }
                                                     ?>

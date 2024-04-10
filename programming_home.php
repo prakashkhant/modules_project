@@ -250,7 +250,7 @@ $db->session_check();
                   <div class='wrapper-flex'>
 
                   <div class='profile-wrapper'>
-                  <img src='images/programming/author.png' alt='Julia Walker' width='50'>
+                  <img src='images/author.png' alt='Julia Walker' width='50'>
                   </div>
 
                   <div class='wrapper'>

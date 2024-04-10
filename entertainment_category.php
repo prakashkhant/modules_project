@@ -40,18 +40,16 @@
 
                         <nav>
                             <ul id="menuitem">
-                                <li><a href="index.html">Home</a></li>
-                                <li><a href="product.html">Movies</a></li>
-                                <li><a href="index.html">Tv Shows</a></li>
-                                <li><a href="contact.html">Video</a></li>
+                                <li><a href="entertainment_home.php">Home</a></li>
+                                
                                
                             </ul>
                         </nav>
                         <span class="fa fa-bars" onclick="menutoggle()"></span>
 
                         <div class="subscribe flex">
-                            <i class="fas fa-search"></i>
-                            <i id="palybtn" class="fas fa-user"></i>
+                           
+                            <!-- <i id="palybtn" class="fas fa-user"></i> -->
 
                         </div>
                     <!-- </div> -->

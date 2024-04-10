@@ -136,11 +136,7 @@ Let the entertainment begin!
                             
                                 <div class='imgBox'>
                                    <a href='ent_single.php?c=".$bm["category"]."&id=".$bm["id"]."'>  <img src='images/entertaintment/" . $bm["photopath"] . "' alt=''></a>
-                                    <div class='icon'>
-                                        <i class='far fa-heart'></i>
-                                        <i class='fas fa-share-alt'></i>
-                                        <i class='fas fa-plus'></i>
-                                    </div>
+                                    
                                 </div>
         
                                 <div class='content'>
@@ -249,11 +245,7 @@ Let the entertainment begin!
                                 <a href='ent_single.php?c=".$bm["category"]."&id=".$cc["id"]."'> 
                                 <img src='images/entertaintment/" . $cc["photopath"] . "' alt=''>
                                 </a>
-                                    <div class='icon'>
-                                        <i class='far fa-heart'></i>
-                                        <i class='fas fa-share-alt'></i>
-                                        <i class='fas fa-plus'></i>
-                                    </div>
+                                    
                                 </div>
         
                                 <div class='content'>

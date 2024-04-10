@@ -280,7 +280,7 @@
         <h2>Want To Learn more About Us? Let's Go join us</h2>
         <p>we provide best environment for making your future bright gives Knowledge and confidence for your grouwth.</p>
         <h4>Best Cources</h4>
-        <a href="#" class="btn">Read More</a>
+        <!-- <a href="#" class="btn">Read More</a> -->
       </div>
     </section>
 

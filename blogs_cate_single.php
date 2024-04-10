@@ -263,7 +263,7 @@ $cat = $_GET["c"];
                                             <div class='card-wrapper'>
         
                                                 <div class='profile-card'>
-                                                    <img src='images/blogs/author-1.png' width='48' height='48' loading='lazy' alt='Joseph' class='profile-banner'>
+                                                    <img src='images/author.png' width='48' height='48' loading='lazy' alt='Joseph' class='profile-banner'>
         
                                                     <div>
                                                         <p class='card-title'>".$cl["publish_by"]."</p>

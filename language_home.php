@@ -254,7 +254,7 @@ $db->session_check();
       <h2>Want To Learn more About Us? </h2>
       <p>We provide best environment for making your future bright gives Knowledge and confidence for your grouwth.</p>
       <h4>For any Query !</h4>
-      <a href="#" class="btn">Contact Us</a>
+      <!-- <a href="#" class="btn">Contact Us</a> -->
     </div>
   </section>
 

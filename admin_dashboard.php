@@ -21,7 +21,7 @@ $uname = $_SESSION["username"];
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <link rel="stylesheet" href="css/dashboard_style.css" />
     <title>Nexushub | Dashboard</title>
-    <link rel="icon" type="image/x-icon" href="./images/website_icon.png">
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
 </head>
 
 <body>

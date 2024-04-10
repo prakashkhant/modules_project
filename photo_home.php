@@ -96,8 +96,7 @@ $db->session_check();
 			<?php
 				$pc=$db->fetch_category_list(5);
 				// print_r($pc);
-				$c=array(25,45,19,24,46);
-				$i=0;
+				
 				foreach( $pc as $pc){
 				echo " 
 					<div class='category-box'>
@@ -107,7 +106,7 @@ $db->session_check();
 							</div>
 						
 						<h4>".$pc["cat_name"]."</h4>
-						<p>".$c[$i]." Photos</p>
+						
 					</div>		
 					";
 				$i++;}
@@ -192,18 +191,7 @@ $db->session_check();
       
 	</script>
 	<!-- Newsletter -->
-	<section class="newsletter">
-		<div class="news-text">
-			<h2>Newsletter</h2>
-			<p>Follow us for more creative,unique,and <br>beautifull Photos Gallery</p>
-		</div>
-		<div class="send">
-			<form>
-				<input type="email" placeholder="Write Your Email" required>
-				<input type="submit" value="Submit">
-			</form>
-		</div>
-	</section>
+	
 	<!-- footer -->
 	<section id="contact">
 		<div class="footer">
