@@ -280,10 +280,10 @@ include 'layouts/index_top.php' ?>
                 <ul class="insta-list">
                     <?php $data = $db->fetch_random_items_by_module(5);
                     // print_r($data);
-                    $count = 0;
+                    $count = 1;
                     foreach ($data as $d) {
 
-                        if ($count > 10) {
+                        if ($count ==13) {
                             break;
                         }
                         echo "<li>

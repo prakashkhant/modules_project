@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/about.css">
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
 
     <title>about us</title>
     <style>
@@ -25,10 +26,16 @@
                 <img src="images/about.jpeg" alt="">
                 
             </div>
-           
+           <style>
+            .index-link:link { text-decoration: none; 
+            font-size: x-large;}
+.index-link:visited { text-decoration: none; }
+.index-link:hover { text-decoration: none; }
+.index-link:active { text-decoration: none; }
+           </style>
             <div class="about-content">
                 <h2>Our Best Part</h2>
-                <p>Nexushub is a dynamic and multifaceted online platform that stands at the intersection of technology
+                <p><a href="index.php" class="index-link">Nexushub</a> is a dynamic and multifaceted online platform that stands at the intersection of technology
                     and creativity. Conceived as the culmination of our last year BSc Computer Science project, Nexushub
                     brings together a diverse range of modules to cater to the varied interests of our users.</p>
                 <a href='#' class='read-more' onclick='showHiddenContent(this)'>Read More</a>
