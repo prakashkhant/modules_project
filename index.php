@@ -23,7 +23,7 @@ setInterval(function(){
         startTimer(secs);
  
     }else if(secs ==0){
-        window.location ="logout.php";
+        window.location ="logouta.php";
 
     }else{
         document.getElementById('count').innerHTML = ('');

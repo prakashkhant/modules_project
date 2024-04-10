@@ -12,7 +12,7 @@ $cid = $_GET["c"];
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Nexushub | Photo Gallery</title>
     <link rel="stylesheet" type="text/css" href="css/photo_single.css">
-	<script src="https://kit.fontawesome.com/e6a8e37cff.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/e6a8e37cff.js" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
@@ -56,29 +56,32 @@ $cid = $_GET["c"];
         color: red !important;
         text-decoration: none;
     }
+
     #myVideo {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
-    z-index: -1;
-    opacity: 70%;
-  }
-  .collection h2{
-    margin: 100px;
-  }
-body{
-    background: url(images/photo/nature4.jpg);
-}
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        min-width: 100%;
+        min-height: 100%;
+        z-index: -1;
+        opacity: 70%;
+    }
+
+    .collection h2 {
+        margin: 100px;
+    }
+
+    body {
+        background: url(images/photo/nature4.jpg);
+    }
 </style>
 
 <body>
-<!-- <video autoplay muted loop id="myVideo">
+    <!-- <video autoplay muted loop id="myVideo">
   <source src="images/bg_live_2.mp4" type="video/mp4">
 </video> -->
     <!-- header -->
-    
+
     <header>
         <a href="index.php" class="logo">Nexus Hub</a>
         <div class="bx bx-menu" id="menu-icon"></div>
@@ -103,27 +106,27 @@ body{
     <!-- hots section -->
     <section class="collection" id="collection">
         <div class="title">
-           
+
             <h2>
                 <span>
-                <?php
-                $cname = $db->find_category_name($cid);
-                foreach ($cname as $cn) {
-                    echo ucfirst($cn["cat_name"]);
-                }
-                ?>
-                Collection
+                    <?php
+                    $cname = $db->find_category_name($cid);
+                    foreach ($cname as $cn) {
+                        echo ucfirst($cn["cat_name"]);
+                    }
+                    ?>
+                    Collection
                 </span>
-                
+
             </h2>
         </div>
 
         <div class="collection-content" id="item-list">
             <?php
             $uid = 0;
-			if (isset($_SESSION["id"])) {
-				$uid = $_SESSION["id"];
-			}
+            if (isset($_SESSION["id"])) {
+                $uid = $_SESSION["id"];
+            }
             $p_images = $db->fetch_items_list($cid);
 
             // print_r($data);
@@ -132,34 +135,41 @@ body{
                 $count += 1;
                 $itemid = $pi["id"];
                 echo "
-              <div class='col-content' id='item".$pi["id"]."'>
+              <div class='col-content' id='item" . $pi["id"] . "'>
   <img src='images/photo/" . $pi["photopath"] . "'>
   <h5>" . ucfirst($pi["title"]) . "</h5>
   <p>" . ucfirst($pi["publish_by"]) . "</p>
   <div class='soical-content'>";
-  $sql = mysqli_query($db->conn, "SELECT flc_id FROM review WHERE item_id = $itemid AND uid = $uid AND liked = 1");
-					if (mysqli_num_rows($sql) > 0) {
-				echo "<button class='likeBtn' id='like".$itemid."' onclick='unlikePost(".$itemid.", ".$uid.")'>
+                $sql = mysqli_query($db->conn, "SELECT flc_id FROM review WHERE item_id = $itemid AND uid = $uid AND liked = 1");
+                if (mysqli_num_rows($sql) > 0) {
+                    echo "<button class='likeBtn' id='like" . $itemid . "' onclick='unlikePost(" . $itemid . ", " . $uid . ")'>
 							<i class='fa-solid fa-heart'></i>
 						</button>";
-					} else {
-				echo "<button class='likeBtn' id='like".$itemid."' onclick='likePost(".$itemid.", ".$uid.")'>
+                } else {
+                    echo "<button class='likeBtn' id='like" . $itemid . "' onclick='likePost(" . $itemid . ", " . $uid . ")'>
 							<i class='fa-regular fa-heart'></i>
 						</button>";
-					}
-					$sql2 = mysqli_query($db->conn, "SELECT flc_id FROM review WHERE item_id = $itemid AND liked = 1");
-					$likes = mysqli_num_rows($sql2);
-					
-  echo "<span class='likes'>".$likes."</span>
-  <a href=''><i class='bx bx-down-arrow-alt' ></i></a>
+                }
+                $sql2 = mysqli_query($db->conn, "SELECT flc_id FROM review WHERE item_id = $itemid AND liked = 1");
+                $likes = mysqli_num_rows($sql2);
+                $filename= $pi["photopath"] ;
+                echo "<span class='likes'>" . $likes . "</span>
  
+                <button class='likeBtn' onclick='dwnF()'><i class='bx bx-down-arrow-alt'></i></button>
+
+
+            
 
   </div>
 </div>
             ";
             } ?>
-           
+
         </div>
+        <script>
+            function dwnF(){
+            window.location.href='download.php?image=images/photo/" '. images;}
+        </script>
     </section>
     <section id="contact">
         <div class="footer">

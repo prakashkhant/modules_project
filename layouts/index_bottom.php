@@ -52,5 +52,5 @@
 <?php include 'top_up.php'; ?>
     
 </body>
-
+<script src="js/app.js"></script>
 </html>
