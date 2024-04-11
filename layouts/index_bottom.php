@@ -18,8 +18,8 @@
         </div>
    
         <div class="newsletterfooter" id="subform">
-            <h3>About us</h3>
-            <p>This website bulid under gudileis of Komal dave , As project of sem 6 in Ty Bsc Computer science. </p>
+            <h3>About This</h3>
+            <p>This website as project of sem 6 in Ty Bsc Computer science. <br>Narmada college od Science & Commerce</p>
            
                 <!-- <button type="submit" class="flex">Read me<i class="fa-solid fa-arrow-right"></i></button> -->
            

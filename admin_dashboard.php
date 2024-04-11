@@ -34,7 +34,7 @@ $uname = $_SESSION["username"];
             </a>
             <div class="list-group list-group-flush my-3">
                 <a href="admin_dashboard.php" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
-                    <i class="fas fa-tachometer-alt me-2"></i>Dashboard</a>
+                    <i class="fas fa-tachometer-alt me-2"></i>Admin Dashboard</a>
                 <!-- <a href="admintab.php" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i class="fas fa-users-cog me-2"></i>Admins</a> -->
                 <a href="users.php" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i class="fas fa-users me-2"></i>Users</a>
                 <a href="add_item_admin.php" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i class="fas fa-edit me-2"></i>Add Itmes</a>
@@ -72,8 +72,8 @@ $uname = $_SESSION["username"];
                                 </a>
 
                                 <ul class="dropdown-menu " aria-labelledby="navbarDropdown">
-                                    <li><a class="dropdown-item" href="#">Profile</a></li>
-                                    <li><a class="dropdown-item" href="#">Settings</a></li>
+                                    <!-- <li><a class="dropdown-item" href="#">Profile</a></li>
+                                    <li><a class="dropdown-item" href="#">Settings</a></li> -->
                                     <li><a class="dropdown-item" href="logout.php">Logout</a></li>
                                 </ul>
                         </div>

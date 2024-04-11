@@ -67,7 +67,7 @@ include './layouts/top.php';
                         <th scope="col">Publish Date</th>
                         <th scope="col">Publish By</th>
                         <th scope="col">Actions</th>
-                        <th scope="col">view</th>
+                        <!-- <th scope="col">view</th> -->
                     </tr>
                 </thead>
                 <tbody>
@@ -88,12 +88,9 @@ include './layouts/top.php';
                                 <td  style='color:blue;'>" . $cname["cat_name"] . "</td>
                                 <td>" . $item["publish_date"] . "</td>
                                 <td>" . $item["publish_by"] . "</td>
-                                <td><a class='btn btn-success' href='updateItem.php?id=" . $item["id"] . "'>Update </a>
-                                <a class='btn btn-primary' href='delete-item.php?id=" . $item["id"] . "'>Delete </a></td>
                                 <td>
-                                    <a href='#'> <i class='fas fa-eye'></i>
-                                    </a>
-                                </td>
+                                <a class='btn btn-primary' href='delete-item.php?id=" . $item["id"] . "'>Delete </a></td>
+                               
                             </tr> ";
                                 break;
                             }

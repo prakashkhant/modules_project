@@ -63,8 +63,11 @@
   
   #sidebar-wrapper .sidebar-heading {
     padding: 0.875rem 1.25rem;
-    
+    text-decoration: none;
     font-size: 1.2rem;
+  }
+   a:link{
+    text-decoration: none;
   }
   
   #sidebar-wrapper .list-group {

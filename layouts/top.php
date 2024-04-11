@@ -70,7 +70,7 @@ $uname= $_SESSION['username'];
                             </a>
 
                             <ul class="dropdown-menu " aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="user_profile.php">Profile Changes</a></li>
+                                <!-- <li><a class="dropdown-item" href="user_profile.php">Profile Changes</a></li> -->
                                 <!-- <li><a class="dropdown-item" href="#">Settings</a></li> -->
                                 <li><a class="dropdown-item" href="logout.php">Logout</a></li>
                             </ul>
