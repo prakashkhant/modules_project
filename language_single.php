@@ -107,22 +107,28 @@
   <section class="container">
  
     <div class="container-box">
-     
-        <img src="images/language/book-spinsh.jpg">
+     <a href="https://www.amazon.in/Fast-Track-Spanish-Learning-Lessons/dp/1989777201" target="_blank" rel="noopener noreferrer">
+          <img src="images/language/book-spinsh.jpg">
 
+     </a>
+        
      
     </div>
 
     <div class="container-box">
-    
-        <img src="images/language/book-english-usage.jpg">
+    <a href="https://www.amazon.in/English-Grammar-Use-Book-Answers/dp/0521189063"  target="_blank" rel="noopener noreferrer">
+       <img src="images/language/book-english-grammer.jpg">
+    </a>
+     
      
       
     </div>
 
     <div class="container-box">
-      
-        <img src="images/language/book-english-grammer.jpg">
+      <a href="https://www.amazon.in/Dictionary-Languages-Definitive-Reference-More/dp/0231115687"  target="_blank" rel="noopener noreferrer">
+           <img src="images/language/book-english-usage.jpg">
+      </a>
+       
      
      
     </div>
@@ -236,9 +242,9 @@
 
     </div>
 
-    <div class="main-btn">
+    <!-- <div class="main-btn">
       <a href="https://www.duolingo.com/"  target="_blank" class="btn">Learn More</a>
-    </div>
+    </div> -->
 
   </section>
 

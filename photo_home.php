@@ -65,7 +65,7 @@ $db->session_check();
 			<li><a href="#home">Home</a> </li>
 			<li><a href="#category">Category</a></li>
 		
-			<li><a href="#hots">Hots</a></li>
+			<li><a href="#hots">Collections</a></li>
 			<li><a href="about.php">About Us</a></li>
 
 		</ul>
