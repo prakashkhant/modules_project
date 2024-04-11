@@ -142,15 +142,10 @@
                                 <img src='images/entertaintment/" . $cl["photopath"] . "' alt=''>
                                 </a>
                                     <div class='icon'>
-                                        <i class='far fa-heart'></i>
-                                        <i class='fas fa-share-alt'></i>
-                                        <i class='fas fa-plus'></i>
+                                        
                                     </div>
                                 </div>
         
-                                <div class='content'>
-                                    <i id='palybtn' class='fas fa-play'></i>
-                                </div>
                                 <div class='text'>
                                     <h3>" . $cl["title"] . "</h3>
                                     <div class='time flex'>

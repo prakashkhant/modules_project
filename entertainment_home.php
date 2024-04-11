@@ -140,7 +140,7 @@ Let the entertainment begin!
                                 </div>
         
                                 <div class='content'>
-                                    <i id='palybtn' class='fas fa-play'></i>
+                                    
                                 </div>
                                 <div class='text'>
                                     <h3>" . $bm["title"] . "</h3>
@@ -249,7 +249,7 @@ Let the entertainment begin!
                                 </div>
         
                                 <div class='content'>
-                                    <i id='palybtn' class='fas fa-play'></i>
+                                    
                                 </div>
                                 <div class='text'>
                                     <h3>" . $cc["title"] . "</h3>

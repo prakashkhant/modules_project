@@ -32,9 +32,9 @@
     </a>
     <ul class="navbar">
       <li> <a href="language_home.php">Home</a></li>
-      <li> <a href="#categories">Categories</a></li>
+      <li> <a href="#categories">Videos</a></li>
       <!-- <li> <a href="#languages">Languages</a></li> -->
-      <li> <a href="#Refrence">Refrence</a></li>
+      <li> <a href="#refernce">Reference</a></li>
 
     </ul>
     <div class="header-icons">

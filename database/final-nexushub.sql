@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 10, 2024 at 03:37 PM
+-- Generation Time: Apr 11, 2024 at 04:51 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.1
 
@@ -96,7 +96,6 @@ CREATE TABLE `item` (
 
 INSERT INTO `item` (`id`, `title`, `description`, `content`, `photopath`, `videopath`, `test_link`, `publish_by`, `publish_date`, `module_id`, `category`, `keywords`, `time`) VALUES
 (1, 'What is Python', 'Python is a simple, general purpose, high level, and object-oriented programming language.', 'Python is a high-level, interpreted programming language known for its simplicity and readability. It was created by Guido van Rossum and first released in 1991. Python emphasizes code readability and a syntax that allows programmers to express concepts in fewer lines of code than would be possible in languages like C++ or Java. It supports multiple programming paradigms, including procedural, object-oriented, and functional programming.\n\nPython has a large and active community of developers contributing to its extensive standard library and numerous third-party libraries and frameworks, making it suitable for a wide range of applications, including web development, data analysis, machine learning, artificial intelligence, scientific computing, automation, and more.\n\nKey features of Python include:\n\nSimple and easy-to-learn syntax: Python\'s syntax is designed to be intuitive and readable, making it accessible to beginners and experienced programmers alike.\n\nInterpreted language: Python code is executed line by line by an interpreter, which means that it does not need to be compiled before running, making development and debugging faster.\n\nDynamic typing: Python is dynamically typed, which means that variables do not need to be explicitly declared with a data type, allowing for more flexibility and faster development.\n\nStrong standard library: Python comes with a comprehensive standard library that provides modules and functions for a wide range of tasks, from file I/O to networking to mathematics.\n\nExtensive third-party ecosystem: Python has a large and active community that develops and maintains thousands of third-party libraries and frameworks, extending its capabilities for various domains and applications.\n\nPlatform-independent: Python is available for all major operating systems, including Windows, macOS, and Linux, making it a versatile choice for developing cross-platform applications.\n\nOverall, Python\'s versatility, simplicity, and extensive ecosystem make it a popular choice for developers across various industries and domains.', 'python.jpg', 'https://www.youtube.com/embed/Y8Tko2YC5hA?si=r6JewjoT4cLz6i_Q', 'https://take.quiz-maker.com/QP3VG0R6J', 'shizu', '2024-01-04', 4, 1, 'python,', '00:03:08'),
-(2, 'What is Java', 'Java is a programming language and a platform. Java is a high level, robust, object-oriented and secure programming language.', 'Java is a widely-used, high-level, object-oriented programming language developed by Sun Microsystems (which was later acquired by Oracle Corporation). It was first released in 1995 and has since become one of the most popular programming languages in the world.\n\nKey features of Java include:\n\nPlatform independence: Java programs can run on any device that has a Java Virtual Machine (JVM) installed, regardless of the underlying hardware and operating system. This is achieved through the \"Write Once, Run Anywhere\" (WORA) principle.\n\nObject-oriented: Java is an object-oriented language, meaning it organizes code into reusable components called objects, which encapsulate data and behavior.\n\nStrongly-typed: Java is a statically-typed language, which means that variables must be declared with a specific data type, and type checking is performed at compile time.\n\nAutomatic memory management: Java manages memory automatically through a process called garbage collection, which deallocates memory for objects that are no longer in use, thereby helping to prevent memory leaks and manual memory management errors.\n\nRich standard library: Java comes with a comprehensive standard library that provides classes and methods for a wide range of tasks, including networking, file I/O, concurrency, and more.\n\nMulti-threading support: Java provides built-in support for multi-threading, allowing developers to create applications that can perform multiple tasks concurrently.\n\nSecurity: Java was designed with security in mind, with features such as bytecode verification and a security manager to prevent malicious code from causing harm to a system.\n\nJava is widely used in various domains, including web development (with frameworks like Spring and Java EE), enterprise software development, mobile application development (using platforms like Android), scientific computing, and more. Its popularity, platform independence, and robust ecosystem of tools and libraries make it a versatile and powerful programming language.', 'java.jpg', 'https://www.youtube.com/embed/NCoekcDxbrI?si=p6rS449oP7q_RpD6', 'https://take.quiz-maker.com/QZAH86CNB', 'prakash ', '2024-01-02', 4, 5, 'java, programming', '00:03:08'),
 (3, 'What is JavaScript', 'JavaScript is an object-based scripting language which is lightweight and cross-platform.\r\n\r\nJavaScript is not a compiled language, but it is a translated language. The JavaScript Translator (embedded in the browser) is responsible for translating the JavaScript code for the web browser.', 'JavaScript (js) is a light-weight object-oriented programming language which is used by several websites for scripting the webpages. It is an interpreted, full-fledged programming language that enables dynamic interactivity on websites when applied to an HTML document. It was introduced in the year 1995 for adding programs to the webpages in the Netscape Navigator browser. Since then, it has been adopted by all other graphical web browsers. With JavaScript, users can build modern web applications to interact directly without reloading the page every time. The traditional website uses js to provide several forms of interactivity and simplicity.\r\n\r\nAlthough, JavaScript has no connectivity with Java programming language. The name was suggested and provided in the times when Java was gaining popularity in the market. In addition to web browsers, databases such as CouchDB and MongoDB uses JavaScript as their scripting and query language.\r\n\r\n', 'javascript.jpg', 'https://www.youtube.com/embed/DHjqpvDnNGE?si=QyqvYQBqfrdCLwOJ', 'https://take.quiz-maker.com/Q1XR4NZJO', 'jenu', '2023-12-12', 4, 4, 'javascript, programming', '00:03:08'),
 (4, 'What is PHP', 'PHP is an open-source, interpreted, and object-oriented scripting language that can be executed at the server-side. PHP is well suited for web development. Therefore, it is used to develop web applications (an application that executes on the server and generates the dynamic page.).', 'PHP (Hypertext Preprocessor) is a server-side scripting language primarily used for web development but also has general-purpose programming capabilities. It was created by Rasmus Lerdorf in 1994 and initially stood for \"Personal Home Page,\" but it now stands for the recursive initialism \"PHP: Hypertext Preprocessor.\"\n\nPHP is commonly embedded into HTML code, where it executes on the server to generate dynamic web page content. Key features and aspects of PHP include:\n\nServer-side scripting: PHP code is executed on the server, generating HTML that is then sent to the client\'s browser. This enables the creation of dynamic web pages that can interact with databases, handle form submissions, authenticate users, and perform other server-side tasks.\n\nWide adoption: PHP is one of the most popular programming languages for web development, powering a significant portion of the web, including websites like Facebook, WordPress, and Wikipedia.\n\nOpen-source: PHP is open-source, meaning its source code is freely available for anyone to view, modify, and distribute. This has led to a large and active community of developers contributing to its development and maintenance.\n\nCross-platform compatibility: PHP runs on various platforms, including Linux, Windows, macOS, and others, making it suitable for building web applications on different server environments.\n\nIntegration with databases: PHP has built-in support for interacting with databases, including MySQL, PostgreSQL, SQLite, and others. This allows developers to create dynamic web applications that store and retrieve data from databases.\n\nEase of use: PHP is relatively easy to learn and use, especially for those with prior experience in web development or programming in general. Its syntax is similar to other C-style languages like C, Java, and JavaScript.\n\nExtensive library support: PHP has a vast ecosystem of libraries and frameworks that extend its functionality and simplify common tasks, such as web application development, content management, e-commerce, and more. Popular PHP frameworks include Laravel, Symfony, CodeIgniter, and Zend Framework.\n\nDespite its widespread use, PHP has faced criticism for its inconsistent design, security vulnerabilities (if not used properly), and performance issues in certain scenarios. However, it remains a dominant force in web development, especially for building dynamic and interactive web applications.', 'php.jpg', 'https://www.youtube.com/embed/a7_WFUlFS94?si=Fngpev6udMntsHt-', 'https://take.quiz-maker.com/QBEOF1V2A', 'jenish', '2023-11-22', 4, 3, 'php, programming', '00:03:08'),
 (5, 'What is Java', 'Our core Java programming tutorial is designed for students and working professionals. Java is an object-oriented, class-based, concurrent, secured and general-purpose computer-programming language. It is a widely used robust technology.', 'Java is a programming language and a platform. Java is a high level, robust, object-oriented and secure programming language.\r\n\r\nJava was developed by Sun Microsystems (which is now the subsidiary of Oracle) in the year 1995. James Gosling is known as the father of Java. Before Java, its name was Oak. Since Oak was already a registered company, so James Gosling and his team changed the name from Oak to Java.\r\n\r\nPlatform: Any hardware or software environment in which a program runs, is known as a platform. Since Java has a runtime environment (JRE) and API, it is called a platform.', 'java.jpg', 'https://www.youtube.com/embed/mAtkPQO1FcA?si=4JYKZCvzG9u1te6B', 'https://take.quiz-maker.com/QZAH86CNB', 'shizu', '2023-12-25', 4, 2, 'java, programming', '00:03:08'),
@@ -192,7 +191,7 @@ INSERT INTO `item` (`id`, `title`, `description`, `content`, `photopath`, `video
 (96, 'Attitude', '', '', 'anime2.jpg', '', '', 'jenu', '2024-03-06', 5, 26, '#Attitude', '00:00:00'),
 (97, 'Friends', '', '', 'anime3.jpeg', '', '', 'jenu', '2024-03-06', 5, 26, '#friends', '00:00:00'),
 (98, 'Fighter', '', '', 'anime4.jpg', '', '', 'piksu', '2024-03-06', 5, 26, '#fighter', '00:00:00'),
-(99, 'Thailand ', '', '', 'arc6.jpg', '', '', 'shizu', '2024-03-16', 5, 5, ' #wonderdful', '00:00:00');
+(99, 'Thailand ', '', '', 'arc6.jpg', '', '', 'shizu', '2024-03-16', 5, 24, ' #wonderdful', '00:00:00');
 
 -- --------------------------------------------------------
 
@@ -243,7 +242,8 @@ INSERT INTO `review` (`flc_id`, `comment`, `liked`, `item_id`, `uid`) VALUES
 (9, ',,,nice,,,,nice,,,,nice,nice', 0, 94, 5),
 (10, NULL, 1, 92, 5),
 (11, NULL, 0, 90, 5),
-(12, NULL, 0, 40, 5);
+(12, NULL, 0, 40, 5),
+(13, NULL, 0, 49, 5);
 
 -- --------------------------------------------------------
 
@@ -270,7 +270,8 @@ INSERT INTO `userdetails` (`uid`, `username`, `fullname`, `password`, `email`, `
 (2, 'piksu', 'prakash khant', '123', 'prakash@gmail.com', 989127048, 'male'),
 (3, 'jenu', 'kishan', '123', 'khant@gmail.com', 988989898, 'none'),
 (4, 'jenish', 'kishan', '123', 't@gmail.com', 988989898, 'none'),
-(5, 'shizu', 'shehnaz', '123', 'sh@gmail.123', 988989898, 'female');
+(5, 'shizu', 'shehnaz', '123', 'sh@gmail.123', 988989898, 'female'),
+(6, 'admin', 'Admin', 'xt9', 'admin@gmail.com', 232323, NULL);
 
 --
 -- Indexes for dumped tables
@@ -326,7 +327,7 @@ ALTER TABLE `category`
 -- AUTO_INCREMENT for table `item`
 --
 ALTER TABLE `item`
-  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=100;
+  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=101;
 
 --
 -- AUTO_INCREMENT for table `modules`
@@ -338,13 +339,13 @@ ALTER TABLE `modules`
 -- AUTO_INCREMENT for table `review`
 --
 ALTER TABLE `review`
-  MODIFY `flc_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `flc_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `userdetails`
 --
 ALTER TABLE `userdetails`
-  MODIFY `uid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `uid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- Constraints for dumped tables

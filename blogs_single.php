@@ -83,19 +83,7 @@ $cid = $_GET["c"];
 
                     <li>
                         <a href="blogs_home.php#topics" class="navbar-link hover-1" data-nav-toggler>Topics</a>
-                    </li>
-
-                    <li>
-                        <a href="blogs_home.php#featured" class="navbar-link hover-1" data-nav-toggler>Featured Post</a>
-                    </li>
-
-                    <li>
-                        <a href="blogs_home.php#recent" class="navbar-link hover-1" data-nav-toggler>Recent Post</a>
-                    </li>
-
-                    <li>
-                        <a href="about.php" class="navbar-link hover-1" data-nav-toggler>About us</a>
-                    </li>
+                    </li>                 
 
                 </ul>
 
