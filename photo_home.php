@@ -109,7 +109,7 @@ $db->session_check();
 						
 					</div>		
 					";
-				$i++;}
+				}
 			?>
 			
 		</div>
